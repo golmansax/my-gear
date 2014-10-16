@@ -4,7 +4,8 @@ class CreateClothingItems < ActiveRecord::Migration
       t.string :model, null: false
       t.string :brand, null: false
       t.string :type, null: false
-      t.date :purchase_date, null: false
+      t.date :recent_purchase_date, null: false
+      t.date :first_purchase_date, null: false
 
       t.timestamps
     end

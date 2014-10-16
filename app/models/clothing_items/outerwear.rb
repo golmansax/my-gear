@@ -1,0 +1,2 @@
+class Outerwear < ClothingItem
+end

@@ -23,5 +23,7 @@ module Wardrobe
     # load_path = Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.load_path += load_path
     # config.i18n.default_locale = :de
+
+    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
   end
 end

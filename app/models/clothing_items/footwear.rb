@@ -1,0 +1,2 @@
+class Footwear < ClothingItem
+end

@@ -14,10 +14,11 @@
 ActiveRecord::Schema.define(version: 20141016044737) do
 
   create_table "clothing_items", force: true do |t|
-    t.string   "model",         null: false
-    t.string   "brand",         null: false
-    t.string   "type",          null: false
-    t.date     "purchase_date", null: false
+    t.string   "model",                null: false
+    t.string   "brand",                null: false
+    t.string   "type",                 null: false
+    t.date     "recent_purchase_date", null: false
+    t.date     "first_purchase_date",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

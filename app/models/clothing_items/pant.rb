@@ -1,0 +1,2 @@
+class Pant < ClothingItem
+end
