@@ -13,8 +13,10 @@ gem 'requirejs-rails', git: 'https://github.com/golmansax/requirejs-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-backbone'
+  gem 'rails-assets-reqwest'
   gem 'rails-assets-underscore'
   gem 'rails-assets-backbone-react-component'
+  gem 'rails-assets-react'
 end
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

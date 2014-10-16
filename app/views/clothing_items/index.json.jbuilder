@@ -1,1 +1,1 @@
-json.array! @clothing_items, :brand, :id
+json.array! @clothing_items, :brand, :model, :id
