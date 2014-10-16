@@ -1,0 +1,4 @@
+modules:
+  - name: 'index'
+paths:
+  jquery: 'jquery_fake'

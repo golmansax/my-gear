@@ -1,2 +1,2 @@
-require('React', function () {
+require(['backbone', 'react'], function () {
 });
