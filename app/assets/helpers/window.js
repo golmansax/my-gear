@@ -1,4 +1,4 @@
-require([], function () {
+define([], function () {
   'use strict';
 
   /* global window */
