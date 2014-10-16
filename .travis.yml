@@ -1,0 +1,11 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.1.2
+before_install:
+  - npm install jshint
+install:
+  - bundle install
+script:
+  - travis lint --skip-completion-check
+  - bundle exec rake jshint
