@@ -1,5 +1,6 @@
 require([], function () {
   'use strict';
 
-  return {};
+  /* global window */
+  return window;
 });
