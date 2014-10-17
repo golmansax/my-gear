@@ -15,7 +15,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-backbone'
   gem 'rails-assets-reqwest'
   gem 'rails-assets-underscore'
-  gem 'rails-assets-backbone-react-component'
+  gem 'rails-assets-backbone-react-component', '~> 0.7.0'
+  gem 'rails-assets-react-router'
   gem 'rails-assets-react'
 end
 

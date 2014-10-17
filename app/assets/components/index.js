@@ -1,9 +1,7 @@
 define([
-  'window', 'backbone', 'reqwest', 'react', 'clothing_item_list', 'sample_view'
-], function (window, Backbone, reqwest, React, ClothingItemList, SampleView) {
+  'window', 'react', 'clothing_item_list', 'sample_view', 'initializers'
+], function (window, React, ClothingItemList, SampleView) {
   'use strict';
-
-  Backbone.ajax = reqwest.compat;
 
   var clothingItems = new ClothingItemList();
   clothingItems.fetch();

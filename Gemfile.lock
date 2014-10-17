@@ -125,6 +125,7 @@ GEM
       rails-assets-react (~> 0.11.1)
       rails-assets-underscore (~> 1.6.0)
     rails-assets-react (0.11.2)
+    rails-assets-react-router (0.9.4)
     rails-assets-reqwest (1.1.2)
     rails-assets-underscore (1.6.0)
     railties (4.1.6)
@@ -209,8 +210,9 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   rails (= 4.1.6)
   rails-assets-backbone!
-  rails-assets-backbone-react-component!
+  rails-assets-backbone-react-component (~> 0.7.0)!
   rails-assets-react!
+  rails-assets-react-router!
   rails-assets-reqwest!
   rails-assets-underscore!
   react-rails (~> 1.0.0.pre)!
