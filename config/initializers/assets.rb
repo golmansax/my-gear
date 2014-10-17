@@ -8,5 +8,4 @@ Rails.application.config.assets.version = '1.0'
 # already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-asset_paths = [Rails.root.join('assets', '**')]
-Rails.application.config.assets.paths += asset_paths
+Rails.application.config.assets.paths << Rails.root.join('app', 'frontend')

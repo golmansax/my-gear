@@ -1,5 +1,5 @@
 modules:
   - name: 'index'
 paths:
-  jquery: 'jquery_fake'
+  jquery: 'objects/jquery_fake'
   backbone_mixin: 'backbone-react-component'

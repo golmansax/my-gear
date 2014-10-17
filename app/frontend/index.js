@@ -1,5 +1,6 @@
 define([
-  'window', 'react', 'clothing_item_list', 'sample_view', 'initializers'
+  'objects/window', 'react', 'collections/clothing_item_list',
+  'components/sample_view', 'initializers/index'
 ], function (window, React, ClothingItemList, SampleView) {
   'use strict';
 
