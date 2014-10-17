@@ -1,5 +1,15 @@
 modules:
   - name: 'index'
 paths:
-  jquery: 'objects/jquery_fake'
-  backbone_mixin: 'lib/component'
+  backbone: 'backbone/backbone'
+  backbone_mixin: 'backbone-react-component/lib/component'
+  react: 'react/react'
+  reqwest: 'reqwest/reqwest'
+map:
+  backbone:
+    jquery: 'objects/jquery_fake'
+  '*':
+    'bower/backbone': 'backbone'
+    'bower/backbone_mixin': 'backbone_mixin'
+    'bower/react': 'react'
+    'bower/reqwest': 'reqwest'

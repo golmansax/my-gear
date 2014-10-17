@@ -1,4 +1,6 @@
-define(['react', 'backbone_mixin'], function (React, BackboneMixin) {
+define([
+  'bower/react', 'bower/backbone_mixin'
+], function (React, BackboneMixin) {
   'use strict';
 
   return React.createClass({

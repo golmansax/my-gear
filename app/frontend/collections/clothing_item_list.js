@@ -1,4 +1,6 @@
-define(['backbone', 'models/clothing_item'], function (Backbone, ClothingItem) {
+define([
+  'bower/backbone', 'models/clothing_item'
+], function (Backbone, ClothingItem) {
   'use strict';
 
   var ClothingItemList = Backbone.Collection.extend({
