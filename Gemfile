@@ -11,15 +11,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'requirejs-rails', git: 'https://github.com/golmansax/requirejs-rails'
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-backbone'
-  gem 'rails-assets-reqwest'
-  gem 'rails-assets-underscore'
-  gem 'rails-assets-backbone-react-component', '~> 0.7.0'
-  gem 'rails-assets-react-router'
-  gem 'rails-assets-react'
-end
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
