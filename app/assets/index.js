@@ -1,5 +1,5 @@
 define([
-  'objects/window', 'bower/react', 'routes',
+  'objects/window', 'bower/react', 'routes'
 ], function (window, React, routes) {
   'use strict';
 

@@ -10,7 +10,7 @@ define([
     render: function () {
       return React.DOM.div(null,
         'WARDROBE MANAGER',
-        Wardrobe({ collection: this.state.clothingItems })
+        new Wardrobe({ collection: this.state.clothingItems })
       );
     }
   });
