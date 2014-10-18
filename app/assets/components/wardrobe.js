@@ -1,19 +1,19 @@
-define([
-  'bower/react', 'bower/backbone_mixin'
-], function (React, BackboneMixin) {
+define(['bower/react'], function (React) {
   'use strict';
 
-  return React.createClass({
+  return React.createBackboneClass({
+    componentDidMount: function () {
+      this.getCollection().fetch();
+    },
     createEntry: function (entry) {
-      return React.DOM.div({ key: entry.id }, entry.brand + ' ' + entry.model);
+      return React.DOM.div({ key: entry.get('id') },
+        entry.get('brand') + ' ' + entry.get('model')
+      );
     },
     render: function () {
-      console.log(this.props.blah);
       return React.DOM.div(null,
         'WARDROBE',
-        //this.props.collection.map(this.createEntry)
-        this.props.blah ? this.createEntry(this.props.blah) : '',
-        this.props.ugh
+        this.getCollection().map(this.createEntry)
       );
     }
   });

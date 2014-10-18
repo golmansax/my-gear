@@ -2,11 +2,11 @@
   "name": "my-wardrobe assets",
   "dependencies": {
     "backbone": "latest",
-    "backbone-react-component": "~> 0.7.0",
     "requirejs": "~> 2.1.15",
     "reqwest": "latest",
     "react": "latest",
     "react-router": "latest",
+    "react.backbone": "latest",
     "underscore": "latest"
   }
 }

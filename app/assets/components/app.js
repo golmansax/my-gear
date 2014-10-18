@@ -1,6 +1,6 @@
 define([
   'bower/react'
-], function (React, BackboneMixin) {
+], function (React) {
   'use strict';
 
   return React.createClass({

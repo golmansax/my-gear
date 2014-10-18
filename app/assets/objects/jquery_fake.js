@@ -1,5 +1,8 @@
-define(function () {
+define(['bower/reqwest'], function (reqwest) {
   'use strict';
 
-  return function jQueryFake() {};
+  return new (function jQueryFake() {
+    this.ajax = reqwest.compat;
+    return this;
+  })();
 });
