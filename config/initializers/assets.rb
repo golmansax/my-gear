@@ -8,6 +8,6 @@ Rails.application.config.assets.version = '1.0'
 # already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-asset_paths = [Rails.root.join('app', 'frontend')]
+asset_paths = [Rails.root.join('app', 'assets')]
 asset_paths << Rails.root.join('vendor', 'bower_components')
 Rails.application.config.assets.paths.unshift(*asset_paths)

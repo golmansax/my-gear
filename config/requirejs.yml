@@ -4,6 +4,7 @@ paths:
   backbone: 'backbone/backbone'
   backbone_mixin: 'backbone-react-component/lib/component'
   react: 'react/react'
+  'react-router': 'react-router/dist/react-router'
   reqwest: 'reqwest/reqwest'
 map:
   backbone:
@@ -12,4 +13,8 @@ map:
     'bower/backbone': 'backbone'
     'bower/backbone_mixin': 'backbone_mixin'
     'bower/react': 'react'
+    'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'
+shim:
+  'react-router':
+    deps: ['initializers/react_router_ugly_hack']

@@ -5,12 +5,16 @@ define([
 
   return React.createClass({
     mixins: [BackboneMixin],
+    componentDidMount: function () {
+      this.getCollection().fetch();
+    },
     createEntry: function (entry) {
       return React.DOM.div({ key: entry.id }, entry.brand + ' ' + entry.model);
     },
     render: function () {
       return React.DOM.div(null,
-        this.props.clothingItems.map(this.createEntry)
+        'WARDROBE',
+        this.props.collection.map(this.createEntry)
       );
     }
   });
