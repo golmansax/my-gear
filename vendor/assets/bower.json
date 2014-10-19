@@ -2,11 +2,12 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "backbone": "latest",
+    "bootstrap-sass-official": "latest",
     "requirejs": "~> 2.1.15",
     "reqwest": "latest",
     "react": "latest",
-    "react-router": "latest",
     "react.backbone": "latest",
+    "react-router": "latest",
     "underscore": "latest"
   }
 }
