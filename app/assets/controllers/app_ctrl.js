@@ -11,8 +11,10 @@ define([
     render: function () {
       return React.DOM.div(null,
         new Header({ collection: this.state.outfits }),
-        'I AM THE APP: ',
-        this.props.activeRouteHandler()
+        React.DOM.div({ className: 'container' },
+          'I AM THE APP: ',
+          this.props.activeRouteHandler()
+        )
       );
     }
   });
