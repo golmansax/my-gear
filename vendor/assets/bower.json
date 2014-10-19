@@ -1,5 +1,5 @@
 {
-  "name": "my-wardrobe assets",
+  "name": "dsl-generated dependencies",
   "dependencies": {
     "backbone": "latest",
     "requirejs": "~> 2.1.15",
