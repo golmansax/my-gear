@@ -25,3 +25,8 @@ Footwear.create!(
   recent_purchase_date: Date.parse('March 2014'),
   first_purchase_date: Date.parse('July 2012'),
 )
+
+favorite_outfit = Outfit.create!(name: 'Favorite')
+ClothingItem.all.each do |clothing_item|
+  favorite_outfit.clothing_items << clothing_item
+end
