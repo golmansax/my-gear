@@ -1,4 +1,4 @@
-define(['bower/react'], function (React) {
+define(['bower/react', 'bower/react_router'], function (React, Router) {
   'use strict';
 
   return React.createBackboneClass({
@@ -6,8 +6,12 @@ define(['bower/react'], function (React) {
       this.getCollection().fetch();
     },
     createEntry: function (entry) {
-      return React.DOM.div({ key: entry.get('id') },
-        entry.get('brand') + ' ' + entry.get('model')
+      var myId= entry.get('id');
+
+      return React.DOM.div({ key: myId },
+        Router.Link({ to: 'clothing_item', params: { clothingItemId: myId }},
+          entry.get('brand') + ' ' + entry.get('model')
+        )
       );
     },
     render: function () {

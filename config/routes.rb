@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
   root 'pages#index'
-
-  resources :clothing_items, only: :index
+  resources :clothing_items, only: [:index, :show]
 end
