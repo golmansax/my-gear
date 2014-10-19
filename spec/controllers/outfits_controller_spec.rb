@@ -27,8 +27,8 @@ describe OutfitsController do
         name: 'Baller',
         id: outfit.id,
         clothing_items: [
-          { id: down_jacket.id, brand: 'Uniqlo', model: 'Down Jacket' }
-        ]
+          { id: down_jacket.id, brand: 'Uniqlo', model: 'Down Jacket' },
+        ],
       }.with_indifferent_access
       expect(JSON.parse(response.body)).to eq(expected_output)
     end
