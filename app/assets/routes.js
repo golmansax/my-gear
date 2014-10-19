@@ -1,12 +1,12 @@
 define([
   'bower/react', 'bower/react_router', 'components/app',
-  'components/wardrobe_manager', 'components/clothing_item_manager'
-], function (React, Router, App, WardrobeManager, ClothingItemManager) {
+  'controllers/wardrobe_ctrl', 'controllers/clothing_item_view_ctrl'
+], function (React, Router, App, WardrobeCtrl, ClothingItemViewCtrl) {
   'use strict';
 
   return Router.Routes(null,
     Router.Route({ handler: App },
-      Router.DefaultRoute({ handler: WardrobeManager }),
+      Router.DefaultRoute({ handler: WardrobeCtrl }),
       Router.Route(clothingItemRouteAttrs())
     )
   );
@@ -15,7 +15,7 @@ define([
     return {
       name: 'clothing_item',
       path: '/clothing_items/:clothingItemId',
-      handler: ClothingItemManager
+      handler: ClothingItemViewCtrl
     };
   }
 });
