@@ -4,13 +4,10 @@ define(['bower/backbone'], function (Backbone) {
   return Backbone.Model.extend({
     defaults: {
       id: null,
-      brand: '',
-      model: '',
-      firstPurchaseDate: null,
-      recentPurchaseDate: null
+      name: ''
     },
     url: function () {
-      return 'clothing_items/' + (this.id || '');
+      return 'outfits/' + (this.id || '');
     }
   });
 });

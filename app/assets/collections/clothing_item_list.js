@@ -3,10 +3,8 @@ define([
 ], function (Backbone, ClothingItem) {
   'use strict';
 
-  var ClothingItemList = Backbone.Collection.extend({
+  return Backbone.Collection.extend({
     model: ClothingItem,
     url: '/clothing_items'
   });
-
-  return ClothingItemList;
 });
