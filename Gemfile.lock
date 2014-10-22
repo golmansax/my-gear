@@ -8,13 +8,6 @@ GIT
       rails (>= 3.1)
       react-source (= 0.11.1)
 
-GIT
-  remote: https://github.com/golmansax/requirejs-rails
-  revision: 036b01129162e14ae790580efd114b3c57254462
-  specs:
-    requirejs-rails (0.9.5)
-      railties (>= 3.1.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -129,6 +122,8 @@ GEM
     raindrops (0.13.0)
     rake (10.3.2)
     react-source (0.11.1)
+    requirejs-rails (0.9.5)
+      railties (>= 3.1.1)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -208,7 +203,7 @@ DEPENDENCIES
   pg
   rails (= 4.1.6)
   react-rails (~> 1.0.0.pre)!
-  requirejs-rails!
+  requirejs-rails
   rspec-rails (~> 3.0.0)
   rubocop
   sass-rails (~> 4.0.3)

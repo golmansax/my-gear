@@ -16,4 +16,4 @@ test:
 
 production:
   <<: *default
-  database: golmansax_wardrobe_production
+  database: golmansax_wardrobe_development

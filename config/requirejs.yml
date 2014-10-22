@@ -4,6 +4,7 @@ paths:
   'react.backbone': 'react.backbone/react.backbone'
   'react-router': 'react-router/dist/react-router'
   reqwest: 'reqwest/reqwest'
+  underscore: 'underscore/underscore'
 map:
   backbone:
     jquery: 'objects/jquery_fake'
@@ -12,5 +13,6 @@ map:
     'bower/react': 'react.backbone' # This loads react
     'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'
+    'bower/underscore': 'underscore'
 shim:
   'react-router': ['initializers/expose_react_hack']
