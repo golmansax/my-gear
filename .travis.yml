@@ -6,6 +6,8 @@ before_install:
   - npm install jshint
 install:
   - bundle install
+before_script:
+  - rake db:create db:migrate
 script:
   - rubocop -D
   - travis lint --skip-completion-check
