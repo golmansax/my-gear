@@ -1,5 +1,6 @@
 {
   "name": "my-wardrobe",
+  "engines": { "node": "0.11.x" },
   "dependencies": {
     "bower": "1.3.x"
   },
