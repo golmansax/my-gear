@@ -1,4 +1,6 @@
-define(['bower/react', 'bower/react_router'], function (React, Router) {
+define([
+  'bower/react', 'bower/react_router', 'bower/underscore'
+], function (React, Router, _) {
   'use strict';
 
   return React.createBackboneClass({
@@ -13,11 +15,16 @@ define(['bower/react', 'bower/react_router'], function (React, Router) {
     },
     renderClothingItems: function (clothingItems) {
       return _(clothingItems).map(function (clothingItem) {
-        React.DOM.div({ key: clothingItem.id },
-          Router.Link({ to: 'clothing_item', params: { clothingItemId: clothingItem.id }},
+        var linkAttrs = {
+          to: 'clothing_item',
+          params: { clothingItemId: clothingItem.id }
+        };
+
+        return React.DOM.div({ key: clothingItem.id },
+          Router.Link(linkAttrs,
             clothingItem.brand + ' ' + clothingItem.model
           )
-        )
+        );
       });
     },
     render: function () {
