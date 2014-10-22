@@ -15,4 +15,9 @@ map:
     'bower/reqwest': 'reqwest'
     'bower/underscore': 'underscore'
 shim:
-  'react-router': ['initializers/expose_react_hack']
+  'initializers/expose_react_hack':
+    exports: 'React'
+  'react-router':
+    deps: ['initializers/expose_react_hack']
+    exports: 'ReactRouter'
+
