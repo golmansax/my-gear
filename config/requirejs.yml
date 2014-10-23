@@ -14,5 +14,3 @@ map:
     'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'
     'bower/underscore': 'underscore'
-shim:
-  'react-router': ['initializers/expose_react_hack']
