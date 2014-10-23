@@ -45,45 +45,6 @@
 
   "requireCommaBeforeLineBreak": true,
 
-  "disallowLeftStickedOperators": [
-    "?",
-    "+",
-    // "-", because of negative numbers
-    "/",
-    "*",
-    "=",
-    "==",
-    "===",
-    "!=",
-    "!==",
-    ">",
-    ">=",
-    "<",
-    "<="
-  ],
-
-  "requireRightStickedOperators": ["!"],
-
-  "disallowRightStickedOperators": [
-    "?",
-    "+",
-    // "-", because of negative numbers
-    "/",
-    "*",
-    ":",
-    "=",
-    "==",
-    "===",
-    "!=",
-    "!==",
-    ">",
-    ">=",
-    "<",
-    "<="
-  ],
-
-  "requireLeftStickedOperators": [","],
-
   "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
 
   "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
