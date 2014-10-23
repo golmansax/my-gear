@@ -10,7 +10,7 @@ define([
     createEntry: function (entry) {
       var myId = entry.get('id');
 
-      return new BootstrapNavItem({ to: 'outfit', params: { outfitId: myId } },
+      return new BootstrapNavItem({ to: 'outfit', params: { outfitId: myId }},
         entry.get('name')
       );
     },
