@@ -14,3 +14,5 @@ map:
     'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'
     'bower/underscore': 'underscore'
+# Add shim config to application.js (so that it is set even after js is
+#   compiled + optimized)
