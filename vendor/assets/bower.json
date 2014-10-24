@@ -9,5 +9,8 @@
     "react.backbone": "latest",
     "react-router": "latest",
     "underscore": "latest"
+  },
+  "devDependencies": {
+    "chai": "latest"
   }
 }

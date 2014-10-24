@@ -6,7 +6,8 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w(*.svg *.eot *.woff *.ttf)
 unless Rails.env.production?
   test_assets = %w(
-    teaspoon.css teaspoon-teaspoon.js
+    teaspoon.css teaspoon-teaspoon.js mocha/*.js teaspoon-mocha.js
+    spec_helper.js
   )
   Rails.application.config.assets.precompile += test_assets
 end

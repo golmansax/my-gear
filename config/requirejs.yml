@@ -3,6 +3,7 @@ paths:
   react: 'react/react'
   'react.backbone': 'react.backbone/react.backbone'
   'react-router': 'react-router/dist/react-router'
+  'react-with-addons': 'react/react-with-addons'
   reqwest: 'reqwest/reqwest'
   underscore: 'underscore/underscore'
 map:

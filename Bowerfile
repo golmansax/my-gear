@@ -7,6 +7,6 @@ asset 'react.backbone'
 asset 'react-router'
 asset 'underscore'
 
-dependency :dev_dependencies  do
+dependency_group :dev_dependencies do
   asset 'chai'
 end

@@ -10,9 +10,11 @@ Teaspoon.configure do |config|
 
   config.suite do |suite|
     suite.use_framework :mocha
+    suite.matcher = 'spec/assets/**/*_spec.js'
+    suite.boot_partial = 'boot_require_js'
   end
 
-  #config.use_coverage = nil
+  config.use_coverage = :default
 
   config.coverage do |coverage|
     coverage.reports = ['text-summary', 'html']
