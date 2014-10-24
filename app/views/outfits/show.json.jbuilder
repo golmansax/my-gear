@@ -1,3 +1,4 @@
-json.call @outfit, :name
-json.id @outfit.slug
-json.clothing_items @outfit.clothing_items, :brand, :model, :id
+json.partial! 'outfit', outfit: @outfit
+json.clothing_items @outfit.clothing_items,
+                    partial: 'clothing_items/clothing_item',
+                    as: :clothing_item

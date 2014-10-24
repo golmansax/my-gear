@@ -1,1 +1,1 @@
-json.call @clothing_item, :brand, :model, :id
+json.partial! 'clothing_item', clothing_item: @clothing_item
