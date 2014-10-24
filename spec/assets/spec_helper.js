@@ -1,6 +1,6 @@
 //= require chai/chai
 //= require require
-//= require support/bind-poly
+//= require support/phantomjs-shims
 
 window.expect = window.chai.expect;
 
