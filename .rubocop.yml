@@ -7,3 +7,7 @@ Documentation:
 
 TrailingComma:
   EnforcedStyleForMultiline: comma
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*

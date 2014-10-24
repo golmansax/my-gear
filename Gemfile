@@ -8,16 +8,16 @@ gem 'pg'
 gem 'unicorn'
 
 gem 'bower-rails'
+gem 'friendly_id', '~> 5.0.0'
+gem 'jbuilder', '~> 2.0'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'requirejs-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-
 group :development do
   gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :test do

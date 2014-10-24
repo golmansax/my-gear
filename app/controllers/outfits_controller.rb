@@ -5,7 +5,7 @@ class OutfitsController < ApplicationController
   end
 
   def show
-    @outfit = Outfit.find(params[:id])
+    @outfit = Outfit.friendly.find(params[:id])
     respond_to { |format| format.json }
   end
 end
