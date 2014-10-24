@@ -14,6 +14,13 @@ Teaspoon.configure do |config|
     suite.boot_partial = 'boot_require_js'
   end
 
+  config.suite :ci do |suite|
+    suite.use_framework :mocha
+    suite.matcher = ''
+    suite.helper = 'ci_helper'
+    suite.boot_partial = 'boot'
+  end
+
   config.use_coverage = :default
 
   config.coverage do |coverage|

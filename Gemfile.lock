@@ -46,6 +46,10 @@ GEM
     bower-rails (0.9.0)
     builder (3.2.2)
     coderay (1.1.0)
+    coffee-script (2.3.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.8.0)
     connection_pool (2.0.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -204,6 +208,7 @@ PLATFORMS
 
 DEPENDENCIES
   bower-rails
+  coffee-script
   factory_girl_rails
   friendly_id (~> 5.0.0)
   jbuilder (~> 2.0)
