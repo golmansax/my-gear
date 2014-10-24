@@ -4,6 +4,12 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w(*.svg *.eot *.woff *.ttf)
+unless Rails.env.production?
+  test_assets = %w(
+    teaspoon.css teaspoon-teaspoon.js
+  )
+  Rails.application.config.assets.precompile += test_assets
+end
 
 asset_paths = [Rails.root.join('app', 'assets')]
 asset_paths << Rails.root.join('vendor', 'assets', 'bower_components')
