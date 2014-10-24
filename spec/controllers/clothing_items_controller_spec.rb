@@ -20,7 +20,7 @@ describe ClothingItemsController do
   describe '#show' do
     it 'returns a json of a clothing item' do
       outerwear = create(:outerwear)
-      get(:show, format: :json, id: outerwear.id)
+      get(:show, format: :json, id: 'marmot-rom-jacket')
 
       expected_output = {
         brand: 'Marmot',
