@@ -5,7 +5,7 @@ define([
 
   describe('components/outfit_view', function () {
     it('renders', function () {
-      var commentList = TestUtils.renderIntoDocument(new OutfitView({
+      TestUtils.renderIntoDocument(new OutfitView({
         model: new Outfit({})
       }));
 

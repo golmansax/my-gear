@@ -2,10 +2,9 @@ language: ruby
 cache: bundler
 rvm:
 - 2.1.3
-before_install:
-- npm install jshint jscs
 install:
 - bundle install
+- npm install
 - bundle exec rake bower:install:deployment
 before_script:
 - rake db:create db:migrate

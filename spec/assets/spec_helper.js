@@ -2,6 +2,7 @@
 //= require require
 //= require support/phantomjs-shims
 
+/* global window */
 window.expect = window.chai.expect;
 
 require.config({
