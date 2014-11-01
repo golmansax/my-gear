@@ -8,7 +8,6 @@ gem 'pg'
 gem 'unicorn'
 
 gem 'bower-rails'
-gem 'coffee-script'
 gem 'friendly_id', '~> 5.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
@@ -29,6 +28,6 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
-  gem 'teaspoon'
+  gem 'teaspoon', github: 'golmansax/teaspoon'
   gem 'travis'
 end

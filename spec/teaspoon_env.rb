@@ -14,29 +14,22 @@ Teaspoon.configure do |config|
     suite.boot_partial = 'boot_require_js'
   end
 
-  config.suite :ci do |suite|
-    suite.use_framework :mocha
-    suite.matcher = ''
-    suite.helper = 'ci_helper'
-    suite.boot_partial = 'boot'
-  end
-
   config.use_coverage = :default
 
   config.coverage do |coverage|
     coverage.reports = ['text-summary', 'html']
     coverage.output_path = 'coverage/istanbul'
-    coverage.statements = 20
-    coverage.branches = 2
-    coverage.functions = 10
-    coverage.lines = 20
+    coverage.statements = 90
+    coverage.branches = 90
+    coverage.functions = 90
+    coverage.lines = 90
   end
 
   config.coverage :ci do |coverage|
     coverage.reports = ['text']
-    coverage.statements = 20
-    coverage.branches = 2
-    coverage.functions = 10
-    coverage.lines = 20
+    coverage.statements = 90
+    coverage.branches = 90
+    coverage.functions = 90
+    coverage.lines = 90
   end
 end

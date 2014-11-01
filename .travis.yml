@@ -14,7 +14,7 @@ script:
 - bundle exec rake jshint
 - bundle exec rake jscs
 - bundle exec rake
-- bundle exec teaspoon --suite=ci
+- bundle exec teaspoon --coverage ci
 deploy:
   provider: heroku
   strategy: git

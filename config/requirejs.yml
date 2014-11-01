@@ -1,6 +1,3 @@
-modules:
-  - name: 'application'
-  - name: 'requirejs_sync_boot'
 paths:
   backbone: 'backbone/backbone'
   react: 'react/react'
