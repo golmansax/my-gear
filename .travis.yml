@@ -6,7 +6,7 @@ before_install:
 - npm install jshint jscs
 install:
 - bundle install
-- bundle exec rake bower:install
+- bundle exec rake bower:install:deployment
 before_script:
 - rake db:create db:migrate
 script:
