@@ -3,7 +3,7 @@ require 'rails_helper'
 describe ClothingItemsController do
   describe '#index' do
     it 'returns a json of clothing items' do
-      outerwear = create(:outerwear)
+      create(:outerwear)
       get(:index, format: :json)
 
       expected_output = [
@@ -19,7 +19,7 @@ describe ClothingItemsController do
 
   describe '#show' do
     it 'returns a json of a clothing item' do
-      outerwear = create(:outerwear)
+      create(:outerwear)
       get(:show, format: :json, id: 'marmot-rom-jacket')
 
       expected_output = {
