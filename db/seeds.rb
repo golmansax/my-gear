@@ -1,6 +1,6 @@
 Shirt.create!(
   brand: 'Icebreaker',
-  model: 'Tech Lite Shirt',
+  model: 'Tech T Lite Short Sleeve',
   recent_purchase_date: Date.parse('July 2014'),
   first_purchase_date: Date.parse('July 2014'),
 )
@@ -14,7 +14,7 @@ Outerwear.create!(
 
 Pant.create!(
   brand: 'PrAna',
-  model: 'Strech Zion Pant',
+  model: 'Stretch Zion Pant',
   recent_purchase_date: Date.parse('June 2014'),
   first_purchase_date: Date.parse('April 2013'),
 )

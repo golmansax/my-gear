@@ -9,6 +9,5 @@ require([
 ], function (initializers, window, React, routes) {
   'use strict';
 
-  var reactContainer = window.document.getElementById('react-container');
-  React.renderComponent(routes, reactContainer);
+  React.renderComponent(routes, window.document.body);
 });

@@ -7,7 +7,8 @@ define(['bower/react'], function (React) {
     },
     createEntry: function (entry) {
       return React.DOM.div(null,
-        entry.get('brand') + ' ' + entry.get('model')
+        entry.get('brand') + ' ' + entry.get('model'),
+        React.DOM.img({ src: entry.get('image_path') })
       );
     },
     render: function () {

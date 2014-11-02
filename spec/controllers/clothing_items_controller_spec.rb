@@ -1,19 +1,21 @@
 require 'rails_helper'
 
 describe ClothingItemsController do
+  let(:outerwear_as_json) do
+    {
+      brand: 'Marmot',
+      model: 'ROM Jacket',
+      id: 'marmot-rom-jacket',
+      image_path: '/assets/marmot-rom-jacket.jpg',
+    }.with_indifferent_access
+  end
+
   describe '#index' do
     it 'returns a json of clothing items' do
       create(:outerwear)
       get(:index, format: :json)
 
-      expected_output = [
-        {
-          brand: 'Marmot',
-          model: 'ROM Jacket',
-          id: 'marmot-rom-jacket',
-        }.with_indifferent_access,
-      ]
-      expect(JSON.parse(response.body)).to eq(expected_output)
+      expect(JSON.parse(response.body)).to eq([outerwear_as_json])
     end
   end
 
@@ -22,12 +24,7 @@ describe ClothingItemsController do
       create(:outerwear)
       get(:show, format: :json, id: 'marmot-rom-jacket')
 
-      expected_output = {
-        brand: 'Marmot',
-        model: 'ROM Jacket',
-        id: 'marmot-rom-jacket',
-      }.with_indifferent_access
-      expect(JSON.parse(response.body)).to eq(expected_output)
+      expect(JSON.parse(response.body)).to eq(outerwear_as_json)
     end
   end
 end
