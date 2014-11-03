@@ -1,6 +1,6 @@
 define([
   'support/test_utils', 'components/outfit_view'
-], function (TestUtils, OutfitView, Outfit) {
+], function (TestUtils, OutfitView) {
   'use strict';
 
   describe('components/outfit_view', function () {
