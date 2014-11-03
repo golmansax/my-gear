@@ -1,12 +1,13 @@
 define([
-  'support/test_utils', 'components/outfit_view', 'models/outfit'
+  'support/test_utils', 'components/outfit_view'
 ], function (TestUtils, OutfitView, Outfit) {
   'use strict';
 
   describe('components/outfit_view', function () {
     it('renders', function () {
       TestUtils.renderIntoDocument(new OutfitView({
-        model: new Outfit({})
+        name: 'Sexy',
+        clothingItems: []
       }));
 
       expect(true).to.equal(true);
