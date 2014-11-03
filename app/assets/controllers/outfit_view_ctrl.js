@@ -10,7 +10,7 @@ define([
     render: function () {
       return React.DOM.div(null,
         'OUTFIT',
-        new OutfitView(this.getModel().attributes)
+        OutfitView(this.getModel().attributes)
       );
     }
   });

@@ -6,11 +6,11 @@ define([
 
   return React.createClass({
     getInitialState: function () {
-      return { outfits: new OutfitList() };
+      return { outfits: OutfitList() };
     },
     render: function () {
       return React.DOM.div(null,
-        new Header({ collection: this.state.outfits }),
+        Header({ collection: this.state.outfits }),
         React.DOM.div({ className: 'container' },
           this.props.activeRouteHandler()
         )

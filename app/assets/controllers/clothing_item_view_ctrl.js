@@ -12,7 +12,7 @@ define([
       var model = this.getModel();
 
       if (model.isValid()) {
-        return new ClothingItemDetailedView(model.attributes);
+        return ClothingItemDetailedView(model.attributes);
       } else {
         return React.DOM.div(null, 'Loading...');
       }

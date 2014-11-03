@@ -12,15 +12,15 @@ define(['bower/react'], function (React) {
       var state = { model: null, collection: null };
 
       if (props.modelClass) {
-        state.model = new props.modelClass(props.params);
+        state.model = props.modelClass(props.params);
       } else if (props.collectionClass) {
-        state.collection = new props.collectionClass();
+        state.collection = props.collectionClass();
       }
 
       return state;
     },
     render: function () {
-      return new this.props.ctrlClass(this.state);
+      return this.props.ctrlClass(this.state);
     }
   });
 });

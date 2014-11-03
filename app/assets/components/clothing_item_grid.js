@@ -7,7 +7,7 @@ define([
   return React.createClass({
     renderGridItem: function (clothingItem) {
       return React.DOM.div({ key: clothingItem.id, className: 'col-sm-4' },
-        new ClothingItemView(clothingItem)
+        ClothingItemView(clothingItem)
       );
     },
     render: function () {

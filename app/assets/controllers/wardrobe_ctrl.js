@@ -14,7 +14,7 @@ define([
 
       return React.DOM.div(null,
         'WARDROBE MANAGER',
-        new ClothingItemGrid({ clothingItems: clothingItems })
+        ClothingItemGrid({ clothingItems: clothingItems })
       );
     }
   });

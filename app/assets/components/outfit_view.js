@@ -21,7 +21,7 @@ define([
     },
     render: function () {
       var clothingItems = _(this.props.clothingItems).map(function (attrs) {
-        return new ClothingItem(attrs, { parse: true }).attributes;
+        return ClothingItem(attrs, { parse: true }).attributes;
       });
 
       return React.DOM.div(null,

@@ -11,7 +11,7 @@ define(['bower/react', 'bower/react_router'], function (React, Router) {
       );
 
       return React.DOM.li({ className: isActive ? 'active' : '' },
-        new Router.Link(this.props)
+        Router.Link(this.props)
       );
     }
   });

@@ -15,13 +15,13 @@ define([
         key: 'outfit/' + myId
       };
 
-      return new BootstrapNavItem(itemAttrs, entry.get('name'));
+      return BootstrapNavItem(itemAttrs, entry.get('name'));
     },
     render: function () {
       return React.DOM.div({ className: 'navbar navbar-default' },
         React.DOM.div({ className: 'container' },
           React.DOM.div({ className: 'navbar-header' },
-            new Router.Link({ className: 'navbar-brand', to: '/' }, 'HOME')
+            Router.Link({ className: 'navbar-brand', to: '/' }, 'HOME')
           ),
           React.DOM.ul({ className: 'navbar-nav nav' },
             this.getCollection().map(this.createEntry)
