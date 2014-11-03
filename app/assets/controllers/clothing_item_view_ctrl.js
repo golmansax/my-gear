@@ -1,6 +1,7 @@
 define([
-  'bower/react', 'models/clothing_item', 'components/clothing_item_view'
-], function (React, ClothingItem, ClothingItemView) {
+  'bower/react', 'models/clothing_item',
+  'components/clothing_item_detailed_view'
+], function (React, ClothingItem, ClothingItemDetailedView) {
   'use strict';
 
   return React.createBackboneClass({
@@ -8,10 +9,13 @@ define([
       this.getModel().fetch();
     },
     render: function () {
-      return React.DOM.div(null,
-        'CLOTHING ITEM',
-        new ClothingItemView(this.getModel().attributes)
-      );
+      var model = this.getModel();
+
+      if (model.isValid()) {
+        return new ClothingItemDetailedView(model.attributes);
+      } else {
+        return React.DOM.div(null, 'Loading...');
+      }
     }
   });
 });

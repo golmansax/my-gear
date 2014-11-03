@@ -7,6 +7,7 @@ describe ClothingItemsController do
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
       imagePath: '/assets/marmot-rom-jacket.jpg',
+      firstPurchaseDate: '2014-07-01',
     }.with_indifferent_access
   end
 

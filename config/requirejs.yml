@@ -1,5 +1,6 @@
 paths:
   backbone: 'backbone/backbone'
+  moment: 'moment/moment'
   react: 'react/react'
   'react.backbone': 'react.backbone/react.backbone'
   'react-router': 'react-router/dist/react-router'
@@ -11,6 +12,7 @@ map:
     jquery: 'objects/jquery_fake'
   '*':
     'bower/backbone': 'backbone'
+    'bower/moment': 'moment'
     'bower/react': 'react.backbone' # This loads react
     'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'

@@ -9,10 +9,13 @@ define([
     },
     createEntry: function (entry) {
       var myId = entry.get('id');
+      var itemAttrs = {
+        to: 'outfit',
+        params: { id: myId },
+        key: 'outfit/' + myId
+      };
 
-      return new BootstrapNavItem({ to: 'outfit', params: { id: myId }},
-        entry.get('name')
-      );
+      return new BootstrapNavItem(itemAttrs, entry.get('name'));
     },
     render: function () {
       return React.DOM.div({ className: 'navbar navbar-default' },

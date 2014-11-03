@@ -10,7 +10,7 @@ define(['bower/react', 'bower/react_router'], function (React, Router) {
 
       return React.DOM.div(null,
         Router.Link({ to: 'clothing_item', params: { id: this.props.id }},
-          this.props.brand + ' ' + this.props.model
+          this.props.name
         ),
         React.DOM.img(imageAttrs)
       );
