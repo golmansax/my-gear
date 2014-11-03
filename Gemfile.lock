@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/golmansax/teaspoon.git
-  revision: fb4c31c6111fcd3304ed289f40fc1082063bfdd3
+  revision: 50a35cb99d981d2a3a52b89b4256394b3f02999f
   specs:
     teaspoon (0.8.0)
       railties (>= 3.2.5, < 5)
