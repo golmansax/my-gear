@@ -1,16 +1,21 @@
 define([
-  'bower/react', 'collections/clothing_item_list', 'components/wardrobe'
-], function (React, ClothingItemList, Wardrobe) {
+  'bower/react', 'components/clothing_item_view'
+], function (React, ClothingItemView) {
   'use strict';
 
-  return React.createClass({
-    getInitialState: function () {
-      return { clothingItems: new ClothingItemList() };
+  return React.createBackboneClass({
+    componentDidMount: function () {
+      this.getCollection().fetch();
+    },
+    createEntry: function (entry) {
+      return new ClothingItemView(entry.attributes);
     },
     render: function () {
       return React.DOM.div(null,
         'WARDROBE MANAGER',
-        new Wardrobe({ collection: this.state.clothingItems })
+        React.DOM.div({ className: 'row' },
+          this.getCollection().map(this.createEntry)
+        )
       );
     }
   });

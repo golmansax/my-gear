@@ -3,16 +3,14 @@ define([
 ], function (React, Outfit, OutfitView) {
   'use strict';
 
-  return React.createClass({
-    getInitialState: function () {
-      return {
-        outfit: new Outfit({ id: this.props.params.outfitId })
-      };
+  return React.createBackboneClass({
+    componentDidMount: function () {
+      this.getModel().fetch();
     },
     render: function () {
       return React.DOM.div(null,
         'OUTFIT',
-        new OutfitView({ model: this.state.outfit })
+        new OutfitView(this.getModel().attributes)
       );
     }
   });

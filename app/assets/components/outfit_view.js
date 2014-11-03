@@ -3,16 +3,7 @@ define([
 ], function (React, Router, _) {
   'use strict';
 
-  return React.createBackboneClass({
-    componentDidMount: function () {
-      this.getModel().fetch();
-    },
-    createEntry: function (entry) {
-      return React.DOM.div(null,
-        entry.get('name'),
-        this.renderClothingItems(entry.get('clothing_items'))
-      );
-    },
+  return React.createClass({
     renderClothingItems: function (clothingItems) {
       return _(clothingItems).map(function (clothingItem) {
         var linkAttrs = {
@@ -29,8 +20,8 @@ define([
     },
     render: function () {
       return React.DOM.div(null,
-        'MODEL',
-        this.createEntry(this.getModel())
+        this.props.name,
+        this.renderClothingItems(this.props.clothing_items)
       );
     }
   });

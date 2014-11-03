@@ -1,20 +1,22 @@
-define(['bower/react'], function (React) {
+define(['bower/react', 'bower/react_router'], function (React, Router) {
   'use strict';
 
-  return React.createBackboneClass({
-    componentDidMount: function () {
-      this.getModel().fetch();
-    },
-    createEntry: function (entry) {
-      return React.DOM.div(null,
-        entry.get('brand') + ' ' + entry.get('model'),
-        React.DOM.img({ src: entry.get('image_path') })
-      );
-    },
+  return React.createClass({
     render: function () {
+      if (!this.props.id) {
+        return React.DOM.div(null, 'FAKE');
+      }
+
+      var imageAttrs = {
+        className: 'img-responsive',
+        src: this.props.image_path
+      };
+
       return React.DOM.div(null,
-        'MODEL',
-        this.createEntry(this.getModel())
+        Router.Link({ to: 'clothing_item', params: { id: this.props.id }},
+          this.props.brand + ' ' + this.props.model
+        ),
+        React.DOM.img(imageAttrs)
       );
     }
   });
