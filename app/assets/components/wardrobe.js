@@ -14,7 +14,7 @@ define(['bower/react', 'bower/react_router'], function (React, Router) {
 
       return React.DOM.div({ key: myId, className: 'col-sm-4' },
         React.DOM.img(imageAttrs),
-        Router.Link({ to: 'clothing_item', params: { clothingItemId: myId }},
+        Router.Link({ to: 'clothing_item', params: { id: myId }},
           entry.get('brand') + ' ' + entry.get('model')
         )
       );

@@ -18,7 +18,7 @@ define([
   function clothingItemRouteAttrs() {
     return {
       name: 'clothing_item',
-      path: '/clothing_items/:clothingItemId',
+      path: '/clothing_items/:id',
       handler: ClothingItemViewCtrl
     };
   }
@@ -26,7 +26,7 @@ define([
   function outfitRouteAttrs() {
     return {
       name: 'outfit',
-      path: '/outfits/:outfitId',
+      path: '/outfits/:id',
       handler: OutfitViewCtrl
     };
   }

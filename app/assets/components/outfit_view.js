@@ -17,7 +17,7 @@ define([
       return _(clothingItems).map(function (clothingItem) {
         var linkAttrs = {
           to: 'clothing_item',
-          params: { clothingItemId: clothingItem.id }
+          params: { id: clothingItem.id }
         };
 
         return React.DOM.div({ key: clothingItem.id },
