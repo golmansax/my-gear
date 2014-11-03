@@ -6,7 +6,7 @@ describe ClothingItemsController do
       brand: 'Marmot',
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
-      image_path: '/assets/marmot-rom-jacket.jpg',
+      imagePath: '/assets/marmot-rom-jacket.jpg',
     }.with_indifferent_access
   end
 

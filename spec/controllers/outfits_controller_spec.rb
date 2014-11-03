@@ -26,12 +26,12 @@ describe OutfitsController do
       expected_output = {
         name: 'Baller',
         id: 'baller',
-        clothing_items: [
+        clothingItems: [
           {
             id: 'uniqlo-down-jacket',
             brand: 'Uniqlo',
             model: 'Down Jacket',
-            image_path: '/images/uniqlo-down-jacket.jpg',
+            imagePath: '/images/uniqlo-down-jacket.jpg',
           },
         ],
       }.with_indifferent_access

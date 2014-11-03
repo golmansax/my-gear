@@ -3,13 +3,9 @@ define(['bower/react', 'bower/react_router'], function (React, Router) {
 
   return React.createClass({
     render: function () {
-      if (!this.props.id) {
-        return React.DOM.div(null, 'FAKE');
-      }
-
       var imageAttrs = {
         className: 'img-responsive',
-        src: this.props.image_path
+        src: this.props.imagePath
       };
 
       return React.DOM.div(null,

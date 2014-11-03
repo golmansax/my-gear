@@ -21,7 +21,7 @@ define([
     render: function () {
       return React.DOM.div(null,
         this.props.name,
-        this.renderClothingItems(this.props.clothing_items)
+        this.renderClothingItems(this.props.clothingItems)
       );
     }
   });
