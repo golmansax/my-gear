@@ -27,7 +27,12 @@ describe OutfitsController do
         name: 'Baller',
         id: 'baller',
         clothing_items: [
-          { id: 'uniqlo-down-jacket', brand: 'Uniqlo', model: 'Down Jacket' },
+          {
+            id: 'uniqlo-down-jacket',
+            brand: 'Uniqlo',
+            model: 'Down Jacket',
+            image_path: '/images/uniqlo-down-jacket.jpg',
+          },
         ],
       }.with_indifferent_access
       expect(JSON.parse(response.body)).to eq(expected_output)
