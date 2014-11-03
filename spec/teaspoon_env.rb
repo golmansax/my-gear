@@ -12,6 +12,7 @@ Teaspoon.configure do |config|
     suite.use_framework :mocha
     suite.matcher = 'spec/assets/**/*_spec.js'
     suite.boot_partial = 'boot_require_js'
+    suite.no_coverage = [%r{/vendor/assets/}, %r{/spec/assets}]
   end
 
   config.use_coverage = :default
