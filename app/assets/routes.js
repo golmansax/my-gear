@@ -1,17 +1,17 @@
 define([
-  'bower/react', 'bower/react_router', 'controllers/backbone_ctrl',
-  'controllers/app_ctrl', 'controllers/wardrobe_ctrl',
-  'controllers/clothing_item_view_ctrl', 'controllers/outfit_view_ctrl',
-  'models/clothing_item', 'models/outfit', 'collections/clothing_item_list'
-], function (React, Router, BackboneCtrl,
-             AppCtrl, WardrobeCtrl,
-             ClothingItemViewCtrl, OutfitViewCtrl,
-             ClothingItem, Outfit, ClothingItemList) {
+  'bower/react', 'bower/react_router', 'routes/backbone_route',
+  'routes/root_route', 'routes/wardrobe_route', 'routes/clothing_item_route',
+  'routes/outfit_route', 'models/clothing_item', 'models/outfit',
+  'collections/clothing_item_list'
+], function (React, Router, BackboneRoute,
+             RootRoute, WardrobeRoute, ClothingItemRoute,
+             OutfitRoute, ClothingItem, Outfit,
+             ClothingItemList) {
 
   'use strict';
 
   return Router.Routes(null,
-    Router.Route({ handler: AppCtrl },
+    Router.Route({ handler: RootRoute },
       Router.DefaultRoute(wardrobeRouteAttrs()),
       Router.Route(clothingItemRouteAttrs()),
       Router.Route(outfitRouteAttrs())
@@ -20,8 +20,8 @@ define([
 
   function wardrobeRouteAttrs() {
     return {
-      handler: BackboneCtrl,
-      ctrlClass: WardrobeCtrl,
+      handler: BackboneRoute,
+      routeClass: WardrobeRoute,
       collectionClass: ClothingItemList
     };
   }
@@ -30,8 +30,8 @@ define([
     return {
       name: 'clothing_item',
       path: '/clothing_items/:id',
-      handler: BackboneCtrl,
-      ctrlClass: ClothingItemViewCtrl,
+      handler: BackboneRoute,
+      routeClass: ClothingItemRoute,
       modelClass: ClothingItem
     };
   }
@@ -40,8 +40,8 @@ define([
     return {
       name: 'outfit',
       path: '/outfits/:id',
-      handler: BackboneCtrl,
-      ctrlClass: OutfitViewCtrl,
+      handler: BackboneRoute,
+      routeClass: OutfitRoute,
       modelClass: Outfit
     };
   }

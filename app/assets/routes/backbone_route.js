@@ -20,7 +20,7 @@ define(['bower/react'], function (React) {
       return state;
     },
     render: function () {
-      return this.props.ctrlClass(this.state);
+      return this.props.routeClass(this.state);
     }
   });
 });

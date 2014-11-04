@@ -6,7 +6,7 @@ define([
 
   return React.createClass({
     getInitialState: function () {
-      return { outfits: OutfitList() };
+      return { outfits: new OutfitList() };
     },
     render: function () {
       return React.DOM.div(null,
