@@ -1,4 +1,6 @@
-define(['bower/react', 'bower/moment'], function (React, moment) {
+define([
+  'bower/react', 'bower/underscore', 'bower/moment'
+], function (React, _, moment) {
   'use strict';
 
   return _(React.PropTypes).extend({

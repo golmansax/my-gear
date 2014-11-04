@@ -5,6 +5,7 @@
   "curly": true,
   "eqeqeq": true,
   "es3": true,
+  "-W024": false,
   "forin": true,
   "freeze": true,
   "immed": true,
@@ -33,7 +34,7 @@
   "eqnull": false,
   "esnext": false,
   "evil": false,
-  "expr": false,
+  "expr": true,
   "funcscope": false,
   "gcl": false,
   "globalstrict": false,
@@ -75,11 +76,14 @@
     "require": true,
     "define": true,
 
-    // Jasmine
-    "beforeEach": true,
+    // Mocha
     "describe": true,
-    "expect": true,
     "it": true,
-    "jasmine": true
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+
+    // Chai
+    "expect": true
   }
 }
