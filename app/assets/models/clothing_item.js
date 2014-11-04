@@ -1,6 +1,6 @@
 define([
-  'bower/backbone', 'bower/moment', 'bower/underscore'
-], function (Backbone, moment, _) {
+  'bower/backbone', 'bower/moment', 'bower/underscore', 'objects/prop_types'
+], function (Backbone, moment, _, PropTypes) {
   'use strict';
 
   return Backbone.Model.extend({
@@ -17,6 +17,12 @@ define([
     },
     url: function () {
       return 'clothing_items/' + (this.id || '');
+    }
+  }, {
+    propTypes: {
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      firstPurchaseDate: PropTypes.moment.isRequired
     }
   });
 });

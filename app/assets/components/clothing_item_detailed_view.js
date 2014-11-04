@@ -1,7 +1,8 @@
-define(['bower/react'], function (React) {
+define(['bower/react', 'models/clothing_item'], function (React, ClothingItem) {
   'use strict';
 
   return React.createClass({
+    propTypes: ClothingItem.propTypes,
     render: function () {
       var imageAttrs = {
         className: 'img-responsive',
