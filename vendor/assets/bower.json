@@ -12,6 +12,7 @@
     "underscore": "latest"
   },
   "devDependencies": {
-    "chai": "latest"
+    "chai": "latest",
+    "sinon": "latest"
   }
 }

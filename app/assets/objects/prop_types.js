@@ -1,4 +1,4 @@
-define(['bower/react', 'bower/moment'], function () {
+define(['bower/react', 'bower/moment'], function (React, moment) {
   'use strict';
 
   return _(React.PropTypes).extend({

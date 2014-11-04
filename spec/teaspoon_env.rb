@@ -15,22 +15,23 @@ Teaspoon.configure do |config|
     suite.no_coverage = [%r{/vendor/assets/}, %r{/spec/assets}]
   end
 
+  def add_coverage_thresholds!(coverage)
+    coverage.statements = 90
+    coverage.branches = 90
+    coverage.functions = 88
+    coverage.lines = 90
+  end
+
   config.use_coverage = :default
 
   config.coverage do |coverage|
     coverage.reports = ['text-summary', 'html']
     coverage.output_path = 'coverage/istanbul'
-    coverage.statements = 90
-    coverage.branches = 90
-    coverage.functions = 90
-    coverage.lines = 90
+    add_coverage_thresholds!(coverage)
   end
 
   config.coverage :ci do |coverage|
     coverage.reports = ['text']
-    coverage.statements = 90
-    coverage.branches = 90
-    coverage.functions = 90
-    coverage.lines = 90
+    add_coverage_thresholds!(coverage)
   end
 end

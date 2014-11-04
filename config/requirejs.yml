@@ -6,6 +6,7 @@ paths:
   'react-router': 'react-router/dist/react-router'
   'react-with-addons': 'react/react-with-addons'
   reqwest: 'reqwest/reqwest'
+  sinon: 'sinon/lib/sinon'
   underscore: 'underscore/underscore'
 map:
   backbone:
@@ -16,6 +17,7 @@ map:
     'bower/react': 'react.backbone' # This loads react
     'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'
+    'bower/sinon': 'sinon'
     'bower/underscore': 'underscore'
 # Add shim config to application.js (so that it is set even after js is
 #   compiled + optimized)

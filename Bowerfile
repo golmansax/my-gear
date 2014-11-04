@@ -10,4 +10,5 @@ asset 'underscore'
 
 dependency_group :dev_dependencies do
   asset 'chai'
+  asset 'sinon'
 end
