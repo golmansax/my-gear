@@ -15,7 +15,7 @@ map:
     'bower/backbone': 'backbone'
     'bower/moment': 'moment'
     'bower/react': 'react.backbone' # This loads react
-    'bower/react_router': 'react-router'
+    #'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'
     'bower/sinon': 'sinon'
     'bower/underscore': 'underscore'

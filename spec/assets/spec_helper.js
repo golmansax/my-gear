@@ -8,7 +8,8 @@ window.expect = window.chai.expect;
 require.config({
  map: {
    '*': {
-     'react': 'react-with-addons'
+     'react': 'react-with-addons',
+     'bower/react_router': 'support/react_router_mock'
    }
  },
  urlArgs: '&instrument=1',
