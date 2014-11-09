@@ -34,7 +34,7 @@
   "eqnull": false,
   "esnext": false,
   "evil": false,
-  "expr": true,
+  "expr": false,
   "funcscope": false,
   "gcl": false,
   "globalstrict": false,
@@ -74,16 +74,6 @@
   "globals": {
     // RequireJS
     "require": true,
-    "define": true,
-
-    // Mocha
-    "describe": true,
-    "it": true,
-    "before": true,
-    "beforeEach": true,
-    "after": true,
-
-    // Chai
-    "expect": true
+    "define": true
   }
 }

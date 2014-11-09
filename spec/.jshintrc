@@ -1,0 +1,17 @@
+{
+  "extends": "../.jshintrc",
+
+  "expr": true,
+
+  "globals": {
+    // Mocha
+    "describe": true,
+    "it": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+
+    // Chai
+    "expect": true
+  }
+}
