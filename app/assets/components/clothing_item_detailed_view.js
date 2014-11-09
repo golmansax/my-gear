@@ -16,7 +16,7 @@ define(['bower/react', 'models/clothing_item'], function (React, ClothingItem) {
         React.DOM.div({ className: 'col-sm-6' },
           React.DOM.h1(null, this.props.name),
           React.DOM.h4(null,
-            React.DOM.strong(null, 'First purchase date:'),
+            React.DOM.strong(null, 'First purchase date: '),
             this.props.firstPurchaseDate.format('MMMM YYYY')
           )
         )
