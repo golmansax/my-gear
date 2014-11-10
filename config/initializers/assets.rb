@@ -15,7 +15,7 @@ unless Rails.env.production?
 end
 
 asset_paths = [Rails.root.join('app', 'assets')]
-asset_paths << Rails.root.join('vendor', 'assets', 'bower_components')
+asset_paths << Rails.root.join('vendor', 'assets')
 
 # Following is for Bootstrap fonts
 asset_paths << Rails.root.join(

@@ -1,7 +1,6 @@
 define([
-  'components/bootstrap_nav_item', 'support/test_utils', 'bower/sinon',
-  'bower/react_router'
-], function (BootstrapNavItem, TestUtils, sinon, Router) {
+  'components/bootstrap_nav_item', 'support/test_utils'
+], function (BootstrapNavItem, TestUtils) {
   'use strict';
 
   describe('components/bootstrap_nav_item', function () {

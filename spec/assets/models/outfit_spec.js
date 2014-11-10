@@ -1,4 +1,4 @@
-define(['models/outfit', 'bower/sinon'], function (Outfit, sinon) {
+define(['models/outfit'], function (Outfit) {
   'use strict';
 
   describe('models/outfit', function () {

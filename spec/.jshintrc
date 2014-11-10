@@ -13,6 +13,9 @@
     "fixture": true,
 
     // Chai
-    "expect": true
+    "expect": true,
+
+    // Sinon
+    "sinon": true
   }
 }

@@ -1,6 +1,4 @@
-define([
-  'collections/outfit_list', 'bower/sinon'
-], function (OutfitList, sinon) {
+define(['collections/outfit_list'], function (OutfitList) {
   'use strict';
 
   describe('collections/outfit_list', function () {

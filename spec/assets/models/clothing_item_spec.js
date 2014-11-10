@@ -1,6 +1,6 @@
 define([
-  'models/clothing_item', 'bower/moment', 'bower/sinon'
-], function (ClothingItem, moment, sinon) {
+  'models/clothing_item', 'bower/moment'
+], function (ClothingItem, moment) {
   'use strict';
 
   describe('models/clothing_item', function () {

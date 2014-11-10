@@ -7,9 +7,3 @@ asset 'react'
 asset 'react.backbone'
 asset 'react-router'
 asset 'underscore'
-
-dependency_group :dev_dependencies do
-  asset 'chai'
-  asset 'sinon'
-  asset 'sinon-chai'
-end
