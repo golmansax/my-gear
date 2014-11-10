@@ -1,9 +1,9 @@
 define(['bower/reqwest'], function (reqwest) {
   'use strict';
 
-  return new JQueryFake();
+  return new JQueryMock();
 
-  function JQueryFake() {
+  function JQueryMock() {
     this.ajax = reqwest.compat;
     return this;
   }
