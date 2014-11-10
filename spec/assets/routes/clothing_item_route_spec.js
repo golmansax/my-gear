@@ -16,6 +16,7 @@ define([
     });
 
     it('fetches model on initialization', function () {
+      model.isValid.returns(false);
       TestUtils.renderIntoDocument(ClothingItemRoute({ model: model }));
       expect(model.fetch).to.have.been.calledWith();
     });
