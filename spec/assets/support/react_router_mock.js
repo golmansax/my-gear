@@ -2,6 +2,9 @@ define(['support/mock_react_class'], function (MockReactClass) {
   'use strict';
 
   return {
-    Link: MockReactClass
+    Link: MockReactClass,
+    ActiveState: {
+      isActive: function () {}
+    }
   };
 });

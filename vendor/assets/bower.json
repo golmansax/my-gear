@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "chai": "latest",
-    "sinon": "latest"
+    "sinon": "latest",
+    "sinon-chai": "latest"
   }
 }
