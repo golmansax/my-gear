@@ -3,12 +3,10 @@
 //= require support/sinon-chai
 //= require require
 //= require support/phantomjs_shims
+//= require support/environment_check
 
 (function () {
   'use strict';
-
-  var inTest = <%= Rails.env.test? %>;
-  if (!inTest) { throw 'Not in Rails test environment'; }
 
   /* global window */
   window.expect = window.chai.expect;

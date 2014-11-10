@@ -1,5 +1,5 @@
 {
-  "excludeFiles": ["**/tmp/**", "**/support/phantomjs-shims.js", "**/spec_helper.js"],
+  "excludeFiles": ["**/tmp/**", "**/support/phantomjs_shims.js", "**/spec_helper.js"],
 
   "requireSpaceAfterKeywords": [
     "if",

@@ -1,0 +1,5 @@
+if (!<%= Rails.env.test? %>) {
+  window.alert('Not in Rails test environment');
+  window.require = undefined;
+  throw 'Not in Rails test environment';
+}
