@@ -1,5 +1,9 @@
-require.config({
- shim: {
-   'react-router': ['initializers/expose_react_hack']
- }
-});
+(function () {
+  'use strict';
+
+  require.config({
+   shim: {
+     'react-router': ['initializers/expose_react_hack']
+   }
+  });
+})();
