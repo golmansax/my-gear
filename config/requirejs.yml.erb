@@ -1,10 +1,9 @@
 paths:
   backbone: 'backbone/backbone'
   moment: 'moment/moment'
-  react: 'react/react'
+  react: <%= Rails.env.test? ? 'react/react-with-addons' : 'react/react' %>
   'react.backbone': 'react.backbone/react.backbone'
-  'react-router': 'react-router/dist/react-router'
-  'react-with-addons': 'react/react-with-addons'
+  'react-router': <%= Rails.env.test? ? 'support/react_router_mock' : 'react-router/dist/react-router' %>
   reqwest: 'reqwest/reqwest'
   sinon: 'sinon/lib/sinon'
   underscore: 'underscore/underscore'
@@ -15,9 +14,11 @@ map:
     'bower/backbone': 'backbone'
     'bower/moment': 'moment'
     'bower/react': 'react.backbone' # This loads react
-    #'bower/react_router': 'react-router'
+    'bower/react_router': 'react-router'
     'bower/reqwest': 'reqwest'
     'bower/sinon': 'sinon'
     'bower/underscore': 'underscore'
+urlArgs: '<%= Rails.env.test? ? '&instrument=1'.html_safe : '' %>'
+
 # Add shim config to application.js (so that it is set even after js is
 #   compiled + optimized)

@@ -1,8 +1,4 @@
-require.config({
- shim: {
-   'react-router': ['initializers/expose_react_hack']
- }
-});
+//= require config
 
 require([
   'initializers', 'objects/window', 'bower/react', 'routes'
