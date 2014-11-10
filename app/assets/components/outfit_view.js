@@ -4,7 +4,7 @@ define([
 ], function (React, Router, _, ClothingItem) {
   'use strict';
 
-  return React.createClass({
+  return React.createFactory(React.createClass({
     renderClothingItems: function (clothingItems) {
       return _(clothingItems).map(function (clothingItem) {
         var linkAttrs = {
@@ -29,5 +29,5 @@ define([
         this.renderClothingItems(clothingItems)
       );
     }
-  });
+  }));
 });

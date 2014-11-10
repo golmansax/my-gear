@@ -4,7 +4,7 @@ define([
 
   'use strict';
 
-  return React.createClass({
+  return React.createFactory(React.createClass({
     renderGridItem: function (clothingItem) {
       return React.DOM.div({ key: clothingItem.id, className: 'col-sm-4' },
         ClothingItemView(clothingItem)
@@ -15,5 +15,5 @@ define([
         _(this.props.clothingItems).map(this.renderGridItem)
       );
     }
-  });
+  }));
 });

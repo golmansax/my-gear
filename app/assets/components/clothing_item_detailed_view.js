@@ -1,7 +1,7 @@
 define(['bower/react', 'models/clothing_item'], function (React, ClothingItem) {
   'use strict';
 
-  return React.createClass({
+  return React.createFactory(React.createClass({
     propTypes: ClothingItem.propTypes,
     render: function () {
       var imageAttrs = {
@@ -22,5 +22,5 @@ define(['bower/react', 'models/clothing_item'], function (React, ClothingItem) {
         )
       );
     }
-  });
+  }));
 });

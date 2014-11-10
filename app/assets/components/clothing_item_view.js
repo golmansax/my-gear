@@ -3,7 +3,7 @@ define([
 ], function (React, Router, ClothingItem) {
   'use strict';
 
-  return React.createClass({
+  return React.createFactory(React.createClass({
     propTypes: ClothingItem.propTypes,
     render: function () {
       var imageAttrs = {
@@ -18,5 +18,5 @@ define([
         React.DOM.img(imageAttrs)
       );
     }
-  });
+  }));
 });

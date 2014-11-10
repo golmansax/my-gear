@@ -3,7 +3,7 @@ define([
 ], function (React, Router, PropTypes) {
   'use strict';
 
-  return React.createClass({
+  return React.createFactory(React.createClass({
     propTypes: {
       to: PropTypes.string.isRequired,
       params: PropTypes.object
@@ -20,5 +20,5 @@ define([
         Router.Link(this.props)
       );
     }
-  });
+  }));
 });
