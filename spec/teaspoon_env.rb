@@ -6,7 +6,7 @@ end
 
 Teaspoon.configure do |config|
   config.asset_paths = ['spec/assets']
-  config.fixture_paths = ['spec/assets/fixtures']
+  config.fixture_paths = []
 
   config.suite do |suite|
     suite.use_framework :mocha

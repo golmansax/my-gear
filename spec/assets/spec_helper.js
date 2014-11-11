@@ -3,7 +3,7 @@
 //= require support/sinon-chai
 //= require require
 //= require support/phantomjs_shims
-//= require support/environment_check
+//= require magic_lamp
 
 (function () {
   'use strict';

@@ -21,13 +21,15 @@ group :development do
 end
 
 group :test do
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'magic_lamp'
   gem 'shoulda-matchers'
+  gem 'teaspoon', github: 'golmansax/teaspoon'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
-  gem 'teaspoon', github: 'golmansax/teaspoon'
   gem 'travis'
 end

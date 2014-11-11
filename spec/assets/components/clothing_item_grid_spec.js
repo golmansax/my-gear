@@ -1,15 +1,19 @@
 define([
   'support/test_utils', 'components/clothing_item_grid',
-  'models/clothing_item', 'components/clothing_item_view'
-], function (TestUtils, ClothingItemGrid, ClothingItem, ClothingItemView) {
+  'models/clothing_item', 'components/clothing_item_view',
+  'support/magic_lamp'
+], function (TestUtils, ClothingItemGrid,
+             ClothingItem, ClothingItemView,
+             MagicLamp) {
+
   'use strict';
 
   describe('components/clothing_item_grid', function () {
     var clothingItem;
 
     beforeEach(function () {
-      this.fixtures = fixture.load('clothing_item.json');
-      clothingItem = new ClothingItem(fixture.json[0], { parse: true });
+      var fixture = MagicLamp.json('clothing_items/show');
+      clothingItem = new ClothingItem(fixture, { parse: true });
     });
 
     it('renders a ClothingItemView for each clothingItem', function () {
