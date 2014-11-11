@@ -39,7 +39,7 @@ define([
       expect(TestUtils.findRenderedComponentWithType(
         route,
         ClothingItemDetailedView
-      )).to.be;
+      )).to.be.ok();
     });
   });
 });

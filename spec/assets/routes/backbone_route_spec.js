@@ -19,13 +19,13 @@ define([
 
       it('attaches an instance of the modelClass to the state', function () {
         expect(route.state.model).to.equal(model);
-        expect(modelClass).to.have.been.called;
+        expect(modelClass.called).to.be.true();
       });
 
       it('renders the routeClass', function () {
         expect(
           TestUtils.findRenderedComponentWithType(route, MockReactClass)
-        ).to.be;
+        ).to.be.ok();
       });
 
       it('switches state when props are changed', function () {
@@ -36,7 +36,7 @@ define([
           collectionClass: collectionClass,
           routeClass: MockReactClass
         });
-        expect(route.state.model).not.to.be;
+        expect(route.state.model).not.to.be.ok();
         expect(route.state.collection).to.equal(collection);
       });
     });
@@ -52,7 +52,7 @@ define([
 
       var route = TestUtils.renderIntoDocument(BackboneRoute(routeAttrs));
       expect(route.state.collection).to.equal(collection);
-      expect(collectionClass).to.have.been.called;
+      expect(collectionClass.called).to.be.true();
     });
 
     it('throws an error if both model and collection specified', function () {

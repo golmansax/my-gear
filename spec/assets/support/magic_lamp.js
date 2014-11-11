@@ -1,4 +1,4 @@
-define(['objects/window'], function (window) {
+define(['objects/window', 'bower/underscore'], function (window, _) {
   'use strict';
 
   var MagicLamp = window.MagicLamp;

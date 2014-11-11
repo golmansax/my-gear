@@ -1,4 +1,4 @@
-//= require support/chai
+//= require bower_components/chai/chai
 //= require support/sinon
 //= require support/sinon-chai
 //= require require

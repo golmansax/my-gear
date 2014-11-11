@@ -32,11 +32,11 @@ define([
 
     describe('#isValid', function () {
       it('returns false when name is empty', function () {
-        expect(new ClothingItem().isValid()).to.be.false;
+        expect(new ClothingItem().isValid()).to.be.false();
       });
 
       it('returns true when name is present', function () {
-        expect(clothingItem.isValid()).to.be.true;
+        expect(clothingItem.isValid()).to.be.true();
       });
     });
 

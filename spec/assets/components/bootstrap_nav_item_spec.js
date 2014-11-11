@@ -21,7 +21,7 @@ define([
       expect(TestUtils.findRenderedDOMComponentWithClass(
         navItem,
         'active'
-      )).to.be;
+      )).to.be.ok();
     });
 
     it('does not have .active CSS class if it is not active', function () {

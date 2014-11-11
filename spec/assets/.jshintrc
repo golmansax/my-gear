@@ -1,7 +1,5 @@
 {
-  "extends": "../.jshintrc",
-
-  "expr": true,
+  "extends": "../../.jshintrc",
 
   "globals": {
     // Mocha
