@@ -3,19 +3,20 @@ define([
 ], function (React, Router, BootstrapNavItem) {
   'use strict';
 
-  return React.createBackboneClass({
+  return React.createFactory(React.createBackboneClass({
     componentDidMount: function () {
       this.getCollection().fetch();
     },
     createEntry: function (entry) {
-      var myId = entry.get('id');
+      var modelAttributes = entry.attributes;
+      var myId = modelAttributes.id;
       var itemAttrs = {
         to: 'outfit',
         params: { id: myId },
         key: 'outfit/' + myId
       };
 
-      return BootstrapNavItem(itemAttrs, entry.get('name'));
+      return BootstrapNavItem(itemAttrs, modelAttributes.name);
     },
     render: function () {
       return React.DOM.div({ className: 'navbar navbar-default' },
@@ -29,5 +30,5 @@ define([
         )
       );
     }
-  });
+  }));
 });

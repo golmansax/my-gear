@@ -1,7 +1,7 @@
 define([
   'support/test_utils', 'components/outfit_view', 'models/outfit',
-  'support/magic_lamp'
-], function (TestUtils, OutfitView, Outfit, MagicLamp) {
+  'support/magic_lamp', 'bower/react_router'
+], function (TestUtils, OutfitView, Outfit, MagicLamp, Router) {
   'use strict';
 
   describe('components/outfit_view', function () {
@@ -12,8 +12,15 @@ define([
       outfit = new Outfit(fixture, { parse: true });
     });
 
-    it('renders', function () {
-      TestUtils.renderIntoDocument(new OutfitView(outfit));
+    it('renders a Router Link for each clothing item', function () {
+      var outfitView = TestUtils.renderIntoDocument(
+        OutfitView(outfit.attributes)
+      );
+
+      expect(TestUtils.findRenderedComponentWithType(
+        outfitView,
+        Router.Link
+      )).to.be.ok();
     });
   });
 });

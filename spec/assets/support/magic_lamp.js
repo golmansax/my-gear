@@ -9,7 +9,13 @@ define(['objects/window', 'bower/underscore'], function (window, _) {
 
   return _(MagicLamp).extend({
     json: function (path) {
-      return JSON.parse(MagicLamp.genie.cache[path]);
+      var cached_partial = MagicLamp.genie.cache[path];
+
+      if (!cached_partial) {
+        throw 'The following path has not been loaded yet: ' + path;
+      }
+
+      return JSON.parse(cached_partial);
     }
   });
 });

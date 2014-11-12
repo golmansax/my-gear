@@ -4,7 +4,7 @@ define([
 ], function (React, Router, OutfitList, Header) {
   'use strict';
 
-  return React.createClass({
+  return React.createFactory(React.createClass({
     getInitialState: function () {
       return { outfits: new OutfitList() };
     },
@@ -16,5 +16,5 @@ define([
         )
       );
     }
-  });
+  }));
 });

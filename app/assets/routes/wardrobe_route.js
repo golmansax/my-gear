@@ -3,7 +3,7 @@ define([
 ], function (React, ClothingItemGrid) {
   'use strict';
 
-  return React.createBackboneClass({
+  return React.createFactory(React.createBackboneClass({
     componentDidMount: function () {
       this.getCollection().fetch();
     },
@@ -17,5 +17,5 @@ define([
         ClothingItemGrid({ clothingItems: clothingItems })
       );
     }
-  });
+  }));
 });

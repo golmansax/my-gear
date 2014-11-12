@@ -24,7 +24,9 @@
   require.config({
     map: {
       'routes': {
-        'components/clothing_item_detailed_view': 'support/mock_react_class'
+        'components/clothing_item_detailed_view': 'support/mock_react_class',
+        'components/clothing_item_grid': 'support/mock_react_class',
+        'components/clothing_item_view': 'support/mock_react_class'
       }
     }
   });
