@@ -27,7 +27,7 @@
     "beforeOpeningRoundBrace": true
   },
 
-  "disallowMultipleVarDecl": "exceptUndefined",
+  // "disallowMultipleVarDecl": "exceptUndefined",
 
   "requireBlocksOnNewline": 1,
 
