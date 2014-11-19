@@ -25,6 +25,9 @@ define([
             Router.Link({ className: 'navbar-brand', to: '/' }, 'HOME')
           ),
           React.DOM.ul({ className: 'navbar-nav nav' },
+            BootstrapNavItem({ to: 'about' }, 'About')
+          ),
+          React.DOM.ul({ className: 'navbar-nav nav' },
             this.getCollection().map(this.createEntry)
           )
         )
