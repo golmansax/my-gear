@@ -4,6 +4,7 @@ FactoryGirl.define do
     model 'Hoodie'
     first_purchase_date Date.today
     recent_purchase_date Date.today
+    type 'Junk'
 
     factory :outerwear, class: 'Outerwear' do
       brand 'Marmot'

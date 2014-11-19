@@ -19,7 +19,7 @@ define(['support/magic_lamp'], function (MagicLamp) {
       });
 
       it('parses the cached value for the path', function () {
-        MagicLamp.genie.cache['hello'] = '{"a":["b"]}';
+        MagicLamp.genie.cache.hello = '{"a":["b"]}';
         expect(MagicLamp.json('hello')).to.deep.equal({ a: ['b'] });
       });
     });

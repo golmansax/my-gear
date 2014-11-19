@@ -17,7 +17,7 @@ MagicLamp.define(controller: OutfitsController) do
       model: 'Down Jacket',
       first_purchase_date: Date.parse('2014-10-30'),
       recent_purchase_date: Date.parse('2014-11-01'),
-      outfits: [@outfit]
+      outfits: [@outfit],
     )
 
     render :show
