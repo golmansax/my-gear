@@ -4,9 +4,10 @@ FactoryGirl.define do
     model 'Hoodie'
     first_purchase_date Date.today
     recent_purchase_date Date.today
-    type 'Junk'
+    type 'Need to overwrite this'
 
     factory :outerwear, class: 'Outerwear' do
+      type 'Outerwear'
       brand 'Marmot'
       model 'ROM Jacket'
       first_purchase_date Date.parse('July 2014')
