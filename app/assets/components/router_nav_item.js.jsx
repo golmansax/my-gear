@@ -16,8 +16,10 @@ define([
         this.props.query
       );
 
-      return React.DOM.li({ className: isActive ? 'active' : '' },
-        Router.Link(this.props)
+      return (
+        <li className={isActive ? 'active' : ''}>
+          <Router.Link ...{this.props} /></Router.Link>
+        </li>
       );
     }
   }));

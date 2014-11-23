@@ -4,6 +4,7 @@ asset 'moment'
 asset 'reqwest'
 asset 'react', '~> 0.12.0'
 asset 'react.backbone'
+asset 'react-bootstrap'
 asset 'react-router'
 asset 'underscore'
 

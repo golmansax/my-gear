@@ -1,6 +1,6 @@
 define([
-  'components/bootstrap_nav_item', 'support/test_utils'
-], function (BootstrapNavItem, TestUtils) {
+  'components/router_nav_item', 'support/test_utils'
+], function (RouterNavItem, TestUtils) {
   'use strict';
 
   describe('components/bootstrap_nav_item', function () {
@@ -10,7 +10,7 @@ define([
     };
 
     it('has .active CSS class if it is the active route', function () {
-      var navItem = TestUtils.renderIntoDocument(BootstrapNavItem(itemAttrs));
+      var navItem = TestUtils.renderIntoDocument(RouterNavItem(itemAttrs));
       var isActiveStub = sinon.stub(
         navItem,
         'isActive'
@@ -25,7 +25,7 @@ define([
     });
 
     it('does not have .active CSS class if it is not active', function () {
-      var navItem = TestUtils.renderIntoDocument(BootstrapNavItem(itemAttrs));
+      var navItem = TestUtils.renderIntoDocument(RouterNavItem(itemAttrs));
       var isActiveStub = sinon.stub(
         navItem,
         'isActive'

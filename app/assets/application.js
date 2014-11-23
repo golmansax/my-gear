@@ -5,5 +5,5 @@ require([
 ], function (initializers, window, React, routes) {
   'use strict';
 
-  React.renderComponent(routes, window.document.body);
+  React.render(routes, window.document.body);
 });

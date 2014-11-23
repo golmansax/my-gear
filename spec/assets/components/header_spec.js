@@ -1,7 +1,7 @@
 define([
-  'components/header', 'support/test_utils', 'components/bootstrap_nav_item',
-  'bower/underscore'
-], function (Header, TestUtils, BootstrapNavItem, _) {
+  'components/header', 'support/test_utils', 'components/router_nav_item',
+  'bower/underscore', 'bower/react_bootstrap'
+], function (Header, TestUtils, RouterNavItem, _, ReactBootstrap) {
   'use strict';
 
   describe('components/header', function () {
@@ -19,9 +19,14 @@ define([
     });
 
     it('has a BootstrapNavItem for each outfit', function () {
-      expect(TestUtils.findRenderedComponentWithType(
+      var dropdownButton = TestUtils.findRenderedComponentWithType(
         this.header,
-        BootstrapNavItem
+        ReactBootstrap.DropdownButton
+      );
+
+      expect(TestUtils.findRenderedComponentWithType(
+        dropdownButton,
+        RouterNavItem
       )).to.be.ok();
     });
   });
