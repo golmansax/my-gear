@@ -1,7 +1,7 @@
 define([
-  'components/header', 'support/test_utils', 'components/router_nav_item',
-  'bower/underscore', 'bower/react_bootstrap'
-], function (Header, TestUtils, RouterNavItem, _, ReactBootstrap) {
+  'components/header', 'support/test_utils', 'bower/react_router',
+  'bower/underscore', 'bower/react_bootstrap', 'bower/react'
+], function (Header, TestUtils, Router, _, ReactBootstrap, React) {
   'use strict';
 
   describe('components/header', function () {
@@ -10,7 +10,9 @@ define([
       _(this.outfitsMock).extend({ fetch: sinon.stub(), on: sinon.stub() });
 
       this.header = TestUtils.renderIntoDocument(
-        Header({ collection: this.outfitsMock })
+        /* jshint maxlen: false, quotmark: false */
+        <Header collection={this.outfitsMock} />
+        /* jshint maxlen: 80, quotmark: single */
       );
     });
 
@@ -18,7 +20,7 @@ define([
       expect(this.outfitsMock.fetch.called).to.be.true();
     });
 
-    it('has a BootstrapNavItem for each outfit', function () {
+    it('has a Router.Link for each outfit', function () {
       var dropdownButton = TestUtils.findRenderedComponentWithType(
         this.header,
         ReactBootstrap.DropdownButton
@@ -26,7 +28,7 @@ define([
 
       expect(TestUtils.findRenderedComponentWithType(
         dropdownButton,
-        RouterNavItem
+        Router.Link
       )).to.be.ok();
     });
   });

@@ -10,7 +10,7 @@ Teaspoon.configure do |config|
 
   config.suite do |suite|
     suite.use_framework :mocha
-    suite.matcher = 'spec/assets/**/*_spec.js'
+    suite.matcher = 'spec/assets/**/*_spec.{js,js.jsx,.jsx}'
     suite.boot_partial = 'boot_require_js'
     suite.no_coverage = [%r{/vendor/assets/}, %r{/spec/assets}]
   end

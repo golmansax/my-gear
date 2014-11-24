@@ -3,7 +3,7 @@ define([
 ], function (React, Router, PropTypes) {
   'use strict';
 
-  return React.createFactory(React.createClass({
+  return React.createClass({
     propTypes: {
       to: PropTypes.string.isRequired,
       params: PropTypes.object
@@ -17,10 +17,12 @@ define([
       );
 
       return (
+        /* jshint maxlen: false, quotmark: false */
         <li className={isActive ? 'active' : ''}>
-          <Router.Link ...{this.props} /></Router.Link>
+          <Router.Link {...this.props} />
         </li>
+        /* jshint maxlen: 80, quotmark: single */
       );
     }
-  }));
+  });
 });

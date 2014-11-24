@@ -11,15 +11,14 @@
   /* global window */
   window.expect = window.chai.expect;
 
-  var globalSandbox;
   beforeEach(function () {
-    globalSandbox = sinon.sandbox.create();
-    globalSandbox.stub(window.console, 'warn', function (message) {
+    this.sandbox = sinon.sandbox.create();
+    this.sandbox.stub(window.console, 'warn', function (message) {
       throw message;
     });
   });
 
-  afterEach(function () { globalSandbox.restore(); });
+  afterEach(function () { this.sandbox.restore(); });
 
   require.config({
     map: {
