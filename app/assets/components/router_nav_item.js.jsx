@@ -17,11 +17,9 @@ define([
       );
 
       return (
-        /* jshint maxlen: false, quotmark: false */
         <li className={isActive ? 'active' : ''}>
           <Router.Link {...this.props} />
         </li>
-        /* jshint maxlen: 80, quotmark: single */
       );
     }
   });

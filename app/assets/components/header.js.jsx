@@ -17,16 +17,13 @@ define([
       };
 
       return (
-        /* jshint maxlen: false, quotmark: false */
         <li key={'outfit/' + myId}>
           <Router.Link {...itemAttrs}>{modelAttributes.name}</Router.Link>
         </li>
-        /* jshint maxlen: 80, quotmark: single */
       );
     },
     render: function () {
       return (
-        /* jshint maxlen: false, quotmark: false */
         <ReactBootstrap.Navbar>
           <div className='navbar-header'>
             <Router.Link className='navbar-brand' to='/'>HOME</Router.Link>
@@ -38,7 +35,6 @@ define([
             </ReactBootstrap.DropdownButton>
           </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>
-        /* jshint maxlen: 80, quotmark: single */
       );
     }
   });

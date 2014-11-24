@@ -10,9 +10,7 @@ define([
       _(this.outfitsMock).extend({ fetch: sinon.stub(), on: sinon.stub() });
 
       this.header = TestUtils.renderIntoDocument(
-        /* jshint maxlen: false, quotmark: false */
         <Header collection={this.outfitsMock} />
-        /* jshint maxlen: 80, quotmark: single */
       );
     });
 

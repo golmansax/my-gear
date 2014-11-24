@@ -13,13 +13,11 @@ define([
         };
 
         return (
-          /* jshint maxlen: false, quotmark: false */
           <div key={clothingItem.id}>
             <Router.Link {...linkAttrs}>
               {clothingItem.name}
             </Router.Link>
           </div>
-          /* jshint maxlen: 80, quotmark: single */
         );
       });
     },
@@ -29,12 +27,10 @@ define([
       });
 
       return (
-        /* jshint maxlen: false, quotmark: false */
         <div>
           {this.props.name}
           {this.renderClothingItems(clothingItems)}
         </div>
-        /* jshint maxlen: 80, quotmark: single */
       );
     }
   });

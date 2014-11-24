@@ -12,10 +12,9 @@ define([
       };
 
       return (
-        /* jshint maxlen: false, quotmark: false */
         <ReactBootstrap.Row>
           <ReactBootstrap.Col sm={6}>
-            <img {...imgAttrs} />
+            <img {...imageAttrs} />
           </ReactBootstrap.Col>
           <ReactBootstrap.Col sm={6}>
             <h1>{this.props.name}</h1>
@@ -25,7 +24,6 @@ define([
             </h4>
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>
-        /* jshint maxlen: 80, quotmark: single */
       );
     }
   });

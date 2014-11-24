@@ -1,6 +1,8 @@
 {
   "excludeFiles": ["**/tmp/**", "**/support/phantomjs_shims.js", "**/spec_helper.js"],
 
+  "fileExtensions": [".js", ".jsx"],
+
   "requireSpaceAfterKeywords": [
     "if",
     "else",
@@ -79,9 +81,13 @@
 
   "validateLineBreaks": "LF",
 
+  "validateQuoteMarks": "'",
+
   "disallowKeywordsOnNewLine": ["else"],
 
   "requireLineFeedAtFileEnd": true,
+
+  "maximumLineLength": 80,
 
   "safeContextKeyword": ["self"],
 

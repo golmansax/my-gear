@@ -12,14 +12,12 @@ define([
       };
 
       return (
-        /* jshint maxlen: false, quotmark: false */
         <div>
           <Router.Link to='clothing_item' params={{ id: this.props.id }}>
             {this.props.name}
           </Router.Link>
           <img {...imageAttrs} />
         </div>
-        /* jshint maxlen: 80, quotmark: single */
       );
     }
   });

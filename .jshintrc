@@ -16,7 +16,7 @@
   "noempty": true,
   "nonew": true,
   "plusplus": false,
-  "quotmark": "single",
+  "quotmark": false, // use jscs
   "undef": true, // See below for a list of globals
   "unused": true,
   "strict": true,
@@ -25,7 +25,7 @@
   "maxdepth": 3,
   "maxstatements": 10,
   "maxcomplexity": 3,
-  "maxlen": 80,
+  "maxlen": false, // use jscs
 
   // Relaxing options: when set to true, produces fewer errors
   "asi": false,

@@ -11,9 +11,7 @@ define([
       };
 
       this.instance = (
-        /* jshint maxlen: false, quotmark: false */
         <RouterNavItem {...itemAttrs} />
-        /* jshint maxlen: 80, quotmark: single */
       );
     });
 
