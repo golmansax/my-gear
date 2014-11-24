@@ -6,8 +6,8 @@
   },
   "devDependencies": {
     "istanbul": "latest",
-    "jscs": "latest",
-    "jshint": "latest"
+    "jsxcs": "latest",
+    "jsxhint": "latest"
   },
   "repository": {
     "type" : "git",
