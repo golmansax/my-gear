@@ -13,7 +13,7 @@ define([
         <div>
           <Header collection={this.state.outfits} />
           <div className='container'>
-            {this.props.activeRouteHandler()}
+            <Router.RouteHandler />
           </div>
         </div>
       );

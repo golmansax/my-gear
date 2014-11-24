@@ -1,4 +1,6 @@
-define(['bower/react', 'objects/prop_types'], function (React, PropTypes) {
+define([
+  'bower/react', 'bower/react_router', 'objects/prop_types'
+], function (React, Router, PropTypes) {
   'use strict';
 
   return React.createClass({
@@ -17,6 +19,7 @@ define(['bower/react', 'objects/prop_types'], function (React, PropTypes) {
         }
       }
     },
+    mixins: [Router.State],
     getInitialState: function () {
       return this.stateFromProps(this.props);
     },
@@ -27,7 +30,7 @@ define(['bower/react', 'objects/prop_types'], function (React, PropTypes) {
       var state = { model: null, collection: null };
 
       if (props.modelClass) {
-        state.model = new props.modelClass(props.params);
+        state.model = new props.modelClass(this.getParams());
       } else {
         state.collection = new props.collectionClass();
       }

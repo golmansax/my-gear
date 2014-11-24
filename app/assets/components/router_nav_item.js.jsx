@@ -8,12 +8,12 @@ define([
       to: PropTypes.string.isRequired,
       params: PropTypes.object
     },
-    mixins: [Router.ActiveState],
+    mixins: [Router.State],
     render: function () {
       var isActive = this.isActive(
         this.props.to,
-        this.props.params,
-        this.props.query
+        this.getParams(),
+        this.getQuery()
       );
 
       return (

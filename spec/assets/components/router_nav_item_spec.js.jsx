@@ -10,37 +10,36 @@ define([
         params: { road: '101' }
       };
 
-      this.instance = (
+      this.navItem = TestUtils.renderIntoDocument(
         <RouterNavItem {...itemAttrs} />
       );
+      this.sandbox.stub(this.navItem, 'getParams').returns({ road: '101' });
     });
 
     it('has .active CSS class if it is the active route', function () {
-      var navItem = TestUtils.renderIntoDocument(this.instance);
-      var isActiveStub = sinon.stub(
-        navItem,
+      var isActiveStub = this.sandbox.stub(
+        this.navItem,
         'isActive'
       ).returns(true);
-      navItem.forceUpdate();
+      this.navItem.forceUpdate();
 
       expect(isActiveStub).to.have.been.calledWith('sf', { road: '101' });
       expect(TestUtils.findRenderedDOMComponentWithClass(
-        navItem,
+        this.navItem,
         'active'
       )).to.be.ok();
     });
 
     it('does not have .active CSS class if it is not active', function () {
-      var navItem = TestUtils.renderIntoDocument(this.instance);
-      var isActiveStub = sinon.stub(
-        navItem,
+      var isActiveStub = this.sandbox.stub(
+        this.navItem,
         'isActive'
       ).returns(false);
-      navItem.forceUpdate();
+      this.navItem.forceUpdate();
 
       expect(isActiveStub).to.have.been.calledWith('sf', { road: '101' });
       expect(TestUtils.scryRenderedDOMComponentsWithClass(
-        navItem,
+        this.navItem,
         'active'
       )).to.have.length(0);
     });
