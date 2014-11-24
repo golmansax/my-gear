@@ -1,7 +1,7 @@
 define([
   'support/test_utils', 'components/clothing_item_view', 'models/clothing_item',
-  'support/magic_lamp'
-], function (TestUtils, ClothingItemView, ClothingItem, MagicLamp) {
+  'support/magic_lamp', 'bower/react'
+], function (TestUtils, ClothingItemView, ClothingItem, MagicLamp, React) {
   'use strict';
 
   describe('components/clothing_item_view', function () {
@@ -12,7 +12,7 @@ define([
 
     it('renders', function () {
       TestUtils.renderIntoDocument(
-        ClothingItemView(this.clothingItem.attributes)
+        <ClothingItemView {...this.clothingItem.attributes} />
       );
     });
   });

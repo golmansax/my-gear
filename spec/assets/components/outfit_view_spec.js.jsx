@@ -1,7 +1,7 @@
 define([
   'support/test_utils', 'components/outfit_view', 'models/outfit',
-  'support/magic_lamp', 'bower/react_router'
-], function (TestUtils, OutfitView, Outfit, MagicLamp, Router) {
+  'support/magic_lamp', 'bower/react_router', 'bower/react'
+], function (TestUtils, OutfitView, Outfit, MagicLamp, Router, React) {
   'use strict';
 
   describe('components/outfit_view', function () {
@@ -14,7 +14,7 @@ define([
 
     it('renders a Router Link for each clothing item', function () {
       var outfitView = TestUtils.renderIntoDocument(
-        OutfitView(outfit.attributes)
+        <OutfitView {...outfit.attributes} />
       );
 
       expect(TestUtils.findRenderedComponentWithType(

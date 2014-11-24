@@ -3,7 +3,7 @@ define([
 ], function (React, ClothingItemGrid) {
   'use strict';
 
-  return React.createFactory(React.createBackboneClass({
+  return React.createBackboneClass({
     componentDidMount: function () {
       this.getCollection().fetch();
     },
@@ -12,10 +12,12 @@ define([
         return clothingItem.attributes;
       });
 
-      return React.DOM.div(null,
-        'WARDROBE MANAGER',
-        ClothingItemGrid({ clothingItems: clothingItems })
+      return (
+        <div>
+          WARDROBE MANAGER
+          <ClothingItemGrid clothingItems={clothingItems} />
+        </div>
       );
     }
-  }));
+  });
 });

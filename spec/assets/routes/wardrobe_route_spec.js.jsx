@@ -1,6 +1,7 @@
 define([
-  'routes/wardrobe_route', 'support/test_utils', 'components/clothing_item_grid'
-], function (WardrobeRoute, TestUtils, ClothingItemGrid) {
+  'routes/wardrobe_route', 'support/test_utils',
+  'components/clothing_item_grid', 'bower/react'
+], function (WardrobeRoute, TestUtils, ClothingItemGrid, React) {
   'use strict';
 
   describe('routes/wardrobe_route', function () {
@@ -10,7 +11,7 @@ define([
       this.collectionMock.on = function () {};
 
       this.wardrobeRoute = TestUtils.renderIntoDocument(
-        WardrobeRoute({ collection: this.collectionMock })
+        <WardrobeRoute collection={this.collectionMock} />
       );
     });
 
