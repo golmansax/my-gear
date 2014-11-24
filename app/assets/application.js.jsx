@@ -6,7 +6,7 @@ require([
 ], function (initializers, window, React, routes, Router) {
   'use strict';
 
-  Router.run(routes, function (Handler, state) {
+  Router.run(routes, function (Handler) {
     React.render(<Handler />, window.document.body);
   });
 });

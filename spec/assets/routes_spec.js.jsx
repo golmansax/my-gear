@@ -1,7 +1,6 @@
 define([
-  'routes', 'support/test_utils', 'support/mock_react_class',
-  'bower/react'
-], function (routes, TestUtils, MockReactClass, React) {
+  'routes', 'support/test_utils'
+], function (routes, TestUtils) {
   'use strict';
 
   describe('routes', function () {
