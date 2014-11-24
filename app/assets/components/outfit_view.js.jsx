@@ -4,7 +4,7 @@ define([
 ], function (React, Router, _, ClothingItem) {
   'use strict';
 
-  return React.createFactory(React.createClass({
+  return React.createClass({
     renderClothingItems: function (clothingItems) {
       return _(clothingItems).map(function (clothingItem) {
         var linkAttrs = {
@@ -12,10 +12,14 @@ define([
           params: { id: clothingItem.id }
         };
 
-        return React.DOM.div({ key: clothingItem.id },
-          Router.Link(linkAttrs,
-            clothingItem.name
-          )
+        return (
+          /* jshint maxlen: false, quotmark: false */
+          <div key={clothingItem.id}>
+            <Router.Link {...linkAttrs}>
+              {clothingItem.name}
+            </Router.Link>
+          </div>
+          /* jshint maxlen: 80, quotmark: single */
         );
       });
     },
@@ -24,10 +28,14 @@ define([
         return new ClothingItem(attrs, { parse: true }).attributes;
       });
 
-      return React.DOM.div(null,
-        this.props.name,
-        this.renderClothingItems(clothingItems)
+      return (
+        /* jshint maxlen: false, quotmark: false */
+        <div>
+          {this.props.name}
+          {this.renderClothingItems(clothingItems)}
+        </div>
+        /* jshint maxlen: 80, quotmark: single */
       );
     }
-  }));
+  });
 });
