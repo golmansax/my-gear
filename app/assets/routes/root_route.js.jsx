@@ -4,17 +4,19 @@ define([
 ], function (React, Router, OutfitList, Header) {
   'use strict';
 
-  return React.createFactory(React.createClass({
+  return React.createClass({
     getInitialState: function () {
       return { outfits: new OutfitList() };
     },
     render: function () {
-      return React.DOM.div(null,
-        Header({ collection: this.state.outfits }),
-        React.DOM.div({ className: 'container' },
-          this.props.activeRouteHandler()
-        )
+      return (
+        <div>
+          <Header collection={this.state.outfits} />
+          <div className='container'>
+            {this.props.activeRouteHandler()}
+          </div>
+        </div>
       );
     }
-  }));
+  });
 });

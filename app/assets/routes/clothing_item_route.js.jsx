@@ -4,7 +4,7 @@ define([
 ], function (React, ClothingItem, ClothingItemDetailedView) {
   'use strict';
 
-  return React.createFactory(React.createBackboneClass({
+  return React.createBackboneClass({
     componentDidMount: function () {
       this.getModel().fetch();
     },
@@ -12,10 +12,10 @@ define([
       var model = this.getModel();
 
       if (model.isValid()) {
-        return ClothingItemDetailedView(model.attributes);
+        return <ClothingItemDetailedView {...model.attributes} />;
       } else {
-        return React.DOM.div(null, 'Loading...');
+        return <div>Loading...</div>;
       }
     }
-  }));
+  });
 });

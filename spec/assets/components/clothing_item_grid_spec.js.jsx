@@ -1,10 +1,10 @@
 define([
   'support/test_utils', 'components/clothing_item_grid',
   'models/clothing_item', 'components/clothing_item_view',
-  'support/magic_lamp'
+  'support/magic_lamp', 'bower/react'
 ], function (TestUtils, ClothingItemGrid,
              ClothingItem, ClothingItemView,
-             MagicLamp) {
+             MagicLamp, React) {
 
   'use strict';
 
@@ -18,7 +18,7 @@ define([
 
     it('renders a ClothingItemView for each clothingItem', function () {
       var grid = TestUtils.renderIntoDocument(
-        ClothingItemGrid({ clothingItems: [clothingItem.attributes] })
+        <ClothingItemGrid clothingItems={[clothingItem.attributes]} />
       );
 
       var clothingItemViews = TestUtils.scryRenderedComponentsWithType(

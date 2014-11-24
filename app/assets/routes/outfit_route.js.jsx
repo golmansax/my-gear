@@ -3,15 +3,17 @@ define([
 ], function (React, Outfit, OutfitView) {
   'use strict';
 
-  return React.createFactory(React.createBackboneClass({
+  return React.createBackboneClass({
     componentDidMount: function () {
       this.getModel().fetch();
     },
     render: function () {
-      return React.DOM.div(null,
-        'OUTFIT',
-        OutfitView(this.getModel().attributes)
+      return (
+        <div>
+          OUTFIT
+          <OutfitView {...this.getModel().attributes} />
+        </div>
       );
     }
-  }));
+  });
 });

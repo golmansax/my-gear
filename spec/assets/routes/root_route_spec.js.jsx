@@ -1,12 +1,12 @@
 define([
-  'routes/root_route', 'support/test_utils', 'components/header'
-], function (RootRoute, TestUtils, Header) {
+  'routes/root_route', 'support/test_utils', 'components/header', 'bower/react'
+], function (RootRoute, TestUtils, Header, React) {
   'use strict';
 
   describe('routes/root_route', function () {
     beforeEach(function () {
       this.rootRoute = TestUtils.renderIntoDocument(
-        RootRoute({ activeRouteHandler: function () { } })
+        <RootRoute activeRouteHandler={this.sandbox.stub()} />
       );
     });
 

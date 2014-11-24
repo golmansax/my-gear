@@ -1,7 +1,7 @@
 define([
   'routes/clothing_item_route', 'support/test_utils',
-  'components/clothing_item_detailed_view'
-], function (ClothingItemRoute, TestUtils, ClothingItemDetailedView) {
+  'components/clothing_item_detailed_view', 'bower/react'
+], function (ClothingItemRoute, TestUtils, ClothingItemDetailedView, React) {
   'use strict';
 
   describe('routes/clothing_item_route', function () {
@@ -17,14 +17,14 @@ define([
 
     it('fetches model on initialization', function () {
       model.isValid.returns(false);
-      TestUtils.renderIntoDocument(ClothingItemRoute({ model: model }));
+      TestUtils.renderIntoDocument(<ClothingItemRoute model={model} />);
       expect(model.fetch).to.have.been.calledWith();
     });
 
     it('renders loading message if model is invalid', function () {
       model.isValid.returns(false);
       var route = TestUtils.renderIntoDocument(
-        ClothingItemRoute({ model: model })
+        <ClothingItemRoute model={model} />
       );
       expect(TestUtils.findAllInRenderedTree(route, function (instance) {
         return instance.props.children === 'Loading...';
@@ -34,7 +34,7 @@ define([
     it('renders ClothingItemDetailedView if model is valid', function () {
       model.isValid.returns(true);
       var route = TestUtils.renderIntoDocument(
-        ClothingItemRoute({ model: model })
+        <ClothingItemRoute model={model} />
       );
       expect(TestUtils.findRenderedComponentWithType(
         route,

@@ -1,6 +1,7 @@
 define([
-  'routes/outfit_route', 'support/test_utils', 'components/outfit_view'
-], function (OutfitRoute, TestUtils, OutfitView) {
+  'routes/outfit_route', 'support/test_utils', 'components/outfit_view',
+  'bower/react'
+], function (OutfitRoute, TestUtils, OutfitView, React) {
   'use strict';
 
   describe('routes/outfit_route', function () {
@@ -11,7 +12,7 @@ define([
         attributes: { hello: 'kitty' }
       };
       this.outfitRoute = TestUtils.renderIntoDocument(
-        OutfitRoute({ model: this.model })
+        <OutfitRoute model={this.model} />
       );
     });
 

@@ -1,7 +1,7 @@
 define(['bower/react', 'objects/prop_types'], function (React, PropTypes) {
   'use strict';
 
-  return React.createFactory(React.createClass({
+  return React.createClass({
     propTypes: {
       routeClass: PropTypes.func.isRequired,
       modelClass: PropTypes.func,
@@ -35,7 +35,7 @@ define(['bower/react', 'objects/prop_types'], function (React, PropTypes) {
       return state;
     },
     render: function () {
-      return this.props.routeClass(this.state);
+      return <this.props.routeClass {...this.state} />;
     }
-  }));
+  });
 });
