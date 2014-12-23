@@ -2,6 +2,7 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "backbone": "latest",
+    "backbone-sortable-collection": "latest",
     "bootstrap-sass-official": "latest",
     "moment": "latest",
     "reqwest": "latest",
