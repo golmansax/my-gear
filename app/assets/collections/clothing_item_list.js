@@ -7,7 +7,7 @@ define([
     model: ClothingItem,
     url: '/clothing_items',
 
-    defaultSort: { name: 'name', dir: 'desc' },
+    defaultSort: { name: 'desc' },
     comparators: {
       name: function (clothingItem) { return clothingItem.get('name'); }
     }
