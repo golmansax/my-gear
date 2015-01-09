@@ -7,10 +7,10 @@ define([
     model: ClothingItem,
     url: '/clothing_items',
 
-    defaultSort: 'name',
-    comparators: {
-      name: function (clothingItem) { return clothingItem.get('name'); },
-      type: function (clothingItem) { return clothingItem.get('type'); }
-    }
+    defaultSort: 'type',
+
+    comparators: { name: 'getter', type: 'getter' },
+
+    sorts: { type: ['type', 'name'] }
   });
 });
