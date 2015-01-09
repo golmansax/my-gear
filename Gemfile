@@ -25,6 +25,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'magic_lamp'
   gem 'shoulda-matchers'
+  gem 'spring-commands-teaspoon'
   gem 'teaspoon', github: 'golmansax/teaspoon'
 end
 
