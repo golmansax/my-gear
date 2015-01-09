@@ -6,8 +6,7 @@
   },
   "devDependencies": {
     "esprima-fb": "latest",
-    "istanbul": "latest",
-    "jscs": "latest"
+    "istanbul": "latest"
   },
   "repository": {
     "type" : "git",
