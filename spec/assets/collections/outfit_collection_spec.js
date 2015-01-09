@@ -1,7 +1,7 @@
-define(['collections/outfit_list'], function (OutfitList) {
+define(['collections/outfit_collection'], function (OutfitCollection) {
   'use strict';
 
-  describe('collections/outfit_list', function () {
+  describe('collections/outfit_collection', function () {
     var outfits;
     var server;
 
@@ -9,7 +9,7 @@ define(['collections/outfit_list'], function (OutfitList) {
     after(function () { server.restore(); });
 
     beforeEach(function () {
-      outfits = new OutfitList();
+      outfits = new OutfitCollection();
     });
 
     describe('#fetch', function () {

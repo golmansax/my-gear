@@ -1,12 +1,12 @@
 define([
-  'bower/react', 'bower/react_router', 'collections/outfit_list',
+  'bower/react', 'bower/react_router', 'collections/outfit_collection',
   'components/header'
-], function (React, Router, OutfitList, Header) {
+], function (React, Router, OutfitCollection, Header) {
   'use strict';
 
   return React.createClass({
     getInitialState: function () {
-      return { outfits: new OutfitList() };
+      return { outfits: new OutfitCollection() };
     },
     render: function () {
       return (

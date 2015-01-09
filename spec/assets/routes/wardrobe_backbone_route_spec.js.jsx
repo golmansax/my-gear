@@ -1,9 +1,9 @@
 define([
   'routes/wardrobe_backbone_route', 'support/test_utils', 'bower/react',
-  'routes/wardrobe_route', 'collections/clothing_item_list',
+  'routes/wardrobe_route', 'collections/clothing_item_collection',
   'routes/backbone_route'
 ], function (WardrobeBackboneRoute, TestUtils, React,
-             WardrobeRoute, ClothingItemList,
+             WardrobeRoute, ClothingItemCollection,
              BackboneRoute) {
 
   'use strict';
@@ -21,7 +21,7 @@ define([
 
     it('renders a BackboneRoute with the proper collection', function () {
       var collectionClass = this.backboneRoute.props.collectionClass;
-      expect(collectionClass).to.equal(ClothingItemList);
+      expect(collectionClass).to.equal(ClothingItemCollection);
     });
 
     it('renders a BackboneRoute with the proper React class', function () {

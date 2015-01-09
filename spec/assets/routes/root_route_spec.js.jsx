@@ -10,7 +10,7 @@ define([
       );
     });
 
-    it('adds an outfit list to the state', function () {
+    it('adds an outfit collection to the state', function () {
       expect(this.rootRoute.state.outfits).to.exist();
     });
 
