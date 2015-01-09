@@ -11,7 +11,6 @@ before_script:
 script:
 - rubocop -D
 - travis lint --skip-completion-check
-- bundle exec rake jsxhint
 - bundle exec rake jscs
 - bundle exec rake
 - RAILS_ENV=test bundle exec teaspoon --coverage ci
