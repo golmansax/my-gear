@@ -13,10 +13,10 @@ install:
 before_script:
 - rake db:create db:migrate
 script:
+- bundle exec teaspoon --coverage ci
 - rubocop -D
 - travis lint --skip-completion-check
 - bundle exec rake
-- RAILS_ENV=test bundle exec teaspoon --coverage ci
 deploy:
   provider: heroku
   strategy: git
