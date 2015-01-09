@@ -1,10 +1,11 @@
 define([
   'bower/react', 'bower/react_router', 'routes/root_route',
   'routes/wardrobe_backbone_route', 'routes/clothing_item_backbone_route',
-  'routes/outfit_backbone_route', 'routes/about_route'
+  'routes/outfit_backbone_route', 'routes/about_route',
+  'routes/list_backbone_route'
 ], function (React, Router, RootRoute,
              WardrobeBackboneRoute, ClothingItemBackboneRoute,
-             OutfitBackboneRoute, AboutRoute) {
+             OutfitBackboneRoute, AboutRoute, ListBackboneRoute) {
 
   'use strict';
 
@@ -12,6 +13,7 @@ define([
     <Router.Route handler={RootRoute}>
       <Router.DefaultRoute handler={WardrobeBackboneRoute} />
       <Router.Route name='about' handler={AboutRoute} />
+      <Router.Route name='list' handler={ListBackboneRoute} />
       <Router.Route {...clothingItemRouteAttrs()} />
       <Router.Route {...outfitRouteAttrs()} />
     </Router.Route>

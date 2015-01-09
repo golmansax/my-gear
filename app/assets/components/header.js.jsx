@@ -30,6 +30,7 @@ define([
           </div>
           <ReactBootstrap.Nav>
             <RouterNavItem to='about'>About</RouterNavItem>
+            <RouterNavItem to='list'>List</RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
               {this.getCollection().map(this.createEntry)}
             </ReactBootstrap.DropdownButton>
