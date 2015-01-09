@@ -173,6 +173,8 @@ GEM
     spring (1.2.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
+    spring-commands-teaspoon (0.0.2)
+      spring (>= 0.9.1)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -229,6 +231,7 @@ DEPENDENCIES
   shoulda-matchers
   spring
   spring-commands-rspec
+  spring-commands-teaspoon
   teaspoon!
   travis
   uglifier (>= 1.3.0)

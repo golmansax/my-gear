@@ -21,7 +21,7 @@
   afterEach(function () { this.sandbox.restore(); });
 
   require.config({
-    waitSeconds: 20
+    waitSeconds: 20,
     map: {
       'routes': {
         'components/clothing_item_detailed_view': 'support/mock_react_class',
