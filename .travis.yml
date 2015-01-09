@@ -13,10 +13,12 @@ install:
 before_script:
 - bundle exec spring rake db:create db:migrate
 script:
-- bundle exec spring teaspoon --coverage ci
-- rubocop -D
 - travis lint --skip-completion-check
+- rubocop -D
+- bundle exec spring rake jsxhint
+- bundle exec spring rake jscs
 - bundle exec spring rake
+- bundle exec spring teaspoon --coverage ci
 deploy:
   provider: heroku
   strategy: git
