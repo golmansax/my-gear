@@ -16,6 +16,16 @@ define(['objects/window', 'bower/underscore'], function (window, _) {
       }
 
       return JSON.parse(cachedPartial);
+    },
+
+    rawJson: function (path) {
+      var cachedPartial = MagicLamp.genie.cache[path];
+
+      if (!cachedPartial) {
+        throw 'The following path has not been loaded yet: ' + path;
+      }
+
+      return cachedPartial;
     }
   });
 });
