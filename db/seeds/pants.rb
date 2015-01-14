@@ -21,23 +21,14 @@ Pant.create!(
 
 Pant.create!(
   brand: 'O\'Neill',
-  model: 'Hybrid Freak Shorts',
+  model: 'Hybrid Freak Short',
   recent_purchase_date: Date.parse('Jan 2014'),
   first_purchase_date: Date.parse('Jan 2014'),
 )
 
 Pant.create!(
   brand: 'Nike',
-  model: 'Jordan Aero Fly Mania Shorts',
+  model: 'Jordan Aero Fly Mania Basketball Short',
   recent_purchase_date: Date.parse('Apr 2013'),
   first_purchase_date: Date.parse('Apr 2013'),
 )
-
-# Injinji sock
-# Smartwool sock
-# Really thick socks
-
-# Uniqlo underwear
-# Bamboxer
-# Cariloha underwear
-# ExOfficio Give N Go Sport

@@ -1,0 +1,2 @@
+class Sock < ClothingItem
+end
