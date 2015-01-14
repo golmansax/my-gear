@@ -33,5 +33,12 @@ Footwear.create!(
   first_purchase_date: Date.parse('July 2011'),
 )
 
+Footwear.create!(
+  brand: 'Inov8',
+  model: 'Bare-Grip 200',
+  recent_purchase_date: Date.parse('Nov 2013'),
+  first_purchase_date: Date.parse('Nov  2013'),
+)
+
 # Basketball shoes
 # Boots
