@@ -32,3 +32,5 @@ Pant.create!(
   recent_purchase_date: Date.parse('Apr 2013'),
   first_purchase_date: Date.parse('Apr 2013'),
 )
+
+# Lounge pants

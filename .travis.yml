@@ -26,7 +26,7 @@ deploy:
   api_key:
     secure: ERr28OXoNvokbiM9EccyPA2GDC2A0Jd6Z3YBXrFPW9FFd+IhTCG47T8ZBqEh+woMXfCsDSnrtgA6crlw4NauTED2lkabhjg/z44ggcOKQ6BVejJ+EyfDTM2SCNcsf+GxU5+kxB0o+KM9Qq7Usk3oOLwCJxCdOcekIl8f8nWgoCM=
   app:
-    secure: cQAG9NMKsPdoHrcF4QMO7pj9nwvBEDWgVhGkk4k1fpepC9R868+k9FqjyyrBX7Ye5DxENL2itl8IhZ97axyREUxXTRG2B9ZVyq4090nPGbHbEOrF72hEQawAh60YNTQaqAIYNiyQzEvsx6rPDOX/5Abd3J7hGMVVW1q/aX/dN+k=
+    secure: PAbRJxrunbmYSs7z96peO3Azr5+GP5IOd0iE1RjXdPbG5Rr7oBNlVXqKQxJVEqbH8RTP8+N19i8luLBjrgFFtZrEsMfogyLTPxKxK2YG8c3eAEVuh/2ZLvLjV57dcLU/coJ4Hl4WpduWVnBoP6e7MtnwN9aA+Kwt+g1Ly10fAiU=
   run:
-    - 'rake db:reset'
-    - 'rake clear_cache'
+  - rake db:reset
+  - rake clear_cache
