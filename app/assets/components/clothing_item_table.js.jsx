@@ -18,7 +18,7 @@ define([
       });
 
       return (
-        <table className='table'>
+        <table className='table clothing-item-table'>
           <tr>
             <th onClick={this._handleSort.bind(this, 'name')}>Name</th>
             <th onClick={this._handleSort.bind(this, 'type')}>Type</th>

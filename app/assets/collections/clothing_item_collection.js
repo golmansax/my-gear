@@ -1,6 +1,7 @@
 define([
-  'bower/backbone_sortable_collection', 'models/clothing_item'
-], function (BackboneSortableCollection, ClothingItem) {
+  'bower/backbone_sortable_collection', 'models/clothing_item',
+  'bower/underscore'
+], function (BackboneSortableCollection, ClothingItem, _) {
   'use strict';
 
   var USAGE_ORDER = ['heavy', 'moderate', 'specialized'];
@@ -14,8 +15,8 @@ define([
     comparators: {
       name: 'getter',
       type: 'getter',
-      usage: function (clothing_item) {
-        var index = _(USAGE_ORDER).indexOf(clothing_item.get('usage'));
+      usage: function (clothingItem) {
+        var index = _(USAGE_ORDER).indexOf(clothingItem.get('usage'));
         return index >= 0 ? index : USAGE_ORDER.length;
       }
     },

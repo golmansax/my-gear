@@ -1,6 +1,6 @@
 define([
-  'bower/react', 'components/clothing_item_table'
-], function (React, ClothingItemTable) {
+  'bower/react', 'components/clothing_item_table_group'
+], function (React, ClothingItemTableGroup) {
   'use strict';
 
   return React.createBackboneClass({
@@ -8,7 +8,10 @@ define([
       this.getCollection().fetch();
     },
     getInitialState: function () {
-      return { currentSort: this.getCollection().defaultSort };
+      return {
+        currentSort: this.getCollection().defaultSort,
+        groupBy: 'usage'
+      };
     },
     handleSort: function (sort) {
       if (this.state.currentSort === sort) {
@@ -26,8 +29,8 @@ define([
       return (
         <div>
           <h1>List of Everything</h1>
-          <ClothingItemTable clothingItems={clothingItems}
-              handleSort={this.handleSort} />
+          <ClothingItemTableGroup clothingItems={clothingItems}
+            groupBy={this.state.groupBy} handleSort={this.handleSort} />
         </div>
       );
     }
