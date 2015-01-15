@@ -31,6 +31,7 @@ define([
           <ReactBootstrap.Nav>
             <RouterNavItem to='about'>About</RouterNavItem>
             <RouterNavItem to='list'>List</RouterNavItem>
+            <RouterNavItem to='wardrobe'>Wardrobe</RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
               {this.getCollection().map(this.createEntry)}
             </ReactBootstrap.DropdownButton>

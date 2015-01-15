@@ -11,9 +11,9 @@ define([
 
   return (
     <Router.Route handler={RootRoute}>
-      <Router.DefaultRoute handler={WardrobeBackboneRoute} />
+      <Router.DefaultRoute name='list' handler={ListBackboneRoute} />
       <Router.Route name='about' handler={AboutRoute} />
-      <Router.Route name='list' handler={ListBackboneRoute} />
+      <Router.Route name='wardrobe' handler={WardrobeBackboneRoute} />
       <Router.Route {...clothingItemRouteAttrs()} />
       <Router.Route {...outfitRouteAttrs()} />
     </Router.Route>
