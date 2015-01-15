@@ -1,4 +1,6 @@
-define(['bower/react'], function (React) {
+define([
+  'bower/react', 'components/clothing_item_table'
+], function (React, ClothingItemTable) {
   'use strict';
 
   return React.createBackboneClass({
@@ -8,7 +10,7 @@ define(['bower/react'], function (React) {
     getInitialState: function () {
       return { currentSort: this.getCollection().defaultSort };
     },
-    _sort: function (sort) {
+    handleSort: function (sort) {
       if (this.state.currentSort === sort) {
         this.getCollection().reverseSort();
       } else {
@@ -16,31 +18,16 @@ define(['bower/react'], function (React) {
         this.setState({ currentSort: sort });
       }
     },
-    _renderClothingItem: function (clothingItem) {
-      return (
-        <tr key={clothingItem.get('id')}>
-          <td>{clothingItem.get('name')}</td>
-          <td>{clothingItem.get('type')}</td>
-          <td>{clothingItem.get('usage')}</td>
-        </tr>
-      );
-    },
     render: function () {
-      var clothingItems = this.getCollection().map(this._renderClothingItem);
+      var clothingItems = this.getCollection().map(function (model) {
+        return model.attributes;
+      });
 
       return (
         <div>
           <h1>List of Everything</h1>
-          <table className='table'>
-            <tr>
-              <th onClick={this._sort.bind(this, 'name')}>Name</th>
-              <th onClick={this._sort.bind(this, 'type')}>Type</th>
-              <th onClick={this._sort.bind(this, 'usage')}>Usage</th>
-            </tr>
-            <tbody>
-              {clothingItems}
-            </tbody>
-          </table>
+          <ClothingItemTable clothingItems={clothingItems}
+              handleSort={this.handleSort} />
         </div>
       );
     }
