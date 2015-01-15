@@ -34,3 +34,7 @@ group :development, :test do
   gem 'spring-commands-teaspoon'
   gem 'travis'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
