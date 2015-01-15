@@ -3,6 +3,7 @@ Footwear.create!(
   model: 'DIY Connect Sandal',
   recent_purchase_date: Date.parse('March 2014'),
   first_purchase_date: Date.parse('July 2012'),
+  usage: 'heavy',
 )
 
 Footwear.create!(
@@ -10,6 +11,7 @@ Footwear.create!(
   model: 'Nine2five',
   recent_purchase_date: Date.parse('June 2014'),
   first_purchase_date: Date.parse('June 2014'),
+  usage: 'moderate',
 )
 
 Footwear.create!(

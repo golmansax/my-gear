@@ -3,14 +3,26 @@ define([
 ], function (BackboneSortableCollection, ClothingItem) {
   'use strict';
 
+  var USAGE_ORDER = ['heavy', 'moderate', 'specialized'];
+
   return BackboneSortableCollection.extend({
     model: ClothingItem,
     url: '/clothing_items',
 
-    defaultSort: 'type',
+    defaultSort: 'usage',
 
-    comparators: { name: 'getter', type: 'getter' },
+    comparators: {
+      name: 'getter',
+      type: 'getter',
+      usage: function (clothing_item) {
+        var index = _(USAGE_ORDER).indexOf(clothing_item.get('usage'));
+        return index >= 0 ? index : USAGE_ORDER.length;
+      }
+    },
 
-    sorts: { type: ['type', 'name'] }
+    sorts: {
+      usage: ['usage', 'type', 'name'],
+      type: ['type', 'name']
+    }
   });
 });

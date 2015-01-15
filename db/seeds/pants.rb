@@ -3,6 +3,7 @@ Pant.create!(
   model: 'Stretch Zion Pant',
   recent_purchase_date: Date.parse('June 2014'),
   first_purchase_date: Date.parse('April 2013'),
+  usage: 'heavy',
 )
 
 Pant.create!(
@@ -10,6 +11,7 @@ Pant.create!(
   model: 'Stretch Zion Short',
   recent_purchase_date: Date.parse('April 2014'),
   first_purchase_date: Date.parse('April 2014'),
+  usage: 'moderate',
 )
 
 Pant.create!(
@@ -17,6 +19,7 @@ Pant.create!(
   model: 'Slim Stonemaster Pant',
   recent_purchase_date: Date.parse('Jan 2014'),
   first_purchase_date: Date.parse('Jan 2014'),
+  usage: 'moderate',
 )
 
 Pant.create!(

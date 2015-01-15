@@ -3,6 +3,7 @@ Shirt.create!(
   model: 'Tech T Lite Short Sleeve',
   recent_purchase_date: Date.parse('July 2014'),
   first_purchase_date: Date.parse('July 2014'),
+  usage: 'moderate',
 )
 
 Shirt.create!(
@@ -10,6 +11,7 @@ Shirt.create!(
   model: 'Better Button Down',
   recent_purchase_date: Date.parse('Oct 2014'),
   first_purchase_date: Date.parse('Oct 2014'),
+  usage: 'moderate',
 )
 
 Shirt.create!(
@@ -18,6 +20,7 @@ Shirt.create!(
   # version 'Home 2013/2014',
   recent_purchase_date: Date.parse('May 2014'),
   first_purchase_date: Date.parse('Dec 2012'),
+  usage: 'moderate',
 )
 
 Shirt.create!(
@@ -26,6 +29,7 @@ Shirt.create!(
   # version '2014 French Open',
   recent_purchase_date: Date.parse('July 2014'),
   first_purchase_date: Date.parse('May 2013'),
+  usage: 'moderate',
 )
 
 Shirt.create!(
@@ -33,4 +37,5 @@ Shirt.create!(
   model: 'Freestyle Polo',
   recent_purchase_date: Date.parse('July 2014'),
   first_purchase_date: Date.parse('May 2013'),
+  usage: 'moderate',
 )

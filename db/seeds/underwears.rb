@@ -3,6 +3,7 @@ Underwear.create!(
   model: 'AIRism Boxer Brief',
   recent_purchase_date: Date.parse('Sept 2014'),
   first_purchase_date: Date.parse('Sept 2014'),
+  usage: 'moderate',
 )
 
 Underwear.create!(
@@ -10,6 +11,7 @@ Underwear.create!(
   model: 'Bamboxer Brief',
   recent_purchase_date: Date.parse('Dec 2014'),
   first_purchase_date: Date.parse('Dec 2014'),
+  usage: 'moderate',
 )
 
 Underwear.create!(
@@ -17,6 +19,7 @@ Underwear.create!(
   model: 'Bamboo Boxer Brief',
   recent_purchase_date: Date.parse('Aug 2014'),
   first_purchase_date: Date.parse('Aug 2014'),
+  usage: 'moderate',
 )
 
 Underwear.create!(
@@ -24,6 +27,7 @@ Underwear.create!(
   model: 'Give-N-Go Sport Brief',
   recent_purchase_date: Date.parse('Sept 2014'),
   first_purchase_date: Date.parse('Sept 2014'),
+  usage: 'moderate',
 )
 
 Underwear.create!(

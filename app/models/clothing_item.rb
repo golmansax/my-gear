@@ -9,6 +9,8 @@ class ClothingItem < ActiveRecord::Base
   validates_presence_of :first_purchase_date
   validates_presence_of :recent_purchase_date
 
+  enum usage: [ :specialized, :moderate, :heavy ]
+
   def name
     "#{brand} #{model}"
   end

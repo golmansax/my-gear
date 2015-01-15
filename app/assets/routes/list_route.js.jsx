@@ -21,6 +21,7 @@ define(['bower/react'], function (React) {
         <tr key={clothingItem.get('id')}>
           <td>{clothingItem.get('name')}</td>
           <td>{clothingItem.get('type')}</td>
+          <td>{clothingItem.get('usage')}</td>
         </tr>
       );
     },
@@ -34,6 +35,7 @@ define(['bower/react'], function (React) {
             <tr>
               <th onClick={this._sort.bind(this, 'name')}>Name</th>
               <th onClick={this._sort.bind(this, 'type')}>Type</th>
+              <th onClick={this._sort.bind(this, 'usage')}>Usage</th>
             </tr>
             <tbody>
               {clothingItems}
