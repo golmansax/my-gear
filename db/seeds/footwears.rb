@@ -37,8 +37,20 @@ Footwear.create!(
   brand: 'Inov8',
   model: 'Bare-Grip 200',
   recent_purchase_date: Date.parse('Nov 2013'),
-  first_purchase_date: Date.parse('Nov  2013'),
+  first_purchase_date: Date.parse('Nov 2013'),
 )
 
-# Basketball shoes
-# Boots
+Footwear.create!(
+  brand: 'Timberland',
+  model: 'Hiking Boot',
+  recent_purchase_date: Date.parse('June 2008'),
+  first_purchase_date: Date.parse('June 2008'),
+)
+
+Footwear.create!(
+  brand: 'Nike',
+  model: 'Hyperfuse Basketball Shoe',
+  # version: 2011,
+  recent_purchase_date: Date.parse('Feb 2012'),
+  first_purchase_date: Date.parse('Feb 2012'),
+)
