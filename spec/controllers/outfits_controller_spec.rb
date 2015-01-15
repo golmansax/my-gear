@@ -33,6 +33,7 @@ describe OutfitsController do
             model: 'Down Jacket',
             imagePath: '/images/uniqlo-down-jacket.jpg',
             firstPurchaseDate: '2014-07-01',
+            usage: 'heavy',
             type: 'Outerwear',
           },
         ],

@@ -10,6 +10,7 @@ FactoryGirl.define do
       type 'Outerwear'
       brand 'Marmot'
       model 'ROM Jacket'
+      usage 'heavy'
       first_purchase_date Date.parse('July 2014')
       recent_purchase_date Date.parse('July 2014')
     end
