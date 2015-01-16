@@ -7,7 +7,7 @@ App.ClothingItemCollection = (function () {
 
   return Backbone.SortableCollection.extend({
     model: App.ClothingItem,
-    url: '/clothing_items',
+    url: '/clothing_items.json',
 
     defaultSort: 'usage',
 

@@ -2,8 +2,8 @@ App.Outfit = (function () {
   'use strict';
 
   return Backbone.Model.extend({
-    urlRoot: function () {
-      return '/outfits/';
+    url: function () {
+      return '/outfits/' + this.get('id') + '.json';
     }
   });
 })();

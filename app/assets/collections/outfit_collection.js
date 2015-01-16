@@ -3,5 +3,8 @@
 App.OutfitCollection = (function () {
   'use strict';
 
-  return Backbone.Collection.extend({ model: App.Outfit, url: '/outfits' });
+  return Backbone.Collection.extend({
+    model: App.Outfit,
+    url: '/outfits.json'
+  });
 })();

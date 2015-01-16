@@ -13,8 +13,8 @@ App.ClothingItem = (function () {
         return 'Data has not been loaded yet';
       }
     },
-    urlRoot: function () {
-      return '/clothing_items/';
+    url: function () {
+      return '/clothing_items/' + this.get('id') + '.json';
     }
   }, {
     propTypes: {

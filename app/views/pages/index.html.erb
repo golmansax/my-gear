@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="router-container">
-      <%= react_component 'App.RouterBootstrap', { path: request.fullpath }, prerender: false %>
+      <%= react_component 'App.RouterBootstrap', { path: request.fullpath }, prerender: true %>
     </div>
     <%= javascript_include_tag 'application' %>
   </body>

@@ -3,13 +3,14 @@
   "dependencies": {
     "backbone": "latest",
     "backbone-sortable-collection": "latest",
+    "backbone.nativeajax": "latest",
     "bootstrap-sass-official": "latest",
     "moment": "latest",
     "reqwest": "latest",
     "react": "~> 0.12.0",
-    "react.backbone": "latest",
     "react-bootstrap": "latest",
     "react-router": "latest",
+    "react.backbone": "latest",
     "underscore": "latest"
   },
   "devDependencies": {

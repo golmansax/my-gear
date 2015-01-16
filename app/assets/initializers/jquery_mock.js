@@ -1,12 +1,12 @@
-//= require bower_components/reqwest/reqwest
+// require bower_components/reqwest/reqwest
 
-var jQuery = (function () {
+Backbone.$ = (function () {
   'use strict';
 
   return new JQueryMock();
 
   function JQueryMock() {
-    this.ajax = reqwest.compat;
+    this.ajax = function () { };//reqwest.compat;
     return this;
   }
 })();
