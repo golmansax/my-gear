@@ -1,96 +1,19 @@
 {
-  "excludeFiles": ["**/tmp/**", "**/support/phantomjs_shims.js", "**/spec_helper.js"],
-
+  "preset": "google",
+  "excludeFiles": ["node_modules/**", "vendor/**", "public/assets/**", "spec/assets/support/phantomjs_shims.js"],
   "fileExtensions": [".js", ".jsx"],
 
-  "requireSpaceAfterKeywords": [
-    "if",
-    "else",
-    "for",
-    "while",
-    "do",
-    "switch",
-    "return",
-    "try",
-    "catch"
-  ],
+  "disallowTrailingComma": true,
 
-  "requireParenthesesAroundIIFE": true,
+  "disallowMultipleVarDecl": "exceptUndefined",
 
-  "requireSpacesInFunctionExpression": {
-    "beforeOpeningCurlyBrace": true
-  },
+  "disallowSpacesInAnonymousFunctionExpression": null,
 
-  "requireSpacesInAnonymousFunctionExpression": {
-    "beforeOpeningRoundBrace": true
-  },
-
-  "disallowSpacesInNamedFunctionExpression": {
-    "beforeOpeningRoundBrace": true
-  },
-
-  // "disallowMultipleVarDecl": "exceptUndefined",
-
-  "requireBlocksOnNewline": 1,
-
-  "disallowEmptyBlocks": true,
-
-  "disallowSpacesInsideArrayBrackets": true,
-
-  "disallowSpacesInsideParentheses": true,
+  "disallowSpacesInsideObjectBrackets": null,
 
   "requireSpacesInsideObjectBrackets": "allButNested",
 
-  "disallowQuotedKeysInObjects": "allButReserved",
-
-  "disallowSpaceAfterObjectKeys": true,
-
-  "requireCommaBeforeLineBreak": true,
-
-  "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
-
-  "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
-
-  "requireSpaceBeforeBinaryOperators": [
-    "+",
-    "-",
-    "/",
-    "*",
-    "=",
-    "==",
-    "===",
-    "!=",
-    "!=="
-  ],
-
-  "requireSpaceAfterBinaryOperators": [
-    "+",
-    "-",
-    "/",
-    "*",
-    "=",
-    "==",
-    "===",
-    "!=",
-    "!=="
-  ],
-
-  "disallowMultipleLineStrings": true,
-
-  "disallowMultipleLineBreaks": true,
-
-  "validateLineBreaks": "LF",
-
-  "validateQuoteMarks": "'",
-
-  "disallowKeywordsOnNewLine": ["else"],
-
-  "requireLineFeedAtFileEnd": true,
-
-  "maximumLineLength": 80,
-
-  "safeContextKeyword": ["self"],
-
-  "disallowYodaConditions": true
-
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  }
 }
