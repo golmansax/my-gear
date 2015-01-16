@@ -1,12 +1,12 @@
-//= require config
-
-require([
-  'initializers/index', 'objects/window', 'bower/react', 'routes',
-  'bower/react_router'
-], function (initializers, window, React, routes, Router) {
-  'use strict';
-
-  Router.run(routes, function (Handler) {
-    React.render(<Handler />, window.document.body);
-  });
+var React = require('bower_components/react/react');
+var App = React.createClass({
+  render: function () {
+    return (
+      <div>
+        Hello World!
+      </div>
+    );
+  }
 });
+
+global.App = App;

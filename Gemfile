@@ -8,6 +8,7 @@ gem 'pg'
 gem 'unicorn'
 
 gem 'bower-rails'
+gem 'browserify-rails'
 gem 'friendly_id', '~> 5.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
