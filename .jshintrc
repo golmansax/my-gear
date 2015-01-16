@@ -72,8 +72,13 @@
   "yui": false,
 
   "globals": {
+    "_": true,
     "App": true,
+    "Backbone": true,
+    "PropTypes": true,
     "React": true,
-    "ReactRouter": true
+    "ReactBootstrap": true,
+    "ReactRouter": true,
+    "moment": true
   }
 }
