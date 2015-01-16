@@ -140,8 +140,6 @@ GEM
     raindrops (0.13.0)
     rake (10.4.2)
     react-source (0.12.2)
-    requirejs-rails (0.9.5)
-      railties (>= 3.1.1)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -229,7 +227,6 @@ DEPENDENCIES
   rails (= 4.1.6)
   rails_12factor
   react-rails (~> 1.0.0.pre)!
-  requirejs-rails
   rspec-rails (~> 3.0.0)
   rubocop
   sass-rails (~> 4.0.3)
