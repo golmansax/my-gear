@@ -72,8 +72,8 @@
   "yui": false,
 
   "globals": {
-    // RequireJS
-    "require": true,
-    "define": true
+    "App": true,
+    "React": true,
+    "ReactRouter": true
   }
 }

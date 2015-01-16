@@ -1,4 +1,4 @@
-var RootRoute = React.createClass({
+App.RootRoute = React.createClass({
   /*
   getInitialState: function () {
     return { outfits: new OutfitCollection() };

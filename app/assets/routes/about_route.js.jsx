@@ -1,4 +1,4 @@
-var AboutRoute = React.createClass({
+App.AboutRoute = React.createClass({
   render: function () {
     return (
       <div>

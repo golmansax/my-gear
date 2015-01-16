@@ -1,27 +1,6 @@
 //= require bower_components/react/react
 //= require bower_components/react-router/dist/react-router
-//= require routes/root_route
-//= require routes/about_route
-//= require fake_routes
+//= require_self
+//= require router_bootstrap
 
-var onClient = !!window.document;
-
-var RouterBootstrap = React.createClass({
-  render: function () {
-    var MyHandler;
-    var routePath = onClient ? ReactRouter.HistoryLocation : this.props.path;
-
-    ReactRouter.run(routes, routePath, function (Handler) {
-      MyHandler = Handler;
-    });
-
-    return (<MyHandler />);
-  }
-});
-
-if (onClient) {
-  React.render(
-    <RouterBootstrap />,
-    window.document.getElementById('router-container')
-  );
-}
+var App = {};
