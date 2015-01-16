@@ -1,4 +1,6 @@
-define(['bower/reqwest'], function (reqwest) {
+//= require bower_components/reqwest/reqwest
+
+var jQuery = (function () {
   'use strict';
 
   return new JQueryMock();
@@ -7,4 +9,4 @@ define(['bower/reqwest'], function (reqwest) {
     this.ajax = reqwest.compat;
     return this;
   }
-});
+})();

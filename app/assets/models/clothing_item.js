@@ -1,6 +1,4 @@
-define([
-  'bower/backbone', 'bower/moment', 'bower/underscore', 'objects/prop_types'
-], function (Backbone, moment, _, PropTypes) {
+App.ClothingItem = (function () {
   'use strict';
 
   return Backbone.Model.extend({
@@ -25,4 +23,4 @@ define([
       firstPurchaseDate: PropTypes.moment.isRequired
     }
   });
-});
+})();

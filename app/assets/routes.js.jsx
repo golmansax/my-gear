@@ -8,14 +8,14 @@
 (function () {
   'use strict';
 
-  App.routes (
-    <Router.Route handler={App.RootRoute}>
-      <Router.DefaultRoute name='list' handler={App.ListBackboneRoute} />
-      <Router.Route name='about' handler={App.AboutRoute} />
-      <Router.Route name='wardrobe' handler={App.WardrobeBackboneRoute} />
-      <Router.Route {...clothingItemRouteAttrs()} />
-      <Router.Route {...outfitRouteAttrs()} />
-    </Router.Route>
+  App.routes = (
+    <ReactRouter.Route handler={App.RootRoute}>
+      <ReactRouter.DefaultRoute name='list' handler={App.ListBackboneRoute} />
+      <ReactRouter.Route name='about' handler={App.AboutRoute} />
+      <ReactRouter.Route name='wardrobe' handler={App.WardrobeBackboneRoute} />
+      <ReactRouter.Route {...clothingItemRouteAttrs()} />
+      <ReactRouter.Route {...outfitRouteAttrs()} />
+    </ReactRouter.Route>
   );
 
   function clothingItemRouteAttrs() {

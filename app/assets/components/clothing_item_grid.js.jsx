@@ -1,7 +1,6 @@
-define([
-  'bower/react', 'bower/underscore', 'components/clothing_item_view',
-  'bower/react_bootstrap'
-], function (React, _, ClothingItemView, ReactBootstrap) {
+//= require components/clothing_item_view
+
+App.ClothingItemGrid = (function () {
 
   'use strict';
 
@@ -9,7 +8,7 @@ define([
     renderGridItem: function (clothingItem) {
       return (
         <ReactBootstrap.Col sm={4} key={clothingItem.id}>
-          <ClothingItemView {...clothingItem} />
+          <App.ClothingItemView {...clothingItem} />
         </ReactBootstrap.Col>
       );
     },
@@ -21,4 +20,4 @@ define([
       );
     }
   });
-});
+})();

@@ -1,10 +1,10 @@
-define([
-  'bower/react', 'bower/react_router', 'models/clothing_item'
-], function (React, Router, ClothingItem) {
+//= require models/clothing_item
+
+App.ClothingItemView = (function () {
   'use strict';
 
   return React.createClass({
-    propTypes: ClothingItem.propTypes,
+    propTypes: App.ClothingItem.propTypes,
     render: function () {
       var imageAttrs = {
         className: 'img-responsive',
@@ -13,12 +13,12 @@ define([
 
       return (
         <div>
-          <Router.Link to='clothing_item' params={{ id: this.props.id }}>
+          <ReactRouter.Link to='clothing_item' params={{ id: this.props.id }}>
             {this.props.name}
-          </Router.Link>
+          </ReactRouter.Link>
           <img {...imageAttrs} />
         </div>
       );
     }
   });
-});
+})();

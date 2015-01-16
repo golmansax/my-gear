@@ -1,13 +1,12 @@
-define([
-  'bower/backbone_sortable_collection', 'models/clothing_item',
-  'bower/underscore'
-], function (BackboneSortableCollection, ClothingItem, _) {
+//= require models/clothing_item
+
+App.ClothingItemCollection = (function () {
   'use strict';
 
   var USAGE_ORDER = ['heavy', 'moderate', 'specialized'];
 
-  return BackboneSortableCollection.extend({
-    model: ClothingItem,
+  return Backbone.SortableCollection.extend({
+    model: App.ClothingItem,
     url: '/clothing_items',
 
     defaultSort: 'usage',
@@ -26,4 +25,4 @@ define([
       type: ['type', 'name']
     }
   });
-});
+})();

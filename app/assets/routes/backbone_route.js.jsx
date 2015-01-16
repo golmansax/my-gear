@@ -17,7 +17,7 @@ App.BackboneRoute = (function () {
         }
       }
     },
-    mixins: [Router.State],
+    mixins: [ReactRouter.State],
     getInitialState: function () {
       return this.stateFromProps(this.props);
     },

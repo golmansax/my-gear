@@ -1,6 +1,4 @@
-define([
-  'bower/react', 'bower/react_router', 'objects/prop_types'
-], function (React, Router, PropTypes) {
+App.RouterNavItem = (function () {
   'use strict';
 
   return React.createClass({
@@ -8,7 +6,7 @@ define([
       to: PropTypes.string.isRequired,
       params: PropTypes.object
     },
-    mixins: [Router.State],
+    mixins: [ReactRouter.State],
     render: function () {
       var isActive = this.isActive(
         this.props.to,
@@ -18,9 +16,9 @@ define([
 
       return (
         <li className={isActive ? 'active' : ''}>
-          <Router.Link {...this.props} />
+          <ReactRouter.Link {...this.props} />
         </li>
       );
     }
   });
-});
+})();

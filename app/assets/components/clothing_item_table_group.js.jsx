@@ -1,6 +1,6 @@
-define([
-  'bower/react', 'components/clothing_item_table', 'bower/underscore'
-], function (React, ClothingItemTable, _) {
+//= require components/clothing_item_table
+
+App.ClothingItemTableGroup = (function () {
   'use strict';
 
   return React.createClass({
@@ -31,7 +31,7 @@ define([
 
     _renderTable: function (clothingItems, attr) {
       return (
-        <ClothingItemTable key={attr} clothingItems={clothingItems}
+        <App.ClothingItemTable key={attr} clothingItems={clothingItems}
             handleSort={this.props.handleSort} />
       );
     },
@@ -59,4 +59,4 @@ define([
     }
     return _.chain(clothingItems).groupBy(groupBy).keys().value();
   }
-});
+})();

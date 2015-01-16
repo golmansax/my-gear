@@ -1,6 +1,4 @@
-define([
-  'bower/react'
-], function (React) {
+App.ClothingItemTableRow = (function () {
   'use strict';
 
   return React.createClass({
@@ -14,4 +12,4 @@ define([
       );
     }
   });
-});
+})();

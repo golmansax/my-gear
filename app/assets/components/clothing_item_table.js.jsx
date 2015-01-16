@@ -1,6 +1,6 @@
-define([
-  'bower/react', 'components/clothing_item_table_row'
-], function (React, ClothingItemTableRow) {
+//= require components/clothing_item_table_row
+
+App.ClothingItemTable = (function () {
   'use strict';
 
   return React.createClass({
@@ -13,7 +13,7 @@ define([
     render: function () {
       var clothingItems = this.props.clothingItems.map(function (clothingItem) {
         return (
-          <ClothingItemTableRow {...clothingItem} key={clothingItem.id} />
+          <App.ClothingItemTableRow {...clothingItem} key={clothingItem.id} />
         );
       });
 
@@ -31,4 +31,4 @@ define([
       );
     }
   });
-});
+})();

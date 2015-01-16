@@ -1,4 +1,4 @@
-define(['bower/backbone'], function (Backbone) {
+App.Outfit = (function () {
   'use strict';
 
   return Backbone.Model.extend({
@@ -6,4 +6,4 @@ define(['bower/backbone'], function (Backbone) {
       return '/outfits/';
     }
   });
-});
+})();

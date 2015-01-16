@@ -1,4 +1,4 @@
-//= rqeuire components/clothing_item_table_group
+//= require components/clothing_item_table_group
 
 App.ListRoute = (function () {
   'use strict';

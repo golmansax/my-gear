@@ -1,7 +1,6 @@
-define([
-  'bower/react', 'bower/react_router', 'components/router_nav_item',
-  'bower/react_bootstrap'
-], function (React, Router, RouterNavItem, ReactBootstrap) {
+//= require components/router_nav_item
+
+App.Header = (function () {
   'use strict';
 
   return React.createBackboneClass({
@@ -18,7 +17,9 @@ define([
 
       return (
         <li key={'outfit/' + myId}>
-          <Router.Link {...itemAttrs}>{modelAttributes.name}</Router.Link>
+          <ReactRouter.Link {...itemAttrs}>
+            {modelAttributes.name}
+          </ReactRouter.Link>
         </li>
       );
     },
@@ -26,12 +27,14 @@ define([
       return (
         <ReactBootstrap.Navbar>
           <div className='navbar-header'>
-            <Router.Link className='navbar-brand' to='/'>HOME</Router.Link>
+            <ReactRouter.Link className='navbar-brand' to='/'>
+              HOME
+            </ReactRouter.Link>
           </div>
           <ReactBootstrap.Nav>
-            <RouterNavItem to='about'>About</RouterNavItem>
-            <RouterNavItem to='list'>List</RouterNavItem>
-            <RouterNavItem to='wardrobe'>Wardrobe</RouterNavItem>
+            <App.RouterNavItem to='about'>About</App.RouterNavItem>
+            <App.RouterNavItem to='list'>List</App.RouterNavItem>
+            <App.RouterNavItem to='wardrobe'>Wardrobe</App.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
               {this.getCollection().map(this.createEntry)}
             </ReactBootstrap.DropdownButton>
@@ -40,4 +43,4 @@ define([
       );
     }
   });
-});
+})();

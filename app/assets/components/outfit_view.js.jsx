@@ -1,7 +1,6 @@
-define([
-  'bower/react', 'bower/react_router', 'bower/underscore',
-  'models/clothing_item'
-], function (React, Router, _, ClothingItem) {
+//= require models/clothing_item
+
+App.OutfitView = (function () {
   'use strict';
 
   return React.createClass({
@@ -14,16 +13,16 @@ define([
 
         return (
           <div key={clothingItem.id}>
-            <Router.Link {...linkAttrs}>
+            <ReactRouter.Link {...linkAttrs}>
               {clothingItem.name}
-            </Router.Link>
+            </ReactRouter.Link>
           </div>
         );
       });
     },
     render: function () {
       var clothingItems = _(this.props.clothingItems).map(function (attrs) {
-        return new ClothingItem(attrs, { parse: true }).attributes;
+        return new App.ClothingItem(attrs, { parse: true }).attributes;
       });
 
       return (
@@ -34,4 +33,4 @@ define([
       );
     }
   });
-});
+})();

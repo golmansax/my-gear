@@ -1,10 +1,10 @@
-define([
-  'bower/react', 'models/clothing_item', 'bower/react_bootstrap'
-], function (React, ClothingItem, ReactBootstrap) {
+//= require models/clothing_item
+
+App.ClothingItemDetailedView = (function () {
   'use strict';
 
   return React.createClass({
-    propTypes: ClothingItem.propTypes,
+    propTypes: App.ClothingItem.propTypes,
     render: function () {
       var imageAttrs = {
         className: 'img-responsive',
@@ -27,4 +27,4 @@ define([
       );
     }
   });
-});
+})();
