@@ -1,22 +1,18 @@
-define([
-  'bower/react', 'bower/react_router', 'collections/outfit_collection',
-  'components/header'
-], function (React, Router, OutfitCollection, Header) {
-  'use strict';
-
-  return React.createClass({
-    getInitialState: function () {
-      return { outfits: new OutfitCollection() };
-    },
-    render: function () {
-      return (
-        <div>
-          <Header collection={this.state.outfits} />
-          <div className='container'>
-            <Router.RouteHandler />
-          </div>
+var RootRoute = React.createClass({
+  /*
+  getInitialState: function () {
+    return { outfits: new OutfitCollection() };
+  },
+  */
+  render: function () {
+    //<Header collection={this.state.outfits} />
+    return (
+      <div>
+        <div className='container'>
+          Hello World!
+          <ReactRouter.RouteHandler />
         </div>
-      );
-    }
-  });
+      </div>
+    );
+  }
 });
