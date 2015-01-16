@@ -7,7 +7,9 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= react_component 'Handler', {}, prerender: true %>
+    <div id="router-container">
+      <%= react_component 'RouterBootstrap', { path: request.fullpath }, prerender: true %>
+    </div>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
