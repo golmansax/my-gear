@@ -6,6 +6,9 @@ class OutfitsController < ApplicationController
 
   def show
     @outfit = Outfit.friendly.find(params[:id])
-    respond_to { |format| format.json }
+    respond_to { |format|
+      format.json
+      format.html { render template: 'pages/index' }
+    }
   end
 end
