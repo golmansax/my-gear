@@ -1,5 +1,6 @@
-//= require fake_routes
+//= require routes
 //= require_self
+/* global window */
 
 (function () {
   'use strict';

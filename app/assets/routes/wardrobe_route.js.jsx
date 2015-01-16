@@ -1,6 +1,6 @@
-define([
-  'bower/react', 'components/clothing_item_grid'
-], function (React, ClothingItemGrid) {
+//= require components/clothing_item_grid
+
+App.WardrobeRoute = (function () {
   'use strict';
 
   return React.createBackboneClass({
@@ -15,9 +15,9 @@ define([
       return (
         <div>
           WARDROBE MANAGER
-          <ClothingItemGrid clothingItems={clothingItems} />
+          <App.ClothingItemGrid clothingItems={clothingItems} />
         </div>
       );
     }
   });
-});
+})();

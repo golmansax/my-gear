@@ -1,6 +1,6 @@
-define([
-  'bower/react', 'models/outfit', 'components/outfit_view'
-], function (React, Outfit, OutfitView) {
+//= require components/outfit_view
+
+App.OutfitRoute = (function () {
   'use strict';
 
   return React.createBackboneClass({
@@ -11,9 +11,9 @@ define([
       return (
         <div>
           OUTFIT
-          <OutfitView {...this.getModel().attributes} />
+          <App.OutfitView {...this.getModel().attributes} />
         </div>
       );
     }
   });
-});
+})();

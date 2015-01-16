@@ -1,18 +1,22 @@
-App.RootRoute = React.createClass({
-  /*
-  getInitialState: function () {
-    return { outfits: new OutfitCollection() };
-  },
-  */
-  render: function () {
-    //<Header collection={this.state.outfits} />
-    return (
-      <div>
-        <div className='container'>
-          Hello World!
-          <ReactRouter.RouteHandler />
+//= require collections/outfit_collection
+//= require components/header
+
+App.RootRoute = (function () {
+  'use strict';
+
+  return React.createClass({
+    getInitialState: function () {
+      return { outfits: new App.OutfitCollection() };
+    },
+    render: function () {
+      return (
+        <div>
+          <App.Header collection={this.state.outfits} />
+          <div className='container'>
+            <ReactRouter.RouteHandler />
+          </div>
         </div>
-      </div>
-    );
-  }
-});
+      );
+    }
+  });
+})();

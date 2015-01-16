@@ -1,7 +1,6 @@
-define([
-  'bower/react', 'models/clothing_item',
-  'components/clothing_item_detailed_view'
-], function (React, ClothingItem, ClothingItemDetailedView) {
+//= require components/clothing_item_detailed_view
+
+App.ClothingItemRoute = (function () {
   'use strict';
 
   return React.createBackboneClass({
@@ -12,10 +11,10 @@ define([
       var model = this.getModel();
 
       if (model.isValid()) {
-        return <ClothingItemDetailedView {...model.attributes} />;
+        return <App.ClothingItemDetailedView {...model.attributes} />;
       } else {
         return <div>Loading...</div>;
       }
     }
   });
-});
+})();

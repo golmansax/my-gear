@@ -1,6 +1,6 @@
-define([
-  'bower/react', 'components/clothing_item_table_group'
-], function (React, ClothingItemTableGroup) {
+//= rqeuire components/clothing_item_table_group
+
+App.ListRoute = (function () {
   'use strict';
 
   return React.createBackboneClass({
@@ -29,10 +29,10 @@ define([
       return (
         <div>
           <h1>List of Everything</h1>
-          <ClothingItemTableGroup clothingItems={clothingItems}
+          <App.ClothingItemTableGroup clothingItems={clothingItems}
             groupBy={this.state.groupBy} handleSort={this.handleSort} />
         </div>
       );
     }
   });
-});
+})();

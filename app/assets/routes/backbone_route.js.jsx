@@ -1,6 +1,4 @@
-define([
-  'bower/react', 'bower/react_router', 'objects/prop_types'
-], function (React, Router, PropTypes) {
+App.BackboneRoute = (function () {
   'use strict';
 
   return React.createClass({
@@ -41,4 +39,4 @@ define([
       return <this.props.routeClass {...this.state} />;
     }
   });
-});
+})();

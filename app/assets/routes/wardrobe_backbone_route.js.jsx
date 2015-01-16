@@ -1,17 +1,18 @@
-define([
-  'bower/react', 'routes/backbone_route', 'routes/wardrobe_route',
-  'collections/clothing_item_collection'
-], function (React, BackboneRoute, WardrobeRoute, ClothingItemCollection) {
+//= require routes/backbone_route
+//= require routes/wardrobe_route
+//= require collections/clothing_item_collection
+
+App.WardrobeBackboneRoute = (function () {
   'use strict';
 
   return React.createClass({
     render: function () {
       var routeAttrs = {
-        routeClass: WardrobeRoute,
-        collectionClass: ClothingItemCollection
+        routeClass: App.WardrobeRoute,
+        collectionClass: App.ClothingItemCollection
       };
 
-      return <BackboneRoute {...routeAttrs} />;
+      return <App.BackboneRoute {...routeAttrs} />;
     }
   });
-});
+})();

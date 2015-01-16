@@ -1,16 +1,18 @@
-define([
-  'bower/react', 'routes/backbone_route', 'routes/outfit_route', 'models/outfit'
-], function (React, BackboneRoute, OutfitRoute, Outfit) {
+//= require routes/backbone_route
+//= require routes/outfit_route
+//= require models/outfit
+
+App.OutfitBackboneRoute = (function () {
   'use strict';
 
   return React.createClass({
     render: function () {
       var routeAttrs = {
-        routeClass: OutfitRoute,
-        modelClass: Outfit
+        routeClass: App.OutfitRoute,
+        modelClass: App.Outfit
       };
 
-      return <BackboneRoute {...routeAttrs} />;
+      return <App.BackboneRoute {...routeAttrs} />;
     }
   });
-});
+})();
