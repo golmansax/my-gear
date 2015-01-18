@@ -1,2 +1,0 @@
-class Shirt < ClothingItem
-end

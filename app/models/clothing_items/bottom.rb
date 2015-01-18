@@ -1,0 +1,2 @@
+class Bottom < ClothingItem
+end
