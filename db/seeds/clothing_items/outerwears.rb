@@ -19,3 +19,10 @@ Outerwear.create!(
   recent_purchase_date: Date.parse('Nov 2012'),
   first_purchase_date: Date.parse('Nov 2012'),
 )
+
+Outerwear.create!(
+  brand: 'Uniqlo',
+  model: 'Ultra Lite Down Vest',
+  recent_purchase_date: Date.parse('Jan 2015'),
+  first_purchase_date: Date.parse('Jan 2015'),
+)

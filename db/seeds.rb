@@ -1,6 +1,3 @@
-Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].each { |seed| load seed }
-
-favorite_outfit = Outfit.create!(name: 'Favorite')
-ClothingItem.all.each do |clothing_item|
-  favorite_outfit.clothing_items << clothing_item
-end
+seeds_path = File.join(Rails.root, 'db', 'seeds')
+Dir[File.join(seeds_path, 'clothing_items', '*.rb')].each { |seed| load seed }
+Dir[File.join(seeds_path, 'outfits', '*.rb')].each { |seed| load seed }

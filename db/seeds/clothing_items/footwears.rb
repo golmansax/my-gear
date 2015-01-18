@@ -1,6 +1,7 @@
 Footwear.create!(
   brand: 'Xero Shoes',
-  model: 'DIY Connect Sandal',
+  model: 'DIY Sandal',
+  # version 'Connect'
   recent_purchase_date: Date.parse('March 2014'),
   first_purchase_date: Date.parse('July 2012'),
   usage: 'heavy',
