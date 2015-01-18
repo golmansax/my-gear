@@ -1,7 +1,6 @@
 //= require bower_components/chai/chai
 //= require support/sinon
 //= require support/sinon-chai
-//= require require
 //= require support/phantomjs_shims
 //= require magic_lamp
 
@@ -19,15 +18,4 @@
   });
 
   afterEach(function () { this.sandbox.restore(); });
-
-  require.config({
-    waitSeconds: 20,
-    map: {
-      'routes': {
-        'components/clothing_item_detailed_view': 'support/mock_react_class',
-        'components/clothing_item_grid': 'support/mock_react_class',
-        'components/clothing_item_view': 'support/mock_react_class'
-      }
-    }
-  });
 })();
