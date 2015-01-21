@@ -11,7 +11,7 @@ Teaspoon.configure do |config|
   config.suite do |suite|
     suite.use_framework :mocha
     suite.matcher = 'spec/assets/**/*_spec.{js,js.jsx,.jsx}'
-    suite.no_coverage = [%r{/vendor/assets/}, /\.rvm/]
+    suite.no_coverage = [%r{/vendor/assets/}, /\.rvm/, %r{/tmp/}]
   end
 
   def add_coverage_thresholds!(coverage)
