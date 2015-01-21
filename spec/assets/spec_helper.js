@@ -1,14 +1,17 @@
+//= require initializers/bower
 //= require bower_components/chai/chai
 //= require support/sinon
 //= require support/sinon-chai
 //= require support/phantomjs_shims
-//= require magic_lamp
+//= require support/magic_lamp
 
 (function () {
   'use strict';
 
   /* global window */
   window.expect = window.chai.expect;
+
+  MagicLamp.preload();
 
   beforeEach(function () {
     this.sandbox = sinon.sandbox.create();
@@ -17,5 +20,8 @@
     });
   });
 
-  afterEach(function () { this.sandbox.restore(); });
+  afterEach(function () {
+    MagicLamp.clean();
+    this.sandbox.restore();
+  });
 })();

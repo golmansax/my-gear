@@ -15,6 +15,8 @@
     "expect": true,
 
     // Sinon
-    "sinon": true
+    "sinon": true,
+
+    "MagicLamp": true
   }
 }

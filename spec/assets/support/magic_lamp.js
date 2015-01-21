@@ -1,13 +1,9 @@
-define(['objects/window', 'bower/underscore'], function (window, _) {
+//= require magic_lamp
+
+var MagicLamp = (function (OldMagicLamp) {
   'use strict';
 
-  var MagicLamp = window.MagicLamp;
-
-  MagicLamp.preload();
-
-  afterEach(function () { MagicLamp.clean(); });
-
-  return _(MagicLamp).extend({
+  return _(OldMagicLamp).extend({
     json: function (path) {
       var cachedPartial = MagicLamp.genie.cache[path];
 
@@ -28,4 +24,4 @@ define(['objects/window', 'bower/underscore'], function (window, _) {
       return cachedPartial;
     }
   });
-});
+})(MagicLamp);

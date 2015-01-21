@@ -1,4 +1,4 @@
-define(['support/mock_react_class'], function (MockReactClass) {
+var ReactRouter = (function () {
   'use strict';
 
   return {
@@ -12,4 +12,4 @@ define(['support/mock_react_class'], function (MockReactClass) {
       isActive: function () {}
     }
   };
-});
+})();

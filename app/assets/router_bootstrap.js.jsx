@@ -2,7 +2,7 @@
 //= require_self
 /* global window */
 
-(function () {
+(function (window) {
   'use strict';
 
   var onClient = !!window.document;
@@ -29,4 +29,4 @@
       window.document.getElementById('router-container')
     );
   }
-})();
+})(window || {});
