@@ -1,15 +1,12 @@
-//= require initializers/bower
-//= require bower_components/chai/chai
-//= require support/sinon
-//= require support/sinon-chai
-//= require support/phantomjs_shims
+//= require support/bower
+//= require support/expect
 //= require support/magic_lamp
+/* global App */
+
+var App = {};
 
 (function () {
   'use strict';
-
-  /* global window */
-  window.expect = window.chai.expect;
 
   MagicLamp.preload();
 

@@ -1,22 +1,22 @@
-define(['collections/outfit_collection'], function (OutfitCollection) {
+//= require collections/outfit_collection
+
+describe('collections/outfit_collection', function () {
   'use strict';
 
-  describe('collections/outfit_collection', function () {
-    var outfits;
-    var server;
+  var outfits;
+  var server;
 
-    before(function () { server = sinon.fakeServer.create(); });
-    after(function () { server.restore(); });
+  before(function () { server = sinon.fakeServer.create(); });
+  after(function () { server.restore(); });
 
-    beforeEach(function () {
-      outfits = new OutfitCollection();
-    });
+  beforeEach(function () {
+    outfits = new App.OutfitCollection();
+  });
 
-    describe('#fetch', function () {
-      it('grabs the data from the proper url', function () {
-        outfits.fetch();
-        expect(server.requests[0].url).to.equal('/outfits');
-      });
+  describe('#fetch', function () {
+    it('grabs the data from the proper url', function () {
+      outfits.fetch();
+      expect(server.requests[0].url).to.equal('/outfits.json');
     });
   });
 });

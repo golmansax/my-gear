@@ -17,6 +17,7 @@
     // Sinon
     "sinon": true,
 
-    "MagicLamp": true
+    "MagicLamp": true,
+    "TestUtils": true
   }
 }
