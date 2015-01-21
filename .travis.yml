@@ -1,11 +1,11 @@
 language: ruby
+rvm:
+- 2.1.5
 cache:
   bundler: true
   directories:
   - node_modules
   - vendor/assets/bower_components
-rvm:
-- 2.1.3
 install:
 - bundle install
 - npm install
