@@ -1,6 +1,6 @@
+//= require support/phantomjs_shims
 //= require support/third_party_for_specs
 //= require support/test_utils
-//= require support/phantomjs_shims
 //= require support/mock_react_router
 //= require support/magic_lamp
 /* global window*/

@@ -8,6 +8,8 @@ describe('routes/wardrobe_route', function () {
     this.collectionMock.fetch = sinon.stub();
     this.collectionMock.on = function () {};
 
+    this.sandbox.stub(App, 'ClothingItemGrid', TestUtils.MockClass);
+
     this.wardrobeRoute = TestUtils.renderIntoDocument(
       <App.WardrobeRoute collection={this.collectionMock} />
     );

@@ -1,5 +1,5 @@
-//= routes/clothing_item_route
-//= components/clothing_item_detailed_view
+//= require routes/clothing_item_route
+//= require components/clothing_item_detailed_view
 
 describe('routes/clothing_item_route', function () {
   'use strict';
@@ -12,6 +12,8 @@ describe('routes/clothing_item_route', function () {
       isValid: sinon.stub(),
       on: function () { }
     };
+
+    this.sandbox.stub(App, 'ClothingItemDetailedView', TestUtils.MockClass);
   });
 
   it('fetches model on initialization', function () {

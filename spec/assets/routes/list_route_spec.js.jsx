@@ -23,8 +23,12 @@ describe('routes/list_route', function () {
   });
 
   it('sorts list when table header is clicked', function () {
-    var fixture = MagicLamp.rawJson('clothing_items/index');
-    server.requests[0].respond(200, 'application/json', fixture);
+    server.requests[0].respond(
+      200,
+      { 'Content-Type': 'application/json' },
+      MagicLamp.rawJson('clothing_items/index')
+    );
+    this.listRoute.forceUpdate();
 
     var headers = TestUtils.scryRenderedDOMComponentsWithTag(
       this.listRoute,
