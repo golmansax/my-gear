@@ -1,6 +1,6 @@
 {
   "name": "my-gear",
-  "engines": { "node": "0.11.x" },
+  "engines": { "node": "0.10.x" },
   "dependencies": {
     "bower": ">= 0.10.0"
   },
