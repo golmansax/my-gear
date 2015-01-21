@@ -1,5 +1,5 @@
-//= require initializers/bower
-//= require_self
+//= require support/third_party
+//= require support/prop_types
 //= require router_bootstrap
 /* global App */
 
