@@ -9,10 +9,9 @@ cache:
 install:
 - bundle install
 - npm install
-- bundle exec rake bower:install:deployment
 before_script:
-- bundle exec spring rake db:create db:migrate
 - RAILS_ENV=production bundle exec rake assets:precompile
+- bundle exec spring rake db:create db:migrate
 script:
 - travis lint --skip-completion-check
 - rubocop -D
@@ -28,8 +27,6 @@ deploy:
   app:
     secure: PAbRJxrunbmYSs7z96peO3Azr5+GP5IOd0iE1RjXdPbG5Rr7oBNlVXqKQxJVEqbH8RTP8+N19i8luLBjrgFFtZrEsMfogyLTPxKxK2YG8c3eAEVuh/2ZLvLjV57dcLU/coJ4Hl4WpduWVnBoP6e7MtnwN9aA+Kwt+g1Ly10fAiU=
   run:
-  - bundle exec rake bower:install:production
-  - bundle exec rake assets:precompile
   - bundle exec rake clear_cache
   after_deploy:
   - heroku pg:reset
