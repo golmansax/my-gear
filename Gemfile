@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -24,7 +24,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'magic_lamp'
   gem 'shoulda-matchers'
-  gem 'teaspoon', github: 'golmansax/teaspoon'
+  gem 'teaspoon'
 end
 
 group :development, :test do
