@@ -1,12 +1,11 @@
-//= require bower_components/moment/moment
+//= require moment
 //
-//= require bower_components/underscore/underscore
-//= require bower_components/backbone/backbone
-//= require bower_components/backbone.nativeajax/backbone.nativeajax
-//= require bower_components/backbone-sortable-collection/lib/backbone_sortable_collection
+//= require underscore
+//= require backbone
+//= require backbone.nativeajax
+//= require backbone-sortable-collection
 //
-//= require bower_components/react/react
-//= require bower_components/react.backbone/react.backbone
-//= require bower_components/react-bootstrap/react-bootstrap
-//= require bower_components/react-router/dist/react-router
-//= require ./prop_types
+//= require react
+//= require react.backbone
+//= require react-bootstrap
+//= require react-router

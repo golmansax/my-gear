@@ -1,7 +1,7 @@
 $font-family-sans-serif: 'Open Sans', sans-serif;
 
-@import 'bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets';
-@import 'bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 .clothing-item-table {
   table-layout: fixed;

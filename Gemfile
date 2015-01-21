@@ -7,11 +7,11 @@ gem 'rails', '4.1.6'
 gem 'pg'
 gem 'unicorn'
 
-gem 'bower-rails'
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'friendly_id', '~> 5.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development do
@@ -36,4 +36,21 @@ end
 
 group :production do
   gem 'rails_12factor'
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-backbone'
+  gem 'rails-assets-backbone-sortable-collection'
+  gem 'rails-assets-backbone.nativeajax'
+  gem 'rails-assets-es5-shim'
+  gem 'rails-assets-moment'
+  gem 'rails-assets-react', '~> 0.12.0'
+  gem 'rails-assets-react-bootstrap'
+  gem 'rails-assets-react-router'
+  gem 'rails-assets-react.backbone'
+  gem 'rails-assets-underscore'
+
+  group :test do
+    gem 'rails-assets-chai'
+  end
 end

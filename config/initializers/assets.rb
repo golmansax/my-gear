@@ -17,13 +17,4 @@ end
 asset_paths = [Rails.root.join('app', 'assets')]
 asset_paths << Rails.root.join('vendor', 'assets')
 
-# Following is for Bootstrap fonts
-asset_paths << Rails.root.join(
-  'vendor',
-  'assets',
-  'bower_components',
-  'bootstrap-sass-official',
-  'assets',
-  'fonts',
-)
 Rails.application.config.assets.paths.unshift(*asset_paths)
