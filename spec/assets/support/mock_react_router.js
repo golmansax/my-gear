@@ -1,4 +1,4 @@
-var ReactRouter = (function () {
+ReactRouter = (function () {
   'use strict';
 
   return {

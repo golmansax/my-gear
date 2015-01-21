@@ -1,4 +1,5 @@
 //= routes/clothing_item_route
+//= components/clothing_item_detailed_view
 
 describe('routes/clothing_item_route', function () {
   'use strict';
@@ -36,7 +37,7 @@ describe('routes/clothing_item_route', function () {
     );
     expect(TestUtils.findRenderedComponentWithType(
       route,
-      ClothingItemDetailedView
+      App.ClothingItemDetailedView
     )).to.be.ok();
   });
 });

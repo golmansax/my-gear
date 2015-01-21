@@ -1,4 +1,5 @@
 //= require components/clothing_item_grid
+//= require components/clothing_item_view
 //= require models/clothing_item
 
 describe('components/clothing_item_grid', function () {
@@ -18,7 +19,7 @@ describe('components/clothing_item_grid', function () {
 
     var clothingItemViews = TestUtils.scryRenderedComponentsWithType(
       grid,
-      ClothingItemView
+      App.ClothingItemView
     );
     expect(clothingItemViews).to.have.length(1);
   });

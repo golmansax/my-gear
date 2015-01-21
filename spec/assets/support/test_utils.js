@@ -1,4 +1,4 @@
-var TestUtils = (function (OldTestUtils) {
+TestUtils = (function (OldTestUtils) {
   'use strict';
 
   return _(OldTestUtils).extend({

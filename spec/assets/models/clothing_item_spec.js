@@ -35,10 +35,6 @@ describe('models/clothing_item', function () {
     });
 
     it('returns true when name is present', function () {
-      console.log(expect(new App.ClothingItem().isValid()));
-      console.log(expect(new App.ClothingItem().isValid()).to);
-      console.log(expect(new App.ClothingItem().isValid()).to.be);
-      console.log(expect(new App.ClothingItem().isValid()).to.be.false);
       expect(clothingItem.isValid()).to.be.true();
     });
   });

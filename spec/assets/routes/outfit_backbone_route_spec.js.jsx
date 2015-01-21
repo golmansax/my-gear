@@ -14,10 +14,10 @@ describe('routes/outfit_backbone_route', function () {
   });
 
   it('renders a BackboneRoute with the proper model', function () {
-    expect(this.backboneRoute.props.modelClass).to.equal(Outfit);
+    expect(this.backboneRoute.props.modelClass).to.equal(App.Outfit);
   });
 
   it('renders a BackboneRoute with the proper React class', function () {
-    expect(this.backboneRoute.props.routeClass).to.equal(OutfitRoute);
+    expect(this.backboneRoute.props.routeClass).to.equal(App.OutfitRoute);
   });
 });

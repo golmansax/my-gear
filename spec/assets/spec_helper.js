@@ -3,15 +3,15 @@
 //= require support/phantomjs_shims
 //= require support/mock_react_router
 //= require support/magic_lamp
-/* global App, expect, chai */
+/* global window*/
 
-var App, expect;
+App = {};
+
+expect = window.chai.expect;
 
 (function () {
   'use strict';
 
-  App = {};
-  expect = chai.expect;
   MagicLamp.preload();
 
   beforeEach(function () {

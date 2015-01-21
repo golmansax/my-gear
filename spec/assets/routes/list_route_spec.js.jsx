@@ -1,4 +1,5 @@
 //= require routes/list_route
+//= require collections/clothing_item_collection
 
 describe('routes/list_route', function () {
   'use strict';
@@ -9,7 +10,7 @@ describe('routes/list_route', function () {
   afterEach(function () { server.restore(); });
 
   beforeEach(function () {
-    this.collection = new ClothingItemCollection([]);
+    this.collection = new App.ClothingItemCollection([]);
     this.fetchSpy = sinon.spy(this.collection, 'fetch');
 
     this.listRoute = TestUtils.renderIntoDocument(
