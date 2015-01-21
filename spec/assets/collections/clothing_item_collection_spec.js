@@ -29,7 +29,7 @@ describe('collections/clothing_item_collection', function () {
       );
 
       var expectedNames = ['Marmot ROM Jacket', 'Uniqlo Down Jacket'];
-      expect(clothingItems.pluck('name')).to.eql(expectedNames);
+      expect(clothingItems.pluck('name')).to.deep.equal(expectedNames);
     });
   });
 });

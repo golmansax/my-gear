@@ -8,6 +8,7 @@
 //= require bower_components/react/react-with-addons
 //= require bower_components/react.backbone/react.backbone
 //= require bower_components/react-bootstrap/react-bootstrap
+//= require support/prop_types
 //
 //= require bower_components/chai/chai
 //= require support/sinon

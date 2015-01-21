@@ -21,8 +21,6 @@ Teaspoon.configure do |config|
     coverage.lines = 100
   end
 
-  config.use_coverage = :default
-
   config.coverage do |coverage|
     coverage.reports = ['text-summary', 'html']
     coverage.output_path = 'coverage/istanbul'
