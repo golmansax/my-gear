@@ -28,8 +28,8 @@ deploy:
   app:
     secure: PAbRJxrunbmYSs7z96peO3Azr5+GP5IOd0iE1RjXdPbG5Rr7oBNlVXqKQxJVEqbH8RTP8+N19i8luLBjrgFFtZrEsMfogyLTPxKxK2YG8c3eAEVuh/2ZLvLjV57dcLU/coJ4Hl4WpduWVnBoP6e7MtnwN9aA+Kwt+g1Ly10fAiU=
   run:
-  - rake bower:install:production
-  - rake assets:precompile
-  - rake clear_cache
+  - bundle exec rake bower:install:production
+  - bundle exec rake assets:precompile
+  - bundle exec rake clear_cache
   after_deploy:
   - heroku pg:reset
