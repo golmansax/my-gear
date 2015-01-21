@@ -1,26 +1,24 @@
-define([
-  'support/test_utils', 'components/outfit_view', 'models/outfit',
-  'support/magic_lamp', 'bower/react_router', 'bower/react'
-], function (TestUtils, OutfitView, Outfit, MagicLamp, Router, React) {
+//= require components/outfit_view
+//= require models/outfit
+
+describe('components/outfit_view', function () {
   'use strict';
 
-  describe('components/outfit_view', function () {
-    var outfit;
+  var outfit;
 
-    beforeEach(function () {
-      var fixture = MagicLamp.json('outfits/show');
-      outfit = new Outfit(fixture, { parse: true });
-    });
+  beforeEach(function () {
+    var fixture = MagicLamp.json('outfits/show');
+    outfit = new App.Outfit(fixture, { parse: true });
+  });
 
-    it('renders a Router Link for each clothing item', function () {
-      var outfitView = TestUtils.renderIntoDocument(
-        <OutfitView {...outfit.attributes} />
-      );
+  it('renders a Router Link for each clothing item', function () {
+    var outfitView = TestUtils.renderIntoDocument(
+      <App.OutfitView {...outfit.attributes} />
+    );
 
-      expect(TestUtils.findRenderedComponentWithType(
-        outfitView,
-        Router.Link
-      )).to.be.ok();
-    });
+    expect(TestUtils.findRenderedComponentWithType(
+      outfitView,
+      ReactRouter.Link
+    )).to.be.ok();
   });
 });

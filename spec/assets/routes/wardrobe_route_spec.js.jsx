@@ -1,31 +1,28 @@
-define([
-  'routes/wardrobe_route', 'support/test_utils',
-  'components/clothing_item_grid', 'bower/react'
-], function (WardrobeRoute, TestUtils, ClothingItemGrid, React) {
+//= require routes/wardrobe_route
+
+describe('routes/wardrobe_route', function () {
   'use strict';
 
-  describe('routes/wardrobe_route', function () {
-    beforeEach(function () {
-      this.collectionMock = [{ attributes: { hello: 'kitty' } }];
-      this.collectionMock.fetch = sinon.stub();
-      this.collectionMock.on = function () {};
+  beforeEach(function () {
+    this.collectionMock = [{ attributes: { hello: 'kitty' } }];
+    this.collectionMock.fetch = sinon.stub();
+    this.collectionMock.on = function () {};
 
-      this.wardrobeRoute = TestUtils.renderIntoDocument(
-        <WardrobeRoute collection={this.collectionMock} />
-      );
-    });
+    this.wardrobeRoute = TestUtils.renderIntoDocument(
+      <App.WardrobeRoute collection={this.collectionMock} />
+    );
+  });
 
-    it('fetches the collection', function () {
-      expect(this.collectionMock.fetch.called).to.be.true();
-    });
+  it('fetches the collection', function () {
+    expect(this.collectionMock.fetch.called).to.be.true();
+  });
 
-    it('renders a ClothingItemGrid with the collections', function () {
-      var grid = TestUtils.findRenderedComponentWithType(
-        this.wardrobeRoute,
-        ClothingItemGrid
-      );
+  it('renders a ClothingItemGrid with the collections', function () {
+    var grid = TestUtils.findRenderedComponentWithType(
+      this.wardrobeRoute,
+      App.ClothingItemGrid
+    );
 
-      expect(grid.props.clothingItems).to.deep.equal([{ hello: 'kitty' }]);
-    });
+    expect(grid.props.clothingItems).to.deep.equal([{ hello: 'kitty' }]);
   });
 });

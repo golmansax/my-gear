@@ -1,11 +1,9 @@
-define([
-  'routes', 'support/test_utils'
-], function (routes, TestUtils) {
+//= require routes
+
+describe('routes', function () {
   'use strict';
 
-  describe('routes', function () {
-    it('renders properly', function () {
-      TestUtils.renderIntoDocument(routes);
-    });
+  it('renders properly', function () {
+    TestUtils.renderIntoDocument(routes);
   });
 });
