@@ -20,4 +20,4 @@ node_modules
 bower_components
 
 coverage
-public/assets
+#public/assets
