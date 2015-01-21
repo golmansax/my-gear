@@ -1,3 +1,5 @@
+//= require bower_components/es5-shim/es5-shim
+//= require bower_components/es5-shim/es5-sham
 //= require bower_components/moment/moment
 //
 //= require bower_components/underscore/underscore

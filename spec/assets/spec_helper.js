@@ -1,4 +1,3 @@
-//= require support/phantomjs_shims
 //= require support/third_party_for_specs
 //= require support/test_utils
 //= require support/mock_react_router

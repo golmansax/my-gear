@@ -5,6 +5,7 @@
     "backbone-sortable-collection": "latest",
     "backbone.nativeajax": "latest",
     "bootstrap-sass-official": "latest",
+    "es5-shim": "latest",
     "moment": "latest",
     "reqwest": "latest",
     "react": "~> 0.12.0",
