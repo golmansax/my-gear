@@ -27,9 +27,9 @@ deploy:
   app:
     secure: PAbRJxrunbmYSs7z96peO3Azr5+GP5IOd0iE1RjXdPbG5Rr7oBNlVXqKQxJVEqbH8RTP8+N19i8luLBjrgFFtZrEsMfogyLTPxKxK2YG8c3eAEVuh/2ZLvLjV57dcLU/coJ4Hl4WpduWVnBoP6e7MtnwN9aA+Kwt+g1Ly10fAiU=
   run:
-    - rake db:migrate VERSION=0
-    - rake db:migrate
-    - rake db:seed
+    - bundle exec rake db:migrate VERSION=0
+    - bundle exec rake db:migrate
+    - bundle exec rake db:seed
 env:
   global:
   - secure: Ai9VTYB0nuXyFXFbtNTlYgLs5/OXtGOeMHdFWH4hTP9teCOQwh5nZaEnl7YEBGr3ITUY/nWf1Cuygl7AWJFalxptft4iTwnkUqKZ5ITGUxUOh9b+O0zuxfHuUncofr/g3mwhvi5ObD3mtDFAdh1rT94oecZD5re33H84EC+Ua20=
