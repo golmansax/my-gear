@@ -8,7 +8,10 @@ class ClothingItemsController < ApplicationController
     @clothing_item = ClothingItem.friendly.find(params[:id])
     respond_to do |format|
       format.json
-      format.html { render template: 'pages/index' }
+      format.html do
+        gon.jbuilder
+        render template: 'pages/index'
+      end
     end
   end
 end
