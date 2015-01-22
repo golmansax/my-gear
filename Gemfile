@@ -10,6 +10,7 @@ gem 'unicorn'
 
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'friendly_id', '~> 5.0.0'
+gem 'gon'
 gem 'jbuilder', '~> 2.0'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'sass-rails', '~> 4.0.5'
