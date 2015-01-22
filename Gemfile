@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby '2.1.5'
 
@@ -38,19 +39,18 @@ group :production do
   gem 'rails_12factor'
 end
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-backbone'
-  gem 'rails-assets-backbone-sortable-collection'
-  gem 'rails-assets-backbone.nativeajax'
-  gem 'rails-assets-es5-shim'
-  gem 'rails-assets-moment'
-  gem 'rails-assets-react', '~> 0.12.0'
-  gem 'rails-assets-react-bootstrap'
-  gem 'rails-assets-react-router'
-  gem 'rails-assets-react.backbone'
-  gem 'rails-assets-underscore'
+# Heroku doesn't support this syntax yet :( source 'https://rails-assets.org' do
+gem 'rails-assets-backbone'
+gem 'rails-assets-backbone-sortable-collection'
+gem 'rails-assets-backbone.nativeajax'
+gem 'rails-assets-es5-shim'
+gem 'rails-assets-moment'
+gem 'rails-assets-react', '~> 0.12.0'
+gem 'rails-assets-react-bootstrap'
+gem 'rails-assets-react-router'
+gem 'rails-assets-react.backbone'
+gem 'rails-assets-underscore'
 
-  group :test do
-    gem 'rails-assets-chai'
-  end
+group :test do
+  gem 'rails-assets-chai'
 end
