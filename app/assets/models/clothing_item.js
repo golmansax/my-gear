@@ -15,7 +15,7 @@ App.ClothingItem = (function () {
         return (brand && model) ? (brand + ' ' + model) : null;
       }
     },
-    validate: function (attrs) {
+    validate: function () {
       if (!this.get('name')) {
         return 'Data has not been loaded yet';
       }
