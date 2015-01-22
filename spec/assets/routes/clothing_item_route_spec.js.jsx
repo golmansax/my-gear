@@ -7,23 +7,19 @@ describe('routes/clothing_item_route', function () {
   var model;
 
   beforeEach(function () {
-    model = {
-      fetch: sinon.stub(),
-      isValid: sinon.stub(),
-      on: function () { }
-    };
+    model = new TestUtils.MockModel();
 
-    this.sandbox.stub(App, 'ClothingItemDetailedView', TestUtils.MockClass);
+    this.sandbox.stub(App, 'ClothingItemDetailedView', TestUtils.MockComponent);
   });
 
   it('fetches model on initialization', function () {
-    model.isValid.returns(false);
+    this.sandbox.stub(model, 'fetch');
     TestUtils.renderIntoDocument(<App.ClothingItemRoute model={model} />);
     expect(model.fetch).to.have.been.calledWith();
   });
 
   it('renders loading message if model is invalid', function () {
-    model.isValid.returns(false);
+    this.sandbox.stub(model, 'isValid').returns(false);
     var route = TestUtils.renderIntoDocument(
       <App.ClothingItemRoute model={model} />
     );
@@ -33,7 +29,7 @@ describe('routes/clothing_item_route', function () {
   });
 
   it('renders ClothingItemDetailedView if model is valid', function () {
-    model.isValid.returns(true);
+    this.sandbox.stub(model, 'isValid').returns(true);
     var route = TestUtils.renderIntoDocument(
       <App.ClothingItemRoute model={model} />
     );

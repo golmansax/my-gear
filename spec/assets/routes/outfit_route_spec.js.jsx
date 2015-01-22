@@ -1,14 +1,13 @@
-//= routes/outfit_route
+//= require routes/outfit_route
 
 describe('routes/outfit_route', function () {
   'use strict';
 
   beforeEach(function () {
-    this.model = {
-      fetch: sinon.stub(),
-      on: function () { },
-      attributes: { hello: 'kitty' }
-    };
+    this.sandbox.stub(App, 'OutfitView', TestUtils.MockComponent);
+    this.model = new TestUtils.MockModel({ hello: 'kitty' });
+    this.sandbox.stub(this.model, 'fetch');
+
     this.outfitRoute = TestUtils.renderIntoDocument(
       <App.OutfitRoute model={this.model} />
     );

@@ -12,7 +12,7 @@ describe('components/clothing_item_detailed_view', function () {
 
   it('renders', function () {
     TestUtils.renderIntoDocument(
-      <App.ClothingItemDetailedView {...clothingItem.attributes} />
+      <App.ClothingItemDetailedView {...(clothingItem.toJSON())} />
     );
   });
 });

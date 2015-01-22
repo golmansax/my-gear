@@ -4,11 +4,10 @@ describe('routes/wardrobe_route', function () {
   'use strict';
 
   beforeEach(function () {
-    this.collectionMock = [{ attributes: { hello: 'kitty' } }];
-    this.collectionMock.fetch = sinon.stub();
-    this.collectionMock.on = function () {};
+    this.collectionMock = new TestUtils.MockCollection([{ hello: 'kitty' }]);
+    this.sandbox.stub(this.collectionMock, 'fetch');
 
-    this.sandbox.stub(App, 'ClothingItemGrid', TestUtils.MockClass);
+    this.sandbox.stub(App, 'ClothingItemGrid', TestUtils.MockComponent);
 
     this.wardrobeRoute = TestUtils.renderIntoDocument(
       <App.WardrobeRoute collection={this.collectionMock} />

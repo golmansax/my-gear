@@ -11,7 +11,7 @@ App.OutfitRoute = (function () {
       return (
         <div>
           OUTFIT
-          <App.OutfitView {...this.getModel().attributes} />
+          <App.OutfitView {...this.getModel().toJSON()} />
         </div>
       );
     }

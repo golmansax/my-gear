@@ -42,6 +42,7 @@ end
 # Heroku doesn't support this syntax yet :( source 'https://rails-assets.org' do
 gem 'rails-assets-backbone'
 gem 'rails-assets-backbone-sortable-collection'
+gem 'rails-assets-backbone.mutators'
 gem 'rails-assets-backbone.nativeajax'
 gem 'rails-assets-es5-shim'
 gem 'rails-assets-moment'

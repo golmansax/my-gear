@@ -7,18 +7,16 @@ App.Header = (function () {
     componentDidMount: function () {
       this.getCollection().fetch();
     },
-    createEntry: function (entry) {
-      var modelAttributes = entry.attributes;
-      var myId = modelAttributes.id;
+    _renderEntry: function (entry) {
       var itemAttrs = {
         to: 'outfit',
-        params: { id: myId }
+        params: { id: entry.id }
       };
 
       return (
-        <li key={'outfit/' + myId}>
+        <li key={'outfit/' + entry.id}>
           <ReactRouter.Link {...itemAttrs}>
-            {modelAttributes.name}
+            {entry.name}
           </ReactRouter.Link>
         </li>
       );
@@ -36,7 +34,7 @@ App.Header = (function () {
             <App.RouterNavItem to='list'>List</App.RouterNavItem>
             <App.RouterNavItem to='wardrobe'>Wardrobe</App.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
-              {this.getCollection().map(this.createEntry)}
+              {this.getCollection().toJSON().map(this._renderEntry)}
             </ReactBootstrap.DropdownButton>
           </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>

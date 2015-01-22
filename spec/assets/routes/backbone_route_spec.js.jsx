@@ -13,7 +13,7 @@ describe('routes/backbone_route', function () {
 
       route = TestUtils.renderIntoDocument(
         <App.BackboneRoute modelClass={modelClass}
-            routeClass={TestUtils.MockClass} />
+            routeClass={TestUtils.MockComponent} />
       );
     });
 
@@ -24,7 +24,7 @@ describe('routes/backbone_route', function () {
 
     it('renders the routeClass', function () {
       expect(
-        TestUtils.findRenderedComponentWithType(route, TestUtils.MockClass)
+        TestUtils.findRenderedComponentWithType(route, TestUtils.MockComponent)
       ).to.be.ok();
     });
 
@@ -34,7 +34,7 @@ describe('routes/backbone_route', function () {
 
       route.replaceProps({
         collectionClass: collectionClass,
-        routeClass: TestUtils.MockClass
+        routeClass: TestUtils.MockComponent
       });
       expect(route.state.model).not.to.be.ok();
       expect(route.state.collection).to.equal(collection);
@@ -47,7 +47,7 @@ describe('routes/backbone_route', function () {
     var collectionClass = sinon.stub().withArgs(params).returns(collection);
     var routeAttrs = {
       collectionClass: collectionClass,
-      routeClass: TestUtils.MockClass
+      routeClass: TestUtils.MockComponent
     };
 
     var route = TestUtils.renderIntoDocument(
@@ -61,7 +61,7 @@ describe('routes/backbone_route', function () {
     var badAttrs = {
       modelClass: this.sandbox.stub(),
       collectionClass: this.sandbox.stub(),
-      routeClass: TestUtils.MockClass
+      routeClass: TestUtils.MockComponent
     };
 
     expect(function () {
@@ -72,7 +72,7 @@ describe('routes/backbone_route', function () {
   it('throws an error if neither model nor collection', function () {
     expect(function () {
       TestUtils.renderIntoDocument(
-        <App.BackboneRoute routeClass={TestUtils.MockClass} />
+        <App.BackboneRoute routeClass={TestUtils.MockComponent} />
       );
     }).to.throw('Neither model nor collection is defined');
   });

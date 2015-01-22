@@ -8,9 +8,7 @@ App.WardrobeRoute = (function () {
       this.getCollection().fetch();
     },
     render: function () {
-      var clothingItems = this.getCollection().map(function (clothingItem) {
-        return clothingItem.attributes;
-      });
+      var clothingItems = this.getCollection().toJSON();
 
       return (
         <div>

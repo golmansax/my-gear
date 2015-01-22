@@ -22,7 +22,7 @@ App.OutfitView = (function () {
     },
     render: function () {
       var clothingItems = _(this.props.clothingItems).map(function (attrs) {
-        return new App.ClothingItem(attrs, { parse: true }).attributes;
+        return new App.ClothingItem(attrs, { parse: true }).toJSON();
       });
 
       return (

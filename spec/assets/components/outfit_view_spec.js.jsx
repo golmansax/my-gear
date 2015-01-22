@@ -13,7 +13,7 @@ describe('components/outfit_view', function () {
 
   it('renders a Router Link for each clothing item', function () {
     var outfitView = TestUtils.renderIntoDocument(
-      <App.OutfitView {...outfit.attributes} />
+      <App.OutfitView {...outfit.toJSON()} />
     );
 
     expect(TestUtils.findRenderedComponentWithType(

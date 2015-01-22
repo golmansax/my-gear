@@ -10,7 +10,7 @@ describe('components/clothing_item_view', function () {
 
   it('renders', function () {
     TestUtils.renderIntoDocument(
-      <App.ClothingItemView {...this.clothingItem.attributes} />
+      <App.ClothingItemView {...this.clothingItem.toJSON()} />
     );
   });
 });

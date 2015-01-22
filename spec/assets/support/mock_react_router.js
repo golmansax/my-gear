@@ -2,10 +2,10 @@ ReactRouter = (function () {
   'use strict';
 
   return {
-    Route: TestUtils.MockClass,
-    DefaultRoute: TestUtils.MockClass,
-    Link: TestUtils.MockClass,
-    RouteHandler: TestUtils.MockClass,
+    Route: TestUtils.MockComponent,
+    DefaultRoute: TestUtils.MockComponent,
+    Link: TestUtils.MockComponent,
+    RouteHandler: TestUtils.MockComponent,
     State: {
       getParams: function () {},
       getQuery: function () {},

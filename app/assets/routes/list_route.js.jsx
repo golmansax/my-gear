@@ -22,9 +22,7 @@ App.ListRoute = (function () {
       }
     },
     render: function () {
-      var clothingItems = this.getCollection().map(function (model) {
-        return model.attributes;
-      });
+      var clothingItems = this.getCollection().toJSON();
 
       return (
         <div>

@@ -4,8 +4,10 @@ describe('components/header', function () {
   'use strict';
 
   beforeEach(function () {
-    this.outfitsMock = [{ attributes: { id: 'sexy', name: 'Sexy' } }];
-    _(this.outfitsMock).extend({ fetch: sinon.stub(), on: sinon.stub() });
+    this.outfitsMock = new TestUtils.MockCollection([
+      { id: 'sexy', name: 'Sexy' }
+    ]);
+    this.sandbox.stub(this.outfitsMock, 'fetch');
 
     this.header = TestUtils.renderIntoDocument(
       <App.Header collection={this.outfitsMock} />

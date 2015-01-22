@@ -11,7 +11,7 @@ App.ClothingItemRoute = (function () {
       var model = this.getModel();
 
       if (model.isValid()) {
-        return <App.ClothingItemDetailedView {...model.attributes} />;
+        return <App.ClothingItemDetailedView {...(model.toJSON())} />;
       } else {
         return <div>Loading...</div>;
       }

@@ -4,12 +4,19 @@ App.ClothingItem = (function () {
   return Backbone.Model.extend({
     parse: function (data) {
       return _(data).extend({
-        name: data.brand + ' ' + data.model,
         firstPurchaseDate: moment(data.firstPurchaseDate)
       });
     },
+    mutators: {
+      name: function () {
+        var brand = this.get('brand');
+        var model = this.get('model');
+
+        return (brand && model) ? (brand + ' ' + model) : null;
+      }
+    },
     validate: function (attrs) {
-      if (!attrs.name) {
+      if (!this.get('name')) {
         return 'Data has not been loaded yet';
       }
     },
