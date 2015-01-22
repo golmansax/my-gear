@@ -26,11 +26,11 @@ deploy:
     secure: ERr28OXoNvokbiM9EccyPA2GDC2A0Jd6Z3YBXrFPW9FFd+IhTCG47T8ZBqEh+woMXfCsDSnrtgA6crlw4NauTED2lkabhjg/z44ggcOKQ6BVejJ+EyfDTM2SCNcsf+GxU5+kxB0o+KM9Qq7Usk3oOLwCJxCdOcekIl8f8nWgoCM=
   app:
     secure: PAbRJxrunbmYSs7z96peO3Azr5+GP5IOd0iE1RjXdPbG5Rr7oBNlVXqKQxJVEqbH8RTP8+N19i8luLBjrgFFtZrEsMfogyLTPxKxK2YG8c3eAEVuh/2ZLvLjV57dcLU/coJ4Hl4WpduWVnBoP6e7MtnwN9aA+Kwt+g1Ly10fAiU=
-  after_deploy:
-  - heroku pg:reset $HEROKU_DB_URL --confirm $HEROKU_APP_NAME
-  - heroku run bundle exec rake db:migrate
-  - heroku run bundle exec rake db:seed
-  - heroku run bundle exec rake clear_cache
+after_deploy:
+- heroku pg:reset $HEROKU_DB_URL --confirm $HEROKU_APP_NAME
+- heroku run bundle exec rake db:migrate
+- heroku run bundle exec rake db:seed
+- heroku run bundle exec rake clear_cache
 env:
   global:
   - secure: Ai9VTYB0nuXyFXFbtNTlYgLs5/OXtGOeMHdFWH4hTP9teCOQwh5nZaEnl7YEBGr3ITUY/nWf1Cuygl7AWJFalxptft4iTwnkUqKZ5ITGUxUOh9b+O0zuxfHuUncofr/g3mwhvi5ObD3mtDFAdh1rT94oecZD5re33H84EC+Ua20=
