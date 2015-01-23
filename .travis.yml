@@ -30,7 +30,3 @@ deploy:
     - bundle exec rake db:migrate
     - bundle exec rake db:seed
     - restart
-env:
-  global:
-  - secure: Ai9VTYB0nuXyFXFbtNTlYgLs5/OXtGOeMHdFWH4hTP9teCOQwh5nZaEnl7YEBGr3ITUY/nWf1Cuygl7AWJFalxptft4iTwnkUqKZ5ITGUxUOh9b+O0zuxfHuUncofr/g3mwhvi5ObD3mtDFAdh1rT94oecZD5re33H84EC+Ua20=
-  - secure: PMaNicbYOkvOw5Igll8k38QZbsVYF5WB1aW7oHN3njxej7/XI+9RL+Cq/zIR4yWaIMRvUPjTMJpYXCvpvyrYF4RP5VlfzIgTxbUnwZ7fTHx2R0lzsDHbvVvr95jqksFM0CxmtFmyye4J+6RmCqtOCRqACMZxE4QyPg1DMEE3A48=
