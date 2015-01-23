@@ -6,8 +6,7 @@ cache:
   directories:
   - node_modules
   - vendor/assets/bower_components
-install:
-- bundle install
+before_install:
 - npm install
 before_script:
 - RAILS_ENV=production bundle exec rake assets:precompile
