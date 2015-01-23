@@ -12,7 +12,7 @@ App.ClothingItemBackboneRoute = (function () {
         modelClass: App.ClothingItem
       };
 
-      return <App.BackboneRoute {...routeAttrs} />;
+      return <App.BackboneRoute {...routeAttrs} data={this.props.data} />;
     }
   });
 })();

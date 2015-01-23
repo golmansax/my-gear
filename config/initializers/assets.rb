@@ -7,14 +7,11 @@ Rails.application.config.assets.precompile += %w(
   *.svg *.eot *.woff *.woff2 *.ttf *.jpg
 )
 unless Rails.env.production?
-  test_assets = %w(
+  Rails.application.config.assets.precompile += %w(
     teaspoon.css teaspoon-teaspoon.js mocha/*.js teaspoon-mocha.js
     spec_helper.js
   )
-  Rails.application.config.assets.precompile += test_assets
 end
 
 asset_paths = [Rails.root.join('app', 'assets')]
-asset_paths << Rails.root.join('vendor', 'assets')
-
 Rails.application.config.assets.paths.unshift(*asset_paths)

@@ -13,7 +13,7 @@ App.RootRoute = (function () {
         <div>
           <App.Header collection={this.state.outfits} />
           <div className='container'>
-            <ReactRouter.RouteHandler />
+            <ReactRouter.RouteHandler data={this.props.data} />
           </div>
         </div>
       );

@@ -19,13 +19,13 @@
       this.setState({ Handler: Handler });
     },
     render: function () {
-      return (<this.state.Handler />);
+      return <this.state.Handler data={this.props.data} />;
     }
   });
 
   if (onClient) {
     React.render(
-      <App.RouterBootstrap />,
+      <App.RouterBootstrap data={window.gon} />,
       window.document.getElementById('router-container')
     );
   }

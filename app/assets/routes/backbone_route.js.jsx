@@ -2,6 +2,7 @@ App.BackboneRoute = (function () {
   'use strict';
 
   return React.createClass({
+
     propTypes: {
       routeClass: PropTypes.func.isRequired,
       modelClass: PropTypes.func,
@@ -17,24 +18,47 @@ App.BackboneRoute = (function () {
         }
       }
     },
-    mixins: [ReactRouter.State],
-    getInitialState: function () {
-      return this.stateFromProps(this.props);
-    },
-    componentWillReceiveProps: function (nextProps) {
-      this.setState(this.stateFromProps(nextProps));
-    },
-    stateFromProps: function (props) {
-      var state = { model: null, collection: null };
 
+    mixins: [ReactRouter.State],
+
+    getInitialState: function () {
+      return this._stateFromProps(this.props, { initialState: true });
+    },
+
+    componentWillReceiveProps: function (nextProps) {
+      this.setState(this._stateFromProps(nextProps));
+    },
+
+    _stateFromProps: function (props, options) {
+      options = options || {};
+
+      var stateCreator;
       if (props.modelClass) {
-        state.model = new props.modelClass(this.getParams());
+        stateCreator = this._stateForModel;
       } else {
-        state.collection = new props.collectionClass();
+        stateCreator = this._stateForCollection;
       }
 
-      return state;
+      return stateCreator(props, options);
     },
+
+    _stateForModel: function (props, options) {
+      var data = options.initialState ? this.props.data : {};
+      data = data || this.getParams();
+
+      return {
+        model: new props.modelClass(data, { parse: true }),
+        collection: null
+      };
+    },
+
+    _stateForCollection: function (props) {
+      return {
+        model: null,
+        collection: new props.collectionClass()
+      };
+    },
+
     render: function () {
       return <this.props.routeClass {...this.state} />;
     }

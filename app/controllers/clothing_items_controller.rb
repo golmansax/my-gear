@@ -1,7 +1,10 @@
 class ClothingItemsController < ApplicationController
   def index
     @clothing_items = ClothingItem.all
-    respond_to { |format| format.json }
+    respond_to do |format|
+      format.json
+      format.html { render template: 'pages/index' }
+    end
   end
 
   def show
@@ -9,7 +12,7 @@ class ClothingItemsController < ApplicationController
     respond_to do |format|
       format.json
       format.html do
-        gon.jbuilder
+        @data = gon.jbuilder
         render template: 'pages/index'
       end
     end

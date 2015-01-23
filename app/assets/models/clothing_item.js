@@ -3,8 +3,10 @@ App.ClothingItem = (function () {
 
   return Backbone.Model.extend({
     parse: function (data) {
-      return _(data).extend({
-        firstPurchaseDate: moment(data.firstPurchaseDate)
+      var clothingItem = data.clothingItem || data;
+
+      return _(clothingItem).extend({
+        firstPurchaseDate: moment(clothingItem.firstPurchaseDate)
       });
     },
     mutators: {
