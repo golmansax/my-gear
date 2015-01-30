@@ -5,6 +5,6 @@ App.OutfitCollection = (function () {
 
   return Backbone.Collection.extend({
     model: App.Outfit,
-    url: '/outfits.json'
+    url: '/outfits'
   });
 })();

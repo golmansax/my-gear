@@ -30,8 +30,12 @@ App.ClothingItemTableGroup = (function () {
 
     _renderTable: function (clothingItems, attr) {
       return (
-        <App.ClothingItemTable key={attr} clothingItems={clothingItems}
-            handleSort={this.props.handleSort} />
+        <App.ClothingItemTable
+          key={attr}
+          clothingItems={clothingItems}
+          handleSort={this.props.handleSort}
+          title={this.props.groupBy + ': ' + attr}
+        />
       );
     },
 
@@ -39,12 +43,9 @@ App.ClothingItemTableGroup = (function () {
       var groupedClothingItems = _(this.props.clothingItems)
         .groupBy(this.props.groupBy);
 
-      var orderedGroupedClothingItems = _(this.state.groupedKeyOrder)
-        .map(function (key) {
-          return groupedClothingItems[key];
-        });
-
-      var tables = _(orderedGroupedClothingItems).map(this._renderTable);
+      var tables = _(this.state.groupedKeyOrder).map(function (key) {
+        return this._renderTable(groupedClothingItems[key], key);
+      }.bind(this));
 
       return (
         <div>{tables}</div>
