@@ -25,7 +25,7 @@
 
   if (onClient) {
     React.render(
-      <App.RouterBootstrap data={window.gon} />,
+      <App.RouterBootstrap data={window.gon || {}} />,
       window.document.getElementById('router-container')
     );
   }

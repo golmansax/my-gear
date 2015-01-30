@@ -4,16 +4,31 @@ App.WardrobeRoute = (function () {
   'use strict';
 
   return React.createBackboneClass({
-    componentDidMount: function () {
-      this.getCollection().fetch();
-    },
-    render: function () {
-      var clothingItems = this.getCollection().toJSON();
+    mixins: [ReactRouter.State],
 
+    componentDidMount: function () {
+      this.state.clothingItems.fetch();
+    },
+
+    componentWillMount: function () {
+      this.state.clothingItem.on('change', this.forceUpdate.bind(this, null));
+    },
+
+    getInitialState: function () {
+      var data = this.props.data.clothingItems || [];
+
+      return {
+        clothingItems: new App.ClothingItemCollection(data, { parse: true })
+      };
+    },
+
+    render: function () {
       return (
         <div>
           WARDROBE MANAGER
-          <App.ClothingItemGrid clothingItems={clothingItems} />
+          <App.ClothingItemGrid
+            clothingItems={this.state.clothingItems.toJSON}
+          />
         </div>
       );
     }

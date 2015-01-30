@@ -10,7 +10,6 @@
 //
 //= require react
 //= require react-bootstrap
-//= require react.backbone
 //
 //= require chai
 //= require support/sinon

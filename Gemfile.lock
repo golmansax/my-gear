@@ -146,7 +146,6 @@ GEM
     rails-assets-react-bootstrap (0.13.2)
       rails-assets-react (>= 0.12.0)
     rails-assets-react-router (0.11.6)
-    rails-assets-react.backbone (0.6.0)
     rails-assets-underscore (1.7.0)
     rails_12factor (0.0.3)
       rails_serve_static_assets
@@ -261,7 +260,6 @@ DEPENDENCIES
   rails-assets-react (~> 0.12.0)
   rails-assets-react-bootstrap
   rails-assets-react-router
-  rails-assets-react.backbone
   rails-assets-underscore
   rails_12factor
   react-rails (~> 1.0.0.pre)!

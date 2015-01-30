@@ -50,7 +50,6 @@ gem 'rails-assets-moment'
 gem 'rails-assets-react', '~> 0.12.0'
 gem 'rails-assets-react-bootstrap'
 gem 'rails-assets-react-router'
-gem 'rails-assets-react.backbone'
 gem 'rails-assets-underscore'
 
 group :test do

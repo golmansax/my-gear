@@ -9,4 +9,3 @@
 //= require react
 //= require react-bootstrap
 //= require react-router
-//= require react.backbone
