@@ -5,13 +5,10 @@ App.RootRoute = (function () {
   'use strict';
 
   return React.createClass({
-    getInitialState: function () {
-      return { outfits: new App.OutfitCollection() };
-    },
     render: function () {
       return (
         <div>
-          <App.Header collection={this.state.outfits} />
+          <App.Header />
           <div className='container'>
             <ReactRouter.RouteHandler data={this.props.data} />
           </div>

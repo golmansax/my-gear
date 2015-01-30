@@ -1,4 +1,5 @@
 //= require components/clothing_item_detailed_view
+//= require models/clothing_item
 
 App.ClothingItemRoute = (function () {
   'use strict';
@@ -6,24 +7,34 @@ App.ClothingItemRoute = (function () {
   return React.createClass({
     mixins: [ReactRouter.State],
 
+    _getStateFromStore: function (id) {
+      return { clothingItem: App.ClothingItemStore.getOne(id) };
+    },
+
     getInitialState: function () {
-      var data = this.props.data.clothingItem || this.getParams();
-      return { clothingItem: new App.ClothingItem(data, { parse: true }) };
+      return this._getStateFromStore(this.getParams().id);
     },
 
-    componentWillMount: function () {
-      this.state.clothingItem.on('all', this.forceUpdate.bind(this, null));
+    componentDidMount: function() {
+      App.ClothingItemStore.addChangeListener(this._onChange);
     },
 
-    componentDidMount: function () {
-      this.state.clothingItem.fetch();
+    componentWillUnmount: function() {
+      App.ClothingItemStore.removeChangeListener(this._onChange);
     },
+
+    _onChange: function () {
+      this.setState(this._getStateFromStore(this.getParams().id));
+    },
+
+    // ACCOUNT FROM getParams() switch
 
     render: function () {
       var clothingItem = this.state.clothingItem;
 
-      if (clothingItem.isValid()) {
-        return <App.ClothingItemDetailedView {...(clothingItem.toJSON())} />;
+      // TODO check validation
+      if (new App.ClothingItem(clothingItem).isValid()) {
+        return <App.ClothingItemDetailedView {...clothingItem} />;
       } else {
         return <div>Loading...</div>;
       }

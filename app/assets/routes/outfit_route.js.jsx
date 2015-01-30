@@ -4,7 +4,7 @@
 App.OutfitRoute = (function () {
   'use strict';
 
-  return React.createBackboneClass({
+  return React.createClass({
     mixins: [ReactRouter.State],
 
     componentDidMount: function () {

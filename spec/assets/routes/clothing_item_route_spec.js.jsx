@@ -10,12 +10,12 @@ describe('routes/clothing_item_route', function () {
     model = new TestUtils.MockModel();
 
     this.sandbox.stub(App, 'ClothingItemDetailedView', TestUtils.MockComponent);
+    this.sandbox.useFakeServer();
   });
 
   it('fetches model on initialization', function () {
-    this.sandbox.stub(model, 'fetch');
-    TestUtils.renderIntoDocument(<App.ClothingItemRoute model={model} />);
-    expect(model.fetch).to.have.been.calledWith();
+    TestUtils.renderIntoDocument(<App.ClothingItemRoute data={{ id: 77 }} />);
+    expect(this.sandbox.server.requests[0].url).to.contain('clothing_items/77');
   });
 
   it('renders loading message if model is invalid', function () {

@@ -4,7 +4,6 @@ App.ClothingItemTableGroup = (function () {
   'use strict';
 
   return React.createClass({
-
     getInitialProps: function () {
       return { clothingItems: [], groupBy: null };
     },
@@ -19,13 +18,13 @@ App.ClothingItemTableGroup = (function () {
     },
 
     componentWillReceiveProps: function (newProps) {
-      if (!this.state.groupedKeyOrder) {
-        var groupedKeyOrder = computeGroupedKeyOrder(
-          newProps.clothingItems,
-          newProps.groupBy
-        );
+      var newGroupedKeyOrder = computeGroupedKeyOrder(
+        newProps.clothingItems,
+        newProps.groupBy
+      );
 
-        this.setState({ groupedKeyOrder: groupedKeyOrder });
+      if (this.state.groupedKeyOrder !== newGroupedKeyOrder) {
+        this.setState({ groupedKeyOrder: newGroupedKeyOrder });
       }
     },
 

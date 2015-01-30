@@ -1,25 +1,28 @@
 //= require components/clothing_item_grid
+//= require stores/clothing_item_store
 
 App.WardrobeRoute = (function () {
   'use strict';
 
-  return React.createBackboneClass({
-    mixins: [ReactRouter.State],
-
-    componentDidMount: function () {
-      this.state.clothingItems.fetch();
-    },
-
-    componentWillMount: function () {
-      this.state.clothingItem.on('change', this.forceUpdate.bind(this, null));
-    },
-
+  return React.createClass({
     getInitialState: function () {
-      var data = this.props.data.clothingItems || [];
+      return this._getStateFromStore();
+    },
 
-      return {
-        clothingItems: new App.ClothingItemCollection(data, { parse: true })
-      };
+    componentDidMount: function() {
+      App.ClothingItemStore.addChangeListener(this._onChange);
+    },
+
+    componentWillUnmount: function() {
+      App.ClothingItemStore.removeChangeListener(this._onChange);
+    },
+
+    _onChange: function () {
+      this.setState(this._getStateFromStore());
+    },
+
+    _getStateFromStore: function () {
+      return { clothingItems: App.ClothingItemStore.getAll() };
     },
 
     render: function () {
@@ -27,7 +30,7 @@ App.WardrobeRoute = (function () {
         <div>
           WARDROBE MANAGER
           <App.ClothingItemGrid
-            clothingItems={this.state.clothingItems.toJSON}
+            clothingItems={this.state.clothingItems}
           />
         </div>
       );
