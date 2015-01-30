@@ -1,11 +1,11 @@
-//= require collections/clothing_item_collection
+//= require collections/outfit_collection
 
-App.ClothingItemStore = (function () {
+App.OutfitStore = (function () {
   'use strict';
 
   var EVENTS = 'add remove change reset sort';
 
-  return new (App.ClothingItemCollection.extend({
+  return new (App.OutfitCollection.extend({
     _fetchedAll: false,
 
     getAll: function () {

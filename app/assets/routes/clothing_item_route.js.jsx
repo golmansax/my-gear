@@ -27,8 +27,6 @@ App.ClothingItemRoute = (function () {
       this.setState(this._getStateFromStore(this.getParams().id));
     },
 
-    // ACCOUNT FROM getParams() switch
-
     render: function () {
       var clothingItem = this.state.clothingItem;
 

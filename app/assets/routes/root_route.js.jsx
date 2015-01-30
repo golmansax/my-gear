@@ -1,4 +1,3 @@
-//= require collections/outfit_collection
 //= require components/header
 
 App.RootRoute = (function () {

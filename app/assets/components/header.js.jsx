@@ -1,20 +1,28 @@
 //= require components/router_nav_item
+//= require stores/outfit_store
 
 App.Header = (function () {
   'use strict';
 
   return React.createClass({
-
     getInitialState: function () {
-      return { outfits: new App.OutfitCollection() };
+      return this._getStateFromStore();
     },
 
-    componentWillMount: function () {
-      this.state.outfits.on('all', this.forceUpdate.bind(this, null));
+    componentDidMount: function() {
+      App.OutfitStore.addChangeListener(this._onChange);
     },
 
-    componentDidMount: function () {
-      this.state.outfits.fetch();
+    componentWillUnmount: function() {
+      App.OutfitStore.removeChangeListener(this._onChange);
+    },
+
+    _onChange: function () {
+      this.setState(this._getStateFromStore());
+    },
+
+    _getStateFromStore: function () {
+      return { outfits: App.OutfitStore.getAll() };
     },
 
     _renderEntry: function (entry) {
@@ -45,7 +53,7 @@ App.Header = (function () {
             <App.RouterNavItem to='list'>List</App.RouterNavItem>
             <App.RouterNavItem to='wardrobe'>Wardrobe</App.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
-              {this.state.outfits.toJSON().map(this._renderEntry)}
+              {this.state.outfits.map(this._renderEntry)}
             </ReactBootstrap.DropdownButton>
           </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>
