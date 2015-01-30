@@ -7,25 +7,27 @@ App.OutfitRoute = (function () {
   return React.createClass({
     mixins: [ReactRouter.State],
 
-    componentDidMount: function () {
-      this.state.outfit.fetch();
-    },
-
-    componentWillMount: function () {
-      this.state.clothingItem.on('all', this.forceUpdate.bind(this, null));
+    _getStateFromStore: function (id) {
+      return { outfit: App.OutfitStore.get(id) };
     },
 
     getInitialState: function () {
-      var data = this.props.data.outfit || this.getParams();
-      return { outfit: new App.Outfit(data, { parse: true }) };
+      return this._getStateFromStore(this.getParams().id);
     },
 
+    componentDidMount: function() {
+      App.OutfitStore.addChangeListener(this._onChange);
+    },
+
+    componentWillUnmount: function() {
+      App.OutfitStore.removeChangeListener(this._onChange);
+    },
 
     render: function () {
       return (
         <div>
           OUTFIT
-          <App.OutfitView {...this.state.outfit.toJSON()} />
+          <App.OutfitView {...this.state.outfit} />
         </div>
       );
     }

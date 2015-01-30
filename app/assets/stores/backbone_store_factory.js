@@ -16,7 +16,7 @@ App.BackboneStoreFactory = function (Collection) {
       return _storage.toJSON();
     },
 
-    getOne: function (id) {
+    get: function (id) {
       var model = _storage.get(id);
       if (!model) {
         model = _storage.create({ id: id });

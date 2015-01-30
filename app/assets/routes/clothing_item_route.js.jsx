@@ -8,7 +8,7 @@ App.ClothingItemRoute = (function () {
     mixins: [ReactRouter.State],
 
     _getStateFromStore: function (id) {
-      return { clothingItem: App.ClothingItemStore.getOne(id) };
+      return { clothingItem: App.ClothingItemStore.get(id) };
     },
 
     getInitialState: function () {
