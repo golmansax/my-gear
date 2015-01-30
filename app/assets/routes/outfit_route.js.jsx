@@ -23,6 +23,16 @@ App.OutfitRoute = (function () {
       App.OutfitStore.removeChangeListener(this._onChange);
     },
 
+    _onChange: function () {
+      this.setState(this._getStateFromStore(this.getParams().id));
+    },
+
+    componentWillReceiveProps: function (newProps) {
+      if (this.getParams().id !== this.state.outfit.id) {
+        this.setState(this._getStateFromStore(this.getParams().id));
+      }
+    },
+
     render: function () {
       return (
         <div>

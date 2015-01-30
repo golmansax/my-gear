@@ -43,7 +43,7 @@ App.ListRoute = (function () {
     render: function () {
       return (
         <div>
-          <h1>List of Everything</h1>
+          <h1>List of Everything ({this.state.clothingItems.length})</h1>
           <App.ClothingItemTableGroup
             clothingItems={this.state.clothingItems}
             groupBy={this.state.groupBy}

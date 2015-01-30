@@ -5,7 +5,7 @@
 
   Backbone.ajax = function (options) {
     var defaultHeaders = { 'X-Requested-With': 'XMLHttpRequest' };
-    options.headers = _(defaultHeaders).extend(options.headers || {});
+    options.headers = _(defaultHeaders).extend(options.headers);
 
     return originalAjax(options);
   }

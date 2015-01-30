@@ -1,5 +1,4 @@
 //= require components/clothing_item_table
-
 App.ClothingItemTableGroup = (function () {
   'use strict';
 
@@ -34,7 +33,7 @@ App.ClothingItemTableGroup = (function () {
           key={attr}
           clothingItems={clothingItems}
           handleSort={this.props.handleSort}
-          title={this.props.groupBy + ': ' + attr}
+          title={App.Utils.capitalize(this.props.groupBy) + ': ' + attr}
         />
       );
     },

@@ -9,6 +9,7 @@ App.ClothingItem = (function () {
         firstPurchaseDate: moment(clothingItem.firstPurchaseDate)
       });
     },
+
     mutators: {
       name: function () {
         var brand = this.get('brand');
@@ -17,11 +18,13 @@ App.ClothingItem = (function () {
         return (brand && model) ? (brand + ' ' + model) : null;
       }
     },
+
     validate: function () {
       if (!this.get('name')) {
         return 'Data has not been loaded yet';
       }
     },
+
     urlRoot: function () {
       return '/clothing_items';
     }
