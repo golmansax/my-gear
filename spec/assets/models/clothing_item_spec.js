@@ -42,7 +42,7 @@ describe('models/clothing_item', function () {
   describe('#fetch', function () {
     it('grabs the data from the proper url', function () {
       clothingItem.fetch();
-      expect(server.requests[0].url).to.equal('/clothing_items/77.json');
+      expect(server.requests[0].url).to.equal('/clothing_items/77');
     });
   });
 });
