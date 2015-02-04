@@ -10,26 +10,17 @@ describe('routes/list_route', function () {
   afterEach(function () { server.restore(); });
 
   beforeEach(function () {
-    this.collection = new App.ClothingItemCollection([]);
-    this.fetchSpy = sinon.spy(this.collection, 'fetch');
+    var collection = new App.ClothingItemCollection(
+      MagicLamp.rawJson('clothing_items/index')
+    ).toJSON();
+    this.sandbox.stub(App.ClothingItemStore, 'getAll').returns(collection);
 
     this.listRoute = TestUtils.renderIntoDocument(
       <App.ListRoute collection={this.collection} />
     );
   });
 
-  it('fetches the collection', function () {
-    expect(this.fetchSpy.called).to.be.true();
-  });
-
   it('sorts list when table header is clicked', function () {
-    server.requests[0].respond(
-      200,
-      { 'Content-Type': 'application/json' },
-      MagicLamp.rawJson('clothing_items/index')
-    );
-    this.listRoute.forceUpdate();
-
     var headers = TestUtils.scryRenderedDOMComponentsWithTag(
       this.listRoute,
       'th'

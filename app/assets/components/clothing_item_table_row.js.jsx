@@ -1,3 +1,5 @@
+//= require models/clothing_item
+
 App.ClothingItemTableRow = (function () {
   'use strict';
 
