@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115081032) do
+ActiveRecord::Schema.define(version: 20150204213112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 20150115081032) do
     t.string   "type",                             null: false
     t.date     "recent_purchase_date",             null: false
     t.date     "first_purchase_date",              null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "slug"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "slug",                             null: false
     t.integer  "usage",                default: 0, null: false
   end
 
@@ -50,11 +50,20 @@ ActiveRecord::Schema.define(version: 20150115081032) do
 
   create_table "outfits", force: true do |t|
     t.string   "name",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "slug",       null: false
   end
 
   add_index "outfits", ["slug"], name: "index_outfits_on_slug", unique: true, using: :btree
+
+  create_table "purchases", force: true do |t|
+    t.string   "version",          null: false
+    t.boolean  "in_use",           null: false
+    t.date     "date",             null: false
+    t.integer  "clothing_item_id", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
 end
