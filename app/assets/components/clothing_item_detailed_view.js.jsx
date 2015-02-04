@@ -20,7 +20,7 @@ App.ClothingItemDetailedView = (function () {
             <h1>{this.props.name}</h1>
             <h4>
               <strong>First purchase date: </strong>
-              {this.props.firstPurchaseDate.format('MMMM YYYY')}
+              Sike!
             </h4>
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>

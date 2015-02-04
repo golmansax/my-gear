@@ -5,7 +5,7 @@ clothing_items = [
   'uniqlo-ultra-lite-down-vest',
   'wool-prince-better-button-down',
   # long shirt
-  'stonemaster-slim-stonemaster-pant',
+  'stonemaster-pant',
   'uniqlo-heattech-long-john',
   # long socks
 ]

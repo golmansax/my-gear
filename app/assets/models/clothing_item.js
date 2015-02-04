@@ -3,11 +3,7 @@ App.ClothingItem = (function () {
 
   return Backbone.Model.extend({
     parse: function (data) {
-      var clothingItem = data.clothingItem || data;
-
-      return _(clothingItem).extend({
-        firstPurchaseDate: moment(clothingItem.firstPurchaseDate)
-      });
+      return data.clothingItem || data;
     },
 
     mutators: {
@@ -31,8 +27,7 @@ App.ClothingItem = (function () {
   }, {
     propTypes: {
       name: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-      firstPurchaseDate: PropTypes.moment.isRequired
+      id: PropTypes.string.isRequired
     }
   });
 })();

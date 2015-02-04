@@ -2,7 +2,7 @@ outfit = Outfit.create!(name: 'Formal')
 
 clothing_items = [
   'wool-prince-better-button-down',
-  'stonemaster-slim-stonemaster-pant',
+  'stonemaster-pant',
   'uniqlo-airism-boxer-brief',
   'injinji-run-2-0-lightweight-no-show-nuwool',
   'xero-shoes-diy-sandal',
