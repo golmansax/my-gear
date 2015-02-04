@@ -3,11 +3,11 @@ class ClothingItem < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   has_and_belongs_to_many :outfits
+  has_many :purchases
 
   validates_presence_of :brand
   validates_presence_of :model
-
-  enum usage: [:specialized, :moderate, :heavy]
+  validates_presence_of :purchases
 
   def name
     "#{brand} #{model}"

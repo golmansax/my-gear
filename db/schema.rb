@@ -11,19 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150204214239) do
+ActiveRecord::Schema.define(version: 20150204222722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clothing_items", force: true do |t|
-    t.string   "model",                  null: false
-    t.string   "brand",                  null: false
-    t.string   "type",                   null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "slug",                   null: false
-    t.integer  "usage",      default: 0, null: false
+    t.string   "model",      null: false
+    t.string   "brand",      null: false
+    t.string   "type",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "slug",       null: false
   end
 
   add_index "clothing_items", ["slug"], name: "index_clothing_items_on_slug", unique: true, using: :btree
@@ -57,11 +56,11 @@ ActiveRecord::Schema.define(version: 20150204214239) do
 
   create_table "purchases", force: true do |t|
     t.string   "version",          null: false
-    t.boolean  "in_use",           null: false
     t.date     "date",             null: false
     t.integer  "clothing_item_id", null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "usage",            null: false
   end
 
 end
