@@ -11,21 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150204213112) do
+ActiveRecord::Schema.define(version: 20150204214239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clothing_items", force: true do |t|
-    t.string   "model",                            null: false
-    t.string   "brand",                            null: false
-    t.string   "type",                             null: false
-    t.date     "recent_purchase_date",             null: false
-    t.date     "first_purchase_date",              null: false
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "slug",                             null: false
-    t.integer  "usage",                default: 0, null: false
+    t.string   "model",                  null: false
+    t.string   "brand",                  null: false
+    t.string   "type",                   null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "slug",                   null: false
+    t.integer  "usage",      default: 0, null: false
   end
 
   add_index "clothing_items", ["slug"], name: "index_clothing_items_on_slug", unique: true, using: :btree
