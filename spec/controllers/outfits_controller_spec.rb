@@ -7,11 +7,11 @@ describe OutfitsController do
       create(:outfit, name: 'Sexy')
       get(:index, format: :json)
 
-      expected_output = [
-        { name: 'Lazy', id: 'lazy' }.with_indifferent_access,
-        { name: 'Sexy', id: 'sexy' }.with_indifferent_access,
-      ]
-      expect(JSON.parse(response.body)).to eq(expected_output)
+      expected_response = [
+        { name: 'Lazy', id: 'lazy', clothingItemIds: [] },
+        { name: 'Sexy', id: 'sexy', clothingItemIds: [] },
+      ].map(&:with_indifferent_access)
+      expect(JSON.parse(response.body)).to eq(expected_response)
     end
   end
 
@@ -23,22 +23,12 @@ describe OutfitsController do
 
       get(:show, format: :json, id: 'baller')
 
-      expected_output = {
+      expected_response = {
         name: 'Baller',
         id: 'baller',
-        clothingItems: [
-          {
-            id: 'uniqlo-down-jacket',
-            brand: 'Uniqlo',
-            model: 'Down Jacket',
-            imagePath: '/images/uniqlo-down-jacket.jpg',
-            firstPurchaseDate: '2014-07-01',
-            usage: 'heavy',
-            type: 'Outerwear',
-          },
-        ],
+        clothingItemIds: [down_jacket.id],
       }.with_indifferent_access
-      expect(JSON.parse(response.body)).to eq(expected_output)
+      expect(JSON.parse(response.body)).to eq(expected_response)
     end
   end
 end

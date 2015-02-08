@@ -16,11 +16,6 @@ gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'sass-rails', '~> 4.0.5'
 gem 'uglifier', '>= 1.3.0'
 
-group :development do
-  gem 'spring'
-  gem 'spring-commands-rspec'
-end
-
 group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
@@ -32,6 +27,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
+  gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'spring-commands-teaspoon'
   gem 'travis'
 end

@@ -3,5 +3,6 @@ FactoryGirl.define do
     date Date.today
     usage 'specialized'
     version 'Navy'
+    clothing_item
   end
 end

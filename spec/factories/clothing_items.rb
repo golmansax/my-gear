@@ -3,14 +3,20 @@ FactoryGirl.define do
     brand 'Chalk'
     model 'Hoodie'
     type 'Need to overwrite this'
-    purchases { build_list(:purchase, 1) }
+    purchases { build_list(:purchase, 1, clothing_item_id: id) }
 
     factory :outerwear, class: 'Outerwear' do
       type 'Outerwear'
       brand 'Marmot'
       model 'ROM Jacket'
-      usage 'heavy'
-      # TODO purchases [build(:purchase, date: Date.parse('July 2014'))]
+      purchases do
+        purchase_params = {
+          date: Date.parse('July 2014'),
+          usage: 'heavy',
+          clothing_item_id: id,
+        }
+        build_list(:purchase, 1, purchase_params)
+      end
     end
   end
 end

@@ -7,10 +7,9 @@ describe ClothingItemsController do
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
       imagePath: '/assets/marmot-rom-jacket.jpg',
-      firstPurchaseDate: '2014-07-01',
       usage: 'heavy',
       type: 'Outerwear',
-    }.with_indifferent_access
+    }
   end
 
   describe '#index' do
@@ -18,7 +17,8 @@ describe ClothingItemsController do
       create(:outerwear)
       get(:index, format: :json)
 
-      expect(JSON.parse(response.body)).to eq([outerwear_as_json])
+      expected_response = [outerwear_as_json].map(&:with_indifferent_access)
+      expect(JSON.parse(response.body)).to eq(expected_response)
     end
   end
 
@@ -27,7 +27,10 @@ describe ClothingItemsController do
       create(:outerwear)
       get(:show, format: :json, id: 'marmot-rom-jacket')
 
-      expect(JSON.parse(response.body)).to eq(outerwear_as_json)
+      expected_response = {
+        clothingItem: outerwear_as_json,
+      }.with_indifferent_access
+      expect(JSON.parse(response.body)).to eq(expected_response)
     end
   end
 end
