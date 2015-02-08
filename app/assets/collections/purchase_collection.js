@@ -1,4 +1,4 @@
-//= require models/outfit
+//= require models/purchase
 
 App.PurchaseCollection = (function () {
   'use strict';
