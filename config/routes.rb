@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/wardrobe' => 'clothing_items#index'
   resources :clothing_items, only: [:index, :show]
   resources :outfits, only: [:index, :show]
+  resources :purchases, only: [:index, :show]
 end

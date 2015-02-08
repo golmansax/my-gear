@@ -26,7 +26,7 @@ describe OutfitsController do
       expected_response = {
         name: 'Baller',
         id: 'baller',
-        clothingItemIds: [down_jacket.id],
+        clothingItemIds: [down_jacket.slug],
       }.with_indifferent_access
       expect(JSON.parse(response.body)).to eq(expected_response)
     end
