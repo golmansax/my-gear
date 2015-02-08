@@ -1,6 +1,7 @@
 //= require components/outfit_view
 //= require models/outfit
 //= require mixins/store_watch_mixin
+//= require stores/outfit_store
 
 App.OutfitRoute = (function () {
   'use strict';

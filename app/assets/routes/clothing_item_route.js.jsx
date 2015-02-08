@@ -1,6 +1,7 @@
 //= require components/clothing_item_detailed_view
 //= require models/clothing_item
 //= require mixins/store_watch_mixin
+//= require stores/clothing_item_store
 
 App.ClothingItemRoute = (function () {
   'use strict';

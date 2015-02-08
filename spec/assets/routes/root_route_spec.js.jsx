@@ -4,13 +4,7 @@ describe('routes/root_route', function () {
   'use strict';
 
   beforeEach(function () {
-    this.rootRoute = TestUtils.renderIntoDocument(
-      <App.RootRoute activeRouteHandler={this.sandbox.stub()} />
-    );
-  });
-
-  it('adds an outfit collection to the state', function () {
-    expect(this.rootRoute.state.outfits).to.exist();
+    this.rootRoute = TestUtils.renderIntoDocument(<App.RootRoute />);
   });
 
   it('renders a header', function () {

@@ -14,7 +14,7 @@ describe('components/clothing_item_grid', function () {
 
   it('renders a ClothingItemView for each clothingItem', function () {
     var grid = TestUtils.renderIntoDocument(
-      <App.ClothingItemGrid clothingItems={[clothingItem.toJSON()]} />
+      <App.ClothingItemGrid ids={[clothingItem.id]} />
     );
 
     var clothingItemViews = TestUtils.scryRenderedComponentsWithType(

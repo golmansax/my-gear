@@ -5,16 +5,13 @@ describe('routes/outfit_route', function () {
 
   beforeEach(function () {
     this.sandbox.stub(App, 'OutfitView', TestUtils.MockComponent);
-    this.model = new TestUtils.MockModel({ hello: 'kitty' });
-    this.sandbox.stub(this.model, 'fetch');
+    this.sandbox.stub(App.OutfitStore, 'get')
+      .withArgs('my-outfit')
+      .returns({ hello: 'kitty' });
 
     this.outfitRoute = TestUtils.renderIntoDocument(
-      <App.OutfitRoute model={this.model} />
+      <App.OutfitRoute id={'my-outfit'} />
     );
-  });
-
-  it('fetches model on initialization', function () {
-    expect(this.model.fetch).to.have.been.calledWith();
   });
 
   it('renders OutfitView with the model attributes', function () {

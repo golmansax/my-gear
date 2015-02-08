@@ -3,6 +3,8 @@
 //= require support/test_utils
 //= require support/mock_react_router
 //= require support/magic_lamp
+//= require_self
+//= require support/utils
 /* global window*/
 
 App = {};

@@ -3,7 +3,8 @@ App.Purchase = (function () {
 
   return Backbone.Model.extend({
     parse: function (data) {
-      return data.purchase || data;
+      var purchase = data.purchase || data;
+      return _.extend(purchase, { date: moment(purchase.date) });
     },
 
     urlRoot: function () {

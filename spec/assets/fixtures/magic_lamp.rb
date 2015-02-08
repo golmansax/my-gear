@@ -3,8 +3,18 @@ MagicLamp.define(controller: ClothingItemsController) do
     @clothing_item = Outerwear.create!(
       brand: 'Uniqlo',
       model: 'Down Jacket',
-      first_purchase_date: Date.parse('2014-10-30'),
-      recent_purchase_date: Date.parse('2014-11-01'),
+      purchases: [
+        Purchase.new(
+          date: Date.parse('2014-10-30'),
+          version: 'Red',
+          usage: 'not in use',
+        ),
+        Purchase.new(
+          date: Date.parse('2014-11-01'),
+          version: 'Navy',
+          usage: 'moderate',
+        ),
+      ],
     )
     render :show
   end
@@ -14,14 +24,34 @@ MagicLamp.define(controller: ClothingItemsController) do
       Outerwear.create!(
         brand: 'Uniqlo',
         model: 'Down Jacket',
-        first_purchase_date: Date.parse('2014-10-30'),
-        recent_purchase_date: Date.parse('2014-11-01'),
+        purchases: [
+          Purchase.new(
+            date: Date.parse('2014-10-30'),
+            version: 'Red',
+            usage: 'not in use',
+          ),
+          Purchase.new(
+            date: Date.parse('2014-11-01'),
+            version: 'Navy',
+            usage: 'moderate',
+          ),
+        ],
       ),
       Outerwear.create!(
         brand: 'Marmot',
         model: 'ROM Jacket',
-        first_purchase_date: Date.parse('2014-10-30'),
-        recent_purchase_date: Date.parse('2014-11-01'),
+        purchases: [
+          Purchase.new(
+            date: Date.parse('2014-10-30'),
+            version: 'Gray',
+            usage: 'not in use',
+          ),
+          Purchase.new(
+            date: Date.parse('2014-11-01'),
+            version: 'Green',
+            usage: 'heavy',
+          ),
+        ],
       ),
     ]
     render :index
@@ -35,9 +65,19 @@ MagicLamp.define(controller: OutfitsController) do
     Outerwear.create!(
       brand: 'Uniqlo',
       model: 'Down Jacket',
-      first_purchase_date: Date.parse('2014-10-30'),
-      recent_purchase_date: Date.parse('2014-11-01'),
       outfits: [@outfit],
+      purchases: [
+        Purchase.new(
+          date: Date.parse('2014-10-30'),
+          version: 'Red',
+          usage: 'not in use',
+        ),
+        Purchase.new(
+          date: Date.parse('2014-11-01'),
+          version: 'Navy',
+          usage: 'moderate',
+        ),
+      ],
     )
 
     render :show

@@ -1,3 +1,4 @@
+//= require mixins/store_watch_mixin
 //= require stores/purchase_store
 
 App.PurchaseListItem = (function () {

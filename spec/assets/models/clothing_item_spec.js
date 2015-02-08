@@ -14,18 +14,12 @@ describe('models/clothing_item', function () {
       id: '77',
       brand: 'Uniqlo',
       model: 'Down Jacket',
-      firstPurchaseDate: '2014-10-30'
     }, { parse: true });
   });
 
   describe('#parse', function () {
     it('adds name to the attributes', function () {
       expect(clothingItem.get('name')).to.equal('Uniqlo Down Jacket');
-    });
-
-    it('makes firstPurchaseDate a moment', function () {
-      var firstPurchaseDate = clothingItem.get('firstPurchaseDate');
-      expect(firstPurchaseDate).to.be.instanceOf(moment.fn.constructor);
     });
   });
 
