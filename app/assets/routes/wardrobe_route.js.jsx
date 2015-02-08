@@ -22,16 +22,14 @@ App.WardrobeRoute = (function () {
     },
 
     _getStateFromStore: function () {
-      return { clothingItems: App.ClothingItemStore.getAll() };
+      return { clothingItemIds: App.ClothingItemStore.getAll({ pluck: 'id' }) };
     },
 
     render: function () {
       return (
         <div>
           WARDROBE MANAGER
-          <App.ClothingItemGrid
-            clothingItems={this.state.clothingItems}
-          />
+          <App.ClothingItemGrid ids={this.state.clothingItemIds} />
         </div>
       );
     }

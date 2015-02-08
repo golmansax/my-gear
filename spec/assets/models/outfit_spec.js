@@ -13,6 +13,12 @@ describe('models/outfit', function () {
     outfit = new App.Outfit({ id: '77' });
   });
 
+  describe('default attributes', function () {
+    it('sets clothingItemIds to []', function () {
+      expect(outfit.get('clothingItemIds')).to.deep.equal([]);
+    });
+  });
+
   describe('#fetch', function () {
     it('grabs the data from the proper url', function () {
       outfit.fetch();

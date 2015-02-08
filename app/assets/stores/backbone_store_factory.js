@@ -12,10 +12,16 @@ App.BackboneStoreFactory = function (MyCollection) {
       _storage.reset(models);
     },
 
-    getAll: function () {
+    getAll: function (options) {
+      options = options || {};
+
       if (!_fetchedAll) {
         _storage.fetch({ reset: true });
         _fetchedAll = true;
+      }
+
+      if (options.pluck) {
+        return _storage.pluck(options.pluck);
       }
 
       return _storage.toJSON();

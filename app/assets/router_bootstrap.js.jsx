@@ -19,7 +19,7 @@
       this.setState({ Handler: Handler, params: state.params });
     },
     render: function () {
-      return <this.state.Handler params={this.state.params} {...(this.state.params)} />;
+      return <this.state.Handler {...(this.state.params)} />;
     }
   });
 

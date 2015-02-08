@@ -30,8 +30,8 @@ App.OutfitRoute = (function () {
     },
 
     componentWillReceiveProps: function (newProps) {
-      if (this.props.id !== this.state.outfit.id) {
-        this.setState(this._getStateFromStore(this.props.id));
+      if (newProps.id !== this.state.outfit.id) {
+        this.setState(this._getStateFromStore(newProps.id));
       }
     },
 

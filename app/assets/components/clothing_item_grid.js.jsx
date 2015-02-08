@@ -5,17 +5,22 @@ App.ClothingItemGrid = (function () {
   'use strict';
 
   return React.createClass({
-    renderGridItem: function (clothingItem) {
+    propTypes: {
+      ids: PropTypes.arrayOf(PropTypes.string).isRequired
+    },
+
+    _renderClothingItem: function (id) {
       return (
-        <ReactBootstrap.Col sm={4} key={clothingItem.id}>
-          <App.ClothingItemView {...clothingItem} />
+        <ReactBootstrap.Col sm={4} key={id}>
+          <App.ClothingItemView id={id} />
         </ReactBootstrap.Col>
       );
     },
+
     render: function () {
       return (
         <ReactBootstrap.Row>
-          {_(this.props.clothingItems).map(this.renderGridItem)}
+          {_(this.props.ids).map(this._renderClothingItem)}
         </ReactBootstrap.Row>
       );
     }
