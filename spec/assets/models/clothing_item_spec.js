@@ -13,7 +13,7 @@ describe('models/clothing_item', function () {
     clothingItem = new App.ClothingItem({
       id: '77',
       brand: 'Uniqlo',
-      model: 'Down Jacket',
+      model: 'Down Jacket'
     }, { parse: true });
   });
 

@@ -5,7 +5,7 @@ App.PurchaseList = (function () {
 
   return React.createClass({
     _renderPurchase: function (id) {
-      return <App.PurchaseListItem id={id} key={id} />
+      return <App.PurchaseListItem id={id} key={id} />;
     },
 
     render: function () {

@@ -8,5 +8,5 @@
     options.headers = _(defaultHeaders).extend(options.headers);
 
     return originalAjax(options);
-  }
+  };
 })();

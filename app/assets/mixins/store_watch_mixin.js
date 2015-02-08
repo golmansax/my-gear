@@ -2,11 +2,11 @@ App.StoreWatchMixin = function (Store, onChangeAttr) {
   'use strict';
 
   return {
-    componentDidMount: function() {
+    componentDidMount: function () {
       Store.addChangeListener(this[onChangeAttr]);
     },
 
-    componentWillUnmount: function() {
+    componentWillUnmount: function () {
       Store.removeChangeListener(this[onChangeAttr]);
     }
   };

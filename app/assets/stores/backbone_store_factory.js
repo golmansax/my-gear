@@ -33,7 +33,7 @@ App.BackboneStoreFactory = function (MyCollection) {
     },
 
     get: function (id) {
-      var model = _storage.get(id)
+      var model = _storage.get(id);
 
       if (!_(_fetchedModels).has(id)) {
         model = model || new _storage.model({ id: id });
