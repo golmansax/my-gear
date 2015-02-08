@@ -8,6 +8,10 @@ App.BackboneStoreFactory = function (MyCollection) {
   var _fetchedAll = false;
 
   return _(this).extend({
+    preload: function (models) {
+      _storage.reset(models);
+    },
+
     getAll: function () {
       if (!_fetchedAll) {
         _storage.fetch({ reset: true });

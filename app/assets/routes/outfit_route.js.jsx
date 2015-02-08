@@ -5,14 +5,16 @@ App.OutfitRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [ReactRouter.State],
+    propTypes: {
+      id: PropTypes.string.isRequired
+    },
 
     _getStateFromStore: function (id) {
       return { outfit: App.OutfitStore.get(id) };
     },
 
     getInitialState: function () {
-      return this._getStateFromStore(this.getParams().id);
+      return this._getStateFromStore(this.props.id);
     },
 
     componentDidMount: function() {
@@ -24,12 +26,12 @@ App.OutfitRoute = (function () {
     },
 
     _onChange: function () {
-      this.setState(this._getStateFromStore(this.getParams().id));
+      this.setState(this._getStateFromStore(this.props.id));
     },
 
     componentWillReceiveProps: function (newProps) {
-      if (this.getParams().id !== this.state.outfit.id) {
-        this.setState(this._getStateFromStore(this.getParams().id));
+      if (this.props.id !== this.state.outfit.id) {
+        this.setState(this._getStateFromStore(this.props.id));
       }
     },
 

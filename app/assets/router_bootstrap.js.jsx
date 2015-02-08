@@ -9,23 +9,24 @@
 
   App.RouterBootstrap = React.createClass({
     getInitialState: function () {
-      return { Handler: null };
+      return { Handler: null, params: {} };
     },
     componentWillMount: function () {
       var routePath = onClient ? ReactRouter.HistoryLocation : this.props.path;
       ReactRouter.run(App.routes, routePath, this._onRouteChange);
     },
-    _onRouteChange: function (Handler) {
-      this.setState({ Handler: Handler });
+    _onRouteChange: function (Handler, state) {
+      this.setState({ Handler: Handler, params: state.params });
     },
     render: function () {
-      return <this.state.Handler data={this.props.data} />;
+      return <this.state.Handler params={this.state.params} {...(this.state.params)} />;
     }
   });
 
   if (onClient) {
+    // TODO put back in window.gon
     React.render(
-      <App.RouterBootstrap data={window.gon || {}} />,
+      <App.RouterBootstrap />,
       window.document.getElementById('router-container')
     );
   }
