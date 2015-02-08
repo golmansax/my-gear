@@ -1,5 +1,6 @@
 //= require components/clothing_item_grid
 //= require stores/clothing_item_store
+//= require mixins/store_watch_mixin
 
 App.WardrobeRoute = (function () {
   'use strict';
@@ -7,14 +8,6 @@ App.WardrobeRoute = (function () {
   return React.createClass({
     getInitialState: function () {
       return this._getStateFromStore();
-    },
-
-    componentDidMount: function() {
-      App.ClothingItemStore.addChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function() {
-      App.ClothingItemStore.removeChangeListener(this._onChange);
     },
 
     _onChange: function () {

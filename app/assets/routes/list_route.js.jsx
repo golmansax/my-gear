@@ -1,11 +1,14 @@
 //= require components/clothing_item_table_group
 //= require collections/clothing_item_collection
 //= require stores/clothing_item_store
+//= require mixins/store_watch_mixin
 
 App.ListRoute = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [App.StoreWatchMixin(App.ClothingItemStore, '_onChange')],
+
     getInitialState: function () {
       var clothingItems = new App.ClothingItemCollection([], { parse: true });
 
@@ -13,14 +16,6 @@ App.ListRoute = (function () {
         currentSort: clothingItems.defaultSort,
         groupBy: 'usage'
       });
-    },
-
-    componentDidMount: function() {
-      App.ClothingItemStore.addChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function() {
-      App.ClothingItemStore.removeChangeListener(this._onChange);
     },
 
     _onChange: function () {

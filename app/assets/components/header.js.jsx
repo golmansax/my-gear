@@ -1,20 +1,15 @@
 //= require components/router_nav_item
 //= require stores/outfit_store
+//= require mixins/store_watch_mixin
 
 App.Header = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [App.StoreWatchMixin(App.OutfitStore, '_onChange')],
+
     getInitialState: function () {
       return this._getStateFromStore();
-    },
-
-    componentDidMount: function() {
-      App.OutfitStore.addChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function() {
-      App.OutfitStore.removeChangeListener(this._onChange);
     },
 
     _onChange: function () {

@@ -1,10 +1,13 @@
 //= require components/outfit_view
 //= require models/outfit
+//= require mixins/store_watch_mixin
 
 App.OutfitRoute = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [App.StoreWatchMixin(App.OutfitStore, '_onChange')],
+
     propTypes: {
       id: PropTypes.string.isRequired
     },
@@ -15,14 +18,6 @@ App.OutfitRoute = (function () {
 
     getInitialState: function () {
       return this._getStateFromStore(this.props.id);
-    },
-
-    componentDidMount: function() {
-      App.OutfitStore.addChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function() {
-      App.OutfitStore.removeChangeListener(this._onChange);
     },
 
     _onChange: function () {
