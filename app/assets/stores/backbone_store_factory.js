@@ -38,6 +38,7 @@ App.BackboneStoreFactory = function (MyCollection) {
       if (!_(_fetchedModels).has(id)) {
         model = model || new _storage.model({ id: id });
         model.fetch({ success: this._add });
+        _storage.add(model, { merge: true, silent: true });
         _fetchedModels[id] = true;
       } else if (!model) {
         return null;
