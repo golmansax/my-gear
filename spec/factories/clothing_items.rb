@@ -3,7 +3,7 @@ FactoryGirl.define do
     brand 'Chalk'
     model 'Hoodie'
     type 'Need to overwrite this'
-    # TODO purchases [build(:purchase)]
+    purchases { build_list(:purchase, 1) }
 
     factory :outerwear, class: 'Outerwear' do
       type 'Outerwear'
