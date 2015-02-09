@@ -18,7 +18,9 @@ App.OutfitRoute = (function () {
 
     componentWillReceiveProps: function (newProps) {
       if (newProps.id !== this.state.outfit.id) {
-        this.updateStateFromStore();
+        this.setState({
+          outfit: App.OutfitGetters.FIND_BY_ID.get(null, { id: newProps.id })
+        });
       }
     },
 
