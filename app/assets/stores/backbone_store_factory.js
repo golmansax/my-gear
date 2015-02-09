@@ -41,8 +41,7 @@ App.BackboneStoreFactory = (function () {
     },
 
     _add: function (model) {
-      this._storage.add(model, { merge: true, silent: true });
-      this._storage.trigger('change');
+      this._storage.set([model]);
     },
 
     get: function (id) {
@@ -50,7 +49,7 @@ App.BackboneStoreFactory = (function () {
 
       if (!_(this._fetchedModels).has(id)) {
         model = model || new this._storage.model({ id: id });
-        model.fetch({ success: this._add });
+        model.fetch({ success: this._add.bind(this) });
         this._storage.add(model, { merge: true, silent: true });
         this._fetchedModels[id] = true;
       } else if (!model) {

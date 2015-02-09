@@ -1,28 +1,21 @@
 //= require components/clothing_item_detailed_view
+//= require getters/clothing_item_getters
 //= require models/clothing_item
-//= require mixins/store_watch_mixin
+//= require mixins/store_state_mixin
 //= require stores/clothing_item_store
 
 App.ClothingItemRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreWatchMixin(App.ClothingItemStore, '_onChange')],
+    mixins: [App.StoreStateMixin],
 
     propTypes: {
       id: PropTypes.string.isRequired
     },
 
-    _getStateFromStore: function (id) {
-      return { clothingItem: App.ClothingItemStore.get(id) };
-    },
-
-    getInitialState: function () {
-      return this._getStateFromStore(this.props.id);
-    },
-
-    _onChange: function () {
-      this.setState(this._getStateFromStore(this.props.id));
+    stateFromStore: {
+      clothingItem: App.ClothingItemGetters.FIND_BY_ID
     },
 
     render: function () {

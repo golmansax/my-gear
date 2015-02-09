@@ -1,29 +1,25 @@
 //= require components/clothing_item_table_group
 //= require collections/clothing_item_collection
-//= require stores/clothing_item_store
-//= require mixins/store_watch_mixin
+//= require getters/clothing_item_getters
+//= require mixins/store_state_mixin
 
 App.ListRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreWatchMixin(App.ClothingItemStore, '_onChange')],
+    mixins: [App.StoreStateMixin],
+
+    stateFromStore: {
+      clothingItems: App.ClothingItemGetters.GET_ALL
+    },
 
     getInitialState: function () {
       var clothingItems = new App.ClothingItemCollection([], { parse: true });
 
-      return _(this._getStateFromStore()).extend({
+      return {
         currentSort: clothingItems.defaultSort,
         groupBy: 'usage'
-      });
-    },
-
-    _onChange: function () {
-      this.setState(this._getStateFromStore());
-    },
-
-    _getStateFromStore: function () {
-      return { clothingItems: App.ClothingItemStore.getAll() };
+      };
     },
 
     handleSort: function (sort) {
