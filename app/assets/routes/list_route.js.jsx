@@ -9,7 +9,7 @@ App.ListRoute = (function () {
   return React.createClass({
     mixins: [App.StoreStateMixin],
 
-    stateFromStore: {
+    stateFromStores: {
       clothingItems: App.ClothingItemGetters.GET_ALL
     },
 

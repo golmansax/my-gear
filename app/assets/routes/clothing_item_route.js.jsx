@@ -2,7 +2,6 @@
 //= require getters/clothing_item_getters
 //= require models/clothing_item
 //= require mixins/store_state_mixin
-//= require stores/clothing_item_store
 
 App.ClothingItemRoute = (function () {
   'use strict';
@@ -14,7 +13,7 @@ App.ClothingItemRoute = (function () {
       id: PropTypes.string.isRequired
     },
 
-    stateFromStore: {
+    stateFromStores: {
       clothingItem: App.ClothingItemGetters.FIND_BY_ID
     },
 

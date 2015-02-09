@@ -1,21 +1,15 @@
 //= require components/clothing_item_grid
-//= require stores/clothing_item_store
-//= require mixins/store_watch_mixin
+//= require getters/clothing_item_getters
+//= require mixins/store_state_mixin
 
 App.WardrobeRoute = (function () {
   'use strict';
 
   return React.createClass({
-    getInitialState: function () {
-      return this._getStateFromStore();
-    },
+    mixins: [App.StoreStateMixin],
 
-    _onChange: function () {
-      this.setState(this._getStateFromStore());
-    },
-
-    _getStateFromStore: function () {
-      return { clothingItemIds: App.ClothingItemStore.getAll({ pluck: 'id' }) };
+    stateFromStores: {
+      clothingItems: App.ClothingItemGetters.GET_ALL
     },
 
     render: function () {

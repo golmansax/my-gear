@@ -2,16 +2,20 @@ App.StoreStateMixin = (function () {
   'use strict';
 
   return {
+    updateStateFromStore: function () {
+      this.setState(this._getStateForAttrs(_(this.stateFromStores).keys()));
+    },
+
     getInitialState: function () {
-      return this._getStateForAttrs(_(this.stateFromStore).keys());
+      return this._getStateForAttrs(_(this.stateFromStores).keys());
     },
 
     componentDidMount: function () {
-      _(this.stateFromStore).each(this._addChangeListener);
+      _(this.stateFromStores).each(this._addChangeListener);
     },
 
     componentWillUnmount: function () {
-      _(this.stateFromStore).each(this._removeChangeListener);
+      _(this.stateFromStores).each(this._removeChangeListener);
     },
 
     _addChangeListener: function (getter, attr) {
@@ -36,7 +40,7 @@ App.StoreStateMixin = (function () {
     _changeListeners: {},
 
     _onStoreChange: function (Store) {
-      var filteredAttrs = _.chain(this.stateFromStore)
+      var filteredAttrs = _.chain(this.stateFromStores)
         .keys()
         .filter(this._isAssociatedWithStore.bind(this, Store))
         .value();
@@ -45,7 +49,7 @@ App.StoreStateMixin = (function () {
     },
 
     _isAssociatedWithStore: function (Store, attr) {
-      return this.stateFromStore[attr].Store === Store;
+      return this.stateFromStores[attr].Store === Store;
     },
 
     _getStateForAttrs: function (attrs) {
@@ -54,7 +58,7 @@ App.StoreStateMixin = (function () {
     },
 
     _getValue: function (attr) {
-      var getter = this.stateFromStore[attr];
+      var getter = this.stateFromStores[attr];
       return getter.get(this.state, this.props);
     }
   };

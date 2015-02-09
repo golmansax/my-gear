@@ -1,14 +1,18 @@
-//= require mixins/store_watch_mixin
-//= require stores/purchase_store
+//= require getters/purchase_getters
+//= require mixins/store_state_mixin
 
 App.PurchaseListItem = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreWatchMixin(App.PurchaseStore, '_onChange')],
+    mixins: [App.StoreStateMixin],
 
     propTypes: {
       id: PropTypes.number.isRequired
+    },
+
+    stateFromStores: {
+      purchase: App.PurchaseGetters.FIND_BY_ID
     },
 
     getInitialState: function () {

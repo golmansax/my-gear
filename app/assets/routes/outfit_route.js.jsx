@@ -1,33 +1,24 @@
 //= require components/outfit_view
-//= require models/outfit
-//= require mixins/store_watch_mixin
-//= require stores/outfit_store
+//= require mixins/store_state_mixin
+//= require getters/outfit_getters
 
 App.OutfitRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreWatchMixin(App.OutfitStore, '_onChange')],
+    mixins: [App.StoreStateMixin],
 
     propTypes: {
       id: PropTypes.string.isRequired
     },
 
-    _getStateFromStore: function (id) {
-      return { outfit: App.OutfitStore.get(id) };
-    },
-
-    getInitialState: function () {
-      return this._getStateFromStore(this.props.id);
-    },
-
-    _onChange: function () {
-      this.setState(this._getStateFromStore(this.props.id));
+    stateFromStores: {
+      outfit: App.OutfitGetters.FIND_BY_ID
     },
 
     componentWillReceiveProps: function (newProps) {
       if (newProps.id !== this.state.outfit.id) {
-        this.setState(this._getStateFromStore(newProps.id));
+        this.updateStateFromStore();
       }
     },
 
