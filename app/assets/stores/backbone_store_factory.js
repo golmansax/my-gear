@@ -1,45 +1,58 @@
-App.BackboneStoreFactory = function (MyCollection) {
+App.BackboneStoreFactory = (function () {
   'use strict';
+
+  var BackboneStoreFactory = function () {
+    this.initialize();
+  };
+  BackboneStoreFactory.extend = Backbone.Collection.extend;
 
   var EVENTS = 'add remove change reset sort';
 
-  var _storage = new MyCollection();
-  var _fetchedModels = {};
-  var _fetchedAll = false;
+  _(BackboneStoreFactory.prototype).extend({
+    collection: Backbone.Collection,
 
-  return _(this).extend({
+    _storage: null,
+
+    _fetchedModels: {},
+
+    _fetchedAll: false,
+
+    initialize: function () {
+      this._storage = new this.collection();
+    },
+
     preload: function (models) {
-      _storage.reset(models);
+      this._storage.reset(models);
     },
 
     getAll: function (options) {
       options = options || {};
 
-      if (!_fetchedAll) {
-        _storage.fetch({ reset: true });
-        _fetchedAll = true;
+      if (!this._fetchedAll) {
+        this._storage.fetch({ reset: true });
+        this._fetchedAll = true;
       }
 
       if (options.pluck) {
-        return _storage.pluck(options.pluck);
+        return this._storage.pluck(options.pluck);
       }
 
-      return _storage.toJSON();
+      return this._storage.toJSON();
     },
 
     _add: function (model) {
-      _storage.add(model, { merge: true, silent: true });
-      _storage.trigger('change');
+      this._storage.add(model, { merge: true, silent: true });
+      this._storage.trigger('change');
     },
 
     get: function (id) {
-      var model = _storage.get(id);
+      var model = this._storage.get(id);
 
-      if (!_(_fetchedModels).has(id)) {
-        model = model || new _storage.model({ id: id });
+      if (!_(this._fetchedModels).has(id)) {
+        model = model || new this._storage.model({ id: id });
         model.fetch({ success: this._add });
-        _storage.add(model, { merge: true, silent: true });
-        _fetchedModels[id] = true;
+        this._storage.add(model, { merge: true, silent: true });
+        this._fetchedModels[id] = true;
       } else if (!model) {
         return null;
       }
@@ -48,11 +61,13 @@ App.BackboneStoreFactory = function (MyCollection) {
     },
 
     addChangeListener: function (callback) {
-      _storage.on(EVENTS, callback);
+      this._storage.on(EVENTS, callback);
     },
 
     removeChangeListener: function (callback) {
-      _storage.off(EVENTS, callback);
+      this._storage.off(EVENTS, callback);
     }
   });
-};
+
+  return BackboneStoreFactory;
+})();
