@@ -4,9 +4,9 @@
 App.ClothingItemStore = (function () {
   'use strict';
 
-  var PurchaseStoreFactory = App.BackboneStoreFactory.extend({
+  var ClothingItemStoreFactory = App.BackboneStoreFactory.extend({
     collection: App.ClothingItemCollection
   });
 
-  return new PurchaseStoreFactory();
+  return new ClothingItemStoreFactory();
 })();
