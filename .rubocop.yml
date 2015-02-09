@@ -3,7 +3,7 @@ AllCops:
     - db/schema.rb
     - node_modules/**/*
     - '**/bower_components/**/*'
-    - vendor/
+    - vendor/**/*
 
 Documentation:
   Enabled: false
