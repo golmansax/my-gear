@@ -30,7 +30,7 @@ App.GettersFactory = (function () {
 
       FIND_BY_ID: function (state, props) {
         return this.Store.get(props.id);
-      },
+      }
     }
   });
 

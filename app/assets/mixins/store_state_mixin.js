@@ -19,7 +19,8 @@ App.StoreStateMixin = (function () {
       _(this.stateFromStores).each(this._removeChangeListener);
     },
 
-    _addChangeListener: function (getter, attr) {
+    _addChangeListener: function (getter) {
+      // TODO: this has to use a different key, maybe storeName
       if (this._changeListeners[getter.Store]) {
         return;
       }
@@ -29,7 +30,7 @@ App.StoreStateMixin = (function () {
       getter.Store.addChangeListener(this._changeListeners[getter.Store]);
     },
 
-    _removeChangeListener: function (getter, attr) {
+    _removeChangeListener: function (getter) {
       if (!this._changeListeners[getter.Store]) {
         return;
       }
