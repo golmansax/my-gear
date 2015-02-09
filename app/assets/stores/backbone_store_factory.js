@@ -41,7 +41,7 @@ App.BackboneStoreFactory = (function () {
     },
 
     _add: function (model) {
-      this._storage.set([model]);
+      this._storage.add(model, { merge: true, silent: true });
     },
 
     get: function (id) {

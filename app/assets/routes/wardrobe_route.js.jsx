@@ -9,7 +9,7 @@ App.WardrobeRoute = (function () {
     mixins: [App.StoreStateMixin],
 
     stateFromStores: {
-      clothingItems: App.ClothingItemGetters.GET_ALL
+      clothingItemIds: App.ClothingItemGetters.GET_ALL_IDS
     },
 
     render: function () {

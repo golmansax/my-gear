@@ -11,6 +11,7 @@ App.StoreStateMixin = (function () {
     },
 
     componentDidMount: function () {
+      this._changeListeners = {};
       _(this.stateFromStores).each(this._addChangeListener);
     },
 
@@ -36,8 +37,6 @@ App.StoreStateMixin = (function () {
       getter.Store.removeChangeListener(this._changeListeners[getter.Store]);
       this._changeListeners[getter.Store] = null;
     },
-
-    _changeListeners: {},
 
     _onStoreChange: function (Store) {
       var filteredAttrs = _.chain(this.stateFromStores)

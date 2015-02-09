@@ -9,19 +9,19 @@ App.Header = (function () {
     mixins: [App.StoreStateMixin],
 
     stateFromStores: {
-      clothingItems: App.OutfitGetters.GET_ALL
+      outfits: App.OutfitGetters.GET_ALL
     },
 
-    _renderEntry: function (entry) {
+    _renderOutfit: function (outfit) {
       var itemAttrs = {
         to: 'outfit',
-        params: { id: entry.id }
+        params: { id: outfit.id }
       };
 
       return (
-        <li key={'outfit/' + entry.id}>
+        <li key={outfit.id}>
           <ReactRouter.Link {...itemAttrs}>
-            {entry.name}
+            {outfit.name}
           </ReactRouter.Link>
         </li>
       );
@@ -40,7 +40,7 @@ App.Header = (function () {
             <App.RouterNavItem to='list'>List</App.RouterNavItem>
             <App.RouterNavItem to='wardrobe'>Wardrobe</App.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
-              {this.state.outfits.map(this._renderEntry)}
+              {this.state.outfits.map(this._renderOutfit)}
             </ReactBootstrap.DropdownButton>
           </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>
