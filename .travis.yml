@@ -9,7 +9,7 @@ cache:
 before_install:
 - npm install
 before_script:
-#- RAILS_ENV=production bundle exec rake assets:precompile
+- RAILS_ENV=production bundle exec rake assets:precompile
 - bundle exec spring rake db:create db:migrate
 script:
 - bundle exec travis lint --skip-completion-check
