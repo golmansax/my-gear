@@ -1,9 +1,15 @@
 AllCops:
+  Include:
+    - Guardfile
+    - config.ru
+    - Rakefile
+    - !ruby/regexp /.*\.rake/
   Exclude:
     - db/schema.rb
     - node_modules/**/*
     - '**/bower_components/**/*'
     - vendor/**/*
+  RunRailsCops: true
 
 Documentation:
   Enabled: false
