@@ -24,3 +24,6 @@ Metrics/MethodLength:
 Output:
   Exclude:
     - config/unicorn.rb
+
+HasAndBelongsToMany:
+  Enabled: false

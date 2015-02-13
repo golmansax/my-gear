@@ -2,7 +2,7 @@ class ClothingItem < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  has_many :outfits, through: :clothing_items_outfits
+  has_and_belongs_to_many :outfits
   has_many :purchases
 
   validates :brand, presence: true
