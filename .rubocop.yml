@@ -20,3 +20,7 @@ TrailingComma:
 Metrics/MethodLength:
   Exclude:
     - db/migrate/*
+
+Output:
+  Exclude:
+    - config/unicorn.rb

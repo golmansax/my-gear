@@ -2,12 +2,12 @@ class ClothingItem < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  has_and_belongs_to_many :outfits
+  has_many :outfits, through: :clothing_items_outfits
   has_many :purchases
 
-  validates_presence_of :brand
-  validates_presence_of :model
-  validates_presence_of :purchases
+  validates :brand, presence: true
+  validates :model, presence: true
+  validates :purchases, presence: true
 
   def name
     "#{brand} #{model}"
