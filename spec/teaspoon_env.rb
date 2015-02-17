@@ -15,10 +15,10 @@ Teaspoon.configure do |config|
   end
 
   def add_coverage_thresholds!(coverage)
-    coverage.statements = 95
-    coverage.branches = 95
-    coverage.functions = 95
-    coverage.lines = 95
+    coverage.statements = 75
+    coverage.branches = 75
+    coverage.functions = 75
+    coverage.lines = 75
   end
 
   config.coverage do |coverage|

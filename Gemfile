@@ -51,4 +51,5 @@ gem 'rails-assets-underscore'
 
 group :test do
   gem 'rails-assets-chai'
+  gem 'rails-assets-dirty-chai'
 end

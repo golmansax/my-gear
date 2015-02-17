@@ -140,6 +140,8 @@ GEM
       rails-assets-underscore (>= 1.4.4)
     rails-assets-backbone.nativeajax (0.3.2)
     rails-assets-chai (1.10.0)
+    rails-assets-dirty-chai (1.0.2)
+      rails-assets-chai
     rails-assets-es5-shim (4.0.5)
     rails-assets-moment (2.9.0)
     rails-assets-react (0.12.2)
@@ -255,6 +257,7 @@ DEPENDENCIES
   rails-assets-backbone.mutators
   rails-assets-backbone.nativeajax
   rails-assets-chai
+  rails-assets-dirty-chai
   rails-assets-es5-shim
   rails-assets-moment
   rails-assets-react (~> 0.12.0)

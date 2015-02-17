@@ -7,6 +7,11 @@ App.StoreStateMixin = (function () {
     },
 
     getInitialState: function () {
+      if (!_(this.stateFromStores).isObject()) {
+        throw 'You must define stateFromStores as an attribute on your React ' +
+          'class to use StoreStateMixin';
+      }
+
       return this._getStateForAttrs(_(this.stateFromStores).keys());
     },
 

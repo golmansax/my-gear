@@ -14,3 +14,4 @@
 //= require chai
 //= require support/sinon
 //= require support/sinon-chai
+//= require dirty-chai
