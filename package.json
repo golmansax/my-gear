@@ -1,5 +1,6 @@
 {
   "name": "my-gear",
+  "author": "Holman Gao <holman@golmansax.com>",
   "engines": {
     "npm": "2.1.x",
     "node": "0.10.x"
