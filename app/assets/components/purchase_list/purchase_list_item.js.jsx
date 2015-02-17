@@ -15,22 +15,14 @@ App.PurchaseListItem = (function () {
       purchase: App.PurchaseGetters.FIND_BY_ID
     },
 
-    getInitialState: function () {
-      return this._getStateFromStore(this.props.id);
-    },
-
-    _onChange: function () {
-      this.setState(this._getStateFromStore(this.props.id));
-    },
-
-    _getStateFromStore: function (id) {
-      return { purchase: App.PurchaseStore.get(id) };
-    },
-
     render: function () {
+      if (!this.state.purchase.date) {
+        return null;
+      }
+
       return (
         <div>
-          {this.state.purchase.version} {this.state.purchase.date}
+          {this.state.purchase.version} {this.state.purchase.date.calendar()}
         </div>
       );
     }

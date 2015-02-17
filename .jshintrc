@@ -24,7 +24,7 @@
   "maxparams": 20,
   "maxdepth": 3,
   "maxstatements": 10,
-  "maxcomplexity": 3,
+  "maxcomplexity": 4,
   "maxlen": false, // use jscs
 
   // Relaxing options: when set to true, produces fewer errors
