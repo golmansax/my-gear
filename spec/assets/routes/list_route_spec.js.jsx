@@ -18,6 +18,13 @@ describe('routes/list_route', function () {
     this.listRoute = TestUtils.renderIntoDocument(<App.ListRoute />);
   });
 
+  it('renders a table group', function () {
+    expect(TestUtils.findRenderedComponentWithType(
+      this.listRoute,
+      App.ClothingItemTableGroup
+    )).to.be.ok();
+  });
+
   it.skip('sorts list when table header is clicked', function () {
     var headers = TestUtils.scryRenderedDOMComponentsWithTag(
       this.listRoute,
