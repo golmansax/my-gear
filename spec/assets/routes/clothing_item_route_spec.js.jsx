@@ -4,16 +4,16 @@
 describe('routes/clothing_item_route', function () {
   'use strict';
 
-  var model;
   var id;
 
   beforeEach(function () {
     id = 'my-clothing-item';
-    model = new TestUtils.MockModel();
+    var fixture = MagicLamp.json('clothing_items/show');
 
     this.sandbox.stub(App, 'ClothingItemDetailedView', TestUtils.MockComponent);
-    this.sandbox.stub(App.ClothingItemStore, 'get').withArgs(id).returns(model);
-    this.sandbox.useFakeServer();
+    this.sandbox.stub(App.ClothingItemStore, 'get')
+      .withArgs(id)
+      .returns(fixture.clothingItem);
   });
 
   it.skip('renders loading message if model is invalid', function () {
@@ -25,7 +25,7 @@ describe('routes/clothing_item_route', function () {
     })).to.have.length(1);
   });
 
-  it.skip('renders ClothingItemDetailedView if model is valid', function () {
+  it('renders ClothingItemDetailedView if model is valid', function () {
     var route = TestUtils.renderIntoDocument(
       <App.ClothingItemRoute id={id} />
     );
