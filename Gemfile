@@ -6,7 +6,7 @@ ruby '2.1.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.1.6'
 gem 'pg'
-gem 'unicorn'
+gem 'passenger'
 
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'friendly_id', '~> 5.0.0'
