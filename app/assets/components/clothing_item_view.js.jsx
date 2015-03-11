@@ -1,5 +1,5 @@
 //= require models/clothing_item
-//= require getters/clothing_item_getters
+//= require stores/clothing_item_store
 
 App.ClothingItemView = (function () {
   'use strict';
@@ -13,7 +13,7 @@ App.ClothingItemView = (function () {
 
     getStateFromStore: function () {
       return {
-        clothingItem: App.ClothingItemGetters.FIND_BY_ID
+        clothingItem: App.ClothingItemStore.get(this.props.id)
       };
     },
 

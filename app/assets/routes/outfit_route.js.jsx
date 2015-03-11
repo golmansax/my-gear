@@ -1,5 +1,5 @@
 //= require components/outfit_view
-//= require getters/outfit_getters
+//= require stores/outfit_store
 
 App.OutfitRoute = (function () {
   'use strict';
@@ -13,16 +13,8 @@ App.OutfitRoute = (function () {
 
     getStateFromStore: function () {
       return {
-        outfit: App.OutfitGetters.FIND_BY_ID
+        outfit: App.OutfitStore.get(this.props.id)
       };
-    },
-
-    componentWillReceiveProps: function (newProps) {
-      if (newProps.id !== this.state.outfit.id) {
-        this.setState({
-          outfit: App.OutfitGetters.FIND_BY_ID.get(null, { id: newProps.id })
-        });
-      }
     },
 
     render: function () {

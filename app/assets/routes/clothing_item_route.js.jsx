@@ -1,6 +1,6 @@
 //= require components/clothing_item_detailed_view
-//= require getters/clothing_item_getters
 //= require models/clothing_item
+//= require stores/clothing_item_store
 
 App.ClothingItemRoute = (function () {
   'use strict';
@@ -14,7 +14,7 @@ App.ClothingItemRoute = (function () {
 
     getStateFromStore: function () {
       return {
-        clothingItem: App.ClothingItemGetters.FIND_BY_ID
+        clothingItem: App.ClothingItemStore.get(this.props.id)
       };
     },
 

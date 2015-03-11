@@ -1,4 +1,4 @@
-//= require getters/purchase_getters
+//= require stores/purchase_store
 
 App.PurchaseListItem = (function () {
   'use strict';
@@ -12,7 +12,7 @@ App.PurchaseListItem = (function () {
 
     getStateFromStore: function () {
       return {
-        purchase: App.PurchaseGetters.FIND_BY_ID
+        purchase: App.PurchaseStore.get(this.props.id)
       };
     },
 

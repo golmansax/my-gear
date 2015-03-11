@@ -1,5 +1,4 @@
 //= require components/clothing_item_grid
-//= require getters/clothing_item_getters
 //= require stores/clothing_item_store
 
 App.WardrobeRoute = (function () {
@@ -8,8 +7,10 @@ App.WardrobeRoute = (function () {
   return React.createClass({
     mixins: [React.BindMixin(App.ClothingItemStore, 'getStateFromStore')],
 
-    getStateFromStore: {
-      clothingItemIds: App.ClothingItemGetters.GET_ALL_IDS
+    getStateFromStore: function () {
+      return {
+        clothingItemIds: App.ClothingItemStore.getAll({ pluck: 'id' })
+      };
     },
 
     render: function () {
