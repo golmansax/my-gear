@@ -6,7 +6,7 @@
     "node": "0.10.x"
   },
   "devDependencies": {
-    "esprima-fb": "latest",
+    "esprima-fb": "12001.1.0-dev-harmony-fb",
     "istanbul": "latest",
     "jsxhint": "latest",
     "jscs": "latest"
