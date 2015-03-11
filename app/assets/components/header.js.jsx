@@ -1,15 +1,16 @@
 //= require components/router_nav_item
-//= require getters/outfit_getters
-//= require mixins/store_state_mixin
+//= require stores/outfit_store
 
 App.Header = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreStateMixin],
+    mixins: [React.BindMixin(App.OutfitStore, 'getStateFromStore')],
 
-    stateFromStores: {
-      outfits: App.OutfitGetters.GET_ALL
+    getStateFromStore: function () {
+      return {
+        outfits: App.OutfitStore.getAll()
+      };
     },
 
     _renderOutfit: function (outfit) {

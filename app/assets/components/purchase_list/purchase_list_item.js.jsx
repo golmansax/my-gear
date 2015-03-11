@@ -1,18 +1,19 @@
 //= require getters/purchase_getters
-//= require mixins/store_state_mixin
 
 App.PurchaseListItem = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreStateMixin],
+    mixins: [React.BindMixin(App.PurchaseStore, 'getStateFromStore')],
 
     propTypes: {
       id: PropTypes.number.isRequired
     },
 
-    stateFromStores: {
-      purchase: App.PurchaseGetters.FIND_BY_ID
+    getStateFromStore: function () {
+      return {
+        purchase: App.PurchaseGetters.FIND_BY_ID
+      };
     },
 
     render: function () {

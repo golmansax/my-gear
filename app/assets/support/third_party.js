@@ -7,5 +7,7 @@
 //= require backbone.nativeajax
 //
 //= require react
+//= require node-uuid
+//= require react-bind-mixin
 //= require react-bootstrap
 //= require react-router

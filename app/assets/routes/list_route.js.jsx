@@ -1,16 +1,17 @@
 //= require components/clothing_item_table_group
 //= require collections/clothing_item_collection
-//= require getters/clothing_item_getters
-//= require mixins/store_state_mixin
+//= require stores/clothing_item_store
 
 App.ListRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreStateMixin],
+    mixins: [React.BindMixin(App.ClothingItemStore, 'getStateFromStore')],
 
-    stateFromStores: {
-      clothingItems: App.ClothingItemGetters.GET_ALL
+    getStateFromStore: function () {
+      return {
+        clothingItems: App.ClothingItemStore.getAll()
+      };
     },
 
     getInitialState: function () {

@@ -13,5 +13,8 @@ unless Rails.env.production?
   )
 end
 
-asset_paths = [Rails.root.join('app', 'assets')]
+asset_paths = [
+  Rails.root.join('app', 'assets'),
+  Rails.root.join('vendor', 'assets')
+]
 Rails.application.config.assets.paths.unshift(*asset_paths)

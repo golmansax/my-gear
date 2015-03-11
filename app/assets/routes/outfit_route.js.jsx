@@ -1,19 +1,20 @@
 //= require components/outfit_view
-//= require mixins/store_state_mixin
 //= require getters/outfit_getters
 
 App.OutfitRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [App.StoreStateMixin],
+    mixins: [React.BindMixin(App.OutfitStore, 'getStateFromStore')],
 
     propTypes: {
       id: PropTypes.string.isRequired
     },
 
-    stateFromStores: {
-      outfit: App.OutfitGetters.FIND_BY_ID
+    getStateFromStore: function () {
+      return {
+        outfit: App.OutfitGetters.FIND_BY_ID
+      };
     },
 
     componentWillReceiveProps: function (newProps) {
