@@ -149,9 +149,15 @@ GEM
     rails-assets-dirty-chai (1.0.2)
       rails-assets-chai
     rails-assets-es5-shim (4.1.0)
+    rails-assets-flux-crud-store (0.0.2)
+      rails-assets-backbone
+      rails-assets-immutable
+      rails-assets-object.assign
+      rails-assets-underscore
     rails-assets-immutable (3.6.4)
     rails-assets-moment (2.9.0)
     rails-assets-node-uuid (1.4.3)
+    rails-assets-object.assign (1.1.1)
     rails-assets-react (0.12.2)
     rails-assets-react-bind-mixin (0.0.5)
       rails-assets-node-uuid
@@ -265,6 +271,7 @@ DEPENDENCIES
   rails-assets-chai
   rails-assets-dirty-chai
   rails-assets-es5-shim
+  rails-assets-flux-crud-store
   rails-assets-immutable
   rails-assets-moment
   rails-assets-react (~> 0.12.0)
