@@ -11,3 +11,6 @@
 //= require react-bind-mixin
 //= require react-bootstrap
 //= require react-router
+//
+//= require immutable
+//= require flux_crud_store

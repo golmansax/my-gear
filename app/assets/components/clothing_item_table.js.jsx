@@ -13,13 +13,16 @@ App.ClothingItemTable = (function () {
     render: function () {
       var clothingItems = this.props.clothingItems.map(function (clothingItem) {
         return (
-          <App.ClothingItemTableRow {...clothingItem} key={clothingItem.id} />
+          <App.ClothingItemTableRow
+            clothingItem={clothingItem}
+            key={clothingItem.id}
+          />
         );
-      });
+      }).toJS();
 
       return (
         <div>
-          <h3>{this.props.title} ({this.props.clothingItems.length})</h3>
+          <h3>{this.props.title} ({this.props.clothingItems.size})</h3>
           <table className='table clothing-item-table'>
             <tr>
               <th onClick={this._handleSort.bind(this, 'name')}>Name</th>

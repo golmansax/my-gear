@@ -39,12 +39,15 @@ App.ClothingItemTableGroup = (function () {
     },
 
     render: function () {
-      var groupedClothingItems = _(this.props.clothingItems)
-        .groupBy(this.props.groupBy);
+      var groupedClothingItems = this.props.clothingItems
+        .groupBy(function (clothingItem) {
+          return clothingItem[this.props.groupBy];
+        }.bind(this));
 
-      var tables = _(this.state.groupedKeyOrder).map(function (key) {
-        return this._renderTable(groupedClothingItems[key], key);
-      }.bind(this));
+      //var tables = _(this.state.groupedKeyOrder).map(function (key) {
+      var tables = groupedClothingItems.map(function (clothingItems, key) {
+        return this._renderTable(clothingItems, key);
+      }.bind(this)).toJS();
 
       return (
         <div>{tables}</div>
@@ -53,9 +56,10 @@ App.ClothingItemTableGroup = (function () {
   });
 
   function computeGroupedKeyOrder(clothingItems, groupBy) {
-    if (clothingItems.length === 0 || !groupBy) {
+    if (clothingItems.size === 0 || !groupBy) {
       return null;
     }
-    return _.chain(clothingItems).groupBy(groupBy).keys().value();
+    //return _.chain(clothingItems).groupBy(groupBy).keys().value();
+    return clothingItems;
   }
 })();
