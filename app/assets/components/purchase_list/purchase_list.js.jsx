@@ -12,7 +12,7 @@ App.PurchaseList = (function () {
       return (
         <div>
           <h4>Purchases:</h4>
-          {this.props.ids.map(this._renderPurchase)}
+          {this.props.ids.map(this._renderPurchase).toJS()}
         </div>
       );
     }

@@ -19,14 +19,9 @@ App.ClothingItemRoute = (function () {
     },
 
     render: function () {
-      var clothingItem = this.state.clothingItem;
-
-      // TODO check validation
-      if (new App.ClothingItem(clothingItem).isValid()) {
-        return <App.ClothingItemDetailedView {...clothingItem} />;
-      } else {
-        return <div>Loading...</div>;
-      }
+      return (
+        <App.ClothingItemDetailedView clothingItem={this.state.clothingItem} />
+      );
     }
   });
 })();

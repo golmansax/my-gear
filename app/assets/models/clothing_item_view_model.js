@@ -6,6 +6,8 @@ App.ClothingItemViewModel = (function () {
     model: '',
     usage: '',
     type: '',
+    imagePath: '',
+    purchaseIds: [],
     id: null
   });
 

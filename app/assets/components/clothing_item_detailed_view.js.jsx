@@ -1,15 +1,19 @@
 //= require components/purchase_list/purchase_list
-//= require models/clothing_item
+//= require models/clothing_item_view_model
 
 App.ClothingItemDetailedView = (function () {
   'use strict';
 
   return React.createClass({
-    propTypes: App.ClothingItem.propTypes,
+    propTypes: {
+      clothingItem: React.PropTypes.instanceOf(App.ClothingItemViewModel)
+        .isRequired
+    },
+
     render: function () {
       var imageAttrs = {
         className: 'img-responsive',
-        src: this.props.imagePath
+        src: this.props.clothingItem.imagePath
       };
 
       return (
@@ -18,8 +22,8 @@ App.ClothingItemDetailedView = (function () {
             <img {...imageAttrs} />
           </ReactBootstrap.Col>
           <ReactBootstrap.Col sm={6}>
-            <h1>{this.props.name}</h1>
-            <App.PurchaseList ids={this.props.purchaseIds} />
+            <h1>{this.props.clothingItem.name}</h1>
+            <App.PurchaseList ids={this.props.clothingItem.purchaseIds} />
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>
       );
