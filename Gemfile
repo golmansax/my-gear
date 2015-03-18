@@ -21,7 +21,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'magic_lamp'
   gem 'shoulda-matchers'
-  gem 'teaspoon'
 end
 
 group :development, :test do
@@ -30,6 +29,7 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-teaspoon'
+  gem 'teaspoon'
   gem 'travis'
 end
 

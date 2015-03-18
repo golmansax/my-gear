@@ -1,5 +1,5 @@
 //= require routes/list_route
-//= require collections/clothing_item_collection
+//= require models/clothing_item_view_model
 
 describe('routes/list_route', function () {
   'use strict';
@@ -10,10 +10,11 @@ describe('routes/list_route', function () {
   afterEach(function () { server.restore(); });
 
   beforeEach(function () {
-    var collection = new App.ClothingItemCollection(
-      MagicLamp.json('clothing_items/index')
-    ).toJSON();
-    this.sandbox.stub(App.ClothingItemStore, 'getAll').returns(collection);
+    var viewModels = new Immutable.List();
+    _(MagicLamp.json('clothing_items/index')).forEach(function (clothingItem) {
+      viewModels = viewModels.push(new App.ClothingItemViewModel(clothingItem));
+    });
+    this.sandbox.stub(App.ClothingItemStore, 'getAll').returns(viewModels);
 
     this.listRoute = TestUtils.renderIntoDocument(<App.ListRoute />);
   });

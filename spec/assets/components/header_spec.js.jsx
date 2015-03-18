@@ -1,11 +1,14 @@
 //= require components/header
+//= require models/outfit_view_model
 
 describe('components/header', function () {
   'use strict';
 
   beforeEach(function () {
-    this.sandbox.stub(App.OutfitStore, 'getAll')
-      .returns([{ id: 'sexy', name: 'Sexy' }]);
+    var viewModels = new Immutable.List();
+    var viewModel = new App.OutfitViewModel({ id: 'sexy', name: 'Sexy' });
+    viewModels = viewModels.push(viewModel);
+    this.sandbox.stub(App.OutfitStore, 'getAll').returns(viewModels)
 
     this.header = TestUtils.renderIntoDocument(<App.Header />);
   });
