@@ -1,11 +1,12 @@
-//= require stores/backbone_store_factory
 //= require collections/outfit_collection
+//= require models/outfit_view_model
 
 App.OutfitStore = (function () {
   'use strict';
 
-  var OutfitStoreFactory = App.BackboneStoreFactory.extend({
-    collection: App.OutfitCollection
+  var OutfitStoreFactory = FluxCrudStore.Store.extend({
+    collection: App.OutfitCollection,
+    viewModel: App.OutfitViewModel
   });
 
   return new OutfitStoreFactory();

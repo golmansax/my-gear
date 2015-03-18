@@ -22,7 +22,7 @@ App.ClothingItemDetailedView = (function () {
             <img {...imageAttrs} />
           </ReactBootstrap.Col>
           <ReactBootstrap.Col sm={6}>
-            <h1>{this.props.clothingItem.name}</h1>
+            <h1>{this.props.clothingItem.name()}</h1>
             <App.PurchaseList ids={this.props.clothingItem.purchaseIds} />
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>

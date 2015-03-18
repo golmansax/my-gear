@@ -1,5 +1,6 @@
 //= require components/router_nav_item
 //= require stores/outfit_store
+//= require actions/outfit_actions
 
 App.Header = (function () {
   'use strict';
@@ -11,6 +12,11 @@ App.Header = (function () {
       return {
         outfits: App.OutfitStore.getAll()
       };
+    },
+
+    componentWillMount: function () {
+      App.OutfitActions.fetchAll();
+      this.setState(this.getStateFromStore());
     },
 
     _renderOutfit: function (outfit) {
@@ -28,6 +34,14 @@ App.Header = (function () {
       );
     },
 
+    _renderOutfits: function () {
+      if (this.state.outfits.isLoading) {
+        return null;
+      }
+
+      return this.state.outfits.map(this._renderOutfit).toJS();
+    },
+
     render: function () {
       return (
         <ReactBootstrap.Navbar>
@@ -41,7 +55,7 @@ App.Header = (function () {
             <App.RouterNavItem to='list'>List</App.RouterNavItem>
             <App.RouterNavItem to='wardrobe'>Wardrobe</App.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
-              {this.state.outfits.map(this._renderOutfit)}
+              {this._renderOutfits()}
             </ReactBootstrap.DropdownButton>
           </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>
