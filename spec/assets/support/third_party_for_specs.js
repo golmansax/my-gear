@@ -13,6 +13,9 @@
 //= require react-bind-mixin
 //= require react-bootstrap
 //
+//= require immutable
+//= require flux-crud-store
+//
 //= require chai
 //= require support/sinon
 //= require support/sinon-chai
