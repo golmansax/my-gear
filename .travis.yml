@@ -17,7 +17,7 @@ script:
 - bundle exec spring rake jsxhint
 - bundle exec spring rake jscs
 - bundle exec spring rake
-- RAILS_ENV=development bundle exec teaspoon --coverage ci
+- bundle exec teaspoon --coverage ci
 deploy:
   provider: heroku
   strategy: git
