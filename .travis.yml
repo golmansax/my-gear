@@ -9,7 +9,7 @@ cache:
 before_install:
 - npm install
 before_script:
-- RAILS_ENV=production bundle exec rake assets:precompile
+- bundle exec rake assets:precompile
 - bundle exec spring rake db:create db:migrate
 script:
 - bundle exec travis lint --skip-completion-check
@@ -17,7 +17,7 @@ script:
 - bundle exec spring rake jsxhint
 - bundle exec spring rake jscs
 - bundle exec spring rake
-- bundle exec teaspoon --coverage ci
+- RAILS_ENV=development bundle exec teaspoon --coverage ci
 deploy:
   provider: heroku
   strategy: git

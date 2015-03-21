@@ -27,9 +27,12 @@ group :development, :test do
   gem 'rubocop'
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'travis'
+end
+
+group :development do
   gem 'spring-commands-teaspoon'
   gem 'teaspoon'
-  gem 'travis'
 end
 
 group :production do

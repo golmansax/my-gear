@@ -6,7 +6,8 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w(
   *.svg *.eot *.woff *.woff2 *.ttf *.jpg
 )
-unless Rails.env.production?
+
+if Rails.env.development?
   Rails.application.config.assets.precompile += %w(
     teaspoon.css teaspoon-teaspoon.js mocha/*.js teaspoon-mocha.js
     spec_helper.js
