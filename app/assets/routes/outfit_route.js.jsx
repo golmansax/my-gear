@@ -1,5 +1,6 @@
 //= require components/outfit_view
 //= require stores/outfit_store
+//= require actions/outfit_actions
 
 App.OutfitRoute = (function () {
   'use strict';
@@ -11,6 +12,11 @@ App.OutfitRoute = (function () {
       id: PropTypes.string.isRequired
     },
 
+    componentWillMount: function () {
+      App.OutfitActions.fetch(this.props.id);
+      this.setState(this.getStateFromStore());
+    },
+
     getStateFromStore: function () {
       return {
         outfit: App.OutfitStore.get(this.props.id)
@@ -18,10 +24,14 @@ App.OutfitRoute = (function () {
     },
 
     render: function () {
+      if (this.state.outfit.isLoading) {
+        return <div>Loading ...</div>;
+      }
+
       return (
         <div>
           OUTFIT
-          <App.OutfitView {...this.state.outfit} />
+          <App.OutfitView outfit={this.state.outfit} />
         </div>
       );
     }

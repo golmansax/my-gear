@@ -20,7 +20,7 @@ App.ClothingItemGrid = (function () {
     render: function () {
       return (
         <ReactBootstrap.Row>
-          {_(this.props.ids).map(this._renderClothingItem)}
+          {this.props.ids.map(this._renderClothingItem)}
         </ReactBootstrap.Row>
       );
     }

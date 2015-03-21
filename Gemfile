@@ -17,13 +17,13 @@ gem 'sass-rails', '~> 4.0.5'
 gem 'uglifier', '>= 1.3.0'
 
 group :test do
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'magic_lamp'
   gem 'shoulda-matchers'
 end
 
 group :development, :test do
+  gem 'database_cleaner'
+  gem 'magic_lamp'
   gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
   gem 'spring'
@@ -52,7 +52,7 @@ gem 'rails-assets-react-bootstrap'
 gem 'rails-assets-react-router'
 gem 'rails-assets-underscore'
 
-group :test do
+group :development, :test do
   gem 'rails-assets-chai'
   gem 'rails-assets-dirty-chai'
 end

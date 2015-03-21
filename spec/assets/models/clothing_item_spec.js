@@ -17,18 +17,12 @@ describe('models/clothing_item', function () {
     }, { parse: true });
   });
 
-  describe('#parse', function () {
-    it('adds name to the attributes', function () {
-      expect(clothingItem.get('name')).to.equal('Uniqlo Down Jacket');
-    });
-  });
-
   describe('#isValid', function () {
-    it('returns false when name is empty', function () {
+    it('returns false when brand is empty', function () {
       expect(new App.ClothingItem().isValid()).to.be.false();
     });
 
-    it('returns true when name is present', function () {
+    it('returns true when brand is present', function () {
       expect(clothingItem.isValid()).to.be.true();
     });
   });

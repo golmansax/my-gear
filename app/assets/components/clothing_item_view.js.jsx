@@ -1,5 +1,6 @@
 //= require models/clothing_item
 //= require stores/clothing_item_store
+//= require actions/clothing_item_actions
 
 App.ClothingItemView = (function () {
   'use strict';
@@ -17,24 +18,29 @@ App.ClothingItemView = (function () {
       };
     },
 
-    render: function () {
-      if (!this.state.clothingItem) {
-        return <div>Loading...</div>;
-      } else {
-        var imageAttrs = {
-          className: 'img-responsive',
-          src: this.state.clothingItem.imagePath
-        };
+    componentWillMount: function () {
+      App.ClothingItemActions.fetch(this.props.id);
+      this.setState(this.getStateFromStore());
+    },
 
-        return (
-          <div>
-            <ReactRouter.Link to='clothing_item' params={{ id: this.props.id }}>
-              {this.state.clothingItem.name}
-            </ReactRouter.Link>
-            <img {...imageAttrs} />
-          </div>
-        );
+    render: function () {
+      if (this.state.clothingItem.isLoading) {
+        return <div>Loading...</div>;
       }
+
+      var imageAttrs = {
+        className: 'img-responsive',
+        src: this.state.clothingItem.imagePath
+      };
+
+      return (
+        <div>
+          <ReactRouter.Link to='clothing_item' params={{ id: this.props.id }}>
+            {this.state.clothingItem.name()}
+          </ReactRouter.Link>
+          <img {...imageAttrs} />
+        </div>
+      );
     }
   });
 })();

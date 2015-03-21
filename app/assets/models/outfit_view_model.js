@@ -2,8 +2,9 @@ App.OutfitViewModel = (function () {
   'use strict';
 
   var OutfitViewModel = Immutable.Record({
+    id: null,
     name: '',
-    id: null
+    clothingItemIds: []
   });
 
   return OutfitViewModel;

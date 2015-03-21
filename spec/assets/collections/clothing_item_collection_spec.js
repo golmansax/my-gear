@@ -28,8 +28,8 @@ describe('collections/clothing_item_collection', function () {
         MagicLamp.rawJson('clothing_items/index')
       );
 
-      var expectedNames = ['Marmot ROM Jacket', 'Uniqlo Down Jacket'];
-      expect(clothingItems.pluck('name')).to.deep.equal(expectedNames);
+      var expectedBrands = ['Marmot', 'Uniqlo'];
+      expect(clothingItems.pluck('brand')).to.deep.equal(expectedBrands);
     });
   });
 });

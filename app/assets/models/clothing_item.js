@@ -6,17 +6,8 @@ App.ClothingItem = (function () {
       return data.clothingItem || data;
     },
 
-    mutators: {
-      name: function () {
-        var brand = this.get('brand');
-        var model = this.get('model');
-
-        return (brand && model) ? (brand + ' ' + model) : null;
-      }
-    },
-
     validate: function () {
-      if (!this.get('name')) {
+      if (!this.get('brand') && !this.get('model')) {
         return 'Data has not been loaded yet';
       }
     },

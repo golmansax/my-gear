@@ -1,4 +1,5 @@
 //= require routes/outfit_route
+//= require models/outfit_view_model
 
 describe('routes/outfit_route', function () {
   'use strict';
@@ -7,7 +8,7 @@ describe('routes/outfit_route', function () {
     this.sandbox.stub(App, 'OutfitView', TestUtils.MockComponent);
     this.sandbox.stub(App.OutfitStore, 'get')
       .withArgs('my-outfit')
-      .returns({ hello: 'kitty' });
+      .returns(new App.OutfitViewModel({ name: 'kitty' }));
 
     this.outfitRoute = TestUtils.renderIntoDocument(
       <App.OutfitRoute id={'my-outfit'} />
@@ -20,6 +21,6 @@ describe('routes/outfit_route', function () {
       App.OutfitView
     );
 
-    expect(outfitView.props).to.deep.equal({ hello: 'kitty' });
+    expect(outfitView.props.outfit.name).to.equal('kitty');
   });
 });

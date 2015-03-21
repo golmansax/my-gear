@@ -10,6 +10,8 @@ describe('components/clothing_item_grid', function () {
   beforeEach(function () {
     var fixture = MagicLamp.json('clothing_items/show');
     clothingItem = new App.ClothingItem(fixture, { parse: true });
+
+    this.sandbox.stub(App, 'ClothingItemView', TestUtils.MockComponent)
   });
 
   it('renders a ClothingItemView for each clothingItem', function () {

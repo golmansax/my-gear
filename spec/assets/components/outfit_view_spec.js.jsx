@@ -1,5 +1,5 @@
 //= require components/outfit_view
-//= require models/outfit
+//= require models/outfit_view_model
 
 describe('components/outfit_view', function () {
   'use strict';
@@ -8,12 +8,14 @@ describe('components/outfit_view', function () {
 
   beforeEach(function () {
     var fixture = MagicLamp.json('outfits/show');
-    outfit = new App.Outfit(fixture, { parse: true });
+    outfit = new App.OutfitViewModel(fixture);
+
+    this.sandbox.stub(App, 'ClothingItemGrid', TestUtils.MockComponent)
   });
 
   it('renders a Router Link for each clothing item', function () {
     var outfitView = TestUtils.renderIntoDocument(
-      <App.OutfitView {...outfit.toJSON()} />
+      <App.OutfitView outfit={outfit} />
     );
 
     expect(TestUtils.findRenderedComponentWithType(

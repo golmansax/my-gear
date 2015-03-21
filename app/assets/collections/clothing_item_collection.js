@@ -12,7 +12,9 @@ App.ClothingItemCollection = (function () {
     defaultSort: 'usage',
 
     comparators: {
-      name: 'getter',
+      name: function (clothingItem) {
+        return clothingItem.get('brand') + clothingItem.get('model')
+      },
       type: 'getter',
       usage: function (clothingItem) {
         var index = _(USAGE_ORDER).indexOf(clothingItem.get('usage'));
