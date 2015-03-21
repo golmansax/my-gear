@@ -17,7 +17,7 @@ describe('routes/clothing_item_route', function () {
     this.sandbox.stub(App, 'ClothingItemDetailedView', TestUtils.MockComponent);
     this.sandbox.stub(App.ClothingItemStore, 'get')
       .withArgs(id)
-      .returns(new App.ClothingItemViewModel(fixture.clothingItem));
+      .returns(new App.ClothingItemViewModel(fixture));
   });
 
   it('fetches the clothing item', function () {
