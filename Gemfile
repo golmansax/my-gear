@@ -29,6 +29,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'spring-commands-teaspoon'
   gem 'teaspoon'
+  gem 'coffee-rails' # Needed by teaspoon...
   gem 'travis'
 end
 
