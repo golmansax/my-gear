@@ -11,14 +11,15 @@ App.ClothingItemTable = (function () {
       this.props.handleSort(sort);
     },
     render: function () {
-      var clothingItems = this.props.clothingItems.map(function (clothingItem) {
-        return (
-          <App.ClothingItemTableRow
-            clothingItem={clothingItem}
-            key={clothingItem.id}
-          />
-        );
-      }).toJS();
+      var clothingItems = this.props.clothingItems.valueSeq()
+        .map(function (clothingItem) {
+          return (
+            <App.ClothingItemTableRow
+              clothingItem={clothingItem}
+              key={clothingItem.id}
+            />
+          );
+        }).toJS();
 
       return (
         <div>

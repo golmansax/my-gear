@@ -5,23 +5,23 @@
 describe('components/clothing_item_grid', function () {
   'use strict';
 
-  var clothingItem;
+  var id;
 
   beforeEach(function () {
     var fixture = MagicLamp.json('clothing_items/show');
-    clothingItem = new App.ClothingItem(fixture, { parse: true });
+    id = fixture.clothingItem.id;
 
     this.sandbox.stub(App, 'ClothingItemView', TestUtils.MockComponent)
   });
 
   it('renders a ClothingItemView for each clothingItem', function () {
     var grid = TestUtils.renderIntoDocument(
-      <App.ClothingItemGrid ids={[clothingItem.id]} />
+      <App.ClothingItemGrid ids={[id]} />
     );
 
     var clothingItemViews = TestUtils.scryRenderedComponentsWithType(
       grid,
-      App.ClothingItemView
+      TestUtils.MockComponent
     );
     expect(clothingItemViews).to.have.length(1);
   });

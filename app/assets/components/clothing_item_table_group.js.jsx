@@ -47,7 +47,7 @@ App.ClothingItemTableGroup = (function () {
       //var tables = _(this.state.groupedKeyOrder).map(function (key) {
       var tables = groupedClothingItems.map(function (clothingItems, key) {
         return this._renderTable(clothingItems, key);
-      }.bind(this)).toJS();
+      }.bind(this)).valueSeq().toJS();
 
       return (
         <div>{tables}</div>

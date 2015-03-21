@@ -39,7 +39,7 @@ App.Header = (function () {
         return null;
       }
 
-      return this.state.outfits.map(this._renderOutfit).toJS();
+      return this.state.outfits.valueSeq().map(this._renderOutfit).toJS();
     },
 
     render: function () {

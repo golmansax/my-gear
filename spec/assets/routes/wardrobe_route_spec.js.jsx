@@ -27,7 +27,7 @@ describe('routes/wardrobe_route', function () {
   it('renders a ClothingItemGrid with the collections', function () {
     var grid = TestUtils.findRenderedComponentWithType(
       this.wardrobeRoute,
-      App.ClothingItemGrid
+      TestUtils.MockComponent
     );
 
     expect(grid.props.ids).to.deep.equal(['hello', 'kitty']);

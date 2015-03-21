@@ -43,7 +43,7 @@ describe('routes/clothing_item_route', function () {
     );
     expect(TestUtils.findRenderedComponentWithType(
       route,
-      App.ClothingItemDetailedView
+      TestUtils.MockComponent
     )).to.be.ok();
   });
 });
