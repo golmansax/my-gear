@@ -1,3 +1,5 @@
-json.purchase do
-  json.partial! 'purchases/purchase', purchase: @purchase
+json.cache!(@purchase) do
+  json.purchase do
+    json.partial! 'purchases/purchase', purchase: @purchase
+  end
 end
