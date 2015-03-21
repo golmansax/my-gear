@@ -16,13 +16,6 @@ describe('models/purchase', function () {
     }, { parse: true });
   });
 
-  describe('#parse', function () {
-    it('makes date a moment', function () {
-      var date = purchase.get('date');
-      expect(date).to.be.instanceOf(moment.fn.constructor);
-    });
-  });
-
   describe('#fetch', function () {
     it('grabs the data from the proper url', function () {
       purchase.fetch();

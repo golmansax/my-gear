@@ -1,11 +1,12 @@
-//= require stores/backbone_store_factory
 //= require collections/purchase_collection
+//= require models/purchase_view_model
 
 App.PurchaseStore = (function () {
   'use strict';
 
-  var PurchaseStoreFactory = App.BackboneStoreFactory.extend({
-    collection: App.PurchaseCollection
+  var PurchaseStoreFactory = FluxCrudStore.Store.extend({
+    collection: App.PurchaseCollection,
+    viewModel: App.PurchaseViewModel
   });
 
   return new PurchaseStoreFactory();

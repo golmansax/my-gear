@@ -1,4 +1,5 @@
 //= require stores/purchase_store
+//= require actions/purchase_actions
 
 App.PurchaseListItem = (function () {
   'use strict';
@@ -16,6 +17,11 @@ App.PurchaseListItem = (function () {
       };
     },
 
+    componentWillMount: function () {
+      App.PurchaseActions.fetch(this.props.id);
+      this.setState(this.getStateFromStore());
+    },
+
     render: function () {
       if (!this.state.purchase.date) {
         return null;
@@ -23,7 +29,8 @@ App.PurchaseListItem = (function () {
 
       return (
         <div>
-          {this.state.purchase.version} {this.state.purchase.date.calendar()}
+          {this.state.purchase.version}&nbsp;
+          {moment(this.state.purchase.date).calendar()}
         </div>
       );
     }
