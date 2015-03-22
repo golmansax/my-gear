@@ -27,9 +27,7 @@ describe ClothingItemsController do
     it 'returns a json of a clothing item' do
       get(:show, format: :json, id: 'marmot-rom-jacket')
 
-      expected_response = {
-        clothingItem: outerwear_as_json,
-      }.with_indifferent_access
+      expected_response = outerwear_as_json.with_indifferent_access
       expect(JSON.parse(response.body)).to eq(expected_response)
     end
   end
