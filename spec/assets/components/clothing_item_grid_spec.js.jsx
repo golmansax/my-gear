@@ -1,5 +1,5 @@
 //= require components/clothing_item_grid
-//= require components/clothing_item_view
+//= require components/clothing_item_grid_item
 //= require models/clothing_item
 
 describe('components/clothing_item_grid', function () {
@@ -11,7 +11,7 @@ describe('components/clothing_item_grid', function () {
     var fixture = MagicLamp.json('clothing_items/show');
     id = fixture.id;
 
-    this.sandbox.stub(App, 'ClothingItemView', TestUtils.MockComponent)
+    this.sandbox.stub(App, 'ClothingItemGridItem', TestUtils.MockComponent)
   });
 
   it('renders a ClothingItemView for each clothingItem', function () {

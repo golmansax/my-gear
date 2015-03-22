@@ -170,7 +170,7 @@ GEM
     rails-assets-dirty-chai (1.2.0)
       rails-assets-chai
     rails-assets-es5-shim (4.1.0)
-    rails-assets-flux-crud-store (0.0.6)
+    rails-assets-flux-crud-store (0.0.7)
       rails-assets-backbone
       rails-assets-immutable
       rails-assets-object.assign

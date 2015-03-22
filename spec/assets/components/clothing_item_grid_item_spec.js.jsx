@@ -1,9 +1,9 @@
-//= require components/clothing_item_view
+//= require components/clothing_item_grid_item
 //= require stores/clothing_item_store
 //= require actions/clothing_item_actions
 //= require models/clothing_item_view_model
 
-describe('components/clothing_item_view', function () {
+describe('components/clothing_item_grid_item', function () {
   'use strict';
 
   beforeEach(function () {
@@ -18,8 +18,7 @@ describe('components/clothing_item_view', function () {
     this.sandbox.stub(App.ClothingItemActions, 'fetch');
   });
 
-  it('fetches the clothing item on load', function () {
-    TestUtils.renderIntoDocument(<App.ClothingItemView id={this.id} />);
-    expect(App.ClothingItemActions.fetch).to.have.been.calledWith(this.id);
+  it('renders', function () {
+    TestUtils.renderIntoDocument(<App.ClothingItemGridItem id={this.id} />);
   });
 });
