@@ -15,12 +15,12 @@ App.ClothingItemRoute = (function () {
 
     componentWillMount: function () {
       App.ClothingItemActions.fetch(this.props.id);
-      this.setState(this.getStateFromStore());
+      this.setState(this.getStateFromStore(this.props));
     },
 
-    getStateFromStore: function () {
+    getStateFromStore: function (props) {
       return {
-        clothingItem: App.ClothingItemStore.get(this.props.id)
+        clothingItem: App.ClothingItemStore.get(props.id)
       };
     },
 

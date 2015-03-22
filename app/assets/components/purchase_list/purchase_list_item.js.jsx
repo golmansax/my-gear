@@ -11,15 +11,15 @@ App.PurchaseListItem = (function () {
       id: PropTypes.number.isRequired
     },
 
-    getStateFromStore: function () {
+    getStateFromStore: function (props) {
       return {
-        purchase: App.PurchaseStore.get(this.props.id)
+        purchase: App.PurchaseStore.get(props.id)
       };
     },
 
     componentWillMount: function () {
       App.PurchaseActions.fetch(this.props.id);
-      this.setState(this.getStateFromStore());
+      this.setState(this.getStateFromStore(this.props));
     },
 
     render: function () {

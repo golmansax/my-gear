@@ -14,12 +14,12 @@ App.OutfitRoute = (function () {
 
     componentWillMount: function () {
       App.OutfitActions.fetch(this.props.id);
-      this.setState(this.getStateFromStore());
+      this.setState(this.getStateFromStore(this.props));
     },
 
-    getStateFromStore: function () {
+    getStateFromStore: function (props) {
       return {
-        outfit: App.OutfitStore.get(this.props.id)
+        outfit: App.OutfitStore.get(props.id)
       };
     },
 

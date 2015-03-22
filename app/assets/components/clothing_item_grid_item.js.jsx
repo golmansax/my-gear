@@ -2,7 +2,7 @@
 //= require stores/clothing_item_store
 //= require actions/clothing_item_actions
 
-App.ClothingItemView = (function () {
+App.ClothingItemGridItem = (function () {
   'use strict';
 
   return React.createClass({
@@ -12,15 +12,10 @@ App.ClothingItemView = (function () {
       id: PropTypes.string.isRequired
     },
 
-    getStateFromStore: function () {
+    getStateFromStore: function (props) {
       return {
-        clothingItem: App.ClothingItemStore.get(this.props.id)
+        clothingItem: App.ClothingItemStore.get(props.id)
       };
-    },
-
-    componentWillMount: function () {
-      App.ClothingItemActions.fetch(this.props.id);
-      this.setState(this.getStateFromStore());
     },
 
     render: function () {

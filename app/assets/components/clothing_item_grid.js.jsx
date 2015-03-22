@@ -1,4 +1,4 @@
-//= require components/clothing_item_view
+//= require components/clothing_item_grid_item
 
 App.ClothingItemGrid = (function () {
 
@@ -12,7 +12,7 @@ App.ClothingItemGrid = (function () {
     _renderClothingItem: function (id) {
       return (
         <ReactBootstrap.Col sm={4} key={id}>
-          <App.ClothingItemView id={id} />
+          <App.ClothingItemGridItem id={id} />
         </ReactBootstrap.Col>
       );
     },
