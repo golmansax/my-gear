@@ -35,6 +35,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'dalli'
 end
 
 # Heroku doesn't support this syntax yet :( source 'https://rails-assets.org' do
