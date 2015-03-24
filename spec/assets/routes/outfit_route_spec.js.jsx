@@ -6,6 +6,8 @@ describe('routes/outfit_route', function () {
   'use strict';
 
   beforeEach(function () {
+    this.sandbox.useFakeServer();
+
     this.sandbox.stub(App.OutfitActions, 'fetch');
     this.sandbox.stub(App, 'OutfitView', TestUtils.MockComponent);
     this.sandbox.stub(App.OutfitStore, 'get')
