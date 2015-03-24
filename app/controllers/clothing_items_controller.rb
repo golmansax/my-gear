@@ -12,7 +12,6 @@ class ClothingItemsController < ApplicationController
     respond_to do |format|
       format.json
       format.html do
-        @data = gon.jbuilder
         render template: 'pages/index'
       end
     end
