@@ -21,6 +21,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'bullet'
   gem 'database_cleaner'
   gem 'magic_lamp'
   gem 'rspec-rails', '~> 3.0.0'
