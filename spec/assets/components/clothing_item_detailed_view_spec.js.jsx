@@ -9,6 +9,7 @@ describe('components/clothing_item_detailed_view', function () {
   beforeEach(function () {
     var fixture = MagicLamp.json('clothing_items/show');
     clothingItem = new App.ClothingItemViewModel(fixture);
+    this.sandbox.useFakeServer();
   });
 
   it('renders', function () {

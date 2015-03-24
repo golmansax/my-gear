@@ -4,6 +4,7 @@ describe('routes/root_route', function () {
   'use strict';
 
   beforeEach(function () {
+    this.sandbox.useFakeServer();
     this.rootRoute = TestUtils.renderIntoDocument(<App.RootRoute />);
   });
 

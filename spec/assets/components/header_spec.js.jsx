@@ -9,6 +9,7 @@ describe('components/header', function () {
     var viewModel = new App.OutfitViewModel({ id: 'sexy', name: 'Sexy' });
     viewModels = viewModels.push(viewModel);
     this.sandbox.stub(App.OutfitStore, 'getAll').returns(viewModels)
+    this.sandbox.useFakeServer();
 
     this.header = TestUtils.renderIntoDocument(<App.Header />);
   });
