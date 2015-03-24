@@ -10,7 +10,6 @@ describe ClothingItemsController do
       imagePath: '/assets/marmot-rom-jacket.jpg',
       usage: 'heavy',
       type: 'Outerwear',
-      purchaseIds: outerwear.purchases.pluck(:id),
     }
   end
 
@@ -27,7 +26,9 @@ describe ClothingItemsController do
     it 'returns a json of a clothing item' do
       get(:show, format: :json, id: 'marmot-rom-jacket')
 
-      expected_response = outerwear_as_json.with_indifferent_access
+      expected_response = outerwear_as_json.merge(
+        purchaseIds: outerwear.purchases.pluck(:id),
+      ).with_indifferent_access
       expect(JSON.parse(response.body)).to eq(expected_response)
     end
   end

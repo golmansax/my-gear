@@ -8,8 +8,8 @@ describe OutfitsController do
       get(:index, format: :json)
 
       expected_response = [
-        { name: 'Lazy', id: 'lazy', clothingItemIds: [] },
-        { name: 'Sexy', id: 'sexy', clothingItemIds: [] },
+        { name: 'Lazy', id: 'lazy' },
+        { name: 'Sexy', id: 'sexy' },
       ].map(&:with_indifferent_access)
       expect(JSON.parse(response.body)).to eq(expected_response)
     end
