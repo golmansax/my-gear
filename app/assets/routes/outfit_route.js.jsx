@@ -17,6 +17,11 @@ App.OutfitRoute = (function () {
       this.setState(this.getStateFromStore(this.props));
     },
 
+    componentWillReceiveProps: function (newProps) {
+      App.OutfitActions.fetch(newProps.id);
+      this.setState(this.getStateFromStore(newProps));
+    },
+
     getStateFromStore: function (props) {
       return {
         outfit: App.OutfitStore.get(props.id)
@@ -30,7 +35,8 @@ App.OutfitRoute = (function () {
 
       return (
         <div>
-          OUTFIT
+          <h1>{this.state.outfit.name}</h1>
+          <br />
           <App.OutfitView outfit={this.state.outfit} />
         </div>
       );
