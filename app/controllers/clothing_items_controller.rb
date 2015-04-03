@@ -1,7 +1,7 @@
 class ClothingItemsController < ApplicationController
   def index
     respond_to do |format|
-      format.json { @clothing_items = ClothingItem.all }
+      format.json { @clothing_items = ClothingItem.all.includes(:purchases) }
       format.html { render template: 'pages/index' }
     end
   end

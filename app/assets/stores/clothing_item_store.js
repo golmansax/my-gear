@@ -1,4 +1,4 @@
-//= require collections/clothing_item_collection
+//= require models/clothing_item_collection
 //= require models/clothing_item_view_model
 
 App.ClothingItemStore = (function () {

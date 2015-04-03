@@ -1,6 +1,6 @@
-//= require collections/clothing_item_collection
+//= require models/clothing_item_collection
 
-describe('collections/clothing_item_collection', function () {
+describe('models/clothing_item_collection', function () {
   'use strict';
 
   var clothingItems;

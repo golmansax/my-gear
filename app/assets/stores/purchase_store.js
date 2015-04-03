@@ -1,4 +1,4 @@
-//= require collections/purchase_collection
+//= require models/purchase_collection
 //= require models/purchase_view_model
 
 App.PurchaseStore = (function () {

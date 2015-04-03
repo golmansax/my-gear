@@ -1,5 +1,5 @@
 //= require components/clothing_item_table_group
-//= require collections/clothing_item_collection
+//= require models/clothing_item_collection
 //= require stores/clothing_item_store
 //= require actions/clothing_item_actions
 
