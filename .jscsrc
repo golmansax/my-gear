@@ -1,6 +1,6 @@
 {
   "preset": "google",
-  "excludeFiles": ["node_modules/**", "vendor/**", "public/assets/**", "spec/assets/support/phantomjs_shims.js"],
+  "excludeFiles": ["coverage/**", "tmp/**", "node_modules/**", "vendor/**", "public/assets/**", "spec/assets/support/phantomjs_shims.js"],
   "fileExtensions": [".js", ".jsx"],
 
   "disallowTrailingComma": true,
