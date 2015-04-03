@@ -26,7 +26,7 @@ outfits = {
   ],
   'Lounging' => [
     'uniqlo-extra-fine-merino-v-neck-sweater',
-    'nike-jordan-aero-fly-mania-basketball-short'
+    'nike-jordan-aero-fly-mania-basketball-short',
   ],
   'Tennis' => ['new-balance-696-tennis'],
 }

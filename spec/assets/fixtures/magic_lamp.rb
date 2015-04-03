@@ -12,7 +12,7 @@ MagicLamp.define(controller: ClothingItemsController) do
         Purchase.new(
           date: Date.parse('2014-11-01'),
           version: 'Navy',
-          usage: 'moderate',
+          usage: 'backup',
         ),
       ],
     )
@@ -33,7 +33,7 @@ MagicLamp.define(controller: ClothingItemsController) do
           Purchase.new(
             date: Date.parse('2014-11-01'),
             version: 'Navy',
-            usage: 'moderate',
+            usage: 'backup',
           ),
         ],
       ),
@@ -75,7 +75,7 @@ MagicLamp.define(controller: OutfitsController) do
         Purchase.new(
           date: Date.parse('2014-11-01'),
           version: 'Navy',
-          usage: 'moderate',
+          usage: 'backup',
         ),
       ],
     )
