@@ -24,7 +24,7 @@ expect = window.chai.expect;
   });
 
   afterEach(function () {
-    MagicLamp.clean();
     this.sandbox.restore();
+    MagicLamp.clean();
   });
 })();
