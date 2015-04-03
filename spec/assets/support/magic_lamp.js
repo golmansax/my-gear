@@ -1,4 +1,5 @@
 //= require magic_lamp
+/* global window */
 
 var MagicLamp = (function (OldMagicLamp) {
   'use strict';
