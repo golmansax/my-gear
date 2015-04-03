@@ -1,16 +1,17 @@
 outfits = {
   'Basketball' => ['nike-hyperfuse-basketball-shoe'],
-  'Biking' => [],
+  'Biking' => ['novara-padded-bike-boxers'],
   'Climbing' => ['five-ten-team-vxi'],
   'Cold Weather' => [
     'uniqlo-ultra-lite-down-vest',
     'uniqlo-extra-fine-merino-v-neck-sweater',
-    # long shirt
+    'uniqlo-heattech-v-neck-t-shirt-long-sleeve',
     'stonemaster-pant',
     'uniqlo-heattech-long-john',
     # long socks
   ],
   'Expressive' => [
+    'american-apparel-tri-blend-t-shirt',
     'xero-shoes-diy-sandal',
     'warrior-liverpool-kit',
     'uniqlo-novak-djokovic-polo',
@@ -25,10 +26,8 @@ outfits = {
   'For Girlfriend' => [
     'wool-prince-better-button-down',
     'stonemaster-pant',
-    'uniqlo-airism-boxer-brief',
-    'injinji-run-2-0-lightweight-no-show-nuwool',
     'lems-nine2five',
-    # AA shirt
+    'american-apparel-tri-blend-t-shirt',
   ],
   'Formal' => [
     'wool-prince-better-button-down',
@@ -42,6 +41,7 @@ outfits = {
   'Frisbee' => ['inov8-bare-grip-200'],
   'Hiking' => ['inov8-bare-grip-200'],
   'Lounging' => [
+    'american-apparel-tri-blend-t-shirt',
     'uniqlo-extra-fine-merino-v-neck-sweater',
     'nike-jordan-aero-fly-mania-basketball-short',
   ],

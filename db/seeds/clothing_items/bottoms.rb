@@ -16,13 +16,25 @@ Bottom.create!(
 )
 
 Bottom.create!(
+  brand: 'Outlier',
+  model: 'New Way Short',
+  purchases: [
+    Purchase.new(
+      date: Date.parse('April 2015'),
+      version: 'Deep Gray',
+      usage: 'everyday',
+    ),
+  ],
+)
+
+Bottom.create!(
   brand: 'prAna',
   model: 'Stretch Zion Short',
   purchases: [
     Purchase.new(
       date: Date.parse('April 2014'),
       version: 'Charcoal',
-      usage: 'everyday',
+      usage: 'backup',
     ),
   ],
 )
@@ -46,7 +58,7 @@ Bottom.create!(
     Purchase.new(
       date: Date.parse('Jan 2014'),
       version: 'Navy Plaid',
-      usage: 'specialized',
+      usage: 'not in use',
     ),
   ],
 )
@@ -63,4 +75,6 @@ Bottom.create!(
   ],
 )
 
-# Lounge pants
+# Old Lounge pants
+# New Lounge pants
+# Ski Pants

@@ -73,4 +73,31 @@ Top.create!(
   ],
 )
 
-# Thumbtack shirt American Apparel
+Top.create!(
+  brand: 'American Apparel',
+  model: 'Tri-Blend T-shirt',
+  purchases: [
+    Purchase.new(
+      date: Date.parse('Sept 2013'),
+      version: 'Tri-Black – Thumbtack',
+      usage: 'specialized',
+    ),
+    Purchase.new(
+      date: Date.parse('Oct 2013'),
+      version: 'Athletic Blue – Red Hot Chili Peppers – Scar Tissue',
+      usage: 'specialized',
+    ),
+  ],
+)
+
+Top.create!(
+  brand: 'Uniqlo',
+  model: 'Heattech V-Neck T-Shirt (Long Sleeve)',
+  purchases: [
+    Purchase.new(
+      date: Date.parse('Jan 2015'),
+      version: 'Black',
+      usage: 'specialized',
+    ),
+  ],
+)

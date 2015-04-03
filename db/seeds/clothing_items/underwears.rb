@@ -57,3 +57,15 @@ Underwear.create!(
     ),
   ],
 )
+
+Underwear.create!(
+  brand: 'Novara',
+  model: 'Padded Bike Boxers',
+  purchases: [
+    Purchase.new(
+      date: Date.parse('Mar 2015'),
+      version: 'Black',
+      usage: 'specialized',
+    ),
+  ],
+)

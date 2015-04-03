@@ -4,7 +4,7 @@ Footwear.create!(
   purchases: [
     Purchase.new(
       date: Date.parse('July 2012'),
-      version: 'Contact in Black/Neon Green',
+      version: 'Contact in Black/Hot Lime',
       usage: 'not in use',
     ),
     Purchase.new(
@@ -14,12 +14,17 @@ Footwear.create!(
     ),
     Purchase.new(
       date: Date.parse('Dec 2013'),
-      version: 'Connect in Brown/Neon Orange',
+      version: 'Connect in Brown/Hot Orange',
       usage: 'not in use',
     ),
     Purchase.new(
-      date: Date.parse('Apr 2014'),
+      date: Date.parse('June 2014'),
       version: 'Connect in Black/Light Purple',
+      usage: 'not in use',
+    ),
+    Purchase.new(
+      date: Date.parse('Apr 2015'),
+      version: 'Connect in Black/Hot Pink',
       usage: 'everyday',
     ),
   ],
