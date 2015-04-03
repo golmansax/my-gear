@@ -49,7 +49,7 @@ MagicLamp.define(controller: ClothingItemsController) do
           Purchase.new(
             date: Date.parse('2014-11-01'),
             version: 'Green',
-            usage: 'heavy',
+            usage: 'everyday',
           ),
         ],
       ),

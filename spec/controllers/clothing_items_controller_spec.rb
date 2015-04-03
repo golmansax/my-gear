@@ -8,7 +8,7 @@ describe ClothingItemsController do
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
       imagePath: '/assets/marmot-rom-jacket.jpg',
-      usage: 'heavy',
+      usage: 'everyday',
       type: 'Outerwear',
     }
   end

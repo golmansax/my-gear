@@ -7,7 +7,7 @@ describe PurchasesController do
       id: purchase.id,
       clothingItemId: purchase.clothing_item_id,
       date: '2014-07-01',
-      usage: 'heavy',
+      usage: 'everyday',
       version: 'Navy',
     }
   end
