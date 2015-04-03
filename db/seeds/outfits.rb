@@ -10,6 +10,11 @@ outfits = {
     'uniqlo-heattech-long-john',
     # long socks
   ],
+  'Expressive' => [
+    'xero-shoes-diy-sandal',
+    'warrior-liverpool-kit',
+    'uniqlo-novak-djokovic-polo',
+  ],
   'Favorite' => [
     'marmot-rom-jacket',
     'icebreaker-tech-t-lite-short-sleeve',
@@ -17,17 +22,30 @@ outfits = {
     'exofficio-give-n-go-sport-brief',
     'xero-shoes-diy-sandal',
   ],
-  'Formal' => [
+  'For Girlfriend' => [
     'wool-prince-better-button-down',
     'stonemaster-pant',
     'uniqlo-airism-boxer-brief',
     'injinji-run-2-0-lightweight-no-show-nuwool',
     'lems-nine2five',
+    # AA shirt
   ],
+  'Formal' => [
+    'wool-prince-better-button-down',
+    'uniqlo-ultra-lite-down-vest',
+    'uniqlo-extra-fine-merino-v-neck-sweater',
+    'stonemaster-pant',
+    'uniqlo-airism-boxer-brief',
+    'injinji-run-2-0-lightweight-no-show-nuwool',
+    'lems-nine2five',
+  ],
+  'Frisbee' => ['inov8-bare-grip-200'],
+  'Hiking' => ['inov8-bare-grip-200'],
   'Lounging' => [
     'uniqlo-extra-fine-merino-v-neck-sweater',
     'nike-jordan-aero-fly-mania-basketball-short',
   ],
+  'Swimming' => ['o-neill-hybrid-freak-short'],
   'Tennis' => ['new-balance-696-tennis'],
 }
 
