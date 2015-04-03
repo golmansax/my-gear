@@ -28,7 +28,7 @@ outfits = {
     'uniqlo-extra-fine-merino-v-neck-sweater',
     'nike-jordan-aero-fly-mania-basketball-short'
   ],
-  'Tennis' => ['new-balance-696'],
+  'Tennis' => ['new-balance-696-tennis'],
 }
 
 outfits.each do |outfit_name, clothing_items|

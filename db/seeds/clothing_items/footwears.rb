@@ -39,7 +39,7 @@ Footwear.create!(
 
 Footwear.create!(
   brand: 'New Balance',
-  model: '696',
+  model: '696 – Tennis',
   purchases: [
     Purchase.new(
       date: Date.parse('Aug 2014'),
