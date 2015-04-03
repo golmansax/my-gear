@@ -4,5 +4,5 @@ class Purchase < ActiveRecord::Base
   validates :date, presence: true
   validates :version, presence: true
 
-  enum usage: ['not in use', :specialized, :moderate, :heavy]
+  enum usage: ['not in use', :specialized, :backup, :everyday, :wishlist]
 end

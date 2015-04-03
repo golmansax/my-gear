@@ -5,7 +5,7 @@ Top.create!(
     Purchase.new(
       date: Date.parse('July 2014'),
       version: 'Yellow',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
@@ -17,12 +17,12 @@ Top.create!(
     Purchase.new(
       date: Date.parse('Oct 2014'),
       version: 'Blue Oxford',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
     Purchase.new(
       date: Date.parse('Feb 2015'),
       version: 'Red Oxford',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
@@ -39,7 +39,7 @@ Top.create!(
     Purchase.new(
       date: Date.parse('May 2014'),
       version: 'Home 2013/2014',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
@@ -56,7 +56,7 @@ Top.create!(
     Purchase.new(
       date: Date.parse('July 2014'),
       version: '2014 French Open',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )

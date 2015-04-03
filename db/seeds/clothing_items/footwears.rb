@@ -20,7 +20,7 @@ Footwear.create!(
     Purchase.new(
       date: Date.parse('Apr 2014'),
       version: 'Connect in Black/Light Purple',
-      usage: 'heavy',
+      usage: 'everyday',
     ),
   ],
 )
@@ -32,7 +32,7 @@ Footwear.create!(
     Purchase.new(
       date: Date.parse('June 2014'),
       version: 'Coffee & Cream',
-      usage: 'moderate',
+      usage: 'specialized',
     ),
   ],
 )
@@ -68,7 +68,7 @@ Footwear.create!(
     Purchase.new(
       date: Date.parse('July 2011'),
       version: 'Black',
-      usage: 'specialized',
+      usage: 'backup',
     ),
   ],
 )

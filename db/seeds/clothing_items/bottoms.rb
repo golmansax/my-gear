@@ -10,7 +10,7 @@ Bottom.create!(
     Purchase.new(
       date: Date.parse('June 2014'),
       version: 'Brown',
-      usage: 'heavy',
+      usage: 'everyday',
     ),
   ],
 )
@@ -22,7 +22,7 @@ Bottom.create!(
     Purchase.new(
       date: Date.parse('April 2014'),
       version: 'Charcoal',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
@@ -34,7 +34,7 @@ Bottom.create!(
     Purchase.new(
       date: Date.parse('May 2014'),
       version: 'Black Slim',
-      usage: 'moderate',
+      usage: 'specialized',
     ),
   ],
 )

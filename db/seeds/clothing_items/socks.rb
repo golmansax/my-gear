@@ -5,12 +5,12 @@ Sock.create!(
     Purchase.new(
       date: Date.parse('Apr 2014'),
       version: 'Olive',
-      usage: 'moderate',
+      usage: 'not in use',
     ),
     Purchase.new(
       date: Date.parse('May 2014'),
       version: 'Charcoal',
-      usage: 'moderate',
+      usage: 'specialized',
     ),
   ],
 )
@@ -27,7 +27,7 @@ Sock.create!(
     Purchase.new(
       date: Date.parse('Jan 2015'),
       version: 'Blue',
-      usage: 'moderate',
+      usage: 'specialized',
     ),
   ],
 )

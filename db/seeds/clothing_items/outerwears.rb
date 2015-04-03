@@ -5,7 +5,7 @@ Outerwear.create!(
     Purchase.new(
       date: Date.parse('May 2014'),
       version: 'Green',
-      usage: 'heavy',
+      usage: 'everyday',
     ),
   ],
 )
@@ -29,7 +29,7 @@ Outerwear.create!(
     Purchase.new(
       date: Date.parse('Nov 2012'),
       version: 'Red',
-      usage: 'specialized',
+      usage: 'backup',
     ),
   ],
 )

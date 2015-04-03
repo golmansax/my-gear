@@ -5,7 +5,7 @@ Underwear.create!(
     Purchase.new(
       date: Date.parse('Sept 2014'),
       version: 'Gray',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
@@ -17,7 +17,7 @@ Underwear.create!(
     Purchase.new(
       date: Date.parse('Dec 2014'),
       version: 'Purple',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
@@ -29,7 +29,7 @@ Underwear.create!(
     Purchase.new(
       date: Date.parse('Aug 2014'),
       version: 'Black',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
@@ -41,7 +41,7 @@ Underwear.create!(
     Purchase.new(
       date: Date.parse('Sept 2014'),
       version: 'Black/Orange',
-      usage: 'moderate',
+      usage: 'everyday',
     ),
   ],
 )
