@@ -75,6 +75,8 @@
     "_": true,
     "App": true,
     "Backbone": true,
+    "FluxCrudStore": true,
+    "Immutable": true,
     "PropTypes": true,
     "React": true,
     "ReactBootstrap": true,

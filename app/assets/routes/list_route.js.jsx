@@ -19,10 +19,6 @@ App.ListRoute = (function () {
       App.ClothingItemActions.fetchAll();
     },
 
-    componentDidMount: function () {
-      console.log(this.getDOMNode().dataset);
-    },
-
     getInitialState: function () {
       var clothingItems = new App.ClothingItemCollection([], { parse: true });
 

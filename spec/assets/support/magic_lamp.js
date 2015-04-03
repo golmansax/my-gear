@@ -11,7 +11,7 @@ var MagicLamp = (function (OldMagicLamp) {
         throw 'The following path has not been loaded yet: ' + path;
       }
 
-      return JSON.parse(cachedPartial);
+      return window.JSON.parse(cachedPartial);
     },
 
     rawJson: function (path) {

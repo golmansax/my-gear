@@ -13,7 +13,7 @@ App.ClothingItemCollection = (function () {
 
     comparators: {
       name: function (clothingItem) {
-        return clothingItem.get('brand') + clothingItem.get('model')
+        return clothingItem.get('brand') + clothingItem.get('model');
       },
       type: 'getter',
       usage: function (clothingItem) {
