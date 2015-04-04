@@ -75,7 +75,17 @@ Bottom.create!(
   ],
 )
 
-# Old Lounge pants
+Bottom.create!(
+  brand: 'White Sierra',
+  model: 'Baz Az Fleece Pant',
+  purchases: [
+    Purchase.new(
+      date: Date.parse('Dec 2013'),
+      version: 'Black',
+      usage: 'not in use',
+    ),
+  ],
+)
 
 Bottom.create!(
   brand: 'REI',
