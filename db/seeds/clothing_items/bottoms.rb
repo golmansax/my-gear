@@ -68,7 +68,7 @@ Bottom.create!(
   model: 'Jordan Aero Fly Mania Basketball Short',
   purchases: [
     Purchase.new(
-      date: Date.parse('Apri 2013'),
+      date: Date.parse('April 2013'),
       version: 'Green',
       usage: 'specialized',
     ),
@@ -76,5 +76,17 @@ Bottom.create!(
 )
 
 # Old Lounge pants
-# New Lounge pants
+
+Bottom.create!(
+  brand: 'REI',
+  model: 'Sariska Yoga Pant',
+  purchases: [
+    Purchase.new(
+      date: Date.parse('April 2015'),
+      version: 'Slate',
+      usage: 'specialized',
+    ),
+  ],
+)
+
 # Ski Pants

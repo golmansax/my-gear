@@ -69,3 +69,15 @@ Underwear.create!(
     ),
   ],
 )
+
+Underwear.create!(
+  brand: 'SmartWool',
+  model: 'NTS Micro 150 Pattern Boxer Brief',
+  purchases: [
+    Purchase.new(
+      date: Date.parse('April 2015'),
+      version: 'Taupe',
+      usage: 'everyday',
+    ),
+  ],
+)
