@@ -1,4 +1,5 @@
 //= require components/purchase_list/purchase_list
+//= require components/purpose_list/purpose_list
 //= require models/clothing_item_view_model
 
 App.ClothingItemDetailedView = (function () {
@@ -24,6 +25,7 @@ App.ClothingItemDetailedView = (function () {
           <ReactBootstrap.Col sm={6}>
             <h1>{this.props.clothingItem.name()}</h1>
             <App.PurchaseList ids={this.props.clothingItem.purchaseIds} />
+            <App.PurposeList ids={this.props.clothingItem.purposeIds} />
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>
       );

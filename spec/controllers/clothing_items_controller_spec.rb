@@ -28,6 +28,7 @@ describe ClothingItemsController do
 
       expected_response = outerwear_as_json.merge(
         purchaseIds: outerwear.purchases.pluck(:id),
+        purposeIds: [],
       ).with_indifferent_access
       expect(JSON.parse(response.body)).to eq(expected_response)
     end
