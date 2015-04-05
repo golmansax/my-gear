@@ -17,10 +17,6 @@ App.PurposeListItem = (function () {
     },
 
     render: function () {
-      if (this.state.purpose.isLoading) {
-        return null;
-      }
-
       return <div>{this.state.purpose.name}</div>;
     }
   });

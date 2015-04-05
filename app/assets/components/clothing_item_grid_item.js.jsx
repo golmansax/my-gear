@@ -18,10 +18,6 @@ App.ClothingItemGridItem = (function () {
     },
 
     render: function () {
-      if (this.state.clothingItem.isLoading) {
-        return <div>Loading...</div>;
-      }
-
       var imageAttrs = {
         className: 'img-responsive',
         src: this.state.clothingItem.imagePath

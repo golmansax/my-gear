@@ -15,7 +15,7 @@ App.WardrobeRoute = (function () {
 
     render: function () {
       if (this.state.clothingItems.isLoading) {
-        return <div>Loading...</div>;
+        return <App.Loading />;
       }
 
       var ids = this.state.clothingItems.map(function (clothingItem) {

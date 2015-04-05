@@ -1,5 +1,6 @@
 //= require components/outfit_view
 //= require stores/outfit_store
+//= require components/loading
 
 App.OutfitRoute = (function () {
   'use strict';
@@ -19,9 +20,8 @@ App.OutfitRoute = (function () {
 
     render: function () {
       if (this.state.outfit.isLoading) {
-        return <div>Loading ...</div>;
+        return <App.Loading />;
       }
-      console.log(this.state.outfit);
 
       return (
         <div>

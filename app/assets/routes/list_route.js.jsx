@@ -1,4 +1,5 @@
 //= require components/clothing_item_table_group
+//= require components/loading
 //= require models/clothing_item_collection
 //= require stores/clothing_item_store
 
@@ -34,7 +35,7 @@ App.ListRoute = (function () {
 
     render: function () {
       if (this.state.clothingItems.isLoading) {
-        return <div>Loading...</div>;
+        return <App.Loading />;
       }
 
       return (
