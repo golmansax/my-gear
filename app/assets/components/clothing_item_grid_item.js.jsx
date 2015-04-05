@@ -1,4 +1,3 @@
-//= require models/clothing_item
 //= require stores/clothing_item_store
 
 App.ClothingItemGridItem = (function () {

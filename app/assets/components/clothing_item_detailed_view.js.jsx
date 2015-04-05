@@ -1,13 +1,13 @@
 //= require components/purchase_list/purchase_list
 //= require components/purpose_list/purpose_list
-//= require models/clothing_item_view_model
+//= require models/clothing_item/view_model
 
 App.ClothingItemDetailedView = (function () {
   'use strict';
 
   return React.createClass({
     propTypes: {
-      clothingItem: React.PropTypes.instanceOf(App.ClothingItemViewModel)
+      clothingItem: React.PropTypes.instanceOf(App.ClothingItem.ViewModel)
         .isRequired
     },
 
