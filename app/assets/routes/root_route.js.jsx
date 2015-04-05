@@ -7,7 +7,7 @@ App.RootRoute = (function () {
 
   return React.createClass({
     mixins: [
-      React.BindMixin(App.DataLoadingStore, 'getStateFromStore'),
+      React.BindMixin(App.DataLoadingStore, 'getStateFromStore')
     ],
 
     getStateFromStore: function () {
