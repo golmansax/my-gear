@@ -1,7 +1,6 @@
 //= require components/clothing_item_detailed_view
 //= require models/clothing_item
 //= require stores/clothing_item_store
-//= require actions/clothing_item_actions
 
 App.ClothingItemRoute = (function () {
   'use strict';
@@ -11,11 +10,6 @@ App.ClothingItemRoute = (function () {
 
     propTypes: {
       id: PropTypes.string.isRequired
-    },
-
-    componentWillMount: function () {
-      App.ClothingItemActions.fetch(this.props.id);
-      this.setState(this.getStateFromStore(this.props));
     },
 
     getStateFromStore: function (props) {

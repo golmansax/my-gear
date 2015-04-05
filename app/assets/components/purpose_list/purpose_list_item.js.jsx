@@ -1,5 +1,4 @@
 //= require stores/outfit_store
-//= require actions/outfit_actions
 
 App.PurposeListItem = (function () {
   'use strict';
@@ -15,11 +14,6 @@ App.PurposeListItem = (function () {
       return {
         purpose: App.OutfitStore.get(props.id)
       };
-    },
-
-    componentWillMount: function () {
-      App.OutfitActions.fetch(this.props.id);
-      this.setState(this.getStateFromStore(this.props));
     },
 
     render: function () {

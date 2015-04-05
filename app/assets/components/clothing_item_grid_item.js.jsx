@@ -1,6 +1,5 @@
 //= require models/clothing_item
 //= require stores/clothing_item_store
-//= require actions/clothing_item_actions
 
 App.ClothingItemGridItem = (function () {
   'use strict';

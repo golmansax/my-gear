@@ -1,6 +1,5 @@
 //= require components/router_nav_item
 //= require stores/outfit_store
-//= require actions/outfit_actions
 
 App.Header = (function () {
   'use strict';
@@ -12,11 +11,6 @@ App.Header = (function () {
       return {
         outfits: App.OutfitStore.getAll()
       };
-    },
-
-    componentWillMount: function () {
-      App.OutfitActions.fetchAll();
-      this.setState(this.getStateFromStore());
     },
 
     _renderOutfit: function (outfit) {

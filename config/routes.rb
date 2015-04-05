@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/about' => 'pages#index'
   get '/wardrobe' => 'clothing_items#index'
-  resources :clothing_items, only: [:index, :show]
-  resources :outfits, only: [:index, :show]
-  resources :purchases, only: [:index, :show]
+  resources :clothing_items, only: :index
+  resources :outfits, only: :index
+  resources :purchases, only: :index
 end

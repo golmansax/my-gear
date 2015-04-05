@@ -1,7 +1,6 @@
 //= require components/clothing_item_table_group
 //= require models/clothing_item_collection
 //= require stores/clothing_item_store
-//= require actions/clothing_item_actions
 
 App.ListRoute = (function () {
   'use strict';
@@ -13,10 +12,6 @@ App.ListRoute = (function () {
       return {
         clothingItems: App.ClothingItemStore.getAll()
       };
-    },
-
-    componentWillMount: function () {
-      App.ClothingItemActions.fetchAll();
     },
 
     getInitialState: function () {
@@ -38,6 +33,10 @@ App.ListRoute = (function () {
     },
 
     render: function () {
+      if (this.state.clothingItems.isLoading) {
+        return <div>Loading...</div>;
+      }
+
       return (
         <div>
           <h1>List of Everything ({this.state.clothingItems.size})</h1>

@@ -16,16 +16,16 @@ gem 'sass-rails', '~> 4.0.5'
 gem 'uglifier', '>= 1.3.0'
 
 group :test do
-  gem 'factory_girl_rails'
-  gem 'shoulda-matchers'
 end
 
 group :development, :test do
   gem 'bullet'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
   gem 'magic_lamp'
   gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
+  gem 'shoulda-matchers'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-teaspoon'

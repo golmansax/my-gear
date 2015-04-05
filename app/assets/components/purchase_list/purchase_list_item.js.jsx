@@ -1,5 +1,4 @@
 //= require stores/purchase_store
-//= require actions/purchase_actions
 
 App.PurchaseListItem = (function () {
   'use strict';
@@ -15,11 +14,6 @@ App.PurchaseListItem = (function () {
       return {
         purchase: App.PurchaseStore.get(props.id)
       };
-    },
-
-    componentWillMount: function () {
-      App.PurchaseActions.fetch(this.props.id);
-      this.setState(this.getStateFromStore(this.props));
     },
 
     render: function () {
