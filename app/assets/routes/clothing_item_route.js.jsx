@@ -1,5 +1,4 @@
 //= require components/clothing_item_detailed_view
-//= require components/loading
 //= require models/clothing_item
 //= require stores/clothing_item_store
 
@@ -23,10 +22,6 @@ App.ClothingItemRoute = (function () {
     },
 
     render: function () {
-      if (this.state.clothingItem.isLoading) {
-        return <App.Loading />;
-      }
-
       return (
         <App.ClothingItemDetailedView clothingItem={this.state.clothingItem} />
       );

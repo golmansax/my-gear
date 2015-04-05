@@ -17,10 +17,6 @@ App.WardrobeRoute = (function () {
     },
 
     render: function () {
-      if (this.state.clothingItems.isLoading) {
-        return <App.Loading />;
-      }
-
       var ids = this.state.clothingItems.map(function (clothingItem) {
         return clothingItem.id;
       }).valueSeq().toJS();
