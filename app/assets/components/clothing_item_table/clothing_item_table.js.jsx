@@ -1,4 +1,4 @@
-//= require components/clothing_item_table_row
+//= require ./clothing_item_table_row
 
 App.ClothingItemTable = (function () {
   'use strict';

@@ -1,4 +1,4 @@
-//= require components/clothing_item_table_group
+//= require components/clothing_item_table/clothing_item_table
 //= require models/clothing_item_collection
 //= require stores/clothing_item_store
 
@@ -39,10 +39,10 @@ App.ListRoute = (function () {
       return (
         <div>
           <h1>List of Everything ({this.state.clothingItems.size})</h1>
-          <App.ClothingItemTableGroup
+          <App.ClothingItemTable
             clothingItems={this.state.clothingItems}
-            groupBy={this.state.groupBy}
             handleSort={this.handleSort}
+            title='BLAH'
           />
         </div>
       );
