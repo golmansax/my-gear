@@ -1,6 +1,5 @@
-//= require components/clothing_item_table/clothing_item_table
-//= require models/clothing_item_collection
-//= require stores/clothing_item_store
+//= require components/purchase_table/purchase_table
+//= require stores/purchase_store
 
 App.ListRoute = (function () {
   'use strict';
@@ -8,30 +7,21 @@ App.ListRoute = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.ClothingItemStore, 'getStateFromStore')
+      React.BindMixin(App.PurchaseStore, 'getStateFromStore')
     ],
 
     getStateFromStore: function () {
       return {
-        clothingItems: App.ClothingItemStore.getAll()
-      };
-    },
-
-    getInitialState: function () {
-      var clothingItems = new App.ClothingItemCollection([], { parse: true });
-
-      return {
-        currentSort: clothingItems.defaultSort,
-        groupBy: 'usage'
+        purchases: App.PurchaseStore.getAll()
       };
     },
 
     render: function () {
       return (
         <div>
-          <h1>List of Everything ({this.state.clothingItems.size})</h1>
+          <h1>List of Everything ({this.state.purchases.size})</h1>
           <br />
-          <App.ClothingItemTable clothingItems={this.state.clothingItems} />
+          <App.PurchaseTable purchases={this.state.purchases} />
         </div>
       );
     }
