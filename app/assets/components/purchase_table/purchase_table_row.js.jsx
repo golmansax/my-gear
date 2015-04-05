@@ -1,4 +1,4 @@
-//= require models/purchase_view_model
+//= require models/purchase/view_model
 //= require stores/clothing_item_store
 
 App.PurchaseTableRow = (function () {
@@ -6,7 +6,7 @@ App.PurchaseTableRow = (function () {
 
   return React.createClass({
     propTypes: {
-      purchase: React.PropTypes.instanceOf(App.PurchaseViewModel)
+      purchase: React.PropTypes.instanceOf(App.Purchase.ViewModel)
     },
 
     render: function () {

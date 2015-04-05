@@ -1,12 +1,12 @@
-//= require models/purchase_collection
-//= require models/purchase_view_model
+//= require models/purchase/collection
+//= require models/purchase/view_model
 
 App.PurchaseStore = (function () {
   'use strict';
 
   var PurchaseStoreFactory = FluxCrudStore.Store.extend({
-    collection: App.PurchaseCollection,
-    viewModel: App.PurchaseViewModel
+    collection: App.Purchase.Collection,
+    viewModel: App.Purchase.ViewModel
   });
 
   return new PurchaseStoreFactory();

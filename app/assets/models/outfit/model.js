@@ -1,10 +1,11 @@
-App.Outfit = (function () {
+//= require ./index
+//= require ./attributes
+
+App.Outfit.Model = (function () {
   'use strict';
 
   return Backbone.Model.extend({
-    defaults: {
-      clothingItemIds: []
-    },
+    defaults: App.Outfit.Attributes,
 
     parse: function (data) {
       return data.outfit || data;

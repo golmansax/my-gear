@@ -1,12 +1,12 @@
 //= require components/clothing_item_grid
-//= require models/outfit_view_model
+//= require models/outfit/view_model
 
 App.OutfitView = (function () {
   'use strict';
 
   return React.createClass({
     propTypes: {
-      outfit: React.PropTypes.instanceOf(App.OutfitViewModel)
+      outfit: React.PropTypes.instanceOf(App.Outfit.ViewModel)
     },
 
     render: function () {

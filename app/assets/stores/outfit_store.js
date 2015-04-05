@@ -1,12 +1,12 @@
-//= require models/outfit_collection
-//= require models/outfit_view_model
+//= require models/outfit/collection
+//= require models/outfit/view_model
 
 App.OutfitStore = (function () {
   'use strict';
 
   var OutfitStoreFactory = FluxCrudStore.Store.extend({
-    collection: App.OutfitCollection,
-    viewModel: App.OutfitViewModel
+    collection: App.Outfit.Collection,
+    viewModel: App.Outfit.ViewModel
   });
 
   return new OutfitStoreFactory();
