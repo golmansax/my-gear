@@ -1,6 +1,6 @@
-//= require models/outfit_collection
+//= require models/outfit/collection
 
-describe('models/outfit_collection', function () {
+describe('models/outfit/collection', function () {
   'use strict';
 
   var outfits;
@@ -10,7 +10,7 @@ describe('models/outfit_collection', function () {
   after(function () { server.restore(); });
 
   beforeEach(function () {
-    outfits = new App.OutfitCollection();
+    outfits = new App.Outfit.Collection();
   });
 
   describe('#fetch', function () {

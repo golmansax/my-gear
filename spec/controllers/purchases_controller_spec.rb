@@ -5,7 +5,7 @@ describe PurchasesController do
   let(:purchase_as_json) do
     {
       id: purchase.id,
-      clothingItemId: purchase.clothing_item_id,
+      clothingItemId: purchase.clothing_item.slug,
       date: '2014-07-01',
       usage: 'everyday',
       version: 'Navy',

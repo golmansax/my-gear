@@ -1,6 +1,6 @@
-//= require models/clothing_item_collection
+//= require models/clothing_item/collection
 
-describe('models/clothing_item_collection', function () {
+describe('models/clothing_item/collection', function () {
   'use strict';
 
   var clothingItems;
@@ -10,7 +10,7 @@ describe('models/clothing_item_collection', function () {
   afterEach(function () { server.restore(); });
 
   beforeEach(function () {
-    clothingItems = new App.ClothingItemCollection();
+    clothingItems = new App.ClothingItem.Collection();
   });
 
   describe('#fetch', function () {
@@ -28,7 +28,7 @@ describe('models/clothing_item_collection', function () {
         MagicLamp.rawJson('clothing_items/index')
       );
 
-      var expectedBrands = ['Marmot', 'Uniqlo'];
+      var expectedBrands = ['Uniqlo', 'Marmot'];
       expect(clothingItems.pluck('brand')).to.deep.equal(expectedBrands);
     });
   });

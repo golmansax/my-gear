@@ -1,6 +1,6 @@
-//= require models/clothing_item
+//= require models/clothing_item/model
 
-describe('models/clothing_item', function () {
+describe('models/clothing_item/model', function () {
   'use strict';
 
   var clothingItem;
@@ -10,7 +10,7 @@ describe('models/clothing_item', function () {
   after(function () { server.restore(); });
 
   beforeEach(function () {
-    clothingItem = new App.ClothingItem({
+    clothingItem = new App.ClothingItem.Model({
       id: '77',
       brand: 'Uniqlo',
       model: 'Down Jacket'
@@ -19,7 +19,7 @@ describe('models/clothing_item', function () {
 
   describe('#isValid', function () {
     it('returns false when brand is empty', function () {
-      expect(new App.ClothingItem().isValid()).to.be.false();
+      expect(new App.ClothingItem.Model().isValid()).to.be.false();
     });
 
     it('returns true when brand is present', function () {

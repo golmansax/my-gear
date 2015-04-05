@@ -1,6 +1,6 @@
-//= require models/outfit
+//= require models/outfit/model
 
-describe('models/outfit', function () {
+describe('models/outfit/model', function () {
   'use strict';
 
   var outfit;
@@ -10,7 +10,7 @@ describe('models/outfit', function () {
   after(function () { server.restore(); });
 
   beforeEach(function () {
-    outfit = new App.Outfit({ id: '77' });
+    outfit = new App.Outfit.Model({ id: '77' });
   });
 
   describe('default attributes', function () {

@@ -8,7 +8,6 @@ describe ClothingItemsController do
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
       imagePath: '/assets/marmot-rom-jacket.jpg',
-      usage: 'everyday',
       type: 'Outerwear',
       purchaseIds: outerwear.purchases.pluck(:id),
       purposeIds: [],

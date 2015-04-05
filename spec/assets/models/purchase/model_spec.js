@@ -1,6 +1,6 @@
-//= require models/purchase
+//= require models/purchase/model
 
-describe('models/purchase', function () {
+describe('models/purchase/model', function () {
   'use strict';
 
   var purchase;
@@ -10,7 +10,7 @@ describe('models/purchase', function () {
   after(function () { server.restore(); });
 
   beforeEach(function () {
-    purchase = new App.Purchase({
+    purchase = new App.Purchase.Model({
       id: '77',
       date: '2014-10-30'
     }, { parse: true });
