@@ -6,6 +6,7 @@ ruby '2.1.5'
 gem 'rails', '~> 4.2.0'
 gem 'passenger'
 gem 'pg'
+gem 'responders', '~> 2.0'
 
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'friendly_id', '~> 5.0.0'
@@ -14,9 +15,6 @@ gem 'gon' # depends on jbuilder
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'sass-rails', '~> 4.0.5'
 gem 'uglifier', '>= 1.3.0'
-
-group :test do
-end
 
 group :development, :test do
   gem 'bullet'

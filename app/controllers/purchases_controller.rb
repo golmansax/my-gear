@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
+  respond_to :json
+
   def index
     @purchases = Purchase.all
-    respond_to { |format| format.json }
   end
 end
