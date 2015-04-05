@@ -4,7 +4,6 @@ App.ClothingItemViewModel = (function () {
   var ClothingItemViewModel = Immutable.Record({
     brand: '',
     model: '',
-    usage: '',
     type: '',
     imagePath: '',
     purchaseIds: [],

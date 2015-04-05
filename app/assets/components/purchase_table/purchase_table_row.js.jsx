@@ -24,7 +24,8 @@ App.PurchaseTableRow = (function () {
             </ReactRouter.Link>
           </td>
           <td>{clothingItem.type}</td>
-          <td>{clothingItem.usage}</td>
+          <td>{this.props.purchase.usage}</td>
+          <td>{this.props.purchase.version}</td>
         </tr>
       );
     }
