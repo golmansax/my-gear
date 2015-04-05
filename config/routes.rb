@@ -1,5 +1,6 @@
 class HtmlConstraint
   def matches?(request)
+    p "HERE! #{accept_format(request)}"
     accept_format(request).include?('text/html')
   end
 
@@ -12,8 +13,9 @@ end
 Rails.application.routes.draw do
   mount MagicLamp::Genie, at: '/magic_lamp' if defined?(MagicLamp)
 
+  root 'pages#index'
   scope constraints: HtmlConstraint.new do
-    get '/*path', to: 'pages#index'
+    get '*path', to: 'pages#index'
   end
 
   resources :clothing_items, only: :index
