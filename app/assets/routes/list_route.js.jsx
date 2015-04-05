@@ -26,24 +26,12 @@ App.ListRoute = (function () {
       };
     },
 
-    handleSort: function (sort) {
-      if (this.state.currentSort === sort) {
-        this.state.clothingItems.reverseSort();
-      } else {
-        this.state.clothingItems.changeSort([sort]);
-        this.setState({ currentSort: sort });
-      }
-    },
-
     render: function () {
       return (
         <div>
           <h1>List of Everything ({this.state.clothingItems.size})</h1>
-          <App.ClothingItemTable
-            clothingItems={this.state.clothingItems}
-            handleSort={this.handleSort}
-            title='BLAH'
-          />
+          <br />
+          <App.ClothingItemTable clothingItems={this.state.clothingItems} />
         </div>
       );
     }
