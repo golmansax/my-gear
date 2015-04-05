@@ -2,6 +2,8 @@ App.AboutRoute = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
     render: function () {
       return (
         <div>

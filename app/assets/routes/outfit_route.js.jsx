@@ -6,7 +6,10 @@ App.OutfitRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.OutfitStore, 'getStateFromStore')],
+    mixins: [
+      React.addons.PureRenderMixin,
+      React.BindMixin(App.OutfitStore, 'getStateFromStore')
+    ],
 
     propTypes: {
       id: PropTypes.string.isRequired

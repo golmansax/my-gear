@@ -5,7 +5,10 @@ App.WardrobeRoute = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.ClothingItemStore, 'getStateFromStore')],
+    mixins: [
+      React.addons.PureRenderMixin,
+      React.BindMixin(App.ClothingItemStore, 'getStateFromStore')
+    ],
 
     getStateFromStore: function () {
       return {

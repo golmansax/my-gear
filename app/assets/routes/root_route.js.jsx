@@ -13,12 +13,16 @@ App.RootRoute = (function () {
       App.PurchaseActions.fetchAll();
     },
 
+    _renderContent: function () {
+      return <ReactRouter.RouteHandler {...this.props} />;
+    },
+
     render: function () {
       return (
         <div>
           <App.Header />
           <div className='container'>
-            <ReactRouter.RouteHandler {...this.props} />
+            {this._renderContent()}
           </div>
         </div>
       );

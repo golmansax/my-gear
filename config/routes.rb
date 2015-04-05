@@ -1,6 +1,5 @@
 class HtmlConstraint
   def matches?(request)
-    p "HERE! #{accept_format(request)}"
     accept_format(request).include?('text/html')
   end
 
