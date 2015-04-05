@@ -16,7 +16,7 @@
 
       <ReactRouter.Route name='clothing' handler={App.ClothingRoute}>
         <ReactRouter.Route name='about' handler={App.AboutRoute} />
-        <ReactRouter.DefaultRoute name='essentials' handler={App.ListRoute} />
+        <ReactRouter.Route name='essentials' handler={App.ListRoute} />
         <ReactRouter.Route name='specialized' handler={App.ListRoute} />
         <ReactRouter.Route name='other' handler={App.ListRoute} />
         <ReactRouter.Route name='wardrobe' handler={App.WardrobeRoute} />
