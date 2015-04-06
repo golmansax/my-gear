@@ -47,9 +47,8 @@ App.Header = (function () {
           <ReactBootstrap.Nav>
             <App.RouterNavItem to='about'>About</App.RouterNavItem>
             <App.RouterNavItem to='essentials'>Essentials</App.RouterNavItem>
-            <App.RouterNavItem to='specialized'>Specialized</App.RouterNavItem>
-            <App.RouterNavItem to='other'>Other</App.RouterNavItem>
-            <App.RouterNavItem to='wardrobe'>Wardrobe</App.RouterNavItem>
+            <App.RouterNavItem to='other'>Non-Essentials</App.RouterNavItem>
+            <App.RouterNavItem to='wishlist'>Wishlist</App.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Outfits'>
               {this._renderOutfits()}
             </ReactBootstrap.DropdownButton>
