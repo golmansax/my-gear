@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :purchase do
-    date Date.today
+    date Time.zone.today
     usage 'specialized'
     version 'Navy'
     clothing_item
