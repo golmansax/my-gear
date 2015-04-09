@@ -38,14 +38,14 @@ MagicLamp.define(controller: ClothingItemsController) do
   end
 end
 
-MagicLamp.define(controller: OutfitsController) do
+MagicLamp.define(controller: PurposesController) do
   fixture do
-    outfit = Outfit.create!(name: 'Fabulous')
+    purpose = Purpose.create!(name: 'Fabulous')
 
     Outerwear.create!(
       brand: 'Uniqlo',
       model: 'Down Jacket',
-      outfits: [outfit],
+      purposes: [purpose],
       purchases: [
         Purchase.new(
           date: Date.parse('2014-10-30'),
@@ -60,7 +60,7 @@ MagicLamp.define(controller: OutfitsController) do
       ],
     )
 
-    @outfits = [outfit]
+    @purposes = [purpose]
 
     render :index
   end

@@ -16,7 +16,7 @@ describe('models/outfit/collection', function () {
   describe('#fetch', function () {
     it('grabs the data from the proper url', function () {
       outfits.fetch();
-      expect(server.requests[0].url).to.equal('/outfits');
+      expect(server.requests[0].url).to.equal('/purposes');
     });
   });
 });
