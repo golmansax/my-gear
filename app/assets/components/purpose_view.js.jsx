@@ -1,19 +1,19 @@
 //= require components/clothing_item_grid
-//= require models/outfit/view_model
+//= require models/purpose/view_model
 
-App.OutfitView = (function () {
+App.PurposeView = (function () {
   'use strict';
 
   return React.createClass({
     propTypes: {
-      outfit: React.PropTypes.instanceOf(App.Outfit.ViewModel)
+      purpose: React.PropTypes.instanceOf(App.Purpose.ViewModel)
     },
 
     render: function () {
       return (
         <div>
           {this.props.name}
-          <App.ClothingItemGrid ids={this.props.outfit.clothingItemIds} />
+          <App.ClothingItemGrid ids={this.props.purpose.clothingItemIds} />
         </div>
       );
     }

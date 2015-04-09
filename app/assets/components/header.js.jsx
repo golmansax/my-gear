@@ -1,39 +1,39 @@
 //= require components/router_nav_item
-//= require stores/outfit_store
+//= require stores/purpose_store
 
 App.Header = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.OutfitStore, 'getStateFromStore')],
+    mixins: [React.BindMixin(App.PurposeStore, 'getStateFromStore')],
 
     getStateFromStore: function () {
       return {
-        outfits: App.OutfitStore.getAll()
+        purposes: App.PurposeStore.getAll()
       };
     },
 
-    _renderOutfit: function (outfit) {
+    _renderPurpose: function (purpose) {
       var itemAttrs = {
-        to: 'outfit',
-        params: { id: outfit.id }
+        to: 'purpose',
+        params: { id: purpose.id }
       };
 
       return (
-        <li key={outfit.id}>
+        <li key={purpose.id}>
           <ReactRouter.Link {...itemAttrs}>
-            {outfit.name}
+            {purpose.name}
           </ReactRouter.Link>
         </li>
       );
     },
 
-    _renderOutfits: function () {
-      if (this.state.outfits.isLoading) {
+    _renderPurposes: function () {
+      if (this.state.purposes.isLoading) {
         return null;
       }
 
-      return this.state.outfits.valueSeq().map(this._renderOutfit).toJS();
+      return this.state.purposes.valueSeq().map(this._renderPurpose).toJS();
     },
 
     render: function () {
@@ -49,8 +49,8 @@ App.Header = (function () {
             <App.RouterNavItem to='essentials'>Essentials</App.RouterNavItem>
             <App.RouterNavItem to='other'>Non-Essentials</App.RouterNavItem>
             <App.RouterNavItem to='wishlist'>Wishlist</App.RouterNavItem>
-            <ReactBootstrap.DropdownButton title='Outfits'>
-              {this._renderOutfits()}
+            <ReactBootstrap.DropdownButton title='Purposes'>
+              {this._renderPurposes()}
             </ReactBootstrap.DropdownButton>
           </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>

@@ -1,10 +1,10 @@
-//= require stores/outfit_store
+//= require stores/purpose_store
 
 App.PurposeListItem = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.OutfitStore, 'getStateFromStore')],
+    mixins: [React.BindMixin(App.PurposeStore, 'getStateFromStore')],
 
     propTypes: {
       id: PropTypes.string.isRequired
@@ -12,7 +12,7 @@ App.PurposeListItem = (function () {
 
     getStateFromStore: function (props) {
       return {
-        purpose: App.OutfitStore.get(props.id)
+        purpose: App.PurposeStore.get(props.id)
       };
     },
 

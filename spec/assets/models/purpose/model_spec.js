@@ -1,27 +1,27 @@
-//= require models/outfit/model
+//= require models/purpose/model
 
-describe('models/outfit/model', function () {
+describe('models/purpose/model', function () {
   'use strict';
 
-  var outfit;
+  var purpose;
   var server;
 
   before(function () { server = sinon.fakeServer.create(); });
   after(function () { server.restore(); });
 
   beforeEach(function () {
-    outfit = new App.Outfit.Model({ id: '77' });
+    purpose = new App.Purpose.Model({ id: '77' });
   });
 
   describe('default attributes', function () {
     it('sets clothingItemIds to []', function () {
-      expect(outfit.get('clothingItemIds')).to.deep.equal([]);
+      expect(purpose.get('clothingItemIds')).to.deep.equal([]);
     });
   });
 
   describe('#fetch', function () {
     it('grabs the data from the proper url', function () {
-      outfit.fetch();
+      purpose.fetch();
       expect(server.requests[0].url).to.equal('/purposes/77');
     });
   });

@@ -1,11 +1,11 @@
 //= require ./index
 //= require ./model
 
-App.Outfit.Collection = (function () {
+App.Purpose.Collection = (function () {
   'use strict';
 
   return Backbone.Collection.extend({
-    model: App.Outfit.Model,
+    model: App.Purpose.Model,
     url: '/purposes'
   });
 })();

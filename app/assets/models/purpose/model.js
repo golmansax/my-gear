@@ -1,11 +1,11 @@
 //= require ./index
 //= require ./attributes
 
-App.Outfit.Model = (function () {
+App.Purpose.Model = (function () {
   'use strict';
 
   return Backbone.Model.extend({
-    defaults: App.Outfit.Attributes,
+    defaults: App.Purpose.Attributes,
 
     urlRoot: function () {
       return '/purposes';

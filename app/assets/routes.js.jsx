@@ -3,7 +3,7 @@
 //= require routes/wardrobe_route
 //= require routes/clothing_route
 //= require routes/clothing_item_route
-//= require routes/outfit_route
+//= require routes/purpose_route
 //= require routes/list_route
 //= require routes/info_route
 
@@ -26,9 +26,9 @@
           handler={App.ClothingItemRoute}
         />
         <ReactRouter.Route
-          name='outfit'
-          path='/clothing/outfits/:id'
-          handler={App.OutfitRoute}
+          name='purpose'
+          path='/clothing/purposes/:id'
+          handler={App.PurposeRoute}
         />
       </ReactRouter.Route>
     </ReactRouter.Route>

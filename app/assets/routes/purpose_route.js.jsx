@@ -1,13 +1,13 @@
-//= require components/outfit_view
-//= require stores/outfit_store
+//= require components/purpose_view
+//= require stores/purpose_store
 
-App.OutfitRoute = (function () {
+App.PurposeRoute = (function () {
   'use strict';
 
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.OutfitStore, 'getStateFromStore')
+      React.BindMixin(App.PurposeStore, 'getStateFromStore')
     ],
 
     propTypes: {
@@ -16,16 +16,16 @@ App.OutfitRoute = (function () {
 
     getStateFromStore: function (props) {
       return {
-        outfit: App.OutfitStore.get(props.id)
+        purpose: App.PurposeStore.get(props.id)
       };
     },
 
     render: function () {
       return (
         <div>
-          <h1>{this.state.outfit.name}</h1>
+          <h1>{this.state.purpose.name}</h1>
           <br />
-          <App.OutfitView outfit={this.state.outfit} />
+          <App.PurposeView purpose={this.state.purpose} />
         </div>
       );
     }
