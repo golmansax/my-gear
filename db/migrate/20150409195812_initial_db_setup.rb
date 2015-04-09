@@ -11,9 +11,9 @@ class InitialDbSetup < ActiveRecord::Migration
 
     add_index :clothing_items, :slug, unique: true
 
-    create_table :clothing_items_outfits, id: false do |t|
+    create_table :clothing_items_purposes, id: false do |t|
       t.integer :clothing_item_id
-      t.integer :outfit_id
+      t.integer :purpose_id
     end
 
     create_table :friendly_id_slugs do |t|
@@ -29,14 +29,14 @@ class InitialDbSetup < ActiveRecord::Migration
     add_index :friendly_id_slugs, [:slug, :sluggable_type, :scope], unique: true
     add_index :friendly_id_slugs, :sluggable_type
 
-    create_table :outfits, force: true do |t|
+    create_table :purposes, force: true do |t|
       t.string :name, null: false
       t.string :slug, null: false
 
       t.timestamps
     end
 
-    add_index :outfits, :slug, unique: true
+    add_index :purposes, :slug, unique: true
 
     create_table :purchases do |t|
       t.string :version, null: false

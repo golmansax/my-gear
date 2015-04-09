@@ -7,12 +7,8 @@ App.Outfit.Model = (function () {
   return Backbone.Model.extend({
     defaults: App.Outfit.Attributes,
 
-    parse: function (data) {
-      return data.outfit || data;
-    },
-
     urlRoot: function () {
-      return '/outfits';
+      return '/purposes';
     }
   });
 })();

@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   end
 
   resources :clothing_items, only: :index
-  resources :outfits, only: :index
+  resources :purposes, only: :index
   resources :purchases, only: :index
 end

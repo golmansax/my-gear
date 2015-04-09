@@ -1,4 +1,4 @@
-outfits = {
+purposes = {
   'Basketball' => ['nike-hyperfuse-basketball-shoe'],
   'Biking' => ['novara-padded-bike-boxers'],
   'Climbing' => ['five-ten-team-vxi'],
@@ -49,10 +49,10 @@ outfits = {
   'Tennis' => ['new-balance-696-tennis'],
 }
 
-outfits.each do |outfit_name, clothing_items|
-  outfit = Outfit.create!(name: outfit_name)
+purposes.each do |purpose_name, clothing_items|
+  purpose = Purpose.create!(name: purpose_name)
 
   clothing_items.each do |clothing_item_id|
-    outfit.clothing_items << ClothingItem.friendly.find(clothing_item_id)
+    purpose.clothing_items << ClothingItem.friendly.find(clothing_item_id)
   end
 end

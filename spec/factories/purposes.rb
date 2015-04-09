@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :outfit do
+  factory :purpose do
     name 'Fabulous'
   end
 end

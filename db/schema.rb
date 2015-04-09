@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20150409195812) do
 
   add_index "clothing_items", ["slug"], name: "index_clothing_items_on_slug", unique: true, using: :btree
 
-  create_table "clothing_items_outfits", id: false, force: :cascade do |t|
+  create_table "clothing_items_purposes", id: false, force: :cascade do |t|
     t.integer "clothing_item_id"
-    t.integer "outfit_id"
+    t.integer "purpose_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -45,15 +45,6 @@ ActiveRecord::Schema.define(version: 20150409195812) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "outfits", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "slug",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "outfits", ["slug"], name: "index_outfits_on_slug", unique: true, using: :btree
-
   create_table "purchases", force: :cascade do |t|
     t.string   "version",          null: false
     t.date     "date",             null: false
@@ -62,5 +53,14 @@ ActiveRecord::Schema.define(version: 20150409195812) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "purposes", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "slug",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "purposes", ["slug"], name: "index_purposes_on_slug", unique: true, using: :btree
 
 end
