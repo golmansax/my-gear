@@ -6,7 +6,6 @@ purposes = {
     'uniqlo-ultra-lite-down-vest',
     'uniqlo-extra-fine-merino-v-neck-sweater',
     'uniqlo-heattech-v-neck-t-shirt-long-sleeve',
-    'stonemaster-pant',
     'uniqlo-heattech-long-john',
     # long socks
   ],
@@ -19,13 +18,11 @@ purposes = {
   'Favorite' => [
     'marmot-rom-jacket',
     'icebreaker-tech-t-lite-short-sleeve',
-    'prana-stretch-zion-pant',
     'exofficio-give-n-go-sport-brief',
     'xero-shoes-diy-sandal',
   ],
   'For Girlfriend' => [
     'wool-prince-better-button-down',
-    'stonemaster-pant',
     'lems-nine2five',
     'american-apparel-tri-blend-t-shirt',
   ],
@@ -33,7 +30,6 @@ purposes = {
     'wool-prince-better-button-down',
     'uniqlo-ultra-lite-down-vest',
     'uniqlo-extra-fine-merino-v-neck-sweater',
-    'stonemaster-pant',
     'uniqlo-airism-boxer-brief',
     'injinji-run-2-0-lightweight-no-show-nuwool',
     'lems-nine2five',
@@ -43,9 +39,7 @@ purposes = {
   'Lounging' => [
     'american-apparel-tri-blend-t-shirt',
     'uniqlo-extra-fine-merino-v-neck-sweater',
-    'nike-jordan-aero-fly-mania-basketball-short',
   ],
-  'Swimming' => ['o-neill-hybrid-freak-short'],
   'Tennis' => ['new-balance-696-tennis'],
 }
 
