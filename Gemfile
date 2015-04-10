@@ -12,7 +12,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'friendly_id', '~> 5.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'gon' # depends on jbuilder
-gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+gem 'react-rails', '~> 1.0'
 gem 'sass-rails', '~> 4.0.5'
 gem 'uglifier', '>= 1.3.0'
 
