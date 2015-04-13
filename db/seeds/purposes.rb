@@ -1,12 +1,10 @@
 purposes = {
   'Basketball' => ['nike-hyperfuse-basketball-shoe'],
-  'Biking' => ['novara-padded-bike-boxers'],
   'Climbing' => ['five-ten-team-vxi'],
   'Cold Weather' => [
     'uniqlo-ultra-lite-down-vest',
     'uniqlo-extra-fine-merino-v-neck-sweater',
     'uniqlo-heattech-v-neck-t-shirt-long-sleeve',
-    'uniqlo-heattech-long-john',
     # long socks
   ],
   'Expressive' => [
@@ -18,7 +16,6 @@ purposes = {
   'Favorite' => [
     'marmot-rom-jacket',
     'icebreaker-tech-t-lite-short-sleeve',
-    'exofficio-give-n-go-sport-brief',
     'xero-shoes-diy-sandal',
   ],
   'For Girlfriend' => [
@@ -30,7 +27,6 @@ purposes = {
     'wool-prince-better-button-down',
     'uniqlo-ultra-lite-down-vest',
     'uniqlo-extra-fine-merino-v-neck-sweater',
-    'uniqlo-airism-boxer-brief',
     'injinji-run-2-0-lightweight-no-show-nuwool',
     'lems-nine2five',
   ],

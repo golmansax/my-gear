@@ -2,7 +2,7 @@ require_relative '../clothing_item_seeder'
 
 class BottomSeeder < ClothingItemSeeder
   def seed!
-    create_clothing_item!(
+    create_bottom!(
       brand: 'prAna',
       model: 'Stretch Zion Pant',
       purchases: [
@@ -20,7 +20,7 @@ class BottomSeeder < ClothingItemSeeder
       purposes: ['Essential'],
     )
 
-    create_clothing_item!(
+    create_bottom!(
       brand: 'Outlier',
       model: 'New Way Short',
       purchases: [
@@ -33,7 +33,7 @@ class BottomSeeder < ClothingItemSeeder
       purposes: ['Essential'],
     )
 
-    create_clothing_item!(
+    create_bottom!(
       brand: 'prAna',
       model: 'Stretch Zion Short',
       purchases: [
@@ -46,7 +46,7 @@ class BottomSeeder < ClothingItemSeeder
       purposes: ['Backup'],
     )
 
-    create_clothing_item!(
+    create_bottom!(
       brand: 'Stonemaster',
       model: 'Pant',
       purchases: [
@@ -59,7 +59,7 @@ class BottomSeeder < ClothingItemSeeder
       purposes: ['For Girlfriend', 'Formal'],
     )
 
-    create_clothing_item!(
+    create_bottom!(
       brand: 'O\'Neill',
       model: 'Hybrid Freak Short',
       purchases: [
@@ -72,7 +72,7 @@ class BottomSeeder < ClothingItemSeeder
       purposes: ['Swimming'],
     )
 
-    create_clothing_item!(
+    create_bottom!(
       brand: 'Nike',
       model: 'Jordan Aero Fly Mania Basketball Short',
       purchases: [
@@ -85,7 +85,7 @@ class BottomSeeder < ClothingItemSeeder
       purposes: ['Lounging'],
     )
 
-    create_clothing_item!(
+    create_bottom!(
       brand: 'White Sierra',
       model: 'Baz Az Fleece Pant',
       purchases: [
@@ -97,7 +97,7 @@ class BottomSeeder < ClothingItemSeeder
       ],
     )
 
-    create_clothing_item!(
+    create_bottom!(
       brand: 'REI',
       model: 'Sariska Yoga Pant',
       purchases: [
@@ -113,7 +113,7 @@ class BottomSeeder < ClothingItemSeeder
     # Ski Pants
   end
 
-  def create_clothing_item!(clothing_item_params)
-    super(clothing_item_params.merge(type: 'Bottom'))
+  def create_bottom!(bottom_params)
+    create_clothing_item!(bottom_params.merge(type: 'Bottom'))
   end
 end
