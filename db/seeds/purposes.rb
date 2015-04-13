@@ -1,6 +1,4 @@
 purposes = {
-  'Basketball' => ['nike-hyperfuse-basketball-shoe'],
-  'Climbing' => ['five-ten-team-vxi'],
   'Cold Weather' => [
     'uniqlo-ultra-lite-down-vest',
     'uniqlo-extra-fine-merino-v-neck-sweater',
@@ -9,18 +7,15 @@ purposes = {
   ],
   'Expressive' => [
     'american-apparel-tri-blend-t-shirt',
-    'xero-shoes-diy-sandal',
     'warrior-liverpool-kit',
     'uniqlo-novak-djokovic-polo',
   ],
   'Favorite' => [
     'marmot-rom-jacket',
     'icebreaker-tech-t-lite-short-sleeve',
-    'xero-shoes-diy-sandal',
   ],
   'For Girlfriend' => [
     'wool-prince-better-button-down',
-    'lems-nine2five',
     'american-apparel-tri-blend-t-shirt',
   ],
   'Formal' => [
@@ -28,15 +23,11 @@ purposes = {
     'uniqlo-ultra-lite-down-vest',
     'uniqlo-extra-fine-merino-v-neck-sweater',
     'injinji-run-2-0-lightweight-no-show-nuwool',
-    'lems-nine2five',
   ],
-  'Frisbee' => ['inov8-bare-grip-200'],
-  'Hiking' => ['inov8-bare-grip-200'],
   'Lounging' => [
     'american-apparel-tri-blend-t-shirt',
     'uniqlo-extra-fine-merino-v-neck-sweater',
   ],
-  'Tennis' => ['new-balance-696-tennis'],
 }
 
 purposes.each do |purpose_name, clothing_items|

@@ -49,6 +49,9 @@ App.Header = (function () {
             <App.RouterNavItem to='essentials'>Essentials</App.RouterNavItem>
             <App.RouterNavItem to='other'>Non-Essentials</App.RouterNavItem>
             <App.RouterNavItem to='wishlist'>Wishlist</App.RouterNavItem>
+            <App.RouterNavItem to='recent-purchases'>
+              Recent Purchases
+            </App.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Purposes'>
               {this._renderPurposes()}
             </ReactBootstrap.DropdownButton>

@@ -90,7 +90,7 @@ class BottomSeeder < ClothingItemSeeder
           usage: 'everyday',
         ),
       ],
-      purposes: ['Essential', 'Favorite'],
+      purposes: %w(Essential Favorite Formal),
     )
   end
 

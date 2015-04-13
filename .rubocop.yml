@@ -20,10 +20,16 @@ TrailingComma:
 Metrics/AbcSize:
   Exclude:
     - db/migrate/*
+    - db/seeds/clothing_item_seeders/*
 
 Metrics/MethodLength:
   Exclude:
     - db/migrate/*
+    - db/seeds/clothing_item_seeders/*
+
+Metrics/ClassLength:
+  Exclude:
+    - db/seeds/clothing_item_seeders/*
 
 HasAndBelongsToMany:
   Enabled: false
