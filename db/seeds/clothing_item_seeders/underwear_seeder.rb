@@ -1,16 +1,16 @@
 require_relative '../clothing_item_seeder'
 
-class BottomSeeder < ClothingItemSeeder
+class UnderwearSeeder < ClothingItemSeeder
   def seed!
     create_underwear!(
       brand: 'Uniqlo',
       model: 'AIRism Boxer Brief',
       purchases: [
-        Purchase.new(
+        {
           date: Date.parse('Sept 2014'),
           version: 'Gray',
           usage: 'everyday',
-        ),
+        },
       ],
       purposes: ['Backup'],
     )
@@ -19,11 +19,11 @@ class BottomSeeder < ClothingItemSeeder
       brand: 'Five Bamboo',
       model: 'Bamboxer Brief',
       purchases: [
-        Purchase.new(
+        {
           date: Date.parse('Dec 2014'),
           version: 'Purple',
           usage: 'everyday',
-        ),
+        },
       ],
       purposes: ['Essential'],
     )
@@ -32,11 +32,11 @@ class BottomSeeder < ClothingItemSeeder
       brand: 'Cariloha',
       model: 'Bamboo Boxer Brief',
       purchases: [
-        Purchase.new(
+        {
           date: Date.parse('Aug 2014'),
           version: 'Black',
           usage: 'everyday',
-        ),
+        },
       ],
       purposes: ['Essential'],
     )
@@ -45,11 +45,11 @@ class BottomSeeder < ClothingItemSeeder
       brand: 'ExOfficio',
       model: 'Give-N-Go Sport Brief',
       purchases: [
-        Purchase.new(
+        {
           date: Date.parse('Sept 2014'),
           version: 'Black/Orange',
           usage: 'everyday',
-        ),
+        },
       ],
       purposes: ['Essential'],
     )
@@ -58,11 +58,11 @@ class BottomSeeder < ClothingItemSeeder
       brand: 'Uniqlo',
       model: 'Heattech Long John',
       purchases: [
-        Purchase.new(
+        {
           date: Date.parse('Nov 2013'),
           version: 'Navy',
           usage: 'specialized',
-        ),
+        },
       ],
       purposes: ['Cold Weather'],
     )
@@ -71,11 +71,11 @@ class BottomSeeder < ClothingItemSeeder
       brand: 'Novara',
       model: 'Padded Bike Boxers',
       purchases: [
-        Purchase.new(
+        {
           date: Date.parse('Mar 2015'),
           version: 'Black',
           usage: 'specialized',
-        ),
+        },
       ],
       purposes: ['Biking'],
     )
@@ -84,11 +84,11 @@ class BottomSeeder < ClothingItemSeeder
       brand: 'SmartWool',
       model: 'NTS Micro 150 Pattern Boxer Brief',
       purchases: [
-        Purchase.new(
+        {
           date: Date.parse('April 2015'),
           version: 'Taupe',
           usage: 'everyday',
-        ),
+        },
       ],
       purposes: %w(Essential Favorite Formal),
     )
