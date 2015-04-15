@@ -11,8 +11,8 @@ class InitialDbSetup < ActiveRecord::Migration
 
     add_index :clothing_items, :slug, unique: true
 
-    create_table :clothing_items_purposes, id: false do |t|
-      t.integer :clothing_item_id
+    create_table :purchases_purposes, id: false do |t|
+      t.integer :purchase_id
       t.integer :purpose_id
     end
 
@@ -42,7 +42,6 @@ class InitialDbSetup < ActiveRecord::Migration
       t.string :version, null: false
       t.date :date, null: false
       t.integer :clothing_item_id, null: false
-      t.integer :usage, null: false
 
       t.timestamps
     end

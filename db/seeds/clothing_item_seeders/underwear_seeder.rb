@@ -9,7 +9,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2014'),
           version: 'Gray',
-          usage: 'everyday',
         },
       ],
       purposes: ['Backup'],
@@ -22,7 +21,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2014'),
           version: 'Purple',
-          usage: 'everyday',
         },
       ],
       purposes: ['Essential'],
@@ -35,7 +33,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2014'),
           version: 'Black',
-          usage: 'everyday',
         },
       ],
       purposes: ['Essential'],
@@ -48,7 +45,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2014'),
           version: 'Black/Orange',
-          usage: 'everyday',
         },
       ],
       purposes: ['Essential'],
@@ -61,7 +57,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2013'),
           version: 'Navy',
-          usage: 'specialized',
         },
       ],
       purposes: ['Cold Weather'],
@@ -74,7 +69,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Mar 2015'),
           version: 'Black',
-          usage: 'specialized',
         },
       ],
       purposes: ['Biking'],
@@ -87,7 +81,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Taupe',
-          usage: 'everyday',
         },
       ],
       purposes: %w(Essential Favorite Formal),

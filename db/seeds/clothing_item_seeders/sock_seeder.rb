@@ -9,12 +9,10 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Apr 2014'),
           version: 'Olive',
-          usage: 'not in use',
         },
         {
           date: Date.parse('May 2014'),
           version: 'Charcoal',
-          usage: 'specialized',
         },
       ],
       purposes: %w(Formal Essential),
@@ -27,12 +25,10 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: 'Magenta',
-          usage: 'not in use',
         },
         {
           date: Date.parse('Jan 2015'),
           version: 'Blue',
-          usage: 'specialized',
         },
       ],
       purposes: %w(Formal Essential),

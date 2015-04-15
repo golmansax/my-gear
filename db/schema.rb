@@ -27,11 +27,6 @@ ActiveRecord::Schema.define(version: 20150409195812) do
 
   add_index "clothing_items", ["slug"], name: "index_clothing_items_on_slug", unique: true, using: :btree
 
-  create_table "clothing_items_purposes", id: false, force: :cascade do |t|
-    t.integer "clothing_item_id"
-    t.integer "purpose_id"
-  end
-
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -49,9 +44,13 @@ ActiveRecord::Schema.define(version: 20150409195812) do
     t.string   "version",          null: false
     t.date     "date",             null: false
     t.integer  "clothing_item_id", null: false
-    t.integer  "usage",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "purchases_purposes", id: false, force: :cascade do |t|
+    t.integer "purchase_id"
+    t.integer "purpose_id"
   end
 
   create_table "purposes", force: :cascade do |t|

@@ -2,17 +2,17 @@ class ClothingItemSeeder
   def create_clothing_item!(purposes: [], purchases:, **clothing_item_params)
     clothing_item = ClothingItem.new(clothing_item_params)
 
-    purposes.each do |purpose_name|
-      purpose = Purpose.find_by(name: purpose_name)
-      purpose ||= Purpose.new(name: purpose_name)
-
-      clothing_item.purposes << purpose
-    end
-
     purchases.each do |purchase_params|
-      clothing_item.purchases << Purchase.new(purchase_params)
-    end
+      purchase = Purchase.new(purchase_params)
+      clothing_item.purchases << purchase
 
-    clothing_item.save!
+      purposes.each do |purpose_name|
+        purpose = Purpose.find_by(name: purpose_name)
+        purpose ||= Purpose.new(name: purpose_name)
+
+        purchase.purposes << purpose
+      end
+      clothing_item.save!
+    end
   end
 end

@@ -2,6 +2,6 @@ class ClothingItemsController < ApplicationController
   respond_to :json
 
   def index
-    @clothing_items = ClothingItem.all.includes(:purchases, :purposes)
+    @clothing_items = ClothingItem.all.includes(:purchases)
   end
 end

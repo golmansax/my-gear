@@ -9,12 +9,10 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2013'),
           version: 'Khaki',
-          usage: 'not in use',
         },
         {
           date: Date.parse('June 2014'),
           version: 'Brown',
-          usage: 'everyday',
         },
       ],
       purposes: ['Essential'],
@@ -27,7 +25,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Deep Gray',
-          usage: 'everyday',
         },
       ],
       purposes: ['Essential'],
@@ -40,7 +37,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2014'),
           version: 'Charcoal',
-          usage: 'backup',
         },
       ],
       purposes: ['Backup'],
@@ -53,7 +49,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Black Slim',
-          usage: 'specialized',
         },
       ],
       purposes: ['For Girlfriend', 'Formal'],
@@ -66,7 +61,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2014'),
           version: 'Navy Plaid',
-          usage: 'not in use',
         },
       ],
       purposes: ['Swimming'],
@@ -79,7 +73,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2013'),
           version: 'Green',
-          usage: 'specialized',
         },
       ],
       purposes: ['Lounging'],
@@ -92,7 +85,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2013'),
           version: 'Black',
-          usage: 'not in use',
         },
       ],
     )
@@ -104,7 +96,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Slate',
-          usage: 'specialized',
         },
       ],
       purposes: ['Lounging'],

@@ -9,7 +9,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: 'Yellow',
-          usage: 'everyday',
         },
       ],
       purposes: ['Essential'],
@@ -22,12 +21,10 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2014'),
           version: 'Blue Oxford',
-          usage: 'everyday',
         },
         {
           date: Date.parse('Feb 2015'),
           version: 'Red Oxford',
-          usage: 'everyday',
         },
       ],
       purposes: ['Favorite', 'Essential', 'Formal', 'For Girlfriend'],
@@ -40,12 +37,10 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2012'),
           version: 'Home 2012/2013',
-          usage: 'not in use',
         },
         {
           date: Date.parse('May 2014'),
           version: 'Home 2013/2014',
-          usage: 'everyday',
         },
       ],
       purposes: %w(Essential Expressive),
@@ -58,12 +53,10 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2013'),
           version: '2013 French Open',
-          usage: 'not in use',
         },
         {
           date: Date.parse('July 2014'),
           version: '2014 French Open',
-          usage: 'everyday',
         },
       ],
       purposes: %w(Essential Expressive),
@@ -76,7 +69,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Feb 2014'),
           version: 'Blue/Red',
-          usage: 'not in use',
         },
       ],
     )
@@ -88,12 +80,10 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2013'),
           version: 'Tri-Black – Thumbtack',
-          usage: 'specialized',
         },
         {
           date: Date.parse('Oct 2013'),
           version: 'Athletic Blue – Red Hot Chili Peppers – Scar Tissue',
-          usage: 'specialized',
         },
       ],
       purposes: ['Lounging', 'For Girlfriend', 'Expressive'],
@@ -106,7 +96,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Black',
-          usage: 'specialized',
         },
       ],
       purposes: ['Cold Weather'],
@@ -119,7 +108,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Yellow',
-          usage: 'specialized',
         },
       ],
       purposes: ['Expressive'],

@@ -9,7 +9,6 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Green',
-          usage: 'everyday',
         },
       ],
       purposes: %w(Essential Favorite),
@@ -22,7 +21,6 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2014'),
           version: 'Wine',
-          usage: 'specialized',
         },
       ],
       purposes: %w(Lounging Formal),
@@ -35,7 +33,6 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2012'),
           version: 'Red',
-          usage: 'backup',
         },
       ],
       purposes: %w(Backup),
@@ -48,7 +45,6 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Navy',
-          usage: 'specialized',
         },
       ],
       purposes: %w(Formal Essential),
