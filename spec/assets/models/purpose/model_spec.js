@@ -14,8 +14,8 @@ describe('models/purpose/model', function () {
   });
 
   describe('default attributes', function () {
-    it('sets clothingItemIds to []', function () {
-      expect(purpose.get('clothingItemIds')).to.deep.equal([]);
+    it('sets purchaseIds to []', function () {
+      expect(purpose.get('purchaseIds')).to.deep.equal([]);
     });
   });
 
