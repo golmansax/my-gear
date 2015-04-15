@@ -4,6 +4,8 @@ App.PurchaseTable = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
     propTypes: {
       purchases: PropTypes.instanceOf(Immutable.Iterable)
     },

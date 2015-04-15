@@ -6,6 +6,8 @@ App.ClothingItemDetailedView = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
     propTypes: {
       clothingItem: React.PropTypes.instanceOf(App.ClothingItem.ViewModel)
         .isRequired

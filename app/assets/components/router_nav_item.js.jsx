@@ -6,7 +6,9 @@ App.RouterNavItem = (function () {
       to: PropTypes.string.isRequired,
       params: PropTypes.object
     },
+
     mixins: [ReactRouter.State],
+
     render: function () {
       var isActive = this.isActive(
         this.props.to,

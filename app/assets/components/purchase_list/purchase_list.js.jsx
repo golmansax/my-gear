@@ -4,6 +4,12 @@ App.PurchaseList = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
+    propTypes: {
+      ids: PropTypes.arrayOf(PropTypes.number).isRequired,
+    },
+
     _renderPurchase: function (id) {
       return <App.PurchaseListItem id={id} key={id} />;
     },

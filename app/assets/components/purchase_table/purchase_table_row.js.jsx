@@ -5,6 +5,8 @@ App.PurchaseTableRow = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
     propTypes: {
       purchase: React.PropTypes.instanceOf(App.Purchase.ViewModel)
     },

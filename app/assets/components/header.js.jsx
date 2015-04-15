@@ -5,7 +5,10 @@ App.Header = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.PurposeStore, 'getStateFromStore')],
+    mixins: [
+      React.addons.PureRenderMixin,
+      React.BindMixin(App.PurposeStore, 'getStateFromStore')
+    ],
 
     getStateFromStore: function () {
       return {

@@ -5,7 +5,10 @@ App.PurchaseGridItem = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.PurchaseStore, 'getStateFromStore')],
+    mixins: [
+      React.addons.PureRenderMixin,
+      React.BindMixin(App.PurchaseStore, 'getStateFromStore')
+    ],
 
     propTypes: {
       id: PropTypes.number.isRequired

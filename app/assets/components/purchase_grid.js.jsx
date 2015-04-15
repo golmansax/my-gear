@@ -4,6 +4,8 @@ App.PurchaseGrid = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
     propTypes: {
       ids: PropTypes.arrayOf(PropTypes.number).isRequired
     },

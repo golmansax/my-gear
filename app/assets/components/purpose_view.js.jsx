@@ -5,6 +5,8 @@ App.PurposeView = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
     propTypes: {
       purpose: React.PropTypes.instanceOf(App.Purpose.ViewModel)
     },

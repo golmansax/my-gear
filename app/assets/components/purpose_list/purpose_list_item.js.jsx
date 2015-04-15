@@ -4,7 +4,10 @@ App.PurposeListItem = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.PurposeStore, 'getStateFromStore')],
+    mixins: [
+      React.addons.PureRenderMixin,
+      React.BindMixin(App.PurposeStore, 'getStateFromStore')
+    ],
 
     propTypes: {
       id: PropTypes.string.isRequired

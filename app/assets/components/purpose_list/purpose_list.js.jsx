@@ -4,6 +4,12 @@ App.PurposeList = (function () {
   'use strict';
 
   return React.createClass({
+    mixins: [React.addons.PureRenderMixin],
+
+    propTypes: {
+      ids: PropTypes.arrayOf(PropTypes.string).isRequired,
+    },
+
     _renderPurpose: function (id) {
       return <App.PurposeListItem id={id} key={id} />;
     },
