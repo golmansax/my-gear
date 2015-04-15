@@ -296,21 +296,21 @@ DEPENDENCIES
   passenger
   pg
   rails (~> 4.2.0)
-  rails-assets-backbone
-  rails-assets-backbone-sortable-collection
-  rails-assets-backbone.mutators
-  rails-assets-backbone.nativeajax
-  rails-assets-chai
-  rails-assets-dirty-chai
-  rails-assets-es5-shim
-  rails-assets-flux-crud-store
-  rails-assets-immutable
-  rails-assets-moment
-  rails-assets-react (~> 0.12.0)
-  rails-assets-react-bind-mixin
-  rails-assets-react-bootstrap
-  rails-assets-react-router
-  rails-assets-underscore
+  rails-assets-backbone!
+  rails-assets-backbone-sortable-collection!
+  rails-assets-backbone.mutators!
+  rails-assets-backbone.nativeajax!
+  rails-assets-chai!
+  rails-assets-dirty-chai!
+  rails-assets-es5-shim!
+  rails-assets-flux-crud-store!
+  rails-assets-immutable!
+  rails-assets-moment!
+  rails-assets-react (~> 0.12.0)!
+  rails-assets-react-bind-mixin!
+  rails-assets-react-bootstrap!
+  rails-assets-react-router!
+  rails-assets-underscore!
   rails_12factor
   react-rails (~> 1.0)
   responders (~> 2.0)

@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 ruby '2.1.5'
 
@@ -37,22 +36,23 @@ group :production do
   gem 'dalli'
 end
 
-# Heroku doesn't support this syntax yet :( source 'https://rails-assets.org' do
-gem 'rails-assets-backbone'
-gem 'rails-assets-backbone-sortable-collection'
-gem 'rails-assets-backbone.mutators'
-gem 'rails-assets-backbone.nativeajax'
-gem 'rails-assets-es5-shim'
-gem 'rails-assets-flux-crud-store'
-gem 'rails-assets-immutable'
-gem 'rails-assets-moment'
-gem 'rails-assets-react', '~> 0.12.0'
-gem 'rails-assets-react-bind-mixin'
-gem 'rails-assets-react-bootstrap'
-gem 'rails-assets-react-router'
-gem 'rails-assets-underscore'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-backbone'
+  gem 'rails-assets-backbone-sortable-collection'
+  gem 'rails-assets-backbone.mutators'
+  gem 'rails-assets-backbone.nativeajax'
+  gem 'rails-assets-es5-shim'
+  gem 'rails-assets-flux-crud-store'
+  gem 'rails-assets-immutable'
+  gem 'rails-assets-moment'
+  gem 'rails-assets-react', '~> 0.12.0'
+  gem 'rails-assets-react-bind-mixin'
+  gem 'rails-assets-react-bootstrap'
+  gem 'rails-assets-react-router'
+  gem 'rails-assets-underscore'
 
-group :development, :test do
-  gem 'rails-assets-chai'
-  gem 'rails-assets-dirty-chai'
+  group :development, :test do
+    gem 'rails-assets-chai'
+    gem 'rails-assets-dirty-chai'
+  end
 end
