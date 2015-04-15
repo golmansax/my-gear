@@ -1,18 +1,17 @@
-//= require components/clothing_item_grid_item
+//= require components/purchase_grid_item
 
-App.ClothingItemGrid = (function () {
-
+App.PurchaseGrid = (function () {
   'use strict';
 
   return React.createClass({
     propTypes: {
-      ids: PropTypes.arrayOf(PropTypes.string).isRequired
+      ids: PropTypes.arrayOf(PropTypes.number).isRequired
     },
 
-    _renderClothingItem: function (id) {
+    _renderPurchase: function (id) {
       return (
         <ReactBootstrap.Col sm={4} key={id}>
-          <App.ClothingItemGridItem id={id} />
+          <App.PurchaseGridItem id={id} />
         </ReactBootstrap.Col>
       );
     },
@@ -20,7 +19,7 @@ App.ClothingItemGrid = (function () {
     render: function () {
       return (
         <ReactBootstrap.Row>
-          {this.props.ids.map(this._renderClothingItem)}
+          {this.props.ids.map(this._renderPurchase)}
         </ReactBootstrap.Row>
       );
     }

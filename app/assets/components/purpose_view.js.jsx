@@ -1,4 +1,4 @@
-//= require components/clothing_item_grid
+//= require components/purchase_grid
 //= require models/purpose/view_model
 
 App.PurposeView = (function () {
@@ -13,7 +13,7 @@ App.PurposeView = (function () {
       return (
         <div>
           {this.props.name}
-          <App.ClothingItemGrid ids={this.props.purpose.clothingItemIds} />
+          <App.PurchaseGrid ids={this.props.purpose.purchaseIds} />
         </div>
       );
     }

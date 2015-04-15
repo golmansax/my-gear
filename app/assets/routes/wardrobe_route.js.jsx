@@ -1,5 +1,5 @@
-//= require components/clothing_item_grid
-//= require stores/clothing_item_store
+//= require components/purchase_grid
+//= require stores/purchase_store
 
 App.WardrobeRoute = (function () {
   'use strict';
@@ -7,24 +7,24 @@ App.WardrobeRoute = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.ClothingItemStore, 'getStateFromStore')
+      React.BindMixin(App.PurchaseStore, 'getStateFromStore')
     ],
 
     getStateFromStore: function () {
       return {
-        clothingItems: App.ClothingItemStore.getAll()
+        purchases: App.PurchaseStore.getAll()
       };
     },
 
     render: function () {
-      var ids = this.state.clothingItems.map(function (clothingItem) {
-        return clothingItem.id;
+      var ids = this.state.purchases.map(function (purchase) {
+        return purchase.id;
       }).valueSeq().toJS();
 
       return (
         <div>
           WARDROBE MANAGER
-          <App.ClothingItemGrid ids={ids} />
+          <App.PurchaseGrid ids={ids} />
         </div>
       );
     }

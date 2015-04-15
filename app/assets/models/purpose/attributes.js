@@ -3,5 +3,5 @@
 App.Purpose.Attributes = {
   id: null,
   name: '',
-  clothingItemIds: []
+  purchaseIds: []
 };

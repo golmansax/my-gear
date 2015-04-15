@@ -6,6 +6,5 @@ App.ClothingItem.Attributes = {
   type: '',
   imagePath: '',
   purchaseIds: [],
-  purposeIds: [],
   id: null
 };
