@@ -14,6 +14,6 @@ class ClothingItemSeeder
   end
 
   def find_or_create_purpose_by_name(name)
-    Purpose.find_by(name: name) ||= Purpose.new(name: name)
+    Purpose.find_by(name: name) || Purpose.new(name: name)
   end
 end
