@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Purpose do
   describe 'associations' do
-    it { is_expected.to have_and_belong_to_many(:clothing_items) }
+    it { is_expected.to have_and_belong_to_many(:purchases) }
   end
 
   describe 'validations' do

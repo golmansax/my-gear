@@ -6,7 +6,7 @@ describe PurposesController do
       purpose = create(:purpose, name: 'Lazy')
       down_jacket = create(:outerwear, brand: 'Uniqlo', model: 'Down Jacket')
       purchase = down_jacket.purchases.first
-      purpose.clothing_items << down_jacket
+      purpose.purchases << purchase
 
       create(:purpose, name: 'Sexy')
       get(:index, format: :json)

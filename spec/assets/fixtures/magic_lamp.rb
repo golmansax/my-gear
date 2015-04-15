@@ -8,12 +8,10 @@ MagicLamp.define(controller: ClothingItemsController) do
           Purchase.new(
             date: Date.parse('2014-10-30'),
             version: 'Red',
-            usage: 'not in use',
           ),
           Purchase.new(
             date: Date.parse('2014-11-01'),
             version: 'Navy',
-            usage: 'backup',
           ),
         ],
       ),
@@ -24,12 +22,10 @@ MagicLamp.define(controller: ClothingItemsController) do
           Purchase.new(
             date: Date.parse('2014-10-30'),
             version: 'Gray',
-            usage: 'not in use',
           ),
           Purchase.new(
             date: Date.parse('2014-11-01'),
             version: 'Green',
-            usage: 'everyday',
           ),
         ],
       ),
@@ -45,17 +41,15 @@ MagicLamp.define(controller: PurposesController) do
     Outerwear.create!(
       brand: 'Uniqlo',
       model: 'Down Jacket',
-      purposes: [purpose],
       purchases: [
         Purchase.new(
           date: Date.parse('2014-10-30'),
           version: 'Red',
-          usage: 'not in use',
         ),
         Purchase.new(
           date: Date.parse('2014-11-01'),
           version: 'Navy',
-          usage: 'backup',
+          purposes: [purpose],
         ),
       ],
     )

@@ -7,7 +7,6 @@ describe PurchasesController do
       id: purchase.id,
       clothingItemId: purchase.clothing_item.slug,
       date: '2014-07-01',
-      usage: 'everyday',
       version: 'Navy',
       purposeIds: [],
     }

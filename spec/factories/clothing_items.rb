@@ -12,7 +12,6 @@ FactoryGirl.define do
       purchases do
         purchase_params = {
           date: Date.parse('July 2014'),
-          usage: 'everyday',
           clothing_item_id: id,
         }
         build_list(:purchase, 1, purchase_params)
