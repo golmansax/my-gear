@@ -1,6 +1,8 @@
 class Purchase < ActiveRecord::Base
   belongs_to :clothing_item
 
+  has_many :purposes, through: :clothing_item
+
   validates :date, presence: true
   validates :version, presence: true
 

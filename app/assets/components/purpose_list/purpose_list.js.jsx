@@ -9,12 +9,7 @@ App.PurposeList = (function () {
     },
 
     render: function () {
-      return (
-        <div>
-          <h4>Purposes:</h4>
-          {this.props.ids.map(this._renderPurpose)}
-        </div>
-      );
+      return <span>{this.props.ids.map(this._renderPurpose)}</span>;
     }
   });
 })();

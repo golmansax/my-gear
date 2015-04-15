@@ -5,5 +5,6 @@ App.Purchase.Attributes = {
   clothingItemId: null,
   usage: '',
   version: '',
-  date: null
+  date: null,
+  purposeIds: []
 };

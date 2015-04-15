@@ -24,7 +24,8 @@ App.PurchaseListItem = (function () {
       return (
         <div>
           {this.state.purchase.version}&nbsp;
-          {moment(this.state.purchase.date).calendar()}
+          {moment(this.state.purchase.date).calendar()}&nbsp;
+          <App.PurposeList ids={this.state.purchase.purposeIds} />
         </div>
       );
     }

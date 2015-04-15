@@ -17,7 +17,11 @@ App.PurposeListItem = (function () {
     },
 
     render: function () {
-      return <div>{this.state.purpose.name}</div>;
+      return (
+        <span className="purpose-list-item label label-default">
+          {this.state.purpose.name}
+        </span>
+      );
     }
   });
 })();
