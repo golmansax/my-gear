@@ -9,6 +9,7 @@ describe PurchasesController do
       date: '2014-07-01',
       usage: 'everyday',
       version: 'Navy',
+      purposeIds: [],
     }
   end
 

@@ -7,7 +7,7 @@ App.PurposeList = (function () {
     mixins: [React.addons.PureRenderMixin],
 
     propTypes: {
-      ids: PropTypes.arrayOf(PropTypes.string).isRequired,
+      ids: PropTypes.arrayOf(PropTypes.string).isRequired
     },
 
     _renderPurpose: function (id) {

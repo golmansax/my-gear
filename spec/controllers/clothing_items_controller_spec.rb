@@ -10,7 +10,6 @@ describe ClothingItemsController do
       imagePath: '/assets/marmot-rom-jacket.jpg',
       type: 'Outerwear',
       purchaseIds: outerwear.purchases.pluck(:id),
-      purposeIds: [],
     }
   end
 
