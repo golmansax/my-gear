@@ -13,9 +13,9 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Brown',
+          purposes: ['Essential'],
         },
       ],
-      purposes: ['Essential'],
     )
 
     create_bottom!(
@@ -25,9 +25,9 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Deep Gray',
+          purposes: ['Essential'],
         },
       ],
-      purposes: ['Essential'],
     )
 
     create_bottom!(
@@ -37,9 +37,9 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2014'),
           version: 'Charcoal',
+          purposes: ['Backup'],
         },
       ],
-      purposes: ['Backup'],
     )
 
     create_bottom!(
@@ -49,9 +49,9 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Black Slim',
+          purposes: ['For Girlfriend', 'Formal'],
         },
       ],
-      purposes: ['For Girlfriend', 'Formal'],
     )
 
     create_bottom!(
@@ -61,9 +61,9 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2014'),
           version: 'Navy Plaid',
+          purposes: ['Swimming'],
         },
       ],
-      purposes: ['Swimming'],
     )
 
     create_bottom!(
@@ -73,9 +73,9 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2013'),
           version: 'Green',
+          purposes: ['Lounging'],
         },
       ],
-      purposes: ['Lounging'],
     )
 
     create_bottom!(
@@ -96,9 +96,9 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Slate',
+          purposes: ['Lounging'],
         },
       ],
-      purposes: ['Lounging'],
     )
 
     # Ski Pants

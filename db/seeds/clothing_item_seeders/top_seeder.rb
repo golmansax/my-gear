@@ -9,9 +9,9 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: 'Yellow',
+          purposes: ['Essential'],
         },
       ],
-      purposes: ['Essential'],
     )
 
     create_top!(
@@ -21,13 +21,14 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2014'),
           version: 'Blue Oxford',
+          purposes: ['Essential', 'Formal', 'For Girlfriend'],
         },
         {
           date: Date.parse('Feb 2015'),
           version: 'Red Oxford',
+          purposes: ['Favorite', 'Essential', 'Formal', 'For Girlfriend'],
         },
       ],
-      purposes: ['Favorite', 'Essential', 'Formal', 'For Girlfriend'],
     )
 
     create_top!(
@@ -41,9 +42,9 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Home 2013/2014',
+          purposes: %w(Essential Expressive),
         },
       ],
-      purposes: %w(Essential Expressive),
     )
 
     create_top!(
@@ -57,9 +58,9 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: '2014 French Open',
+          purposes: %w(Essential Expressive),
         },
       ],
-      purposes: %w(Essential Expressive),
     )
 
     create_top!(
@@ -80,13 +81,14 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2013'),
           version: 'Tri-Black – Thumbtack',
+          purposes: ['Lounging', 'For Girlfriend'],
         },
         {
           date: Date.parse('Oct 2013'),
           version: 'Athletic Blue – Red Hot Chili Peppers – Scar Tissue',
+          purposes: ['Lounging', 'For Girlfriend', 'Expressive'],
         },
       ],
-      purposes: ['Lounging', 'For Girlfriend', 'Expressive'],
     )
 
     create_top!(
@@ -96,9 +98,9 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Black',
+          purposes: ['Cold Weather'],
         },
       ],
-      purposes: ['Cold Weather'],
     )
 
     create_top!(
@@ -108,9 +110,9 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Yellow',
+          purposes: ['Expressive'],
         },
       ],
-      purposes: ['Expressive'],
     )
   end
 

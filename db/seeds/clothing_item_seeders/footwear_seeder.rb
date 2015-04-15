@@ -25,9 +25,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Apr 2015'),
           version: 'Connect in Black/Hot Pink',
+          purposes: %w(Expressive Essential Favorite),
         },
       ],
-      purposes: %w(Expressive Essential Favorite),
     )
 
     create_footwear!(
@@ -37,9 +37,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Coffee & Cream',
+          purposes: ['Formal', 'For Girlfriend'],
         },
       ],
-      purposes: ['Formal', 'For Girlfriend'],
     )
 
     create_footwear!(
@@ -49,9 +49,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2014'),
           version: 'Blue',
+          purposes: %w(Tennis),
         },
       ],
-      purposes: %w(Tennis),
     )
 
     create_footwear!(
@@ -61,9 +61,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2013'),
           version: 'Green',
+          purposes: %w(Climbing),
         },
       ],
-      purposes: %w(Climbing),
     )
 
     create_footwear!(
@@ -73,9 +73,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2011'),
           version: 'Black',
+          purposes: %w(Backup),
         },
       ],
-      purposes: %w(Backup),
     )
 
     create_footwear!(
@@ -85,9 +85,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2013'),
           version: 'Green',
+          purposes: %w(Hiking Frisbee),
         },
       ],
-      purposes: %w(Hiking Frisbee),
     )
 
     create_footwear!(
@@ -97,9 +97,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2008'),
           version: 'Brown',
+          purposes: ['Hiking', 'Cold Weather'],
         },
       ],
-      purposes: ['Hiking', 'Cold Weather'],
     )
 
     create_footwear!(
@@ -109,9 +109,9 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Feb 2012'),
           version: '2011 Black/Neon Green',
+          purposes: ['Basketball'],
         },
       ],
-      purposes: ['Basketball'],
     )
   end
 

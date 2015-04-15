@@ -13,9 +13,9 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Charcoal',
+          purposes: %w(Formal Essential),
         },
       ],
-      purposes: %w(Formal Essential),
     )
 
     create_sock!(
@@ -29,9 +29,9 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Blue',
+          purposes: %w(Essential),
         },
       ],
-      purposes: %w(Formal Essential),
     )
 
     # Really thick socks

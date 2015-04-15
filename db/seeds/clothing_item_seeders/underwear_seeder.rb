@@ -9,9 +9,9 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2014'),
           version: 'Gray',
+          purposes: ['Backup'],
         },
       ],
-      purposes: ['Backup'],
     )
 
     create_underwear!(
@@ -21,9 +21,9 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2014'),
           version: 'Purple',
+          purposes: ['Essential'],
         },
       ],
-      purposes: ['Essential'],
     )
 
     create_underwear!(
@@ -33,9 +33,9 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2014'),
           version: 'Black',
+          purposes: ['Essential'],
         },
       ],
-      purposes: ['Essential'],
     )
 
     create_underwear!(
@@ -45,9 +45,9 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2014'),
           version: 'Black/Orange',
+          purposes: ['Essential'],
         },
       ],
-      purposes: ['Essential'],
     )
 
     create_underwear!(
@@ -57,9 +57,9 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2013'),
           version: 'Navy',
+          purposes: ['Cold Weather'],
         },
       ],
-      purposes: ['Cold Weather'],
     )
 
     create_underwear!(
@@ -69,9 +69,9 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Mar 2015'),
           version: 'Black',
+          purposes: ['Biking'],
         },
       ],
-      purposes: ['Biking'],
     )
 
     create_underwear!(
@@ -81,9 +81,9 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Taupe',
+          purposes: %w(Essential Favorite Formal),
         },
       ],
-      purposes: %w(Essential Favorite Formal),
     )
   end
 
