@@ -16,24 +16,9 @@ App.EssentialsRoute = (function () {
       };
     },
 
-    _purchaseSortByDate: function (purchaseA, purchaseB) {
-      var momentA = purchaseA.moment();
-      var momentB = purchaseB.moment();
-
-      if (momentA.isAfter(momentB)) {
-        return -1;
-      } else if (momentB.isAfter(momentA)) {
-        return 1;
-      } else {
-        return 0;
-      }
-    },
-
     render: function () {
       var purchases = this.state.purchases.filter(function (purchase) {
-        return purchase.purposeIds.reduce(function (previousValue, purposeId) {
-          return previousValue || (purposeId === 'essential');
-        }, false);
+        return purchase.group() === 'essential';
       });
 
       return (

@@ -47,7 +47,9 @@ App.Header = (function () {
           <ReactBootstrap.Nav>
             <App.RouterNavItem to='about'>About</App.RouterNavItem>
             <App.RouterNavItem to='essentials'>Essentials</App.RouterNavItem>
-            <App.RouterNavItem to='other'>Non-Essentials</App.RouterNavItem>
+            <App.RouterNavItem to='non-essentials'>
+              Non-Essentials
+            </App.RouterNavItem>
             <App.RouterNavItem to='wishlist'>Wishlist</App.RouterNavItem>
             <App.RouterNavItem to='recent-purchases'>
               Recent Purchases

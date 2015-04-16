@@ -26,7 +26,7 @@ App.PurchaseGridItem = (function () {
 
       return (
         <div>
-          <ReactRouter.Link to='clothing_item' params={{ id: clothingItemId }}>
+          <ReactRouter.Link to='clothing-item' params={{ id: clothingItemId }}>
             {clothingItem.name()}
           </ReactRouter.Link>
           <img className='img-responsive' src={clothingItem.imagePath} />
