@@ -31,6 +31,7 @@ App.PurchaseTableRow = (function () {
             <App.Purpose.LabelList ids={this.props.purchase.purposeIds} />
           </td>
           <td>{this.props.purchase.version}</td>
+          <td>{this.props.purchase.formattedDate()}</td>
         </tr>
       );
     }

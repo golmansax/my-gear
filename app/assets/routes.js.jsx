@@ -4,6 +4,7 @@
 //= require routes/clothing_route
 //= require routes/clothing_item_route
 //= require routes/purpose_route
+//= require routes/recent_route
 //= require routes/list_route
 //= require routes/info_route
 
@@ -19,7 +20,7 @@
         <ReactRouter.Route name='essentials' handler={App.ListRoute} />
         <ReactRouter.Route name='other' handler={App.ListRoute} />
         <ReactRouter.Route name='wishlist' handler={App.ListRoute} />
-        <ReactRouter.Route name='recent-purchases' handler={App.ListRoute} />
+        <ReactRouter.Route name='recent-purchases' handler={App.RecentRoute} />
         <ReactRouter.Route name='wardrobe' handler={App.WardrobeRoute} />
         <ReactRouter.Route
           name='clothing_item'

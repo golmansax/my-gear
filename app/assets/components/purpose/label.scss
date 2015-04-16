@@ -4,7 +4,9 @@
 .purpose-label {
   @include label-variant(#b6bbbf); // light gray
 
+  display: inline-block;
   margin-right: 5px;
+  padding: 5px;
 }
 
 .label-biking,

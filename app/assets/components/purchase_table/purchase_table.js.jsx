@@ -29,6 +29,7 @@ App.PurchaseTable = (function () {
             <th>Type</th>
             <th>Usage</th>
             <th>Version</th>
+            <th>Purchase Date</th>
           </tr>
           <tbody>{this._renderPurchases()}</tbody>
         </table>

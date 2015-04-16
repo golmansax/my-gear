@@ -28,7 +28,7 @@ App.PurchaseListItem = (function () {
       return (
         <div>
           {this.state.purchase.version}&nbsp;
-          {moment(this.state.purchase.date).calendar()}&nbsp;
+          {this.state.purchase.formattedDate()}&nbsp;
           <App.Purpose.LabelList ids={this.state.purchase.purposeIds} />
         </div>
       );
