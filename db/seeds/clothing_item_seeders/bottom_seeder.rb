@@ -101,6 +101,16 @@ class BottomSeeder < ClothingItemSeeder
       ],
     )
 
+    create_bottom!(
+      brand: 'Outlier',
+      model: 'New OG Pant',
+    )
+
+    create_bottom!(
+      brand: 'Ministry of Supply',
+      model: 'Aviator Chino',
+    )
+
     # Ski Pants
   end
 

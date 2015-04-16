@@ -50,7 +50,7 @@ App.Header = (function () {
             <App.RouterNavItem to='non-essentials'>
               Non-Essentials
             </App.RouterNavItem>
-            <App.RouterNavItem to='wishlist'>Wishlist</App.RouterNavItem>
+            <App.RouterNavItem to='watch-list'>Watch List</App.RouterNavItem>
             <App.RouterNavItem to='recent-purchases'>
               Recent Purchases
             </App.RouterNavItem>

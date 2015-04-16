@@ -6,7 +6,6 @@ class ClothingItem < ActiveRecord::Base
 
   validates :brand, presence: true
   validates :model, presence: true
-  validates :purchases, presence: true
 
   def name
     "#{brand} #{model}"

@@ -1,6 +1,6 @@
 class ClothingItemSeeder
   def create_clothing_item!(purchases: [], **clothing_item_params)
-    clothing_item = ClothingItem.new(clothing_item_params)
+    clothing_item = ClothingItem.create!(clothing_item_params)
 
     purchases.each do |purchase_params|
       clothing_item.purchases << create_purchase(purchase_params)
