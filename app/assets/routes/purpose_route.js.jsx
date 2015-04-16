@@ -1,4 +1,5 @@
 //= require components/purpose_view
+//= require components/purpose/label
 //= require stores/purpose_store
 
 App.PurposeRoute = (function () {
@@ -23,7 +24,9 @@ App.PurposeRoute = (function () {
     render: function () {
       return (
         <div>
-          <h1>{this.state.purpose.name}</h1>
+          <h1>
+            <App.Purpose.Label id={this.state.purpose.id} />
+          </h1>
           <br />
           <App.PurposeView purpose={this.state.purpose} />
         </div>

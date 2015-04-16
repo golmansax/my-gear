@@ -13,10 +13,7 @@ App.PurposeView = (function () {
 
     render: function () {
       return (
-        <div>
-          {this.props.name}
-          <App.PurchaseGrid ids={this.props.purpose.purchaseIds} />
-        </div>
+        <App.PurchaseGrid ids={this.props.purpose.purchaseIds} />
       );
     }
   });
