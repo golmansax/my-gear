@@ -46,3 +46,7 @@
 .label-cold-weather {
   @include label-variant(#00c2e0); // light blue
 }
+
+.label-colorful {
+  @include label-variant(#ff9f1a); // orange
+}
