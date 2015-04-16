@@ -9,7 +9,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: 'Yellow',
-          purposes: ['Essential'],
+          purposes: %w(Essential Colorful),
         },
       ],
     )
@@ -26,7 +26,9 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Feb 2015'),
           version: 'Red Oxford',
-          purposes: ['Favorite', 'Essential', 'Formal', 'For Girlfriend'],
+          purposes: [
+            'Favorite', 'Essential', 'Formal', 'For Girlfriend', 'Colorful'
+          ],
         },
       ],
     )
@@ -42,7 +44,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Home 2013/2014',
-          purposes: %w(Essential Expressive),
+          purposes: %w(Essential Expressive Colorful),
         },
       ],
     )
@@ -58,7 +60,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: '2014 French Open',
-          purposes: %w(Essential Expressive),
+          purposes: %w(Essential Expressive Colorful),
         },
       ],
     )
@@ -110,7 +112,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Yellow',
-          purposes: ['Expressive'],
+          purposes: %w(Expressive Colorful),
         },
       ],
     )

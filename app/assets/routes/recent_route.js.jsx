@@ -16,19 +16,21 @@ App.RecentRoute = (function () {
       };
     },
 
-    render: function () {
-      var purchases = this.state.purchases.sort(function (purchaseA, purchaseB) {
-        var momentA = purchaseA.moment();
-        var momentB = purchaseB.moment();
+    _purchaseSortByDate: function (purchaseA, purchaseB) {
+      var momentA = purchaseA.moment();
+      var momentB = purchaseB.moment();
 
-        if (momentA.isAfter(momentB)) {
-          return -1;
-        } else if (momentB.isAfter(momentA)) {
-          return 1;
-        } else {
-          return 0;
-        }
-      });
+      if (momentA.isAfter(momentB)) {
+        return -1;
+      } else if (momentB.isAfter(momentA)) {
+        return 1;
+      } else {
+        return 0;
+      }
+    },
+
+    render: function () {
+      var purchases = this.state.purchases.sort(this._purchaseSortByDate);
 
       return (
         <div>

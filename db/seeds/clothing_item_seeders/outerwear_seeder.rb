@@ -9,7 +9,7 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Green',
-          purposes: %w(Essential Favorite),
+          purposes: %w(Essential Favorite Colorful),
         },
       ],
     )
@@ -33,7 +33,7 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2012'),
           version: 'Red',
-          purposes: %w(Backup),
+          purposes: %w(Backup Colorful),
         },
       ],
     )

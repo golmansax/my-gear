@@ -73,7 +73,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2013'),
           version: 'Green',
-          purposes: ['Lounging'],
+          purposes: %w(Lounging Colorful),
         },
       ],
     )

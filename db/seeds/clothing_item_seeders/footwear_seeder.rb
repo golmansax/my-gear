@@ -25,7 +25,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Apr 2015'),
           version: 'Connect in Black/Hot Pink',
-          purposes: %w(Expressive Essential Favorite),
+          purposes: %w(Expressive Essential Favorite Colorful),
         },
       ],
     )
@@ -49,7 +49,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2014'),
           version: 'Blue',
-          purposes: %w(Tennis),
+          purposes: %w(Tennis Colorful),
         },
       ],
     )
@@ -61,7 +61,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2013'),
           version: 'Green',
-          purposes: %w(Climbing),
+          purposes: %w(Climbing Colorful),
         },
       ],
     )
@@ -85,7 +85,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2013'),
           version: 'Green',
-          purposes: %w(Hiking Frisbee),
+          purposes: %w(Hiking Frisbee Colorful),
         },
       ],
     )
@@ -109,7 +109,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Feb 2012'),
           version: '2011 Black/Neon Green',
-          purposes: ['Basketball'],
+          purposes: %w(Basketball Colorful),
         },
       ],
     )
