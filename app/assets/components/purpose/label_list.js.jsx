@@ -1,6 +1,7 @@
-//= require ./purpose_list_item
+//= require ./index
+//= require ./label
 
-App.PurposeList = (function () {
+App.Purpose.LabelList = (function () {
   'use strict';
 
   return React.createClass({
@@ -11,7 +12,7 @@ App.PurposeList = (function () {
     },
 
     _renderPurpose: function (id) {
-      return <App.PurposeListItem id={id} key={id} />;
+      return <App.Purpose.Label id={id} key={id} />;
     },
 
     render: function () {

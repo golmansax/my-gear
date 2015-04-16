@@ -1,4 +1,5 @@
 //= require stores/purchase_store
+//= require components/purpose/label_list
 
 App.PurchaseListItem = (function () {
   'use strict';
@@ -28,7 +29,7 @@ App.PurchaseListItem = (function () {
         <div>
           {this.state.purchase.version}&nbsp;
           {moment(this.state.purchase.date).calendar()}&nbsp;
-          <App.PurposeList ids={this.state.purchase.purposeIds} />
+          <App.Purpose.LabelList ids={this.state.purchase.purposeIds} />
         </div>
       );
     }

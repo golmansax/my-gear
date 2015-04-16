@@ -1,0 +1,45 @@
+@import 'bootstrap/mixins/labels';
+@import 'bootstrap/variables';
+
+.purpose-label {
+  @include label-variant(#b6bbbf); // light gray
+
+  margin-right: 5px;
+}
+
+.label-hiking,
+.label-swimming,
+.label-frisbee,
+.label-climbing,
+.label-basketball,
+.label-tennis {
+  @include label-variant(#70b500); // green
+}
+
+.label-formal {
+  @include label-variant(#4d4d4d); // dark gray
+}
+
+.label-essential {
+  @include label-variant(#0079bf); // blue
+}
+
+.label-for-girlfriend {
+  @include label-variant(#ff78cb); // pink
+}
+
+.label-favorite {
+  @include label-variant(#f2d600); // yellow
+}
+
+.label-lounging {
+  @include label-variant(#51e898); // blue-green
+}
+
+.label-expressive {
+  @include label-variant(#c377e0); // purple
+}
+
+.label-cold-weather {
+  @include label-variant(#00c2e0); // light blue
+}

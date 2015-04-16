@@ -1,4 +1,5 @@
 //= require models/purchase/view_model
+//= require components/purpose/label_list
 //= require stores/clothing_item_store
 
 App.PurchaseTableRow = (function () {
@@ -26,7 +27,9 @@ App.PurchaseTableRow = (function () {
             </ReactRouter.Link>
           </td>
           <td>{clothingItem.type}</td>
-          <td><App.PurposeList ids={this.props.purchase.purposeIds} /></td>
+          <td>
+            <App.Purpose.LabelList ids={this.props.purchase.purposeIds} />
+          </td>
           <td>{this.props.purchase.version}</td>
         </tr>
       );

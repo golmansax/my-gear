@@ -1,5 +1,4 @@
 //= require components/purchase_list/purchase_list
-//= require components/purpose_list/purpose_list
 //= require models/clothing_item/view_model
 
 App.ClothingItemDetailedView = (function () {
