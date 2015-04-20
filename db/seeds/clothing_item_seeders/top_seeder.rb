@@ -116,6 +116,11 @@ class TopSeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_top!(
+      brand: 'Vulpine',
+      model: "Men's Merino Henley",
+    )
   end
 
   def create_top!(top_params)

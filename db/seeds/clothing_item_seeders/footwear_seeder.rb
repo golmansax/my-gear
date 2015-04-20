@@ -113,6 +113,16 @@ class FootwearSeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_footwear!(
+      brand: 'NEOS Overshoe',
+      model: 'Adventurer',
+    )
+
+    create_footwear!(
+      brand: 'Western Mountaineering',
+      model: 'Flash Bootie',
+    )
   end
 
   def create_footwear!(footwear_params)
