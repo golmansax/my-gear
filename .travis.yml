@@ -10,13 +10,13 @@ before_install:
 - npm install
 before_script:
 - bundle exec rake assets:precompile
-- bundle exec spring rake db:create db:migrate
+- bundle exec rake db:create db:migrate
 script:
 - bundle exec travis lint --skip-completion-check
 - bundle exec rubocop -D
-- bundle exec spring rake jsxhint
-- bundle exec spring rake jscs
-- bundle exec spring rake
+- bundle exec rake jsxhint
+- bundle exec rake jscs
+- bundle exec rake
 - bundle exec teaspoon
 deploy:
   provider: heroku

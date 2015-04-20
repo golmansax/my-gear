@@ -23,12 +23,15 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'shoulda-matchers'
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'spring-commands-teaspoon'
   gem 'teaspoon'
   gem 'coffee-rails' # Needed by teaspoon...
   gem 'travis'
+end
+
+group :development do
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-teaspoon'
 end
 
 group :production do
