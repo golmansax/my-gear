@@ -13,6 +13,7 @@ gem 'jbuilder'
 gem 'gon' # depends on jbuilder
 gem 'react-rails'
 gem 'sass-rails'
+gem 'stink_bomb'
 gem 'uglifier'
 
 group :development, :test do
@@ -52,6 +53,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-react-bind-mixin'
   gem 'rails-assets-react-bootstrap'
   gem 'rails-assets-react-router'
+  gem 'rails-assets-stink-bomb'
   gem 'rails-assets-underscore'
 
   group :development, :test do
