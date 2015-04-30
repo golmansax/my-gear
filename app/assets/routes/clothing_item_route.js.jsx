@@ -1,4 +1,4 @@
-//= require components/clothing_item_detailed_view
+//= require components/clothing_item/detailed_view
 //= require stores/clothing_item_store
 
 App.ClothingItemRoute = (function () {
@@ -22,7 +22,7 @@ App.ClothingItemRoute = (function () {
 
     render: function () {
       return (
-        <App.ClothingItemDetailedView clothingItem={this.state.clothingItem} />
+        <App.ClothingItem.DetailedView clothingItem={this.state.clothingItem} />
       );
     }
   });
