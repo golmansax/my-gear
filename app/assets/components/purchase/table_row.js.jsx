@@ -1,3 +1,4 @@
+//= require ./index
 //= require models/purchase/view_model
 //= require components/purpose/label_list
 //= require stores/clothing_item_store

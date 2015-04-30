@@ -1,4 +1,4 @@
-//= require components/purchase_grid
+//= require components/purchase/grid
 //= require stores/purchase_store
 
 App.WardrobeRoute = (function () {
@@ -24,7 +24,7 @@ App.WardrobeRoute = (function () {
       return (
         <div>
           WARDROBE MANAGER
-          <App.PurchaseGrid ids={ids} />
+          <App.Purchase.Grid ids={ids} />
         </div>
       );
     }

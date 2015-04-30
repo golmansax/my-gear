@@ -1,7 +1,8 @@
+//= require ./index
 //= require stores/purchase_store
 //= require stores/clothing_item_store
 
-App.PurchaseGridItem = (function () {
+App.Purchase.GridItem = (function () {
   'use strict';
 
   return React.createClass({

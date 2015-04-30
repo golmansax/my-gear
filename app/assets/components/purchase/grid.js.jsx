@@ -1,6 +1,7 @@
-//= require components/purchase_grid_item
+//= require ./index
+//= require ./grid_item
 
-App.PurchaseGrid = (function () {
+App.Purchase.Grid = (function () {
   'use strict';
 
   return React.createClass({
@@ -13,7 +14,7 @@ App.PurchaseGrid = (function () {
     _renderPurchase: function (id) {
       return (
         <ReactBootstrap.Col sm={4} key={id}>
-          <App.PurchaseGridItem id={id} />
+          <App.Purchase.GridItem id={id} />
         </ReactBootstrap.Col>
       );
     },

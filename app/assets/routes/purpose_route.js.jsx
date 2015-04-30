@@ -1,5 +1,5 @@
 //= require components/purpose/label
-//= require components/purchase_grid
+//= require components/purchase/grid
 //= require stores/purpose_store
 
 App.PurposeRoute = (function () {
@@ -28,7 +28,7 @@ App.PurposeRoute = (function () {
             <App.Purpose.Label id={this.state.purpose.id} />
           </h1>
           <br />
-          <App.PurchaseGrid ids={this.state.purpose.purchaseIds} />
+          <App.Purchase.Grid ids={this.state.purpose.purchaseIds} />
         </div>
       );
     }
