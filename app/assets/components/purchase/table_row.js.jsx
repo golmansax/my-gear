@@ -2,7 +2,7 @@
 //= require components/purpose/label_list
 //= require stores/clothing_item_store
 
-App.PurchaseTableRow = (function () {
+App.Purchase.TableRow = (function () {
   'use strict';
 
   return React.createClass({

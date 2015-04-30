@@ -1,6 +1,6 @@
-//= require ./purchase_table_row
+//= require ./table_row
 
-App.PurchaseTable = (function () {
+App.Purchase.Table = (function () {
   'use strict';
 
   return React.createClass({
@@ -13,7 +13,7 @@ App.PurchaseTable = (function () {
     _renderPurchases: function () {
       return this.props.purchases.valueSeq().map(function (purchase) {
         return (
-          <App.PurchaseTableRow
+          <App.Purchase.TableRow
             purchase={purchase}
             key={purchase.id}
           />

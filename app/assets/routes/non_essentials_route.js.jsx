@@ -1,4 +1,4 @@
-//= require components/purchase_table/purchase_table
+//= require components/purchase/table
 //= require stores/purchase_store
 
 App.NonEssentialsRoute = (function () {
@@ -42,15 +42,15 @@ App.NonEssentialsRoute = (function () {
         <div>
           <h1>Specialized Clothing ({specializedPurchases.size})</h1>
           <br />
-          <App.PurchaseTable purchases={specializedPurchases} />
+          <App.Purchase.Table purchases={specializedPurchases} />
           <br />
           <h1>Backup Clothing ({backupPurchases.size})</h1>
           <br />
-          <App.PurchaseTable purchases={backupPurchases} />
+          <App.Purchase.Table purchases={backupPurchases} />
           <br />
           <h1>Not in Use Anymore ({notInUsePurchases.size})</h1>
           <br />
-          <App.PurchaseTable purchases={notInUsePurchases} />
+          <App.Purchase.Table purchases={notInUsePurchases} />
         </div>
       );
     }

@@ -1,4 +1,4 @@
-//= require components/purchase_table/purchase_table
+//= require components/purchase/table
 //= require stores/purchase_store
 
 App.RecentRoute = (function () {
@@ -36,7 +36,7 @@ App.RecentRoute = (function () {
         <div>
           <h1>Most Recent Purchases</h1>
           <br />
-          <App.PurchaseTable purchases={purchases} />
+          <App.Purchase.Table purchases={purchases} />
         </div>
       );
     }
