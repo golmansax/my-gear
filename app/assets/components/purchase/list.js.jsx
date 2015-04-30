@@ -1,6 +1,7 @@
-//= require ./purchase_list_item
+//= require ./index
+//= require ./list_item
 
-App.PurchaseList = (function () {
+App.Purchase.List = (function () {
   'use strict';
 
   return React.createClass({
@@ -11,7 +12,7 @@ App.PurchaseList = (function () {
     },
 
     _renderPurchase: function (id) {
-      return <App.PurchaseListItem id={id} key={id} />;
+      return <App.Purchase.ListItem id={id} key={id} />;
     },
 
     render: function () {

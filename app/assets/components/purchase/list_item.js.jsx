@@ -1,7 +1,8 @@
+//= require ./index
 //= require stores/purchase_store
 //= require components/purpose/label_list
 
-App.PurchaseListItem = (function () {
+App.Purchase.ListItem = (function () {
   'use strict';
 
   return React.createClass({
