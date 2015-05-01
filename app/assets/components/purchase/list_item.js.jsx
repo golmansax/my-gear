@@ -1,6 +1,6 @@
 //= require ./index
 //= require stores/purchase_store
-//= require components/purpose/label_list
+//= require views/purpose/label_list
 
 App.Purchase.ListItem = (function () {
   'use strict';

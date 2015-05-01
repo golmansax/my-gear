@@ -1,4 +1,4 @@
-//= require components/purpose/label
+//= require views/purpose/label
 //= require components/purchase/grid
 //= require stores/purpose_store
 
