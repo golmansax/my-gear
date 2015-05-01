@@ -6,7 +6,7 @@
 //= require routes/non_essentials_route
 //= require routes/clothing_route
 //= require routes/clothing_item_route
-//= require routes/purpose_route
+//= require views/purpose/route
 //= require routes/recent_route
 //= require routes/watch_list_route
 //= require routes/info_route
@@ -37,7 +37,7 @@
         <ReactRouter.Route
           name='purpose'
           path='/clothing/purposes/:id'
-          handler={App.PurposeRoute}
+          handler={App.Purpose.Route}
         />
       </ReactRouter.Route>
     </ReactRouter.Route>

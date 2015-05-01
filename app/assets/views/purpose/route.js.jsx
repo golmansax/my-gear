@@ -1,8 +1,8 @@
-//= require views/purpose/label
+//= require ./label
 //= require components/purchase/grid
 //= require stores/purpose_store
 
-App.PurposeRoute = (function () {
+App.Purpose.Route = (function () {
   'use strict';
 
   return React.createClass({
