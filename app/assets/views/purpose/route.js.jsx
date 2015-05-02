@@ -1,5 +1,5 @@
 //= require ./label
-//= require components/purchase/grid
+//= require views/purchase/grid
 //= require stores/purpose_store
 
 App.Purpose.Route = (function () {

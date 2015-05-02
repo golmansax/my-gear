@@ -1,4 +1,4 @@
-//= require components/purchase/grid
+//= require views/purchase/grid
 //= require stores/purchase_store
 
 App.WardrobeRoute = (function () {

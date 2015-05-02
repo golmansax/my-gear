@@ -1,5 +1,5 @@
 //= require ./index
-//= require components/purchase/list
+//= require views/purchase/list
 //= require models/clothing_item/view_model
 
 App.ClothingItem.DetailedView = (function () {

@@ -1,4 +1,4 @@
-//= require components/purchase/table
+//= require views/purchase/table
 //= require stores/purchase_store
 
 App.NonEssentialsRoute = (function () {
