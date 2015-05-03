@@ -1,4 +1,4 @@
-//= require components/clothing_item/detailed_view
+//= require views/clothing_item/detailed_view
 //= require stores/clothing_item_store
 
 App.ClothingItemRoute = (function () {

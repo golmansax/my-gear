@@ -1,7 +1,8 @@
-//= require components/router_nav_item
+//= require ./index
+//= require views/shared/router_nav_item
 //= require stores/purpose_store
 
-App.Header = (function () {
+App.Layout.Header = (function () {
   'use strict';
 
   return React.createClass({
@@ -45,15 +46,21 @@ App.Header = (function () {
             </ReactRouter.Link>
           </div>
           <ReactBootstrap.Nav>
-            <App.RouterNavItem to='about'>About</App.RouterNavItem>
-            <App.RouterNavItem to='essentials'>Essentials</App.RouterNavItem>
-            <App.RouterNavItem to='non-essentials'>
+            <App.Shared.RouterNavItem to='about'>
+              About
+            </App.Shared.RouterNavItem>
+            <App.Shared.RouterNavItem to='essentials'>
+              Essentials
+            </App.Shared.RouterNavItem>
+            <App.Shared.RouterNavItem to='non-essentials'>
               Non-Essentials
-            </App.RouterNavItem>
-            <App.RouterNavItem to='watch-list'>Watch List</App.RouterNavItem>
-            <App.RouterNavItem to='recent-purchases'>
+            </App.Shared.RouterNavItem>
+            <App.Shared.RouterNavItem to='watch-list'>
+              Watch List
+            </App.Shared.RouterNavItem>
+            <App.Shared.RouterNavItem to='recent-purchases'>
               Recent Purchases
-            </App.RouterNavItem>
+            </App.Shared.RouterNavItem>
             <ReactBootstrap.DropdownButton title='Purposes'>
               {this._renderPurposes()}
             </ReactBootstrap.DropdownButton>

@@ -1,4 +1,4 @@
-//= require components/header
+//= require layout/header
 //= require actions/data_loading_actions
 //= require stores/data_loading_store
 
@@ -13,7 +13,7 @@ App.RootRoute = (function () {
     render: function () {
       return (
         <div>
-          <App.Header />
+          <App.Layout.Header />
           <div className='container'>
             <ReactRouter.RouteHandler {...this.props} />
           </div>

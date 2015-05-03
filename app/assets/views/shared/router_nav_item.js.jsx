@@ -1,4 +1,6 @@
-App.RouterNavItem = (function () {
+//= require ./index
+
+App.Shared.RouterNavItem = (function () {
   'use strict';
 
   return React.createClass({
