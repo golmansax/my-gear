@@ -1,6 +1,6 @@
 //= require ./label
 //= require views/purchase/grid
-//= require stores/purpose_store
+//= require flux/purpose/store
 
 App.Purpose.Route = (function () {
   'use strict';

@@ -1,6 +1,6 @@
 //= require ./index
 ////= require views/purchase/grid
-//= require stores/purchase_store
+//= require flux/purchase/store
 
 App.Pages.WardrobeRoute = (function () {
   'use strict';

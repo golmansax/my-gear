@@ -1,7 +1,7 @@
 //= require ./index
 //= require ./header
 //= require actions/data_loading_actions
-//= require stores/data_loading_store
+//= require flux/data_loading/store
 
 App.Layout.RootRoute = (function () {
   'use strict';

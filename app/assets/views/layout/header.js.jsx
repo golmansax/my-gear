@@ -1,6 +1,6 @@
 //= require ./index
 //= require views/shared/router_nav_item
-//= require stores/purpose_store
+//= require flux/purpose/store
 
 App.Layout.Header = (function () {
   'use strict';

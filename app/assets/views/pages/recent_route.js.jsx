@@ -1,6 +1,6 @@
 //= require ./index
 //= require views/purchase/table
-//= require stores/purchase_store
+//= require flux/purchase/store
 
 App.Pages.RecentRoute = (function () {
   'use strict';

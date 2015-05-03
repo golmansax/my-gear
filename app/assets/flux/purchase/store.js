@@ -1,7 +1,8 @@
-//= require models/purchase/collection
-//= require models/purchase/view_model
+//= require ./index
+//= require ./collection
+//= require ./view_model
 
-App.PurchaseStore = (function () {
+App.Purchase.Store = (function () {
   'use strict';
 
   var PurchaseStoreFactory = FluxCrudStore.Store.extend({

@@ -1,6 +1,6 @@
 //= require ./index
-//= require stores/purchase_store
-//= require stores/clothing_item_store
+//= require flux/purchase/store
+//= require flux/clothing_item/store
 
 App.Purchase.GridItem = (function () {
   'use strict';

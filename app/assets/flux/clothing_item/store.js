@@ -1,7 +1,8 @@
-//= require models/clothing_item/collection
-//= require models/clothing_item/view_model
+//= require ./index
+//= require ./collection
+//= require ./view_model
 
-App.ClothingItemStore = (function () {
+App.ClothingItem.Store = (function () {
   'use strict';
 
   var ClothingItemStoreFactory = FluxCrudStore.Store.extend({

@@ -1,5 +1,5 @@
 //= require ./index
-//= require stores/purchase_store
+//= require flux/purchase/store
 //= require views/purpose/label_list
 
 App.Purchase.ListItem = (function () {

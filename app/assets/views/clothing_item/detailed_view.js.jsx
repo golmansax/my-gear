@@ -1,6 +1,6 @@
 //= require ./index
 //= require views/purchase/list
-//= require models/clothing_item/view_model
+//= require flux/clothing_item/view_model
 
 App.ClothingItem.DetailedView = (function () {
   'use strict';

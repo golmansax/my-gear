@@ -1,5 +1,5 @@
 //= require ./index
-//= require stores/clothing_item_store
+//= require flux/clothing_item/store
 
 App.Pages.WatchListRoute = (function () {
   'use strict';

@@ -1,7 +1,8 @@
-//= require models/purpose/collection
-//= require models/purpose/view_model
+//= require ./index
+//= require /collection
+//= require /view_model
 
-App.PurposeStore = (function () {
+App.Purpose.Store = (function () {
   'use strict';
 
   var PurposeStoreFactory = FluxCrudStore.Store.extend({

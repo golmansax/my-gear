@@ -2,9 +2,9 @@
 //= require actions/clothing_item_actions
 //= require actions/purpose_actions
 //= require actions/purchase_actions
-//= require stores/clothing_item_store
-//= require stores/purpose_store
-//= require stores/purchase_store
+//= require flux/clothing_item/store
+//= require flux/purpose/store
+//= require flux/purchase/store
 
 App.DataLoadingActions = (function () {
   'use strict';
