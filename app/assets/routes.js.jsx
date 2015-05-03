@@ -1,4 +1,4 @@
-//= require routes/root_route
+//= require layout/root_route
 //= require routes/about_route
 //= require routes/not_found_route
 //= require routes/wardrobe_route
@@ -15,7 +15,7 @@
   'use strict';
 
   App.routes = (
-    <ReactRouter.Route handler={App.RootRoute}>
+    <ReactRouter.Route handler={App.Layout.RootRoute}>
       <ReactRouter.DefaultRoute name='info' handler={App.InfoRoute} />
       <ReactRouter.NotFoundRoute handler={App.NotFoundRoute} />
 

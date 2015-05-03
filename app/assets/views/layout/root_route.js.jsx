@@ -1,8 +1,9 @@
-//= require layout/header
+//= require ./index
+//= require ./header
 //= require actions/data_loading_actions
 //= require stores/data_loading_store
 
-App.RootRoute = (function () {
+App.Layout.RootRoute = (function () {
   'use strict';
 
   return React.createClass({
