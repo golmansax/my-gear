@@ -5,11 +5,11 @@ App.Layout.ClothingRoute = (function () {
 
   return React.createClass({
     mixins: [
-      React.BindMixin(App.DataLoadingStore, 'getStateFromStore')
+      React.BindMixin(App.DataLoading.Store, 'getStateFromStore')
     ],
 
     getStateFromStore: function () {
-      return { isLoading: App.DataLoadingStore.isLoading() };
+      return { isLoading: App.DataLoading.Store.isLoading() };
     },
 
     render: function () {

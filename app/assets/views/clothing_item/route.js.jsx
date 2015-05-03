@@ -7,7 +7,7 @@ App.ClothingItem.Route = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.ClothingItemStore, 'getStateFromStore')
+      React.BindMixin(App.ClothingItem.Store, 'getStateFromStore')
     ],
 
     propTypes: {
@@ -16,7 +16,7 @@ App.ClothingItem.Route = (function () {
 
     getStateFromStore: function (props) {
       return {
-        clothingItem: App.ClothingItemStore.get(props.id)
+        clothingItem: App.ClothingItem.Store.get(props.id)
       };
     },
 

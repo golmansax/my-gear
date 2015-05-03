@@ -7,7 +7,7 @@ App.Purpose.Label = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.PurposeStore, 'getStateFromStore')
+      React.BindMixin(App.Purpose.Store, 'getStateFromStore')
     ],
 
     propTypes: {
@@ -16,7 +16,7 @@ App.Purpose.Label = (function () {
 
     getStateFromStore: function (props) {
       return {
-        purpose: App.PurposeStore.get(props.id)
+        purpose: App.Purpose.Store.get(props.id)
       };
     },
 

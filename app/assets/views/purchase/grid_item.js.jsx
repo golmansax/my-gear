@@ -8,7 +8,7 @@ App.Purchase.GridItem = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.PurchaseStore, 'getStateFromStore')
+      React.BindMixin(App.Purchase.Store, 'getStateFromStore')
     ],
 
     propTypes: {
@@ -17,13 +17,13 @@ App.Purchase.GridItem = (function () {
 
     getStateFromStore: function (props) {
       return {
-        purchase: App.PurchaseStore.get(props.id)
+        purchase: App.Purchase.Store.get(props.id)
       };
     },
 
     render: function () {
       var clothingItemId = this.state.purchase.clothingItemId;
-      var clothingItem = App.ClothingItemStore.get(clothingItemId);
+      var clothingItem = App.ClothingItem.Store.get(clothingItemId);
 
       return (
         <div>

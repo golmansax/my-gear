@@ -1,6 +1,7 @@
+//= require ./index
 //= require dispatcher
 
-App.DataLoadingStore = (function () {
+App.DataLoading.Store = (function () {
   'use strict';
 
   var BACKBONE_EVENTS = 'change';
@@ -8,7 +9,7 @@ App.DataLoadingStore = (function () {
     defaults: { isLoading: false }
   });
 
-  App.Dispatcher.on('DataLoadingStore.setLoading', function (value) {
+  App.Dispatcher.on('DataLoading.Store.setLoading', function (value) {
     _storage.set('isLoading', value);
   });
 

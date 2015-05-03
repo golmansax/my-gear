@@ -7,12 +7,12 @@ App.Pages.WatchListRoute = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.ClothingItemStore, 'getStateFromStore')
+      React.BindMixin(App.ClothingItem.Store, 'getStateFromStore')
     ],
 
     getStateFromStore: function () {
       return {
-        clothingItems: App.ClothingItemStore.getAll()
+        clothingItems: App.ClothingItem.Store.getAll()
       };
     },
 

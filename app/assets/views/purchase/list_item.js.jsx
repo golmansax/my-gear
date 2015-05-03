@@ -8,7 +8,7 @@ App.Purchase.ListItem = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.PurchaseStore, 'getStateFromStore')
+      React.BindMixin(App.Purchase.Store, 'getStateFromStore')
     ],
 
     propTypes: {
@@ -17,7 +17,7 @@ App.Purchase.ListItem = (function () {
 
     getStateFromStore: function (props) {
       return {
-        purchase: App.PurchaseStore.get(props.id)
+        purchase: App.Purchase.Store.get(props.id)
       };
     },
 

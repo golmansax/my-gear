@@ -6,11 +6,11 @@ App.Layout.Header = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.BindMixin(App.PurposeStore, 'getStateFromStore')],
+    mixins: [React.BindMixin(App.Purpose.Store, 'getStateFromStore')],
 
     getStateFromStore: function () {
       return {
-        purposes: App.PurposeStore.getAll()
+        purposes: App.Purpose.Store.getAll()
       };
     },
 

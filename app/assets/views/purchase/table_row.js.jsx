@@ -15,7 +15,7 @@ App.Purchase.TableRow = (function () {
 
     render: function () {
       var clothingItemId = this.props.purchase.clothingItemId;
-      var clothingItem = App.ClothingItemStore.get(clothingItemId);
+      var clothingItem = App.ClothingItem.Store.get(clothingItemId);
 
       return (
         <tr>

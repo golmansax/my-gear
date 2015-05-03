@@ -1,6 +1,6 @@
 //= require ./index
 //= require ./header
-//= require actions/data_loading_actions
+//= require flux/data_loading/actions
 //= require flux/data_loading/store
 
 App.Layout.RootRoute = (function () {
@@ -8,7 +8,7 @@ App.Layout.RootRoute = (function () {
 
   return React.createClass({
     componentWillMount: function () {
-      App.DataLoadingActions.fetchAll();
+      App.DataLoading.Actions.fetchAll();
     },
 
     render: function () {

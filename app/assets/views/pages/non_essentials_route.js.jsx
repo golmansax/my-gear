@@ -8,12 +8,12 @@ App.Pages.NonEssentialsRoute = (function () {
   return React.createClass({
     mixins: [
       React.addons.PureRenderMixin,
-      React.BindMixin(App.PurchaseStore, 'getStateFromStore')
+      React.BindMixin(App.Purchase.Store, 'getStateFromStore')
     ],
 
     getStateFromStore: function () {
       return {
-        purchases: App.PurchaseStore.getAll()
+        purchases: App.Purchase.Store.getAll()
       };
     },
 

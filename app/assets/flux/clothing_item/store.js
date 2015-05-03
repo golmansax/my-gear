@@ -5,10 +5,8 @@
 App.ClothingItem.Store = (function () {
   'use strict';
 
-  var ClothingItemStoreFactory = FluxCrudStore.Store.extend({
+  return FluxCrudStore.Store.extend({
     collection: App.ClothingItem.Collection,
     viewModel: App.ClothingItem.ViewModel
-  });
-
-  return new ClothingItemStoreFactory();
+  }).instance();
 })();
