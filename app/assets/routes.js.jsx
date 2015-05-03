@@ -1,38 +1,50 @@
-//= require layout/root_route
-//= require routes/about_route
-//= require routes/not_found_route
-//= require routes/wardrobe_route
-//= require routes/essentials_route
-//= require routes/non_essentials_route
-//= require routes/clothing_route
-//= require routes/clothing_item_route
+//= require views/layout/root_route
+//= require views/layout/clothing_route
+//= require views/pages/about_route
+//= require views/pages/not_found_route
+//= require views/pages/wardrobe_route
+//= require views/pages/essentials_route
+//= require views/pages/non_essentials_route
+//= require views/clothing_item/route
 //= require views/purpose/route
-//= require routes/recent_route
-//= require routes/watch_list_route
-//= require routes/info_route
+//= require views/pages/recent_route
+//= require views/pages/watch_list_route
+//= require views/pages/info_route
 
 (function () {
   'use strict';
 
   App.routes = (
     <ReactRouter.Route handler={App.Layout.RootRoute}>
-      <ReactRouter.DefaultRoute name='info' handler={App.InfoRoute} />
-      <ReactRouter.NotFoundRoute handler={App.NotFoundRoute} />
+      <ReactRouter.DefaultRoute name='info' handler={App.Pages.InfoRoute} />
+      <ReactRouter.NotFoundRoute handler={App.Pages.NotFoundRoute} />
 
-      <ReactRouter.Route name='clothing' handler={App.ClothingRoute}>
-        <ReactRouter.Route name='about' handler={App.AboutRoute} />
-        <ReactRouter.Route name='essentials' handler={App.EssentialsRoute} />
+      <ReactRouter.Route name='clothing' handler={App.Layout.ClothingRoute}>
+        <ReactRouter.Route name='about' handler={App.Pages.AboutRoute} />
+        <ReactRouter.Route
+          name='essentials'
+          handler={App.Pages.EssentialsRoute}
+        />
         <ReactRouter.Route
           name='non-essentials'
-          handler={App.NonEssentialsRoute}
+          handler={App.Pages.NonEssentialsRoute}
         />
-        <ReactRouter.Route name='watch-list' handler={App.WatchListRoute} />
-        <ReactRouter.Route name='recent-purchases' handler={App.RecentRoute} />
-        <ReactRouter.Route name='wardrobe' handler={App.WardrobeRoute} />
+        <ReactRouter.Route
+          name='watch-list'
+          handler={App.Pages.WatchListRoute}
+        />
+        <ReactRouter.Route
+          name='recent-purchases'
+          handler={App.Pages.RecentRoute}
+        />
+        <ReactRouter.Route
+          name='wardrobe'
+          handler={App.Pages.WardrobeRoute}
+        />
         <ReactRouter.Route
           name='clothing-item'
           path='/clothing/items/:id'
-          handler={App.ClothingItemRoute}
+          handler={App.ClothingItem.Route}
         />
         <ReactRouter.Route
           name='purpose'

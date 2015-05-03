@@ -1,7 +1,8 @@
-//= require views/purchase/table
+//= require ./index
+////= require views/purchase/grid
 //= require stores/purchase_store
 
-App.EssentialsRoute = (function () {
+App.Pages.WardrobeRoute = (function () {
   'use strict';
 
   return React.createClass({
@@ -17,15 +18,14 @@ App.EssentialsRoute = (function () {
     },
 
     render: function () {
-      var purchases = this.state.purchases.filter(function (purchase) {
-        return purchase.group() === 'essential';
-      });
+      var ids = this.state.purchases.map(function (purchase) {
+        return purchase.id;
+      }).valueSeq().toJS();
 
       return (
         <div>
-          <h1>Essential Clothing ({purchases.size})</h1>
-          <br />
-          <App.Purchase.Table purchases={purchases} />
+          WARDROBE MANAGER
+          <App.Purchase.Grid ids={ids} />
         </div>
       );
     }

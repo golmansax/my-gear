@@ -1,4 +1,6 @@
-App.NotFoundRoute = (function () {
+//= require ./index
+
+App.Pages.NotFoundRoute = (function () {
   'use strict';
 
   return React.createClass({

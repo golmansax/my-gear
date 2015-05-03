@@ -1,7 +1,8 @@
+//= require ./index
 //= require views/purchase/table
 //= require stores/purchase_store
 
-App.RecentRoute = (function () {
+App.Pages.RecentRoute = (function () {
   'use strict';
 
   return React.createClass({

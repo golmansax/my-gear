@@ -1,4 +1,6 @@
-App.AboutRoute = (function () {
+//= require ./index
+
+App.Pages.AboutRoute = (function () {
   'use strict';
 
   return React.createClass({

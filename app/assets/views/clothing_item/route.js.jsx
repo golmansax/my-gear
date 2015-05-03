@@ -1,7 +1,7 @@
-//= require views/clothing_item/detailed_view
+//= require ./detailed_view
 //= require stores/clothing_item_store
 
-App.ClothingItemRoute = (function () {
+App.ClothingItem.Route = (function () {
   'use strict';
 
   return React.createClass({

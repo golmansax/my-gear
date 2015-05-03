@@ -1,4 +1,6 @@
-App.ClothingRoute = (function () {
+//= require ./index
+
+App.Layout.ClothingRoute = (function () {
   'use strict';
 
   return React.createClass({

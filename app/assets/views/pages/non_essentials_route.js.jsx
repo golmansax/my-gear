@@ -1,7 +1,8 @@
+//= require ./index
 //= require views/purchase/table
 //= require stores/purchase_store
 
-App.NonEssentialsRoute = (function () {
+App.Pages.NonEssentialsRoute = (function () {
   'use strict';
 
   return React.createClass({

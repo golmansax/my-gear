@@ -1,6 +1,7 @@
+//= require ./index
 //= require stores/clothing_item_store
 
-App.WatchListRoute = (function () {
+App.Pages.WatchListRoute = (function () {
   'use strict';
 
   return React.createClass({

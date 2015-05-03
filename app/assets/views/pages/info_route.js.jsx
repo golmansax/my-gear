@@ -1,4 +1,6 @@
-App.InfoRoute = (function () {
+//= require ./index
+
+App.Pages.InfoRoute = (function () {
   'use strict';
 
   return React.createClass({
