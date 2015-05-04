@@ -3,8 +3,5 @@ $font-family-sans-serif: 'Open Sans', sans-serif;
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-.clothing-item-table {
-  table-layout: fixed;
-}
-
 @import 'views/purpose/label';
+@import 'views/purchase/table';

@@ -24,7 +24,7 @@ App.Purchase.Table = (function () {
 
     render: function () {
       return (
-        <table className='table clothing-item-table'>
+        <table className='table purchase-table'>
           <tr>
             <th>Name</th>
             <th>Type</th>
