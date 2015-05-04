@@ -1,6 +1,6 @@
-//= require models/clothing_item/model
+//= require flux/clothing_item/model
 
-describe('models/clothing_item/model', function () {
+describe('flux/clothing_item/model', function () {
   'use strict';
 
   var clothingItem;
