@@ -5,12 +5,12 @@ unless defined?(Rails)
 end
 
 Teaspoon.configure do |config|
-  config.asset_paths = ['spec/assets']
+  config.asset_paths = ['spec/frontend']
   config.fixture_paths = []
 
   config.suite do |suite|
     suite.use_framework :mocha
-    suite.matcher = 'spec/assets/**/*_spec.{js,js.jsx,.jsx}'
+    suite.matcher = 'spec/frontend/**/*_spec.{js,js.jsx,.jsx}'
     suite.no_coverage = [%r{/vendor/}, /\.rvm/, %r{/tmp/}]
   end
 

@@ -14,5 +14,5 @@ if Rails.env.development?
   )
 end
 
-asset_paths = [Rails.root.join('app', 'assets')]
+asset_paths = [Rails.root.join('app', 'frontend')]
 Rails.application.config.assets.paths.unshift(*asset_paths)
