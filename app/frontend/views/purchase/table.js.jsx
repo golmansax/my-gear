@@ -13,7 +13,7 @@ App.Purchase.Table = (function () {
 
     _renderPurchases: function () {
       return this.props.ids.map(function (id) {
-        return <App.Purchase.TableRow id={id} key={id} />
+        return <App.Purchase.TableRow id={id} key={id} />;
       }).toJS();
     },
 
