@@ -1,5 +1,5 @@
 //= require ./index
-//= require views/purchase/table
+//= require views/purchase/table_from_models
 //= require flux/purchase/store
 
 App.Pages.RecentRoute = (function () {
@@ -37,7 +37,7 @@ App.Pages.RecentRoute = (function () {
         <div>
           <h1>Most Recent Purchases</h1>
           <br />
-          <App.Purchase.Table purchases={purchases} />
+          <App.Purchase.TableFromModels purchases={purchases} />
         </div>
       );
     }

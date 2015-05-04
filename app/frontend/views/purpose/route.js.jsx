@@ -23,11 +23,7 @@ App.Purpose.Route = (function () {
     },
 
     render: function () {
-      var purchases = Immutable.List(
-        this.state.purpose.purchaseIds.map(function (purchaseId) {
-          return App.Purchase.Store.get(purchaseId);
-        })
-      );
+      var purchaseIds = Immutable.List(this.state.purpose.purchaseIds);
 
       return (
         <div>
@@ -35,7 +31,7 @@ App.Purpose.Route = (function () {
             <App.Purpose.Label id={this.state.purpose.id} />
           </h1>
           <br />
-          <App.Purchase.Table purchases={purchases} />
+          <App.Purchase.Table ids={purchaseIds} />
         </div>
       );
     }

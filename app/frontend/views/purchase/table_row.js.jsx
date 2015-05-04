@@ -7,14 +7,23 @@ App.Purchase.TableRow = (function () {
   'use strict';
 
   return React.createClass({
-    mixins: [React.addons.PureRenderMixin],
+    mixins: [
+      React.addons.PureRenderMixin,
+      React.BindMixin(App.Purchase.Store, 'getStateFromStore')
+    ],
 
     propTypes: {
-      purchase: React.PropTypes.instanceOf(App.Purchase.ViewModel)
+      id: PropTypes.number.isRequired
+    },
+
+    getStateFromStore: function (props) {
+      return {
+        purchase: App.Purchase.Store.get(props.id)
+      };
     },
 
     render: function () {
-      var clothingItemId = this.props.purchase.clothingItemId;
+      var clothingItemId = this.state.purchase.clothingItemId;
       var clothingItem = App.ClothingItem.Store.get(clothingItemId);
 
       return (
@@ -29,10 +38,10 @@ App.Purchase.TableRow = (function () {
           </td>
           <td>{clothingItem.type}</td>
           <td>
-            <App.Purpose.LabelList ids={this.props.purchase.purposeIds} />
+            <App.Purpose.LabelList ids={this.state.purchase.purposeIds} />
           </td>
-          <td>{this.props.purchase.version}</td>
-          <td>{this.props.purchase.formattedDate()}</td>
+          <td>{this.state.purchase.version}</td>
+          <td>{this.state.purchase.formattedDate()}</td>
         </tr>
       );
     }

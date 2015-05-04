@@ -1,5 +1,5 @@
 //= require ./index
-//= require views/purchase/table
+//= require views/purchase/table_from_models
 //= require flux/purchase/store
 
 App.Pages.NonEssentialsRoute = (function () {
@@ -43,15 +43,15 @@ App.Pages.NonEssentialsRoute = (function () {
         <div>
           <h1>Specialized Clothing ({specializedPurchases.size})</h1>
           <br />
-          <App.Purchase.Table purchases={specializedPurchases} />
+          <App.Purchase.TableFromModels purchases={specializedPurchases} />
           <br />
           <h1>Backup Clothing ({backupPurchases.size})</h1>
           <br />
-          <App.Purchase.Table purchases={backupPurchases} />
+          <App.Purchase.TableFromModels purchases={backupPurchases} />
           <br />
           <h1>Not in Use Anymore ({notInUsePurchases.size})</h1>
           <br />
-          <App.Purchase.Table purchases={notInUsePurchases} />
+          <App.Purchase.TableFromModels purchases={notInUsePurchases} />
         </div>
       );
     }

@@ -8,17 +8,12 @@ App.Purchase.Table = (function () {
     mixins: [React.addons.PureRenderMixin],
 
     propTypes: {
-      purchases: PropTypes.instanceOf(Immutable.Iterable)
+      ids: PropTypes.instanceOf(Immutable.List).isRequired
     },
 
     _renderPurchases: function () {
-      return this.props.purchases.valueSeq().map(function (purchase) {
-        return (
-          <App.Purchase.TableRow
-            purchase={purchase}
-            key={purchase.id}
-          />
-        );
+      return this.props.ids.map(function (id) {
+        return <App.Purchase.TableRow id={id} key={id} />
       }).toJS();
     },
 
