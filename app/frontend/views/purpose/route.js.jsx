@@ -1,6 +1,7 @@
 //= require ./label
-//= require views/purchase/grid
+//= require views/purchase/table
 //= require flux/purpose/store
+//= require flux/purchase/store
 
 App.Purpose.Route = (function () {
   'use strict';
@@ -22,13 +23,19 @@ App.Purpose.Route = (function () {
     },
 
     render: function () {
+      var purchases = Immutable.List(
+        this.state.purpose.purchaseIds.map(function (purchaseId) {
+          return App.Purchase.Store.get(purchaseId);
+        })
+      );
+
       return (
         <div>
           <h1>
             <App.Purpose.Label id={this.state.purpose.id} />
           </h1>
           <br />
-          <App.Purchase.Grid ids={this.state.purpose.purchaseIds} />
+          <App.Purchase.Table purchases={purchases} />
         </div>
       );
     }
