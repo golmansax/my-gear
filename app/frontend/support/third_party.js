@@ -10,8 +10,6 @@
 //= require react-bind-mixin
 //= require react-bootstrap
 //= require react-router
-//= require slick-carousel
-//= require react-slick
 //
 //= require immutable
 //= require flux-crud-store
