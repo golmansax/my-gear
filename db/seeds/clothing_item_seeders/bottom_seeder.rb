@@ -13,7 +13,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Brown',
-          purposes: ['Essential'],
+          purposes: ['Backup'],
         },
       ],
     )
@@ -25,7 +25,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Deep Gray',
-          purposes: ['Essential'],
+          purposes: ['Essential', 'Swimming'],
         },
       ],
     )
@@ -49,7 +49,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Black Slim',
-          purposes: ['For Girlfriend', 'Formal'],
         },
       ],
     )
@@ -61,7 +60,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2014'),
           version: 'Navy Plaid',
-          purposes: ['Swimming'],
         },
       ],
     )
@@ -109,6 +107,13 @@ class BottomSeeder < ClothingItemSeeder
     create_bottom!(
       brand: 'Ministry of Supply',
       model: 'Aviator Chino',
+      purchases: [
+        {
+          date: Date.parse('May 2015'),
+          version: 'Black Slim',
+          purposes: ['Essential', 'Formal', 'For Girlfriend'],
+        },
+      ],
     )
 
     # Ski Pants

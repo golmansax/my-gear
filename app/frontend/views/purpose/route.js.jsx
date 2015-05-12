@@ -29,6 +29,7 @@ App.Purpose.Route = (function () {
         <div>
           <h1>
             <App.Purpose.Label id={this.state.purpose.id} />
+            ({purchaseIds.size})
           </h1>
           <br />
           <App.Purchase.Table ids={purchaseIds} />

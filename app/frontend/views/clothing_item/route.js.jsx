@@ -23,7 +23,7 @@ App.ClothingItem.Route = (function () {
     render: function () {
       var imageAttrs = {
         className: 'img-responsive',
-        src: this.props.clothingItem.imagePath
+        src: this.state.clothingItem.imagePath
       };
 
       return (
@@ -32,8 +32,8 @@ App.ClothingItem.Route = (function () {
             <img {...imageAttrs} />
           </ReactBootstrap.Col>
           <ReactBootstrap.Col sm={6}>
-            <h1>{this.props.clothingItem.name()}</h1>
-            <App.Purchase.List ids={this.props.clothingItem.purchaseIds} />
+            <h1>{this.state.clothingItem.name()}</h1>
+            <App.Purchase.List ids={this.state.clothingItem.purchaseIds} />
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>
       );
