@@ -25,7 +25,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Deep Gray',
-          purposes: ['Essential', 'Swimming'],
+          purposes: %w(Essential Swimming),
         },
       ],
     )
