@@ -25,6 +25,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'shoulda-matchers'
   gem 'coffee-rails' # Needed by teaspoon...
+  gem 'teaspoon-mocha'
   gem 'travis'
 end
 
@@ -32,7 +33,6 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-teaspoon'
-  gem 'teaspoon'
 end
 
 group :production do

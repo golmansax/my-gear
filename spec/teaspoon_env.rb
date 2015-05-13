@@ -11,7 +11,6 @@ Teaspoon.configure do |config|
   config.suite do |suite|
     suite.use_framework :mocha
     suite.matcher = 'spec/frontend/**/*_spec.{js,js.jsx,.jsx}'
-    suite.no_coverage = [%r{/vendor/}, /\.rvm/, %r{/tmp/}]
   end
 
   def add_coverage_thresholds!(coverage)
@@ -19,6 +18,7 @@ Teaspoon.configure do |config|
     coverage.branches = 60
     coverage.functions = 75
     coverage.lines = 75
+    coverage.ignore = [%r{/vendor/}, /\.rvm/, %r{/tmp/}]
   end
 
   config.coverage do |coverage|
