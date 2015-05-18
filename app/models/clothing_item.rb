@@ -3,11 +3,12 @@ class ClothingItem < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   has_many :purchases
+  belongs_to :brand
 
   validates :brand, presence: true
   validates :model, presence: true
 
   def name
-    "#{brand} #{model}"
+    "#{brand.name} #{model}"
   end
 end
