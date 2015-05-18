@@ -2,7 +2,7 @@ MagicLamp.define(controller: ClothingItemsController) do
   fixture do
     @clothing_items = [
       Outerwear.create!(
-        brand: 'Uniqlo',
+        brand: Brand.new(name: 'Uniqlo'),
         model: 'Down Jacket',
         purchases: [
           Purchase.new(
@@ -16,7 +16,7 @@ MagicLamp.define(controller: ClothingItemsController) do
         ],
       ),
       Outerwear.create!(
-        brand: 'Marmot',
+        brand: Brand.new(name: 'Marmot'),
         model: 'ROM Jacket',
         purchases: [
           Purchase.new(
@@ -39,7 +39,7 @@ MagicLamp.define(controller: PurposesController) do
     purpose = Purpose.create!(name: 'Fabulous')
 
     Outerwear.create!(
-      brand: 'Uniqlo',
+      brand: Brand.new(name: 'Uniqlo'),
       model: 'Down Jacket',
       purchases: [
         Purchase.new(

@@ -1,13 +1,13 @@
 FactoryGirl.define do
   factory :clothing_item do
-    brand 'Chalk'
+    brand
     model 'Hoodie'
     type 'Need to overwrite this'
     purchases { build_list(:purchase, 1, clothing_item_id: id) }
 
     factory :outerwear, class: 'Outerwear' do
       type 'Outerwear'
-      brand 'Marmot'
+      brand { build(:brand, name: 'Marmot') }
       model 'ROM Jacket'
       purchases do
         purchase_params = {

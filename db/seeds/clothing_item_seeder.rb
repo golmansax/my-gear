@@ -1,7 +1,7 @@
 class ClothingItemSeeder
   def create_clothing_item!(purchases: [], brand:, **clothing_item_params)
     clothing_item = ClothingItem.create!(
-      clothing_item_params.merge(brand: find_or_create_brand_by_name(brand))
+      clothing_item_params.merge(brand: find_or_create_brand_by_name(brand)),
     )
 
     purchases.each do |purchase_params|
