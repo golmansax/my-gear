@@ -6,7 +6,14 @@ describe ClothingItem do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:brand) }
+    subject { build(:clothing_item) }
+
     it { is_expected.to validate_presence_of(:model) }
+  end
+
+  it 'throws an error if a clothing item is saved without a brand' do
+    expect do
+      create(:clothing_item, brand: nil)
+    end.to raise_error
   end
 end

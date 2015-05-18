@@ -23,7 +23,7 @@ group :development, :test do
   gem 'magic_lamp'
   gem 'rspec-rails'
   gem 'rubocop'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'coffee-rails' # Needed by teaspoon...
   gem 'teaspoon-mocha'
   gem 'travis'

@@ -4,7 +4,8 @@ describe PurposesController do
   describe '#index' do
     it 'returns a json of purposes' do
       purpose = create(:purpose, name: 'Lazy')
-      down_jacket = create(:outerwear, brand: 'Uniqlo', model: 'Down Jacket')
+      uniqlo = build(:brand, name: 'Uniqlo')
+      down_jacket = create(:outerwear, brand: uniqlo, model: 'Down Jacket')
       purchase = down_jacket.purchases.first
       purpose.purchases << purchase
 
