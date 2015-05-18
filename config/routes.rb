@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   resources :clothing_items, only: :index
   resources :purposes, only: :index
   resources :purchases, only: :index
+  resources :brands, only: :index
 end

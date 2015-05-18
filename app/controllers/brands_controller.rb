@@ -1,7 +1,7 @@
-class PurchasesController < ApplicationController
+class BrandsController < ApplicationController
   respond_to :json
 
   def index
-    @purchases = Purchase.all.includes(:purposes, :clothing_item)
+    @brands = Brand.all.includes(:purchases)
   end
 end

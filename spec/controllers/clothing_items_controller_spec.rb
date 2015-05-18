@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ClothingItemsController do
-  let!(:outerwear) {  create(:outerwear) }
+  let!(:outerwear) { create(:outerwear) }
   let(:outerwear_as_json) do
     {
       brand: 'Marmot',
