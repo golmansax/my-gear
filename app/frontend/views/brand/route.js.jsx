@@ -25,6 +25,10 @@ App.Brand.Route = (function () {
 
       return (
         <div>
+          <ol className='breadcrumb'>
+            <li>Brands</li>
+            <li className='active'>{this.state.brand.name}</li>
+          </ol>
           <h1>
             {this.state.brand.name}
             &nbsp;({purchaseIds.size})

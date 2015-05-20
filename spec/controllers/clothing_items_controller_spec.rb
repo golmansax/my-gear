@@ -4,7 +4,7 @@ describe ClothingItemsController do
   let!(:outerwear) { create(:outerwear) }
   let(:outerwear_as_json) do
     {
-      brand: 'Marmot',
+      brandId: 'marmot',
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
       imagePath: '/assets/marmot-rom-jacket.jpg',

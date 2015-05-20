@@ -27,8 +27,6 @@ App.Purchase.TableRow = (function () {
       var clothingItemId = this.state.purchase.clothingItemId;
       var clothingItem = App.ClothingItem.Store.get(clothingItemId);
       var brand = App.Brand.Store.get(clothingItem.brandId);
-      console.log(clothingItem.brandId);
-      console.log(App.Brand.Store.getAll());
 
       return (
         <tr>

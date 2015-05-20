@@ -12,35 +12,43 @@
 App.DataLoading.Actions = (function () {
   'use strict';
 
-  function _blah() {
-    if (App.ClothingItem.Store.getAll().isLoading ||
-        App.Purpose.Store.getAll().isLoading ||
-        App.Brand.Store.getAll().isLoading ||
-        App.Purchase.Store.getAll().isLoading) {
+  var REGISTERED_MODELS = [
+    'ClothingItem', 'Purpose', 'Brand', 'Purchase'
+  ];
+
+  function _loadingListener() {
+    if (REGISTERED_MODELS.some(_isStoreLoading)) {
       return;
     }
 
-    App.ClothingItem.Store.removeChangeListener(_blah);
-    App.Purpose.Store.removeChangeListener(_blah);
-    App.Purchase.Store.removeChangeListener(_blah);
-    App.Brand.Store.removeChangeListener(_blah);
-
     App.Dispatcher.trigger('DataLoading.Store.setLoading', false);
+
+    REGISTERED_MODELS.forEach(_removeLoadingListenerFromStore);
+  }
+
+  function _isStoreLoading(model) {
+    return App[model].Store.getAll().isLoading;
+  }
+
+  function _removeLoadingListenerFromStore(model) {
+    App[model].Store.removeChangeListener(_loadingListener);
+  }
+
+  function _addLoadingListenerToStore(model) {
+    App[model].Store.addChangeListener(_loadingListener);
+  }
+
+  function _fetchAll(model) {
+    App[model].Actions.fetchAll();
   }
 
   return {
     fetchAll: function () {
-      App.ClothingItem.Actions.fetchAll();
-      App.Purpose.Actions.fetchAll();
-      App.Purchase.Actions.fetchAll();
-      App.Brand.Actions.fetchAll();
+      REGISTERED_MODELS.forEach(_fetchAll);
 
       App.Dispatcher.trigger('DataLoading.Store.setLoading', true);
 
-      App.ClothingItem.Store.addChangeListener(_blah);
-      App.Purpose.Store.addChangeListener(_blah);
-      App.Purchase.Store.addChangeListener(_blah);
-      App.Brand.Store.addChangeListener(_blah);
+      REGISTERED_MODELS.forEach(_addLoadingListenerToStore);
     }
   };
 })();

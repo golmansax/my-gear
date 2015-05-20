@@ -27,6 +27,10 @@ App.Purpose.Route = (function () {
 
       return (
         <div>
+          <ol className='breadcrumb'>
+            <li>Purposes</li>
+            <li className='active'>{this.state.purpose.name}</li>
+          </ol>
           <h1>
             <App.Purpose.Label id={this.state.purpose.id} />
             ({purchaseIds.size})
