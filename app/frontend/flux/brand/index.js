@@ -1,0 +1,1 @@
+App.Brand = App.Brand || {};

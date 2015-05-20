@@ -2,6 +2,7 @@
 
 App.ClothingItem.Attributes = {
   brand: '',
+  brandId: null,
   model: '',
   type: '',
   imagePath: '',

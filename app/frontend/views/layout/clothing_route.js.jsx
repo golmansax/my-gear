@@ -1,4 +1,6 @@
 //= require ./index
+//= require flux/data_loading/actions
+//= require flux/data_loading/store
 
 App.Layout.ClothingRoute = (function () {
   'use strict';
@@ -10,6 +12,11 @@ App.Layout.ClothingRoute = (function () {
 
     getStateFromStore: function () {
       return { isLoading: App.DataLoading.Store.isLoading() };
+    },
+
+    componentWillMount: function () {
+      App.DataLoading.Actions.fetchAll();
+      this.setState(this.getStateFromStore());
     },
 
     render: function () {

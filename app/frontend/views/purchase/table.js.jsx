@@ -21,10 +21,11 @@ App.Purchase.Table = (function () {
       return (
         <table className='table purchase-table'>
           <tr>
-            <th>Name</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Version</th>
             <th>Type</th>
             <th>Usage</th>
-            <th>Version</th>
             <th>Purchase Date</th>
           </tr>
           <tbody>{this._renderPurchases()}</tbody>
