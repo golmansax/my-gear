@@ -28,8 +28,8 @@ describe('flux/clothing_item/collection', function () {
         MagicLamp.rawJson('clothing_items/index')
       );
 
-      var expectedBrands = ['Uniqlo', 'Marmot'];
-      expect(clothingItems.pluck('brand')).to.deep.equal(expectedBrands);
+      var expectedModels = ['Down Jacket', 'ROM Jacket'];
+      expect(clothingItems.pluck('model')).to.deep.equal(expectedModels);
     });
   });
 });
