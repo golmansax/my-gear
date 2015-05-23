@@ -1,6 +1,6 @@
 //= require ./index
 //= require views/shared/router_nav_item
-//= require flux/purpose/store
+//= require purpose/flux/store
 //= require brand/flux/store
 
 App.Layout.Header = (function () {

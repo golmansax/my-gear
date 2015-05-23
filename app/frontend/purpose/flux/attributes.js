@@ -1,4 +1,3 @@
-//= require ./index
 
 App.Purpose.Attributes = {
   id: null,

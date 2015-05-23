@@ -1,11 +1,11 @@
 //= require ./index
 //= require dispatcher
 //= require clothing_item/flux/actions
-//= require flux/purpose/actions
+//= require purpose/flux/actions
 //= require purchase/flux/actions
 //= require brand/flux/actions
 //= require clothing_item/flux/store
-//= require flux/purpose/store
+//= require purpose/flux/store
 //= require purchase/flux/store
 //= require brand/flux/store
 

@@ -1,5 +1,6 @@
 //= require ../index
-//= require purchase/flux/store
+//= require ../flux/store
+//
 //= require clothing_item/flux/store
 
 App.Purchase.GridItem = (function () {

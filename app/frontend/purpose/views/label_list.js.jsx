@@ -1,4 +1,3 @@
-//= require ./index
 //= require ./label
 
 App.Purpose.LabelList = (function () {

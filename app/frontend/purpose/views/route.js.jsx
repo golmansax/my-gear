@@ -1,6 +1,6 @@
 //= require ./label
 //= require purchase/views/table
-//= require flux/purpose/store
+//= require purpose/flux/store
 //= require purchase/flux/store
 
 App.Purpose.Route = (function () {

@@ -1,6 +1,7 @@
 //= require ../index
-//= require purchase/flux/store
-//= require views/purpose/label_list
+//= require ../flux/store
+//
+//= require purpose/views/label_list
 
 App.Purchase.ListItem = (function () {
   'use strict';

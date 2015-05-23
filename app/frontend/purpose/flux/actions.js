@@ -1,4 +1,3 @@
-//= require ./index
 //= require ./store
 
 App.Purpose.Actions = (function () {

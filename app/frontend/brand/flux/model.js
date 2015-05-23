@@ -1,4 +1,3 @@
-//= require ../index
 //= require ./attributes
 
 App.Brand.Model = (function () {

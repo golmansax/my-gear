@@ -1,4 +1,3 @@
-//= require ./index
 //= require ./attributes
 
 App.Purpose.ViewModel = (function () {
