@@ -3,11 +3,11 @@
 //= require flux/clothing_item/actions
 //= require flux/purpose/actions
 //= require flux/purchase/actions
-//= require flux/brand/actions
+//= require brand/flux/actions
 //= require flux/clothing_item/store
 //= require flux/purpose/store
 //= require flux/purchase/store
-//= require flux/brand/store
+//= require brand/flux/store
 
 App.DataLoading.Actions = (function () {
   'use strict';

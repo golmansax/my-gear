@@ -1,4 +1,4 @@
-//= require ./index
+//= require ../index
 
 App.Brand.Attributes = {
   id: null,

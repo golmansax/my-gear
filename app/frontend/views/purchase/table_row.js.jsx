@@ -2,7 +2,7 @@
 //= require flux/purchase/view_model
 //= require views/purpose/label_list
 //= require flux/clothing_item/store
-//= require flux/brand/store
+//= require brand/flux/store
 
 App.Purchase.TableRow = (function () {
   'use strict';

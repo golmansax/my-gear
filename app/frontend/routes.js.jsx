@@ -7,7 +7,7 @@
 //= require views/pages/non_essentials_route
 //= require views/clothing_item/route
 //= require views/purpose/route
-//= require views/brand/route
+//= require brand/views/route
 //= require views/pages/recent_route
 //= require views/pages/watch_list_route
 //= require views/pages/info_route

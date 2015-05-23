@@ -1,4 +1,4 @@
-//= require ./index
+//= require ../index
 //= require ./store
 
 App.Brand.Actions = (function () {
