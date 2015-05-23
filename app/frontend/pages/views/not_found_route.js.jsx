@@ -1,4 +1,3 @@
-//= require ./index
 
 App.Pages.NotFoundRoute = (function () {
   'use strict';

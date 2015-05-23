@@ -1,4 +1,3 @@
-//= require ./index
 
 App.Pages.InfoRoute = (function () {
   'use strict';

@@ -1,8 +1,7 @@
-//= require ./index
 //= require data_loading/flux/actions
 //= require data_loading/flux/store
 
-App.Layout.ClothingRoute = (function () {
+App.Pages.ClothingRoute = (function () {
   'use strict';
 
   return React.createClass({

@@ -1,26 +1,26 @@
-//= require views/layout/root_route
-//= require views/layout/clothing_route
-//= require views/pages/about_route
-//= require views/pages/not_found_route
-//= require views/pages/wardrobe_route
-//= require views/pages/essentials_route
-//= require views/pages/non_essentials_route
+//= require pages/layouts/root_route
+//= require pages/layouts/clothing_route
+//= require pages/views/about_route
+//= require pages/views/not_found_route
+//= require pages/views/wardrobe_route
+//= require pages/views/essentials_route
+//= require pages/views/non_essentials_route
 //= require clothing_item/views/route
 //= require purpose/views/route
 //= require brand/views/route
-//= require views/pages/recent_route
-//= require views/pages/watch_list_route
-//= require views/pages/info_route
+//= require pages/views/recent_route
+//= require pages/views/watch_list_route
+//= require pages/views/info_route
 
 (function () {
   'use strict';
 
   App.routes = (
-    <ReactRouter.Route handler={App.Layout.RootRoute}>
+    <ReactRouter.Route handler={App.Pages.RootRoute}>
       <ReactRouter.DefaultRoute name='info' handler={App.Pages.InfoRoute} />
       <ReactRouter.NotFoundRoute handler={App.Pages.NotFoundRoute} />
 
-      <ReactRouter.Route name='clothing' handler={App.Layout.ClothingRoute}>
+      <ReactRouter.Route name='clothing' handler={App.Pages.ClothingRoute}>
         <ReactRouter.Route name='about' handler={App.Pages.AboutRoute} />
         <ReactRouter.Route
           name='essentials'

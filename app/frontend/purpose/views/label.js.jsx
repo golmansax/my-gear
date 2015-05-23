@@ -1,4 +1,4 @@
-//= require purpose/flux/store
+//= require ../flux/store
 
 App.Purpose.Label = (function () {
   'use strict';

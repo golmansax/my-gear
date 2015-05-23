@@ -1,9 +1,8 @@
-//= require ./index
-//= require views/shared/router_nav_item
+//= require shared/views/router_nav_item
 //= require purpose/flux/store
 //= require brand/flux/store
 
-App.Layout.Header = (function () {
+App.Pages.Header = (function () {
   'use strict';
 
   return React.createClass({

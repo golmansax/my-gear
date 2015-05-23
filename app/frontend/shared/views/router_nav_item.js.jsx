@@ -1,4 +1,3 @@
-//= require ./index
 
 App.Shared.RouterNavItem = (function () {
   'use strict';

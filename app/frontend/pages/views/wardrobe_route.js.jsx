@@ -1,4 +1,3 @@
-//= require ./index
 ////= require purchase/views/grid
 //= require purchase/flux/store
 

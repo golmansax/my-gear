@@ -1,4 +1,3 @@
-//= require ./index
 //= require purchase/views/table_from_models
 //= require purchase/flux/store
 

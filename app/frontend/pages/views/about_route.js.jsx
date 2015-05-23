@@ -1,4 +1,3 @@
-//= require ./index
 
 App.Pages.AboutRoute = (function () {
   'use strict';

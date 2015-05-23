@@ -1,4 +1,3 @@
-//= require ./index
 //= require clothing_item/flux/store
 
 App.Pages.WatchListRoute = (function () {
@@ -27,7 +26,7 @@ App.Pages.WatchListRoute = (function () {
     },
 
     _renderWatchListItem: function (clothingItem) {
-      return <div key={clothingItem.id}>{clothingItem.name()}</div>;
+      return <div key={clothingItem.id}>{clothingItem.model}</div>;
     },
 
     render: function () {
