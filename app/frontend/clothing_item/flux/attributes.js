@@ -1,4 +1,3 @@
-//= require ../index
 
 App.ClothingItem.Attributes = {
   brand: '',

@@ -7,6 +7,7 @@
 //= require brand/index
 //= require purpose/index
 //= require purchase/index
+//= require clothing_item/index
 //
 //= require support/utils
 //= require router_bootstrap
