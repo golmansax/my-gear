@@ -1,1 +1,1 @@
-App.ClothingItem = App.ClothingItem || {};
+App.ClothingItem = {};

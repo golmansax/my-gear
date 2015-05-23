@@ -1,1 +1,1 @@
-App.Pages = App.Pages || {};
+App.Pages = {};

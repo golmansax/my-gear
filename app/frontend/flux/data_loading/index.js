@@ -1,1 +1,0 @@
-App.DataLoading = App.DataLoading || {};

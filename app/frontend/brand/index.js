@@ -1,1 +1,1 @@
-App.Brand = App.Brand || {};
+App.Brand = {};

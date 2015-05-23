@@ -1,4 +1,3 @@
-//= require ./index
 //= require dispatcher
 //= require clothing_item/flux/actions
 //= require purpose/flux/actions

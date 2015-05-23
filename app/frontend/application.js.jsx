@@ -8,6 +8,7 @@
 //= require purpose/index
 //= require purchase/index
 //= require clothing_item/index
+//= require data_loading/index
 //
 //= require support/utils
 //= require router_bootstrap

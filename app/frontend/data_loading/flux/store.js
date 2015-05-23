@@ -1,4 +1,3 @@
-//= require ./index
 //= require dispatcher
 
 App.DataLoading.Store = (function () {

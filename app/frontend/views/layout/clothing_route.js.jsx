@@ -1,6 +1,6 @@
 //= require ./index
-//= require flux/data_loading/actions
-//= require flux/data_loading/store
+//= require data_loading/flux/actions
+//= require data_loading/flux/store
 
 App.Layout.ClothingRoute = (function () {
   'use strict';

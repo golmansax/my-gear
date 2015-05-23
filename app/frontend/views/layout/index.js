@@ -1,1 +1,1 @@
-App.Layout = App.Layout || {};
+App.Layout = {};

@@ -1,1 +1,1 @@
-App.Shared = App.Shared || {};
+App.Shared = {};

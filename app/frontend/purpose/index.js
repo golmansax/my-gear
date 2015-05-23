@@ -1,1 +1,1 @@
-App.Purpose = App.Purpose || {};
+App.Purpose = {};
