@@ -1,4 +1,3 @@
-//= require ../index
 //= require ./collection
 //= require ./view_model
 

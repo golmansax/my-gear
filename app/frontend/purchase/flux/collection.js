@@ -1,4 +1,3 @@
-//= require ../index
 //= require ./model
 
 App.Purchase.Collection = (function () {

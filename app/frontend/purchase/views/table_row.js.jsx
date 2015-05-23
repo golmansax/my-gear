@@ -1,4 +1,3 @@
-//= require ../index
 //= require ../flux/view_model
 //
 //= require purpose/views/label_list

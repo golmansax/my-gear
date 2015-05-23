@@ -1,4 +1,3 @@
-//= require ../index
 
 App.Purchase.Attributes = {
   id: null,

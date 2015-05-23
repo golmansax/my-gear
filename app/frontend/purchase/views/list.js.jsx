@@ -1,4 +1,3 @@
-//= require ../index
 //= require ./list_item
 
 App.Purchase.List = (function () {

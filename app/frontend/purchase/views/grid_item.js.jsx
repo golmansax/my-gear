@@ -1,4 +1,3 @@
-//= require ../index
 //= require ../flux/store
 //
 //= require clothing_item/flux/store

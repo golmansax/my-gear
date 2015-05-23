@@ -1,4 +1,3 @@
-//= require ../index
 //= require ./table
 
 App.Purchase.TableFromModels = (function () {

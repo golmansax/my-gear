@@ -6,6 +6,7 @@
 //= require_self
 //= require brand/index
 //= require purpose/index
+//= require purchase/index
 //
 //= require support/utils
 //= require router_bootstrap

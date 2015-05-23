@@ -1,4 +1,3 @@
-//= require ../index
 //= require ./grid_item
 
 App.Purchase.Grid = (function () {

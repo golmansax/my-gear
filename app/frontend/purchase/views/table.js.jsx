@@ -1,4 +1,3 @@
-//= require ../index
 //= require ./table_row
 
 App.Purchase.Table = (function () {
