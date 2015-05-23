@@ -18,12 +18,21 @@ App.Pages.ClothingRoute = (function () {
       this.setState(this.getStateFromStore());
     },
 
-    render: function () {
+    _renderContent: function () {
       if (this.state.isLoading) {
         return <div>Loading...</div>;
       }
 
       return <ReactRouter.RouteHandler {...this.props} />;
+    },
+
+    render: function () {
+      return (
+        <div>
+          <App.Pages.Header />
+          <div className='container'>{this._renderContent()}</div>
+        </div>
+      );
     }
   });
 })();

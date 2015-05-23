@@ -1,4 +1,3 @@
-//= require pages/layouts/root_route
 //= require pages/layouts/clothing_route
 //= require pages/views/about_route
 //= require pages/views/not_found_route
@@ -16,11 +15,12 @@
   'use strict';
 
   App.routes = (
-    <ReactRouter.Route handler={App.Pages.RootRoute}>
-      <ReactRouter.DefaultRoute name='info' handler={App.Pages.InfoRoute} />
+    <ReactRouter.Route>
+      <ReactRouter.Redirect from='/' to='clothing' />
       <ReactRouter.NotFoundRoute handler={App.Pages.NotFoundRoute} />
 
       <ReactRouter.Route name='clothing' handler={App.Pages.ClothingRoute}>
+        <ReactRouter.DefaultRoute name='info' handler={App.Pages.InfoRoute} />
         <ReactRouter.Route name='about' handler={App.Pages.AboutRoute} />
         <ReactRouter.Route
           name='essentials'
