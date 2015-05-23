@@ -1,4 +1,4 @@
-//= require ./index
+//= require ../index
 //= require ./model
 
 App.ClothingItem.Collection = (function () {

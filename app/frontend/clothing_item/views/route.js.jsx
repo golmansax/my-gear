@@ -1,4 +1,6 @@
-//= require flux/clothing_item/store
+//= require ../flux/store
+//
+//= require brand/flux/store
 //= require views/purchase/list
 
 App.ClothingItem.Route = (function () {
@@ -21,6 +23,7 @@ App.ClothingItem.Route = (function () {
     },
 
     render: function () {
+      var brand = App.Brand.Store.get(this.state.clothingItem.brandId);
       var imageAttrs = {
         className: 'img-responsive',
         src: this.state.clothingItem.imagePath
@@ -32,7 +35,10 @@ App.ClothingItem.Route = (function () {
             <img {...imageAttrs} />
           </ReactBootstrap.Col>
           <ReactBootstrap.Col sm={6}>
-            <h1>{this.state.clothingItem.name()}</h1>
+            <h1>
+              {brand.name}
+              {this.state.clothingItem.model}
+            </h1>
             <App.Purchase.List ids={this.state.clothingItem.purchaseIds} />
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>

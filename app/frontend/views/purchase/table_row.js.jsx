@@ -1,7 +1,7 @@
 //= require ./index
 //= require flux/purchase/view_model
 //= require views/purpose/label_list
-//= require flux/clothing_item/store
+//= require clothing_item/flux/store
 //= require brand/flux/store
 
 App.Purchase.TableRow = (function () {

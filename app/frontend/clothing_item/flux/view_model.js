@@ -1,4 +1,4 @@
-//= require ./index
+//= require ../index
 //= require ./attributes
 
 App.ClothingItem.ViewModel = (function () {
