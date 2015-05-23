@@ -1,5 +1,5 @@
-//= require ./index
-//= require flux/purchase/view_model
+//= require ../index
+//= require purchase/flux/view_model
 //= require views/purpose/label_list
 //= require clothing_item/flux/store
 //= require brand/flux/store

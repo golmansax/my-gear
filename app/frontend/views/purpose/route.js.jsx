@@ -1,7 +1,7 @@
 //= require ./label
-//= require views/purchase/table
+//= require purchase/views/table
 //= require flux/purpose/store
-//= require flux/purchase/store
+//= require purchase/flux/store
 
 App.Purpose.Route = (function () {
   'use strict';

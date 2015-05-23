@@ -1,6 +1,6 @@
 //= require ./index
-//= require views/purchase/table_from_models
-//= require flux/purchase/store
+//= require purchase/views/table_from_models
+//= require purchase/flux/store
 
 App.Pages.EssentialsRoute = (function () {
   'use strict';

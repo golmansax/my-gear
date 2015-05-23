@@ -1,7 +1,7 @@
 //= require ../flux/store
 //
 //= require brand/flux/store
-//= require views/purchase/list
+//= require purchase/views/list
 
 App.ClothingItem.Route = (function () {
   'use strict';

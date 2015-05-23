@@ -1,7 +1,7 @@
-//= require ./index
-//= require ./list_item
+//= require ../index
+//= require ./grid_item
 
-App.Purchase.List = (function () {
+App.Purchase.Grid = (function () {
   'use strict';
 
   return React.createClass({
@@ -12,15 +12,18 @@ App.Purchase.List = (function () {
     },
 
     _renderPurchase: function (id) {
-      return <App.Purchase.ListItem id={id} key={id} />;
+      return (
+        <ReactBootstrap.Col sm={4} key={id}>
+          <App.Purchase.GridItem id={id} />
+        </ReactBootstrap.Col>
+      );
     },
 
     render: function () {
       return (
-        <div>
-          <h4>Purchases:</h4>
+        <ReactBootstrap.Row>
           {this.props.ids.map(this._renderPurchase)}
-        </div>
+        </ReactBootstrap.Row>
       );
     }
   });

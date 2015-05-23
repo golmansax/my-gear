@@ -1,1 +1,0 @@
-App.Purchase = App.Purchase || {};

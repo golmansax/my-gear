@@ -1,6 +1,6 @@
 //= require ../flux/store
 //
-//= require views/purchase/table
+//= require purchase/views/table
 
 App.Brand.Route = (function () {
   'use strict';

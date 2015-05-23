@@ -2,11 +2,11 @@
 //= require dispatcher
 //= require clothing_item/flux/actions
 //= require flux/purpose/actions
-//= require flux/purchase/actions
+//= require purchase/flux/actions
 //= require brand/flux/actions
 //= require clothing_item/flux/store
 //= require flux/purpose/store
-//= require flux/purchase/store
+//= require purchase/flux/store
 //= require brand/flux/store
 
 App.DataLoading.Actions = (function () {
