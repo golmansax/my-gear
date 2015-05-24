@@ -1,4 +1,4 @@
-//= require pages/layouts/clothing_route
+//= require pages/views/layout
 //= require pages/views/about_route
 //= require pages/views/not_found_route
 //= require pages/views/wardrobe_route
@@ -19,7 +19,7 @@
       <ReactRouter.Redirect from='/' to='clothing' />
       <ReactRouter.NotFoundRoute handler={App.Pages.NotFoundRoute} />
 
-      <ReactRouter.Route name='clothing' handler={App.Pages.ClothingRoute}>
+      <ReactRouter.Route name='clothing' handler={App.Pages.Layout}>
         <ReactRouter.DefaultRoute name='info' handler={App.Pages.InfoRoute} />
         <ReactRouter.Route name='about' handler={App.Pages.AboutRoute} />
         <ReactRouter.Route
