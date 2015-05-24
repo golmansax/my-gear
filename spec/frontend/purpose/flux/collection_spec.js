@@ -1,6 +1,6 @@
-//= require flux/purpose/collection
+//= require purpose/flux/collection
 
-describe('flux/purpose/collection', function () {
+describe('purpose/flux/collection', function () {
   'use strict';
 
   var purposes;

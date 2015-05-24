@@ -2,17 +2,6 @@
 //= require support/backbone_ajax_overrides
 //= require support/prop_types
 //
-// initialize App structure (but does not load modules)
-//= require_self
-//= require brand/index
-//= require purpose/index
-//= require purchase/index
-//= require clothing_item/index
-//= require data_loading/index
-//= require pages/index
-//= require shared/index
-//
+//= require ./module
 //= require support/utils
 //= require router_bootstrap
-
-App = {};

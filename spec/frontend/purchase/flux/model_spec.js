@@ -1,6 +1,6 @@
-//= require flux/purchase/model
+//= require purchase/flux/model
 
-describe('flux/purchase/model', function () {
+describe('purchase/flux/model', function () {
   'use strict';
 
   var purchase;

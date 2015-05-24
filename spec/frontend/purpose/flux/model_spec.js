@@ -1,6 +1,6 @@
-//= require flux/purpose/model
+//= require purpose/flux/model
 
-describe('flux/purpose/model', function () {
+describe('purpose/flux/model', function () {
   'use strict';
 
   var purpose;
