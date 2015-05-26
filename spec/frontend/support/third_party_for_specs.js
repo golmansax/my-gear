@@ -5,7 +5,6 @@
 //= require underscore
 //= require backbone
 //= require backbone-sortable-collection
-//= require backbone.mutators
 //= require backbone.nativeajax
 //
 //= require react
