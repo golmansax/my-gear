@@ -49,10 +49,11 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-flux-crud-store'
   gem 'rails-assets-immutable'
   gem 'rails-assets-moment'
-  gem 'rails-assets-react', '~> 0.12.0'
+  gem 'rails-assets-react'
   gem 'rails-assets-react-bind-mixin'
   gem 'rails-assets-react-bootstrap'
   gem 'rails-assets-react-router'
+  gem 'rails-assets-react-router-bootstrap'
   gem 'rails-assets-stink-bomb'
   gem 'rails-assets-underscore'
 

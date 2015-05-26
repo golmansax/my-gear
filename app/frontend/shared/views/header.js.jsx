@@ -1,5 +1,3 @@
-//= require ./router_nav_item
-//
 //= require purpose/flux/store
 //= require brand/flux/store
 
@@ -72,21 +70,21 @@ App.Shared.Header = (function () {
             </ReactRouter.Link>
           </div>
           <ReactBootstrap.Nav>
-            <App.Shared.RouterNavItem to='about'>
+            <ReactRouterBootstrap.NavItemLink to='about'>
               About
-            </App.Shared.RouterNavItem>
-            <App.Shared.RouterNavItem to='essentials'>
+            </ReactRouterBootstrap.NavItemLink>
+            <ReactRouterBootstrap.NavItemLink to='essentials'>
               Essentials
-            </App.Shared.RouterNavItem>
-            <App.Shared.RouterNavItem to='non-essentials'>
+            </ReactRouterBootstrap.NavItemLink>
+            <ReactRouterBootstrap.NavItemLink to='non-essentials'>
               Non-Essentials
-            </App.Shared.RouterNavItem>
-            <App.Shared.RouterNavItem to='watch-list'>
+            </ReactRouterBootstrap.NavItemLink>
+            <ReactRouterBootstrap.NavItemLink to='watch-list'>
               Watch List
-            </App.Shared.RouterNavItem>
-            <App.Shared.RouterNavItem to='recent-purchases'>
+            </ReactRouterBootstrap.NavItemLink>
+            <ReactRouterBootstrap.NavItemLink to='recent-purchases'>
               Recent Purchases
-            </App.Shared.RouterNavItem>
+            </ReactRouterBootstrap.NavItemLink>
             <ReactBootstrap.DropdownButton title='Brands'>
               {this._renderBrands()}
             </ReactBootstrap.DropdownButton>
