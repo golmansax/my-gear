@@ -1,7 +1,6 @@
-//= require ./header
-//
 //= require data_loading/flux/actions
 //= require data_loading/flux/store
+//= require shared/views/header
 
 App.Pages.Layout = (function () {
   'use strict';
@@ -31,7 +30,7 @@ App.Pages.Layout = (function () {
     render: function () {
       return (
         <div>
-          <App.Pages.Header />
+          <App.Shared.Header />
           <div className='container'>{this._renderContent()}</div>
         </div>
       );
