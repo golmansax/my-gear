@@ -81,6 +81,8 @@
     "React": true,
     "ReactBootstrap": true,
     "ReactRouter": true,
+    "ReactRouterBootstrap": true,
+    "classNames": true,
     "moment": true
   }
 }

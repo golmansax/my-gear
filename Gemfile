@@ -43,8 +43,8 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-backbone'
   gem 'rails-assets-backbone-sortable-collection'
-  gem 'rails-assets-backbone.mutators'
   gem 'rails-assets-backbone.nativeajax'
+  gem 'rails-assets-classnames'
   gem 'rails-assets-es5-shim'
   gem 'rails-assets-flux-crud-store'
   gem 'rails-assets-immutable'

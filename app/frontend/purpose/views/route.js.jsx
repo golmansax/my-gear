@@ -3,6 +3,7 @@
 //
 //= require purchase/views/table
 //= require purchase/flux/store
+//= require shared/views/breadcrumb
 
 App.Purpose.Route = (function () {
   'use strict';
@@ -25,13 +26,14 @@ App.Purpose.Route = (function () {
 
     render: function () {
       var purchaseIds = Immutable.List(this.state.purpose.purchaseIds);
+      var crumbs = [
+        { title: 'Purposes' },
+        { title: this.state.purpose.name }
+      ];
 
       return (
         <div>
-          <ol className='breadcrumb'>
-            <li>Purposes</li>
-            <li className='active'>{this.state.purpose.name}</li>
-          </ol>
+          <App.Shared.Breadcrumb crumbs={crumbs} />
           <h1>
             <App.Purpose.Label id={this.state.purpose.id} />
             ({purchaseIds.size})

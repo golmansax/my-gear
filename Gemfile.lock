@@ -154,9 +154,6 @@ GEM
     rails-assets-backbone-sortable-collection (0.0.7)
       rails-assets-backbone
       rails-assets-underscore
-    rails-assets-backbone.mutators (0.4.5)
-      rails-assets-backbone (>= 1.0.0)
-      rails-assets-underscore (>= 1.4.4)
     rails-assets-backbone.nativeajax (0.3.2)
     rails-assets-chai (2.3.0)
     rails-assets-classnames (2.1.1)
@@ -306,9 +303,9 @@ DEPENDENCIES
   rails (~> 4.2.0)
   rails-assets-backbone!
   rails-assets-backbone-sortable-collection!
-  rails-assets-backbone.mutators!
   rails-assets-backbone.nativeajax!
   rails-assets-chai!
+  rails-assets-classnames!
   rails-assets-dirty-chai!
   rails-assets-es5-shim!
   rails-assets-flux-crud-store!

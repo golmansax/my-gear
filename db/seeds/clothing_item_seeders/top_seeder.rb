@@ -110,7 +110,7 @@ class TopSeeder < ClothingItemSeeder
       model: 'Lightweight Banana Costume',
       purchases: [
         {
-          date: Date.parse('Jan 2015'),
+          date: Date.parse('Nov 2013'),
           version: 'Yellow',
           purposes: %w(Expressive Colorful),
         },

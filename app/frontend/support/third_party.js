@@ -3,7 +3,6 @@
 //= require underscore
 //= require backbone
 //= require backbone-sortable-collection
-//= require backbone.mutators
 //= require backbone.nativeajax
 //
 //= require react
@@ -12,5 +11,6 @@
 //= require react-router
 //= require react-router-bootstrap
 //
+//= require classnames
 //= require immutable
 //= require flux-crud-store
