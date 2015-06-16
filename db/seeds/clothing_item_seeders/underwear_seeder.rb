@@ -33,7 +33,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2014'),
           version: 'Black',
-          purposes: ['Essential'],
         },
       ],
     )
@@ -81,6 +80,11 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Taupe',
+          purposes: %w(Essential Favorite Formal),
+        },
+        {
+          date: Date.parse('June 2015'),
+          version: 'Gray',
           purposes: %w(Essential Favorite Formal),
         },
       ],
