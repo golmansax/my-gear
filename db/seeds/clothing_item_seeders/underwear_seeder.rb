@@ -84,7 +84,7 @@ class UnderwearSeeder < ClothingItemSeeder
         },
         {
           date: Date.parse('June 2015'),
-          version: 'Gray',
+          version: 'Alloy',
           purposes: %w(Essential Favorite Formal),
         },
       ],
