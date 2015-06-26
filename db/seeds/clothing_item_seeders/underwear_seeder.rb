@@ -82,6 +82,13 @@ class UnderwearSeeder < ClothingItemSeeder
           version: 'Taupe',
           purposes: %w(Essential Favorite Formal),
         },
+      ],
+    )
+
+    create_underwear!(
+      brand: 'SmartWool',
+      model: 'Microweight Boxer Brief',
+      purchases: [
         {
           date: Date.parse('June 2015'),
           version: 'Alloy',
