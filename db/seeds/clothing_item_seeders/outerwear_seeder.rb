@@ -49,6 +49,11 @@ class OuterwearSeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_outerwear!(
+      brand: 'Marmot',
+      model: 'PreCip Jacket',
+    )
   end
 
   def create_outerwear!(outerwear_params)
