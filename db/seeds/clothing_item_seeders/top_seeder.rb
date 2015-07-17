@@ -8,8 +8,13 @@ class TopSeeder < ClothingItemSeeder
       purchases: [
         {
           date: Date.parse('July 2014'),
-          version: 'Yellow',
+          version: 'Fuse',
           purposes: %w(Essential Colorful),
+        },
+        {
+          date: Date.parse('July 2015'),
+          version: 'Maroon',
+          purposes: %w(Essential Colorful Favorite),
         },
       ],
     )

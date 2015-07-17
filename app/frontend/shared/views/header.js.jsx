@@ -66,7 +66,7 @@ App.Shared.Header = (function () {
         <ReactBootstrap.Navbar>
           <div className='navbar-header'>
             <ReactRouter.Link className='navbar-brand' to='/'>
-              HOME
+              My Gear
             </ReactRouter.Link>
           </div>
           <ReactBootstrap.Nav>

@@ -5,7 +5,7 @@
 //= require backbone-sortable-collection
 //= require backbone.nativeajax
 //
-//= require react
+//= require react/react-with-addons
 //= require react-bind-mixin
 //= require react-bootstrap
 //= require react-router

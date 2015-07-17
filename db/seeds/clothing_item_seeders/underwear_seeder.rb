@@ -39,6 +39,18 @@ class UnderwearSeeder < ClothingItemSeeder
 
     create_underwear!(
       brand: 'ExOfficio',
+      model: 'Give-N-Go Printed Boxer Brief',
+      purchases: [
+        {
+          date: Date.parse('Jul 2015'),
+          version: 'Map/Light Lapis',
+          purposes: %w(Essential Colorful),
+        },
+      ],
+    )
+
+    create_underwear!(
+      brand: 'ExOfficio',
       model: 'Give-N-Go Sport Brief',
       purchases: [
         {
