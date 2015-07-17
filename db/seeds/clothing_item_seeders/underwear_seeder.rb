@@ -104,7 +104,7 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2015'),
           version: 'Alloy',
-          purposes: %w(Essential Favorite Formal),
+          purposes: %w(Essential Formal),
         },
       ],
     )
