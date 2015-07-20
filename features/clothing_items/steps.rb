@@ -1,5 +1,8 @@
 Given 'I have an essential clothing item' do
-  @essential = Top.create!(brand: Brand.new(name: 'Marmot'), model: 'Jacket')
+  brand = Brand.new(name: 'Marmot')
+  @clothing_item = Top.create!(brand: brand, model: 'Jacket')
+  @clothing_item.purchases.create!(date: Time.zone.now, version: 'Green')
+  @clothing_item.purchases.first.purposes.create!(name: 'essential')
 end
 
 When 'I go to a list of essentials' do

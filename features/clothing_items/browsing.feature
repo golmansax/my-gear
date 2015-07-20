@@ -1,3 +1,4 @@
+@javascript
 Feature: Clothing items browsing
 
   Scenario: Go to essentials
