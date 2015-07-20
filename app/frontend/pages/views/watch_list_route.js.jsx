@@ -1,3 +1,4 @@
+//= require brand/flux/store
 //= require clothing_item/flux/store
 
 App.Pages.WatchListRoute = (function () {
@@ -26,7 +27,8 @@ App.Pages.WatchListRoute = (function () {
     },
 
     _renderWatchListItem: function (clothingItem) {
-      return <div key={clothingItem.id}>{clothingItem.model}</div>;
+      var brand = App.Brand.Store.get(clothingItem.brandId);
+      return <div key={clothingItem.id}>{brand.name} {clothingItem.model}</div>;
     },
 
     render: function () {
