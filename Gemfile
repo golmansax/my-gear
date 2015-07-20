@@ -18,7 +18,6 @@ gem 'uglifier'
 
 group :development, :test do
   gem 'bullet'
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'magic_lamp'
   gem 'rspec-rails'
@@ -28,6 +27,13 @@ group :development, :test do
   gem 'coffee-rails' # Needed by teaspoon...
   gem 'teaspoon-mocha'
   gem 'travis'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 group :development do
