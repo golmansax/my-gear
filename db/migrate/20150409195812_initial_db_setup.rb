@@ -2,9 +2,9 @@ class InitialDbSetup < ActiveRecord::Migration
   def change
     create_table :clothing_items do |t|
       t.string :model, null: false
-      t.string :brand, null: false
       t.string :type, null: false
       t.string :slug, null: false
+      t.integer :brand_id, null: false
 
       t.timestamps
     end
@@ -43,6 +43,12 @@ class InitialDbSetup < ActiveRecord::Migration
       t.date :date, null: false
       t.integer :clothing_item_id, null: false
 
+      t.timestamps
+    end
+
+    create_table :brands do |t|
+      t.string :name, null: false
+      t.string :slug, null: false
       t.timestamps
     end
   end
