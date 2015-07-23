@@ -1,6 +1,5 @@
 //= require support/third_party_for_specs
 //= require support/prop_types
-//= require support/test_utils
 //= require support/mock_react_router
 //= require support/magic_lamp
 //= require module

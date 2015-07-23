@@ -12,7 +12,7 @@ App.Purchase.TableRow = (function () {
     ],
 
     propTypes: {
-      id: PropTypes.number.isRequired
+      id: React.PropTypes.number.isRequired
     },
 
     getStateFromStore: function (props) {

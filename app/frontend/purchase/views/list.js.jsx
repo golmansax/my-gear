@@ -7,7 +7,7 @@ App.Purchase.List = (function () {
     mixins: [React.addons.PureRenderMixin],
 
     propTypes: {
-      ids: PropTypes.arrayOf(PropTypes.number).isRequired
+      ids: React.PropTypes.arrayOf(React.PropTypes.number).isRequired
     },
 
     _renderPurchase: function (id) {

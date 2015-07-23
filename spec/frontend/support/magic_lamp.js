@@ -4,25 +4,25 @@
 var MagicLamp = (function (OldMagicLamp) {
   'use strict';
 
-  return _(OldMagicLamp).extend({
-    json: function (path) {
-      var cachedPartial = MagicLamp.genie.cache[path];
+  OldMagicLamp.json = function (path) {
+    var cachedPartial = MagicLamp.genie.cache[path];
 
-      if (!cachedPartial) {
-        throw 'The following path has not been loaded yet: ' + path;
-      }
-
-      return window.JSON.parse(cachedPartial);
-    },
-
-    rawJson: function (path) {
-      var cachedPartial = MagicLamp.genie.cache[path];
-
-      if (!cachedPartial) {
-        throw 'The following path has not been loaded yet: ' + path;
-      }
-
-      return cachedPartial;
+    if (!cachedPartial) {
+      throw 'The following path has not been loaded yet: ' + path;
     }
-  });
+
+    return window.JSON.parse(cachedPartial);
+  };
+
+  OldMagicLamp.rawJson = function (path) {
+    var cachedPartial = MagicLamp.genie.cache[path];
+
+    if (!cachedPartial) {
+      throw 'The following path has not been loaded yet: ' + path;
+    }
+
+    return cachedPartial;
+  };
+
+  return OldMagicLamp;
 })(MagicLamp);

@@ -48,9 +48,6 @@ group :production do
 end
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-backbone'
-  gem 'rails-assets-backbone-sortable-collection'
-  gem 'rails-assets-backbone.nativeajax'
   gem 'rails-assets-classnames'
   gem 'rails-assets-EventEmitter.js'
   gem 'rails-assets-es5-shim'
@@ -65,7 +62,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-react-router-bootstrap', '~> 0.16.0'
   gem 'rails-assets-reqwest'
   gem 'rails-assets-stink-bomb'
-  gem 'rails-assets-underscore'
 
   group :development, :test do
     gem 'rails-assets-chai'

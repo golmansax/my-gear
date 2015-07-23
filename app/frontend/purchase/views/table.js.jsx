@@ -7,7 +7,7 @@ App.Purchase.Table = (function () {
     mixins: [React.addons.PureRenderMixin],
 
     propTypes: {
-      ids: PropTypes.instanceOf(Immutable.List).isRequired
+      ids: React.PropTypes.instanceOf(Immutable.List).isRequired
     },
 
     _renderPurchases: function () {

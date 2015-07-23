@@ -3,28 +3,37 @@
 App.DataLoading.Store = (function () {
   'use strict';
 
-  var BACKBONE_EVENTS = 'change';
-  var _storage = new Backbone.Model({
-    defaults: { isLoading: false }
-  });
+  var _isLoading = false;
+  var _listeners = [];
 
   App.Dispatcher.register(function (action) {
     if (action.actionType === 'DataLoading.Store.setLoading') {
-      _storage.set('isLoading', action.value);
+      if (_isLoading !== action.value) {
+        _isLoading = action.value;
+        _emitChange();
+      }
     }
   });
 
+  function _emitChange() {
+    _listeners.forEach(function (listener) {
+      listener();
+    });
+  }
+
   return {
-    addChangeListener: function (callback) {
-      _storage.on(BACKBONE_EVENTS, callback);
+    addChangeListener: function (listener) {
+      _listeners.push(listener);
     },
 
-    removeChangeListener: function (callback) {
-      _storage.off(BACKBONE_EVENTS, callback);
+    removeChangeListener: function (myListener) {
+      _listeners = _listeners.filter(function (listener) {
+        return listener !== myListener;
+      });
     },
 
     isLoading: function () {
-      return _storage.get('isLoading');
+      return _isLoading;
     }
   };
 })();

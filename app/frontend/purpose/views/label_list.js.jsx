@@ -7,7 +7,7 @@ App.Purpose.LabelList = (function () {
     mixins: [React.addons.PureRenderMixin],
 
     propTypes: {
-      ids: PropTypes.arrayOf(PropTypes.string).isRequired
+      ids: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
     },
 
     _renderPurpose: function (id) {
