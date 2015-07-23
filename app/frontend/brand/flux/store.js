@@ -1,11 +1,17 @@
-//= require ./collection
-//= require ./view_model
+//= require ./constants
 
 App.Brand.Store = (function () {
   'use strict';
 
-  return FluxCrudStore.Store.extend({
-    collection: App.Brand.Collection,
-    viewModel: App.Brand.ViewModel
-  }).instance();
+  return new FluxCrud.Store({
+    defaultAttrs: {
+      id: null,
+      name: '',
+      purchaseIds: []
+    },
+
+    dispatcher: App.Dispatcher,
+
+    constants: App.Brand.Constants
+  });
 })();

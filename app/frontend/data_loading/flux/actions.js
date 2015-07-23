@@ -15,39 +15,50 @@ App.DataLoading.Actions = (function () {
     'ClothingItem', 'Purpose', 'Brand', 'Purchase'
   ];
 
-  function _loadingListener() {
-    if (REGISTERED_MODELS.some(_isStoreLoading)) {
-      return;
-    }
+  var isLoading = {};
 
-    App.Dispatcher.trigger('DataLoading.Store.setLoading', false);
+  function _loadingListener(model, collectionData) {
+    isLoading[model] = false;
 
-    REGISTERED_MODELS.forEach(_removeLoadingListenerFromStore);
+    collectionData.forEach(function (modelData) {
+      var key = modelData.id || modelData.slug;
+      App[model].Actions.create(key, modelData);
+    });
+
+    if (!_areAllLoaded()) { return; }
+
+    App.Dispatcher.dispatch({
+      actionType: 'DataLoading.Store.setLoading',
+      value: false
+    });
+  }
+
+  function _areAllLoaded() {
+    return REGISTERED_MODELS.every(function (model) {
+      return isLoading[model] === false;
+    });
   }
 
   function _isStoreLoading(model) {
     return App[model].Store.getAll().isLoading;
   }
 
-  function _removeLoadingListenerFromStore(model) {
-    App[model].Store.removeChangeListener(_loadingListener);
-  }
-
-  function _addLoadingListenerToStore(model) {
-    App[model].Store.addChangeListener(_loadingListener);
-  }
-
   function _fetchAll(model) {
-    App[model].Actions.fetchAll();
+    isLoading[model] = true;
+
+    var path = model === 'ClothingItem' ? 'clothing_item' : model.toLowerCase();
+    reqwest({ url: '/' + path + 's', type: 'json' })
+        .then(_loadingListener.bind(this, model));
   }
 
   return {
     fetchAll: function () {
       REGISTERED_MODELS.forEach(_fetchAll);
 
-      App.Dispatcher.trigger('DataLoading.Store.setLoading', true);
-
-      REGISTERED_MODELS.forEach(_addLoadingListenerToStore);
+      App.Dispatcher.dispatch({
+        actionType: 'DataLoading.Store.setLoading',
+        value: true
+      });
     }
   };
 })();

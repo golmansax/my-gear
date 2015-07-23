@@ -8,8 +8,10 @@ App.DataLoading.Store = (function () {
     defaults: { isLoading: false }
   });
 
-  App.Dispatcher.on('DataLoading.Store.setLoading', function (value) {
-    _storage.set('isLoading', value);
+  App.Dispatcher.register(function (action) {
+    if (action.actionType === 'DataLoading.Store.setLoading') {
+      _storage.set('isLoading', action.value);
+    }
   });
 
   return {

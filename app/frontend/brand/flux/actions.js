@@ -1,7 +1,10 @@
-//= require ./store
+//= require ./constants
 
 App.Brand.Actions = (function () {
   'use strict';
 
-  return FluxCrudStore.Actions.boundTo(App.Brand.Store);
+  return new FluxCrud.Actions({
+    dispatcher: App.Dispatcher,
+    constants: App.Brand.Constants
+  });
 })();

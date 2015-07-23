@@ -11,6 +11,8 @@
 //= require react-router
 //= require react-router-bootstrap
 //
+//= require reqwest
+//= require flux
 //= require classnames
 //= require immutable
-//= require flux-crud-store
+//= require flux-crud/flux_crud_es5

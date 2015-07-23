@@ -12,7 +12,7 @@
 //= require react-bootstrap
 //
 //= require immutable
-//= require flux-crud-store
+//= require flux-crud/flux_crud_es5
 //
 //= require chai
 //= require support/sinon
