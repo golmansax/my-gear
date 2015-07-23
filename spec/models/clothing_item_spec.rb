@@ -14,6 +14,6 @@ describe ClothingItem do
   it 'throws an error if a clothing item is saved without a brand' do
     expect do
       create(:clothing_item, brand: nil)
-    end.to raise_error
+    end.to raise_error(NoMethodError)
   end
 end
