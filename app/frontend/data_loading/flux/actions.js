@@ -15,10 +15,10 @@ App.DataLoading.Actions = (function () {
     'ClothingItem', 'Purpose', 'Brand', 'Purchase'
   ];
 
-  var isLoading = {};
+  var _isLoading = {};
 
   function _loadingListener(model, collectionData) {
-    isLoading[model] = false;
+    _isLoading[model] = false;
 
     collectionData.forEach(function (modelData) {
       var key = modelData.id || modelData.slug;
@@ -35,20 +35,16 @@ App.DataLoading.Actions = (function () {
 
   function _areAllLoaded() {
     return REGISTERED_MODELS.every(function (model) {
-      return isLoading[model] === false;
+      return _isLoading[model] === false;
     });
   }
 
-  function _isStoreLoading(model) {
-    return App[model].Store.getAll().isLoading;
-  }
-
   function _fetchAll(model) {
-    isLoading[model] = true;
+    _isLoading[model] = true;
 
     var path = model === 'ClothingItem' ? 'clothing_item' : model.toLowerCase();
     reqwest({ url: '/' + path + 's', type: 'json' })
-        .then(_loadingListener.bind(this, model));
+        .then(_loadingListener.bind(null, model));
   }
 
   return {

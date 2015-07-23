@@ -75,7 +75,7 @@
     "_": true,
     "App": true,
     "Backbone": true,
-    "FluxCrudStore": true,
+    "FluxCrud": true,
     "Immutable": true,
     "PropTypes": true,
     "React": true,
@@ -83,6 +83,7 @@
     "ReactRouter": true,
     "ReactRouterBootstrap": true,
     "classNames": true,
-    "moment": true
+    "moment": true,
+    "reqwest": true
   }
 }
