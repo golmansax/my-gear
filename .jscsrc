@@ -1,5 +1,6 @@
 {
-  "preset": "google",
+  "preset": "airbnb",
+  "esnext": true,
   "excludeFiles": ["coverage/**", "tmp/**", "node_modules/**", "vendor/**", "public/assets/**"],
   "fileExtensions": [".js", ".jsx"],
 
@@ -9,6 +10,8 @@
 
   "disallowSpacesInAnonymousFunctionExpression": null,
 
+  "disallowSpacesInFunctionExpression": null,
+
   "disallowSpacesInsideObjectBrackets": null,
 
   "requireSpaceBeforeObjectValues": true,
@@ -17,5 +20,7 @@
 
   "requireSpacesInAnonymousFunctionExpression": {
     "beforeOpeningRoundBrace": true
-  }
+  },
+
+  "requireTrailingComma": null
 }

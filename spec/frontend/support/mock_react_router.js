@@ -7,9 +7,9 @@ ReactRouter = (function () {
     Link: TestUtils.MockComponent,
     RouteHandler: TestUtils.MockComponent,
     State: {
-      getParams: function () {},
-      getQuery: function () {},
-      isActive: function () {}
+      getParams: sinon.spy(),
+      getQuery: sinon.spy(),
+      isActive: sinon.spy()
     }
   };
 })();

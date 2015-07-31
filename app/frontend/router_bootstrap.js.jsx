@@ -11,13 +11,16 @@
     getInitialState: function () {
       return { Handler: null, params: {} };
     },
+
     componentWillMount: function () {
       var routePath = onClient ? ReactRouter.HistoryLocation : this.props.path;
       ReactRouter.run(App.routes, routePath, this._onRouteChange);
     },
+
     _onRouteChange: function (Handler, state) {
       this.setState({ Handler: Handler, params: state.params });
     },
+
     render: function () {
       return <this.state.Handler {...(this.state.params)} />;
     }
