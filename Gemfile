@@ -59,7 +59,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-react-bind-mixin'
   gem 'rails-assets-react-bootstrap'
   gem 'rails-assets-react-router'
-  gem 'rails-assets-react-router-bootstrap', '~> 0.16.0'
+  gem 'rails-assets-react-router-bootstrap'
   gem 'rails-assets-reqwest'
   gem 'rails-assets-stink-bomb'
 

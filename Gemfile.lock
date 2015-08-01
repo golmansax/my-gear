@@ -192,7 +192,7 @@ GEM
     rails-assets-react-bootstrap (0.24.3)
       rails-assets-react (>= 0.13)
     rails-assets-react-router (0.13.3)
-    rails-assets-react-router-bootstrap (0.16.0)
+    rails-assets-react-router-bootstrap (0.18.0)
       rails-assets-react-bootstrap (>= 0.22.4)
       rails-assets-react-router (>= 0.13.1)
     rails-assets-reqwest (2.0.1)
@@ -343,7 +343,7 @@ DEPENDENCIES
   rails-assets-react-bind-mixin!
   rails-assets-react-bootstrap!
   rails-assets-react-router!
-  rails-assets-react-router-bootstrap (~> 0.16.0)!
+  rails-assets-react-router-bootstrap!
   rails-assets-reqwest!
   rails-assets-stink-bomb!
   rails_12factor
