@@ -13,7 +13,6 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Charcoal',
-          purposes: %w(Formal),
         },
       ],
     )
@@ -34,7 +33,17 @@ class SockSeeder < ClothingItemSeeder
       ],
     )
 
-    # Really thick socks
+    create_sock!(
+      brand: 'Injinji',
+      model: 'Outdoor 2.0 Original Weight NuWool Crew',
+      purchases: [
+        {
+          date: Date.parse('Aug 2015'),
+          version: 'Charcoal',
+          purposes: %w(Tennis),
+        },
+      ],
+    )
   end
 
   def create_sock!(sock_params)
