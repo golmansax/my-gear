@@ -126,6 +126,11 @@ class TopSeeder < ClothingItemSeeder
       brand: 'Vulpine',
       model: "Men's Merino Henley",
     )
+
+    create_top!(
+      brand: 'Mizzen+Main',
+      model: 'Wright Gingham Button Down',
+    )
   end
 
   def create_top!(top_params)
