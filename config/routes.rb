@@ -17,7 +17,6 @@ Rails.application.routes.draw do
     get '*path', to: 'pages#index'
   end
 
-  resources :clothing_items, only: :index
   resources :purposes, only: :index
   resources :purchases, only: :index
   resources :brands, only: :index

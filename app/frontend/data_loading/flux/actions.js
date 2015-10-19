@@ -42,9 +42,32 @@ App.DataLoading.Actions = (function () {
   function _fetchAll(model) {
     _isLoading[model] = true;
 
-    var path = model === 'ClothingItem' ? 'clothing_item' : model.toLowerCase();
-    reqwest({ url: '/' + path + 's', type: 'json' })
-        .then(_loadingListener.bind(null, model));
+    if (model === 'ClothingItem') {
+      reqwest({
+        url: '/graph_ql',
+        method: 'post',
+        type: 'json',
+        data: {
+          query: [
+            'query {',
+            '  clothingItems {',
+            '    id,',
+            '    type,',
+            '    model,',
+            '    imagePath,',
+            '    brandId,',
+            '    purchaseIds,',
+            '  }',
+            '}',
+          ].join('')
+        }
+      }).then(function (result) {
+        _loadingListener(model, result.data.clothingItems);
+      });
+    } else {
+      reqwest({ url: '/' + model.toLowerCase() + 's', type: 'json' })
+          .then(_loadingListener.bind(null, model));
+    }
   }
 
   return {
