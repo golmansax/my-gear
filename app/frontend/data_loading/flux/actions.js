@@ -58,7 +58,7 @@ App.DataLoading.Actions = (function () {
             '    brandId,',
             '    purchaseIds,',
             '  }',
-            '}',
+            '}'
           ].join('')
         }
       }).then(function (result) {
