@@ -19,12 +19,9 @@ gem 'uglifier'
 
 group :development, :test do
   gem 'bullet'
-  gem 'factory_girl_rails'
   gem 'magic_lamp'
-  gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rspec'
-  gem 'shoulda-matchers', require: false
   gem 'coffee-rails' # Needed by teaspoon...
   gem 'teaspoon-mocha'
   gem 'travis'
@@ -34,7 +31,10 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
 end
 
 group :development do
