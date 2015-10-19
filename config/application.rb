@@ -25,6 +25,7 @@ module MyGear
     # config.i18n.default_locale = :de
 
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
+    config.autoload_paths << Rails.root.join('app', 'graph_ql', 'my_gear_schema.rb')
 
     config.react.component_filenames = ['application.js']
     config.react.react_js -> {}

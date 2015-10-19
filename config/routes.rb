@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :purposes, only: :index
   resources :purchases, only: :index
   resources :brands, only: :index
+  resources :graph_ql, only: :create
 end

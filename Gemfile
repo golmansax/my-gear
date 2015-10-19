@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'friendly_id'
 gem 'jbuilder'
 gem 'gon' # depends on jbuilder
+gem 'graphql'
 gem 'react-rails'
 gem 'sass-rails'
 gem 'stink_bomb'
