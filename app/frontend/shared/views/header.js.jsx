@@ -7,7 +7,8 @@ App.Shared.Header = (function () {
   return React.createClass({
     mixins: [
       React.BindMixin(App.Purpose.Store, 'getPurposeStateFromStore'),
-      React.BindMixin(App.Brand.Store, 'getBrandStateFromStore')
+      React.BindMixin(App.Brand.Store, 'getBrandStateFromStore'),
+      React.PureRenderMixin
     ],
 
     getPurposeStateFromStore: function () {
@@ -37,11 +38,11 @@ App.Shared.Header = (function () {
       };
 
       return (
-        <li key={item.id}>
+        <ReactBootstrap.MenuItem key={item.id}>
           <ReactRouter.Link {...itemAttrs}>
             {item.name}
           </ReactRouter.Link>
-        </li>
+        </ReactBootstrap.MenuItem>
       );
     },
 
@@ -85,12 +86,18 @@ App.Shared.Header = (function () {
             <ReactRouterBootstrap.NavItemLink to='recent-purchases'>
               Recent Purchases
             </ReactRouterBootstrap.NavItemLink>
-            <ReactBootstrap.DropdownButton title='Brands'>
+            <ReactBootstrap.NavDropdown
+              title='Brands'
+              id='header-brands-dropdown'
+              >
               {this._renderBrands()}
-            </ReactBootstrap.DropdownButton>
-            <ReactBootstrap.DropdownButton title='Purposes'>
+            </ReactBootstrap.NavDropdown>
+            <ReactBootstrap.NavDropdown
+              title='Purposes'
+              id='header-purposes-dropdown'
+              >
               {this._renderPurposes()}
-            </ReactBootstrap.DropdownButton>
+            </ReactBootstrap.NavDropdown>
           </ReactBootstrap.Nav>
         </ReactBootstrap.Navbar>
       );
