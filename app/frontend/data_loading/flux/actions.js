@@ -12,96 +12,58 @@
 App.DataLoading.Actions = (function () {
   'use strict';
 
-  var REGISTERED_MODELS = [
-    'ClothingItem', 'Purpose', 'Brand', 'Purchase'
-  ];
-
-  var _isLoading = {};
-
-  function _loadingListener(model, collectionData) {
-    _isLoading[model] = false;
-
+  function _loadModels(Model, collectionData) {
     collectionData.forEach(function (modelData) {
-      var key = modelData.id || modelData.slug;
-      App[model].Actions.create(key, modelData);
-    });
-
-    if (!_areAllLoaded()) { return; }
-
-    App.Dispatcher.dispatch({
-      actionType: 'DataLoading.Store.setLoading',
-      value: false
+      var key = modelData.id;
+      App[Model].Actions.create(key, modelData);
     });
   }
 
-  function _areAllLoaded() {
-    return REGISTERED_MODELS.every(function (model) {
-      return _isLoading[model] === false;
+  function _fetchAllThroughGraphQl() {
+    App.GraphQl.query([
+      'query {',
+      '  clothingItems {',
+      '    id,',
+      '    type,',
+      '    model,',
+      '    imagePath,',
+      '    brandId,',
+      '    purchaseIds,',
+      '  }',
+      '  brands {',
+      '    id,',
+      '    name,',
+      '    purchaseIds,',
+      '  }',
+      '  purchases {',
+      '    id,',
+      '    clothingItemId,',
+      '    purposeIds,',
+      '    date,',
+      '    version,',
+      '  }',
+      '  purposes {',
+      '    id,',
+      '    name,',
+      '    purchaseIds,',
+      '  }',
+      '}'
+    ].join('')).then(function (result) {
+      _loadModels('Brand', result.data.brands);
+      _loadModels('ClothingItem', result.data.clothingItems);
+      _loadModels('Purchase', result.data.purchases);
+      _loadModels('Purpose', result.data.purposes);
+
+      App.Dispatcher.dispatch({
+        actionType: 'DataLoading.Store.setLoading',
+        value: false
+      });
     });
-  }
-
-  function _fetchAll(model) {
-    _isLoading[model] = true;
-
-    if (model === 'ClothingItem') {
-      App.GraphQl.query([
-        'query {',
-        '  clothingItems {',
-        '    id,',
-        '    type,',
-        '    model,',
-        '    imagePath,',
-        '    brandId,',
-        '    purchaseIds,',
-        '  }',
-        '}'
-      ].join('')).then(function (result) {
-        _loadingListener(model, result.data.clothingItems);
-      });
-    } else if (model === 'Brand') {
-      App.GraphQl.query([
-        'query {',
-        '  brands {',
-        '    id,',
-        '    name,',
-        '    purchaseIds,',
-        '  }',
-        '}'
-      ].join('')).then(function (result) {
-        _loadingListener(model, result.data.brands);
-      });
-    } else if (model === 'Purchase') {
-      App.GraphQl.query([
-        'query {',
-        '  purchases {',
-        '    id,',
-        '    clothingItemId,',
-        '    purposeIds,',
-        '    date,',
-        '    version,',
-        '  }',
-        '}'
-      ].join('')).then(function (result) {
-        _loadingListener(model, result.data.purchases);
-      });
-    } else if (model === 'Purpose') {
-      App.GraphQl.query([
-        'query {',
-        '  purposes {',
-        '    id,',
-        '    name,',
-        '    purchaseIds,',
-        '  }',
-        '}'
-      ].join('')).then(function (result) {
-        _loadingListener(model, result.data.purposes);
-      });
-    }
   }
 
   return {
     fetchAll: function () {
-      REGISTERED_MODELS.forEach(_fetchAll);
+      _fetchAllThroughGraphQl();
 
       App.Dispatcher.dispatch({
         actionType: 'DataLoading.Store.setLoading',
