@@ -70,6 +70,20 @@ App.DataLoading.Actions = (function () {
       ].join('')).then(function (result) {
         _loadingListener(model, result.data.brands);
       });
+    } else if (model === 'Purchase') {
+      App.GraphQl.query([
+        'query {',
+        '  purchases {',
+        '    id,',
+        '    clothingItemId,',
+        '    purposeIds,',
+        '    date,',
+        '    version,',
+        '  }',
+        '}'
+      ].join('')).then(function (result) {
+        _loadingListener(model, result.data.purchases);
+      });
     } else {
       reqwest({ url: '/' + model.toLowerCase() + 's', type: 'json' })
           .then(_loadingListener.bind(null, model));

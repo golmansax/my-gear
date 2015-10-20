@@ -1,6 +1,3 @@
-require_relative 'brand_type'
-require_relative 'clothing_item_type'
-
 QueryType = GraphQL::ObjectType.define do
   name 'Query'
   description 'The query root of this schema'
@@ -15,5 +12,11 @@ QueryType = GraphQL::ObjectType.define do
     type !types[!BrandType]
     description 'All brands'
     resolve proc { Brand.all.includes(:purchases) }
+  end
+
+  field :purchases do
+    type !types[!PurchaseType]
+    description 'All purchases'
+    resolve proc { Purchase.all.includes(:purposes, :clothing_item) }
   end
 end

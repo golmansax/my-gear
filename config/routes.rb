@@ -18,6 +18,5 @@ Rails.application.routes.draw do
   end
 
   resources :purposes, only: :index
-  resources :purchases, only: :index
   resources :graph_ql, only: :create
 end
