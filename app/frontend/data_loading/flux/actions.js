@@ -1,4 +1,5 @@
 //= require dispatcher
+//= require graph_ql
 //= require clothing_item/flux/actions
 //= require purpose/flux/actions
 //= require purchase/flux/actions
@@ -43,26 +44,31 @@ App.DataLoading.Actions = (function () {
     _isLoading[model] = true;
 
     if (model === 'ClothingItem') {
-      reqwest({
-        url: '/graph_ql',
-        method: 'post',
-        type: 'json',
-        data: {
-          query: [
-            'query {',
-            '  clothingItems {',
-            '    id,',
-            '    type,',
-            '    model,',
-            '    imagePath,',
-            '    brandId,',
-            '    purchaseIds,',
-            '  }',
-            '}'
-          ].join('')
-        }
-      }).then(function (result) {
+      App.GraphQl.query([
+        'query {',
+        '  clothingItems {',
+        '    id,',
+        '    type,',
+        '    model,',
+        '    imagePath,',
+        '    brandId,',
+        '    purchaseIds,',
+        '  }',
+        '}'
+      ].join('')).then(function (result) {
         _loadingListener(model, result.data.clothingItems);
+      });
+    } else if (model === 'Brand') {
+      App.GraphQl.query([
+        'query {',
+        '  brands {',
+        '    id,',
+        '    name,',
+        '    purchaseIds,',
+        '  }',
+        '}'
+      ].join('')).then(function (result) {
+        _loadingListener(model, result.data.brands);
       });
     } else {
       reqwest({ url: '/' + model.toLowerCase() + 's', type: 'json' })
