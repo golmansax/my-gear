@@ -84,9 +84,18 @@ App.DataLoading.Actions = (function () {
       ].join('')).then(function (result) {
         _loadingListener(model, result.data.purchases);
       });
-    } else {
-      reqwest({ url: '/' + model.toLowerCase() + 's', type: 'json' })
-          .then(_loadingListener.bind(null, model));
+    } else if (model === 'Purpose') {
+      App.GraphQl.query([
+        'query {',
+        '  purposes {',
+        '    id,',
+        '    name,',
+        '    purchaseIds,',
+        '  }',
+        '}'
+      ].join('')).then(function (result) {
+        _loadingListener(model, result.data.purposes);
+      });
     }
   }
 

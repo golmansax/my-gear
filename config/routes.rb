@@ -16,7 +16,5 @@ Rails.application.routes.draw do
   scope constraints: HtmlConstraint.new do
     get '*path', to: 'pages#index'
   end
-
-  resources :purposes, only: :index
   resources :graph_ql, only: :create
 end

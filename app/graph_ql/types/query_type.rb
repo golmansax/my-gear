@@ -19,4 +19,10 @@ QueryType = GraphQL::ObjectType.define do
     description 'All purchases'
     resolve proc { Purchase.all.includes(:purposes, :clothing_item) }
   end
+
+  field :purposes do
+    type !types[!PurposeType]
+    description 'All purposes'
+    resolve proc { Purpose.all.includes(:purchases) }
+  end
 end
