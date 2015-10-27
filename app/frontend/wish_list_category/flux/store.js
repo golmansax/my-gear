@@ -7,7 +7,7 @@ App.WishListCategory.Store = (function () {
     defaultAttrs: {
       id: null,
       name: '',
-      clothingItemIds: [],
+      clothingItemIds: []
     },
 
     dispatcher: App.Dispatcher,
