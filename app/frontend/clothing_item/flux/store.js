@@ -5,7 +5,6 @@ App.ClothingItem.Store = (function () {
 
   return new FluxCrud.Store({
     defaultAttrs: {
-      brand: '',
       brandId: null,
       model: '',
       type: '',

@@ -8,8 +8,8 @@
 //= require purpose/views/route
 //= require brand/views/route
 //= require pages/views/recent_route
-//= require pages/views/wish_list_route
 //= require pages/views/info_route
+//= require wish_list_category/views/index_route
 
 (function () {
   'use strict';
@@ -32,7 +32,7 @@
         />
         <ReactRouter.Route
           name='wish-list'
-          handler={App.Pages.WishListRoute}
+          handler={App.WishListCategory.IndexRoute}
         />
         <ReactRouter.Route
           name='recent-purchases'

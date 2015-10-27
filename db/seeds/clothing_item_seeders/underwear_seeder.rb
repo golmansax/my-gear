@@ -94,6 +94,11 @@ class UnderwearSeeder < ClothingItemSeeder
           version: 'Taupe',
           purposes: %w(Essential Favorite Formal),
         },
+        {
+          date: Date.parse('Oct 2015'),
+          version: 'Green',
+          purposes: %w(Essential Favorite Colorful),
+        },
       ],
     )
 

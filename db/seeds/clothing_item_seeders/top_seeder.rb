@@ -9,12 +9,12 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: 'Fuse',
-          purposes: %w(Essential Colorful),
+          purposes: %w(Backup Colorful),
         },
         {
           date: Date.parse('July 2015'),
           version: 'Maroon',
-          purposes: %w(Essential Colorful Favorite),
+          purposes: ['Essential', 'Colorful', 'Favorite', 'For Girlfriend'],
         },
       ],
     )
@@ -26,7 +26,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2014'),
           version: 'Blue Oxford',
-          purposes: ['Essential', 'Formal', 'For Girlfriend'],
+          purposes: ['Backup', 'Formal', 'For Girlfriend'],
         },
         {
           date: Date.parse('Feb 2015'),
@@ -93,7 +93,18 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2013'),
           version: 'Athletic Blue – Red Hot Chili Peppers – Scar Tissue',
-          purposes: ['Lounging', 'For Girlfriend', 'Expressive'],
+        },
+      ],
+    )
+
+    create_top!(
+      brand: 'PrAna',
+      model: 'T-shirt',
+      purchases: [
+        {
+          date: Date.parse('Oct 2013'),
+          version: 'Crops – Toffee',
+          purposes: ['Colorful', 'Lounging', 'For Girlfriend'],
         },
       ],
     )
@@ -129,7 +140,14 @@ class TopSeeder < ClothingItemSeeder
 
     create_top!(
       brand: 'Mizzen+Main',
-      model: 'Wright Gingham Button Down',
+      model: 'Button Down',
+      purchases: [
+        {
+          date: Date.parse('Oct 2015'),
+          version: 'Morgan – Green',
+          purposes: ['Essential', 'Formal' 'For Girlfriend', 'Colorful'],
+        },
+      ],
     )
   end
 
