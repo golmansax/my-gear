@@ -1,7 +1,7 @@
 //= require brand/flux/store
 //= require clothing_item/flux/store
 
-App.Pages.WatchListRoute = (function () {
+App.Pages.WishListRoute = (function () {
   'use strict';
 
   return React.createClass({
@@ -16,35 +16,35 @@ App.Pages.WatchListRoute = (function () {
       };
     },
 
-    _renderBlankWatchList: function () {
+    _renderBlankWishList: function () {
       return (
         <div>
-          <h1>Watch List</h1>
+          <h1>Wish List</h1>
           <br />
           It&rsquo;s empty!  (for now...)
         </div>
       );
     },
 
-    _renderWatchListItem: function (clothingItem) {
+    _renderWishListItem: function (clothingItem) {
       var brand = App.Brand.Store.get(clothingItem.brandId);
       return <div key={clothingItem.id}>{brand.name} {clothingItem.model}</div>;
     },
 
     render: function () {
-      var watchList = this.state.clothingItems.filter(function (clothingItem) {
+      var wishList = this.state.clothingItems.filter(function (clothingItem) {
         return clothingItem.purchaseIds.length === 0;
       });
 
-      if (watchList.size === 0) {
-        return this._renderBlankWatchList();
+      if (wishList.size === 0) {
+        return this._renderBlankWishList();
       }
 
       return (
         <div>
-          <h1>Watch List ({watchList.size})</h1>
+          <h1>Wish List ({wishList.size})</h1>
           <br />
-          {watchList.valueSeq().map(this._renderWatchListItem)}
+          {wishList.valueSeq().map(this._renderWishListItem)}
         </div>
       );
     }

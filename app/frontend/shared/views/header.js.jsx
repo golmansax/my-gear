@@ -80,8 +80,8 @@ App.Shared.Header = (function () {
             <ReactRouterBootstrap.NavItemLink to='non-essentials'>
               Non-Essentials
             </ReactRouterBootstrap.NavItemLink>
-            <ReactRouterBootstrap.NavItemLink to='watch-list'>
-              Watch List
+            <ReactRouterBootstrap.NavItemLink to='wish-list'>
+              Wish List
             </ReactRouterBootstrap.NavItemLink>
             <ReactRouterBootstrap.NavItemLink to='recent-purchases'>
               Recent Purchases

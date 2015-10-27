@@ -8,7 +8,7 @@
 //= require purpose/views/route
 //= require brand/views/route
 //= require pages/views/recent_route
-//= require pages/views/watch_list_route
+//= require pages/views/wish_list_route
 //= require pages/views/info_route
 
 (function () {
@@ -31,8 +31,8 @@
           handler={App.Pages.NonEssentialsRoute}
         />
         <ReactRouter.Route
-          name='watch-list'
-          handler={App.Pages.WatchListRoute}
+          name='wish-list'
+          handler={App.Pages.WishListRoute}
         />
         <ReactRouter.Route
           name='recent-purchases'
