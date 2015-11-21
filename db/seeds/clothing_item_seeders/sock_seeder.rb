@@ -44,6 +44,18 @@ class SockSeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_sock!(
+      brand: 'Injinji',
+      model: 'Outdoor 2.0 Original Weight NuWool Mini-Crew',
+      purchases: [
+        {
+          date: Date.parse('Oct 2015'),
+          version: 'Canyon Pink/Gray',
+          purposes: %w(Tennis),
+        },
+      ],
+    )
   end
 
   def create_sock!(sock_params)
