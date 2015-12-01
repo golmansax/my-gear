@@ -46,10 +46,17 @@ QueryType = GraphQL::ObjectType.define do
           ],
         ),
         WishListCategory.new(
-          'Formal, performance pants',
           'formal-performance-pants',
+          'Formal, performance pants',
           [
             'outlier-new-og-pant',
+          ],
+        ),
+        WishListCategory.new(
+          'new-climbing-shoes',
+          'New climbing shoes',
+          [
+            'scarpa-furia',
           ],
         ),
       ]
