@@ -88,7 +88,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2013'),
           version: 'Tri-Black – Thumbtack',
-          purposes: ['Lounging', 'For Girlfriend'],
         },
         {
           date: Date.parse('Oct 2013'),
@@ -146,6 +145,18 @@ class TopSeeder < ClothingItemSeeder
           date: Date.parse('Oct 2015'),
           version: 'Morgan – Green',
           purposes: ['Essential', 'Formal', 'For Girlfriend', 'Colorful'],
+        },
+      ],
+    )
+
+    create_top!(
+      brand: 'Reebok',
+      model: 'Spartan Race 2015 Sprint Finisher Shirt',
+      purchases: [
+        {
+          date: Date.parse('Nov 2015'),
+          version: 'Gray',
+          purposes: ['Lounging', 'For Girlfriend'],
         },
       ],
     )

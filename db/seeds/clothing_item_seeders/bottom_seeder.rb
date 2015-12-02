@@ -13,7 +13,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Brown',
-          purposes: ['Backup'],
+          purposes: %w(Essential),
         },
       ],
     )
@@ -37,7 +37,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2014'),
           version: 'Charcoal',
-          purposes: ['Backup'],
         },
       ],
     )
@@ -60,6 +59,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2014'),
           version: 'Navy Plaid',
+          purposes: ['Backup'],
         },
       ],
     )
