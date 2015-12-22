@@ -105,6 +105,11 @@ class BottomSeeder < ClothingItemSeeder
     )
 
     create_bottom!(
+      brand: 'Rapha',
+      model: 'Loopback Trouser',
+    )
+
+    create_bottom!(
       brand: 'Ministry of Supply',
       model: 'Aviator Chino',
       purchases: [

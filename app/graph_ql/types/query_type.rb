@@ -50,6 +50,7 @@ QueryType = GraphQL::ObjectType.define do
           'Formal, performance pants',
           [
             'outlier-new-og-pant',
+            'rapha-loopback-trouser',
           ],
         ),
         WishListCategory.new(
