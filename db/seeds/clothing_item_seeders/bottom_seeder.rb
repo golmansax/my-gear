@@ -110,6 +110,11 @@ class BottomSeeder < ClothingItemSeeder
     )
 
     create_bottom!(
+      brand: 'Myles',
+      model: 'Everyday Short',
+    )
+
+    create_bottom!(
       brand: 'Ministry of Supply',
       model: 'Aviator Chino',
       purchases: [
