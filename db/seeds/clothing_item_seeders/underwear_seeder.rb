@@ -21,7 +21,7 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2014'),
           version: 'Purple',
-          purposes: %w(Essential Colorful),
+          purposes: %w(Backup Colorful),
         },
       ],
     )

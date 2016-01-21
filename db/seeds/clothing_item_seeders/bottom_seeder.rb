@@ -13,7 +13,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Brown',
-          purposes: %w(Essential),
+          purposes: %w(Yoga),
         },
       ],
     )
@@ -105,11 +105,6 @@ class BottomSeeder < ClothingItemSeeder
     )
 
     create_bottom!(
-      brand: 'Rapha',
-      model: 'Loopback Trouser',
-    )
-
-    create_bottom!(
       brand: 'Myles',
       model: 'Everyday Short',
     )
@@ -121,6 +116,18 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2015'),
           version: 'Black Slim',
+          purposes: ['Formal', 'For Girlfriend'],
+        },
+      ],
+    )
+
+    create_bottom!(
+      brand: 'Rapha',
+      model: 'Loopback Trouser',
+      purchases: [
+        {
+          date: Date.parse('May 2015'),
+          version: 'Navy',
           purposes: ['Essential', 'Formal', 'For Girlfriend'],
         },
       ],
