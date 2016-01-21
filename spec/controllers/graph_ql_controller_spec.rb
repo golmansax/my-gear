@@ -8,7 +8,7 @@ describe GraphQlController do
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
       type: 'Outerwear',
-      imagePath: /\/assets\/marmot-rom-jacket-[0-9a-f]*\.jpg/,
+      imagePath: %r{/assets/marmot-rom-jacket-[0-9a-f]*\.jpg},
       purchaseIds: outerwear.purchases.pluck(:id),
     }
   end
