@@ -1,5 +1,6 @@
-require:
-  - rubocop-rspec
+# Put the following in when we rubocop-rspec is fixed
+# require:
+# - rubocop-rspec
 
 AllCops:
   Include:
@@ -12,12 +13,18 @@ AllCops:
     - node_modules/**/*
     - '**/bower_components/**/*'
     - vendor/**/*
-  RunRailsCops: true
+  TargetRubyVersion: 2.3
+
+Rails:
+  Enabled: true
 
 Documentation:
   Enabled: false
 
-TrailingComma:
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
 
 Metrics/AbcSize:

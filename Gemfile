@@ -20,8 +20,8 @@ gem 'uglifier'
 group :development, :test do
   gem 'bullet'
   gem 'magic_lamp'
-  gem 'rubocop'
-  gem 'rubocop-rspec'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
   gem 'coffee-rails' # Needed by teaspoon...
   gem 'teaspoon-mocha'
   gem 'travis'
