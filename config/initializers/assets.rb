@@ -4,7 +4,7 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w(
-  *.svg *.eot *.woff *.woff2 *.ttf *.jpg *.ico
+  application.js application.css *.svg *.eot *.woff *.woff2 *.ttf *.jpg *.ico
 )
 
 if Rails.env.development?

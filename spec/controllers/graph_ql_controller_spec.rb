@@ -7,8 +7,8 @@ describe GraphQlController do
       brandId: 'marmot',
       model: 'ROM Jacket',
       id: 'marmot-rom-jacket',
-      imagePath: '/assets/marmot-rom-jacket.jpg',
       type: 'Outerwear',
+      imagePath: /\/assets\/marmot-rom-jacket-[0-9a-f]*\.jpg/,
       purchaseIds: outerwear.purchases.pluck(:id),
     }
   end
@@ -36,10 +36,13 @@ describe GraphQlController do
 
     it 'allows you to query for clothing items' do
       post(:create, query: query)
+
       expected_response = {
         data: { clothingItems: [outerwear_as_json] },
       }.with_indifferent_access
-      expect(JSON.parse(response.body)).to eq(expected_response)
+      json_response = JSON.parse(response.body)
+
+      expect(json_response).to match(expected_response)
     end
   end
 end
