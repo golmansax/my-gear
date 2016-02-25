@@ -46,7 +46,6 @@ QueryType = GraphQL::ObjectType.define do
           'Winter boots',
           [
             'neos-overshoe-adventurer',
-            'kitsbox-ride-tee-tritone',
           ],
         ),
         WishListCategory.new(
@@ -54,7 +53,6 @@ QueryType = GraphQL::ObjectType.define do
           'Formal, performance pants',
           [
             'outlier-new-og-pant',
-            'rapha-loopback-trouser',
           ],
         ),
         WishListCategory.new(

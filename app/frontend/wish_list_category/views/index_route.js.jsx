@@ -29,8 +29,10 @@ App.WishListCategory.IndexRoute = (function () {
     _renderCategory: function (category) {
       return (
         <div key={category.id}>
-          {category.name}
-          {category.clothingItemIds.map(this._renderClothingItem)}
+          <h3>{category.name}</h3>
+          <ul>
+            {category.clothingItemIds.map(this._renderClothingItem)}
+          </ul>
         </div>
       );
     },
@@ -39,9 +41,9 @@ App.WishListCategory.IndexRoute = (function () {
       var clothingItem = App.ClothingItem.Store.get(clothingItemId);
       var brand = App.Brand.Store.get(clothingItem.brandId);
       return (
-        <div key={clothingItemId}>
+        <li key={clothingItemId}>
           {brand.name} {clothingItem.model}
-        </div>
+        </li>
       );
     },
 
