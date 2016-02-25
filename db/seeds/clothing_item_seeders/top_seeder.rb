@@ -9,7 +9,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: 'Fuse',
-          purposes: %w(Backup Colorful),
+          purposes: %w(Essential Colorful),
         },
         {
           date: Date.parse('July 2015'),
@@ -65,7 +65,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: '2014 French Open',
-          purposes: %w(Essential Expressive Colorful),
+          purposes: %w(Backup Expressive Colorful),
         },
       ],
     )
@@ -157,6 +157,18 @@ class TopSeeder < ClothingItemSeeder
           date: Date.parse('Nov 2015'),
           version: 'Gray',
           purposes: ['Lounging', 'For Girlfriend'],
+        },
+      ],
+    )
+
+    create_top!(
+      brand: 'Under Armour',
+      model: "Men's Performance T-Shirt",
+      purchases: [
+        {
+          date: Date.parse('Nov 2015'),
+          version: 'Maryland Terrapins Gold Flag Banner',
+          purposes: %w(Colorful Expressive Backup),
         },
       ],
     )

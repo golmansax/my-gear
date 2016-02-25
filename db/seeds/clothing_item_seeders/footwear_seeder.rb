@@ -37,7 +37,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Coffee & Cream',
-          purposes: ['Formal', 'For Girlfriend'],
+          purposes: ['Essential', 'Formal', 'For Girlfriend'],
         },
       ],
     )

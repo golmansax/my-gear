@@ -28,7 +28,6 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Blue',
-          purposes: %w(Colorful),
         },
       ],
     )
@@ -52,7 +51,7 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2015'),
           version: 'Canyon Pink/Gray',
-          purposes: %w(Tennis),
+          purposes: %w(Tennis Colorful Favorite Essential),
         },
       ],
     )
@@ -64,7 +63,7 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2015'),
           version: 'Indigo',
-          purposes: %w(Tennis),
+          purposes: %w(Tennis Colorful),
         },
       ],
     )

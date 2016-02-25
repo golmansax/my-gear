@@ -13,7 +13,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Brown',
-          purposes: %w(Yoga),
+          purposes: %w(Yoga Backup),
         },
       ],
     )
@@ -116,7 +116,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2015'),
           version: 'Black Slim',
-          purposes: ['Formal', 'For Girlfriend'],
+          purposes: ['Backup', 'Formal', 'For Girlfriend'],
         },
       ],
     )
@@ -126,9 +126,9 @@ class BottomSeeder < ClothingItemSeeder
       model: 'Loopback Trouser',
       purchases: [
         {
-          date: Date.parse('May 2015'),
+          date: Date.parse('Jan 2016'),
           version: 'Navy',
-          purposes: ['Essential', 'Formal', 'For Girlfriend'],
+          purposes: ['Essential', 'Formal', 'For Girlfriend', 'Favorite'],
         },
       ],
     )

@@ -92,7 +92,7 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Taupe',
-          purposes: %w(Essential Favorite Formal),
+          purposes: %w(Essential Formal),
         },
         {
           date: Date.parse('Oct 2015'),
@@ -110,6 +110,18 @@ class UnderwearSeeder < ClothingItemSeeder
           date: Date.parse('June 2015'),
           version: 'Alloy',
           purposes: %w(Essential Formal),
+        },
+      ],
+    )
+
+    create_underwear!(
+      brand: 'WoolX',
+      model: 'The Daily – Merino Wool Boxer Brief',
+      purchases: [
+        {
+          date: Date.parse('Jan 2016'),
+          version: 'Cobalt Blue',
+          purposes: %w(Essential Colorful Favorite),
         },
       ],
     )
