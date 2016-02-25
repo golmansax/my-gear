@@ -124,6 +124,11 @@ class FootwearSeeder < ClothingItemSeeder
     )
 
     create_footwear!(
+      brand: 'Vivobarefoot',
+      model: 'Motus',
+    )
+
+    create_footwear!(
       brand: 'Scarpa',
       model: 'Furia',
     )

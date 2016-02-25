@@ -35,14 +35,18 @@ QueryType = GraphQL::ObjectType.define do
         WishListCategory.new(
           'short-sleeve-henley',
           'Short-sleeve henley',
-          ['vulpine-men-s-merino-henley'],
+          [
+            'vulpine-men-s-merino-henley'
+            'icebreaker-cool-lite-sphere-short-sleeve-henley'
+            'icebreaker-cool-lite-sphere-short-sleeve-henley'
+          ],
         ),
         WishListCategory.new(
           'winter-boots',
           'Winter boots',
           [
             'neos-overshoe-adventurer',
-            'western-mountaineering-flash-bootie',
+            'kitsbox-ride-tee-tritone',
           ],
         ),
         WishListCategory.new(
@@ -62,9 +66,16 @@ QueryType = GraphQL::ObjectType.define do
         ),
         WishListCategory.new(
           'everyday-short',
-          'Everyday Short',
+          'Everyday short',
           [
             'myles-everyday-short',
+          ],
+        ),
+        WishListCategory.new(
+          'all-around-athletic-shoe',
+          'All around athletic shoe',
+          [
+            'vivobarefoot-motus',
           ],
         ),
       ]

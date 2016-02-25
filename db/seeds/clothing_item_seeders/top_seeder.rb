@@ -172,6 +172,16 @@ class TopSeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_top!(
+      brand: 'Icebreaker',
+      model: 'Cool-Lite Sphere Short Sleeve Henley',
+    )
+
+    create_top!(
+      brand: 'Kitsbow',
+      model: 'Ride Tee-Tritone',
+    )
   end
 
   def create_top!(top_params)
