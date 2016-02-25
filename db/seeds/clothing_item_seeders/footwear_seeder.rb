@@ -49,7 +49,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2014'),
           version: 'Blue',
-          purposes: %w(Tennis Colorful),
+          purposes: %w(Tennis Basketball Colorful),
         },
       ],
     )
