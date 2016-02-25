@@ -36,9 +36,9 @@ QueryType = GraphQL::ObjectType.define do
           'short-sleeve-henley',
           'Short-sleeve henley',
           [
-            'vulpine-men-s-merino-henley'
-            'icebreaker-cool-lite-sphere-short-sleeve-henley'
-            'icebreaker-cool-lite-sphere-short-sleeve-henley'
+            'vulpine-men-s-merino-henley',
+            'icebreaker-cool-lite-sphere-short-sleeve-henley',
+            'kitsbow-ride-tee-tritone',
           ],
         ),
         WishListCategory.new(
