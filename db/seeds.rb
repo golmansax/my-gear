@@ -6,5 +6,5 @@ Dir[File.join(seeds_path, 'clothing_item_seeders', '*.rb')].each do |seeder|
 end
 [
   TopSeeder, BottomSeeder, OuterwearSeeder, UnderwearSeeder, SockSeeder,
-  FootwearSeeder, GloveSeeder,
+  FootwearSeeder, GloveSeeder
 ].each { |seeder_klass| seeder_klass.new.seed! }
