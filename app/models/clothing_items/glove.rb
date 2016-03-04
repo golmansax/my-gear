@@ -1,0 +1,2 @@
+class Glove < ClothingItem
+end

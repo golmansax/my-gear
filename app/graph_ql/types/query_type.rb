@@ -39,6 +39,7 @@ QueryType = GraphQL::ObjectType.define do
             'vulpine-men-s-merino-henley',
             'icebreaker-cool-lite-sphere-short-sleeve-henley',
             'kitsbow-ride-tee-tritone',
+            'ibex-od-henley-t',
           ],
         ),
         WishListCategory.new(
@@ -49,17 +50,11 @@ QueryType = GraphQL::ObjectType.define do
           ],
         ),
         WishListCategory.new(
-          'formal-performance-pants',
-          'Formal, performance pants',
-          [
-            'outlier-new-og-pant',
-          ],
-        ),
-        WishListCategory.new(
           'climbing-shoes',
           'Climbing shoes',
           [
             'scarpa-furia',
+            'mad-rock-men-s-flash-2-0-climbing-shoe',
           ],
         ),
         WishListCategory.new(

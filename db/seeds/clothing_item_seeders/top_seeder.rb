@@ -182,6 +182,11 @@ class TopSeeder < ClothingItemSeeder
       brand: 'Kitsbow',
       model: 'Ride Tee-Tritone',
     )
+
+    create_top!(
+      brand: 'Ibex',
+      model: 'OD Henley T',
+    )
   end
 
   def create_top!(top_params)

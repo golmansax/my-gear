@@ -46,12 +46,17 @@ class SockSeeder < ClothingItemSeeder
 
     create_sock!(
       brand: 'Injinji',
-      model: 'Outdoor 2.0 Original Weight Micro Mini-Crew',
+      model: 'Outdoor 2.0 Original Weight Micro',
       purchases: [
         {
           date: Date.parse('Oct 2015'),
           version: 'Canyon Pink/Gray',
-          purposes: %w(Tennis Colorful Favorite Essential),
+          purposes: %w(Colorful Favorite Essential),
+        },
+        {
+          date: Date.parse('Mar 2016'),
+          version: 'Wild Lime',
+          purposes: %w(Colorful Favorite Essential),
         },
       ],
     )
@@ -63,7 +68,7 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2015'),
           version: 'Indigo',
-          purposes: %w(Tennis Colorful),
+          purposes: %w(Colorful),
         },
       ],
     )

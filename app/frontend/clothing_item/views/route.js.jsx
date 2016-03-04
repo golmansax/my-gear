@@ -36,7 +36,7 @@ App.ClothingItem.Route = (function () {
           </ReactBootstrap.Col>
           <ReactBootstrap.Col sm={6}>
             <h1>
-              {brand.name}
+              {brand.name}&nbsp;
               {this.state.clothingItem.model}
             </h1>
             <App.Purchase.List ids={this.state.clothingItem.purchaseIds} />

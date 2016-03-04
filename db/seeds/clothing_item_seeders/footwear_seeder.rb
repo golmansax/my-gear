@@ -132,6 +132,11 @@ class FootwearSeeder < ClothingItemSeeder
       brand: 'Scarpa',
       model: 'Furia',
     )
+
+    create_footwear!(
+      brand: 'Mad Rock',
+      model: "Men's Flash 2.0 Climbing Shoe",
+    )
   end
 
   def create_footwear!(footwear_params)
