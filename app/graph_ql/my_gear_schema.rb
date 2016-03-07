@@ -1,1 +1,1 @@
-MyGearSchema = GraphQL::Schema.new(query: QueryType)
+MyGearSchema = GraphQL::Schema.new(query: QueryRoot)
