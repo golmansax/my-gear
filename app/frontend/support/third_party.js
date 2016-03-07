@@ -3,9 +3,11 @@
 //= require moment
 //
 //= require react/react-with-addons
+//= require react/react-dom
 //= require react-bind-mixin
 //= require react-bootstrap
-//= require react-router
+//= require vendor/react-router-1.0.3/ReactRouter
+//= require vendor/history-1.17.0/History
 //= require react-router-bootstrap
 //
 //= require reqwest

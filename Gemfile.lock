@@ -187,14 +187,14 @@ GEM
       rails-assets-immutable
     rails-assets-immutable (3.7.6)
     rails-assets-moment (2.11.1)
-    rails-assets-react (0.13.3)
+    rails-assets-react (0.14.7)
     rails-assets-react-bind-mixin (0.0.9)
-    rails-assets-react-bootstrap (0.26.4)
-      rails-assets-react (>= 0.13, < 0.14)
-    rails-assets-react-router (0.13.5)
-    rails-assets-react-router-bootstrap (0.18.1)
-      rails-assets-react-bootstrap (>= 0.22.4)
-      rails-assets-react-router (>= 0.13.1)
+    rails-assets-react-bootstrap (0.28.3)
+      rails-assets-react (>= 0.14.0)
+    rails-assets-react-router (2.0.9.rc4)
+    rails-assets-react-router-bootstrap (0.19.3)
+      rails-assets-react (>= 0.13.0)
+      rails-assets-react-router (>= 1.0.0.rc3)
     rails-assets-reqwest (2.0.5)
     rails-assets-stink-bomb (0.0.1)
       rails-assets-moment
@@ -337,11 +337,10 @@ DEPENDENCIES
   rails-assets-flux-crud!
   rails-assets-immutable!
   rails-assets-moment!
-  rails-assets-react (~> 0.13.0)!
+  rails-assets-react (~> 0.14.0)!
   rails-assets-react-bind-mixin!
-  rails-assets-react-bootstrap (~> 0.26.0)!
-  rails-assets-react-router (~> 0.13.0)!
-  rails-assets-react-router-bootstrap!
+  rails-assets-react-bootstrap!
+  rails-assets-react-router-bootstrap (~> 0.19.3)!
   rails-assets-reqwest!
   rails-assets-stink-bomb!
   rails_12factor

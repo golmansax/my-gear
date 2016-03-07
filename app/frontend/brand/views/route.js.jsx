@@ -13,12 +13,14 @@ App.Brand.Route = (function () {
     ],
 
     propTypes: {
-      id: React.PropTypes.string.isRequired
+      params: React.PropTypes.shape({
+        id: React.PropTypes.string
+      }).isRequired
     },
 
     getStateFromStore: function (props) {
       return {
-        brand: App.Brand.Store.get(props.id)
+        brand: App.Brand.Store.get(props.params.id)
       };
     },
 

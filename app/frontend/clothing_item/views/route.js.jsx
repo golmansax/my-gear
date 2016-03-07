@@ -13,12 +13,14 @@ App.ClothingItem.Route = (function () {
     ],
 
     propTypes: {
-      id: React.PropTypes.string.isRequired
+      params: React.PropTypes.shape({
+        id: React.PropTypes.string
+      }).isRequired
     },
 
     getStateFromStore: function (props) {
       return {
-        clothingItem: App.ClothingItem.Store.get(props.id)
+        clothingItem: App.ClothingItem.Store.get(props.params.id)
       };
     },
 

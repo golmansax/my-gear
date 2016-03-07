@@ -15,49 +15,42 @@
   'use strict';
 
   App.routes = (
-    <ReactRouter.Route>
-      <ReactRouter.Redirect from='/' to='clothing' />
-      <ReactRouter.NotFoundRoute handler={App.Pages.NotFoundRoute} />
-
-      <ReactRouter.Route name='clothing' handler={App.Pages.Layout}>
-        <ReactRouter.DefaultRoute name='info' handler={App.Pages.InfoRoute} />
-        <ReactRouter.Route name='about' handler={App.Pages.AboutRoute} />
-        <ReactRouter.Route
-          name='essentials'
-          handler={App.Pages.EssentialsRoute}
-        />
-        <ReactRouter.Route
-          name='non-essentials'
-          handler={App.Pages.NonEssentialsRoute}
-        />
-        <ReactRouter.Route
-          name='wish-list'
-          handler={App.WishListCategory.IndexRoute}
-        />
-        <ReactRouter.Route
-          name='recent-purchases'
-          handler={App.Pages.RecentRoute}
-        />
-        <ReactRouter.Route
-          name='wardrobe'
-          handler={App.Pages.WardrobeRoute}
-        />
-        <ReactRouter.Route
-          name='clothing-item'
-          path='/clothing/items/:id'
-          handler={App.ClothingItem.Route}
-        />
-        <ReactRouter.Route
-          name='purpose'
-          path='/clothing/purposes/:id'
-          handler={App.Purpose.Route}
-        />
-        <ReactRouter.Route
-          name='brand'
-          path='/clothing/brands/:id'
-          handler={App.Brand.Route}
-        />
-      </ReactRouter.Route>
+    <ReactRouter.Route path='/' component={App.Pages.Layout}>
+      <ReactRouter.IndexRoute component={App.Pages.InfoRoute} />
+      <ReactRouter.Route path='about' component={App.Pages.AboutRoute} />
+      <ReactRouter.Route
+        path='essentials'
+        component={App.Pages.EssentialsRoute}
+      />
+      <ReactRouter.Route
+        path='non-essentials'
+        component={App.Pages.NonEssentialsRoute}
+      />
+      <ReactRouter.Route
+        path='wish-list'
+        component={App.WishListCategory.IndexRoute}
+      />
+      <ReactRouter.Route
+        path='recent-purchases'
+        component={App.Pages.RecentRoute}
+      />
+      <ReactRouter.Route
+        path='wardrobe'
+        component={App.Pages.WardrobeRoute}
+      />
+      <ReactRouter.Route
+        path='/clothing/:id'
+        component={App.ClothingItem.Route}
+      />
+      <ReactRouter.Route
+        path='/purposes/:id'
+        component={App.Purpose.Route}
+      />
+      <ReactRouter.Route
+        path='/brands/:id'
+        component={App.Brand.Route}
+      />
+      <ReactRouter.Route path='*' component={App.Pages.NotFoundRoute} />
     </ReactRouter.Route>
   );
 })();

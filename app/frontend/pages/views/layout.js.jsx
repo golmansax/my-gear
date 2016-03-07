@@ -24,7 +24,7 @@ App.Pages.Layout = (function () {
         return <div>Loading...</div>;
       }
 
-      return <ReactRouter.RouteHandler {...this.props} />;
+      return this.props.children;
     },
 
     render: function () {

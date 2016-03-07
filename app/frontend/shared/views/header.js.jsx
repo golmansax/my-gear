@@ -33,16 +33,16 @@ App.Shared.Header = (function () {
 
     _renderListItem: function (type, item) {
       var itemAttrs = {
-        to: type,
-        params: { id: item.id }
+        to: '/' + type + 's/' + item.id,
+        key: type + '-' + item
       };
 
       return (
-        <ReactBootstrap.MenuItem key={item.id}>
-          <ReactRouter.Link {...itemAttrs}>
+        <ReactRouterBootstrap.LinkContainer {...itemAttrs}>
+          <ReactBootstrap.MenuItem key={item.id}>
             {item.name}
-          </ReactRouter.Link>
-        </ReactBootstrap.MenuItem>
+          </ReactBootstrap.MenuItem>
+        </ReactRouterBootstrap.LinkContainer>
       );
     },
 
@@ -71,21 +71,31 @@ App.Shared.Header = (function () {
             </ReactRouter.Link>
           </div>
           <ReactBootstrap.Nav>
-            <ReactRouterBootstrap.NavItemLink to='about'>
-              About
-            </ReactRouterBootstrap.NavItemLink>
-            <ReactRouterBootstrap.NavItemLink to='essentials'>
-              Essentials
-            </ReactRouterBootstrap.NavItemLink>
-            <ReactRouterBootstrap.NavItemLink to='non-essentials'>
-              Non-Essentials
-            </ReactRouterBootstrap.NavItemLink>
-            <ReactRouterBootstrap.NavItemLink to='wish-list'>
-              Wish List
-            </ReactRouterBootstrap.NavItemLink>
-            <ReactRouterBootstrap.NavItemLink to='recent-purchases'>
-              Recent Purchases
-            </ReactRouterBootstrap.NavItemLink>
+            <ReactRouterBootstrap.LinkContainer to='/about'>
+              <ReactBootstrap.NavItem>
+                About
+              </ReactBootstrap.NavItem>
+            </ReactRouterBootstrap.LinkContainer>
+            <ReactRouterBootstrap.LinkContainer to='/essentials'>
+              <ReactBootstrap.NavItem>
+                Essentials
+              </ReactBootstrap.NavItem>
+            </ReactRouterBootstrap.LinkContainer>
+            <ReactRouterBootstrap.LinkContainer to='/non-essentials'>
+              <ReactBootstrap.NavItem>
+                Non-Essentials
+              </ReactBootstrap.NavItem>
+            </ReactRouterBootstrap.LinkContainer>
+            <ReactRouterBootstrap.LinkContainer to='/wish-list'>
+              <ReactBootstrap.NavItem>
+                Wish List
+              </ReactBootstrap.NavItem>
+            </ReactRouterBootstrap.LinkContainer>
+            <ReactRouterBootstrap.LinkContainer to='/recent-purchases'>
+              <ReactBootstrap.NavItem>
+                Recent Purchases
+              </ReactBootstrap.NavItem>
+            </ReactRouterBootstrap.LinkContainer>
             <ReactBootstrap.NavDropdown
               title='Brands'
               id='header-brands-dropdown'

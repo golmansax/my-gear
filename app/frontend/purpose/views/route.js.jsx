@@ -15,12 +15,14 @@ App.Purpose.Route = (function () {
     ],
 
     propTypes: {
-      id: React.PropTypes.string.isRequired
+      params: React.PropTypes.shape({
+        id: React.PropTypes.string
+      }).isRequired
     },
 
     getStateFromStore: function (props) {
       return {
-        purpose: App.Purpose.Store.get(props.id)
+        purpose: App.Purpose.Store.get(props.params.id)
       };
     },
 
