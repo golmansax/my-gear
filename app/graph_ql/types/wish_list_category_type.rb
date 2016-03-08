@@ -3,5 +3,9 @@ WishListCategoryType = GraphQL::ObjectType.define do
   description 'WishListCategory model'
   field :id, !types.ID, 'Unique ID'
   field :name, !types.String, 'Name'
-  field :clothingItemIds, !types[!types.ID], 'List of ClothingItem IDs'
+  field :clothingItemIds do
+    type !types[!types.ID]
+    description 'List of ClothingItem IDs'
+    resolve proc { |wish_list_category| wish_list_category.clothing_item_ids }
+  end
 end

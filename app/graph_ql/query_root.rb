@@ -1,5 +1,5 @@
 QueryRoot = GraphQL::ObjectType.define do
-  name 'Query'
+  name 'QueryRoot'
   description 'The query root of this schema'
 
   field :clothingItems do
@@ -26,5 +26,9 @@ QueryRoot = GraphQL::ObjectType.define do
     resolve proc { Purpose.all.includes(:purchases) }
   end
 
-  field :wishListCategories, field: WishListCategoryIndexField
+  field :wishListCategories do
+    type !types[!WishListCategoryType]
+    description 'All wish list categories'
+    resolve proc { WishListCategory.all }
+  end
 end

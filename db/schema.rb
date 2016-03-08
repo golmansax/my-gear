@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409195812) do
+ActiveRecord::Schema.define(version: 20160308011344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20150409195812) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "brands", ["slug"], name: "index_brands_on_slug", unique: true, using: :btree
 
   create_table "clothing_items", force: :cascade do |t|
     t.string   "model",      null: false
@@ -68,5 +70,15 @@ ActiveRecord::Schema.define(version: 20150409195812) do
   end
 
   add_index "purposes", ["slug"], name: "index_purposes_on_slug", unique: true, using: :btree
+
+  create_table "wish_list_categories", force: :cascade do |t|
+    t.string   "name",              null: false
+    t.string   "slug",              null: false
+    t.string   "clothing_item_ids", null: false, array: true
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "wish_list_categories", ["slug"], name: "index_wish_list_categories_on_slug", unique: true, using: :btree
 
 end
