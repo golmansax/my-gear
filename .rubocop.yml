@@ -36,6 +36,7 @@ Metrics/MethodLength:
   Exclude:
     - db/migrate/*
     - db/seeds/clothing_item_seeders/*
+    - db/seeds/wish_list_category_seeder.rb
 
 Metrics/ClassLength:
   Exclude:
