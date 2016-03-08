@@ -80,6 +80,7 @@
     "PropTypes": true,
     "React": true,
     "ReactBootstrap": true,
+    "ReactDOM": true,
     "ReactRouter": true,
     "ReactRouterBootstrap": true,
     "classNames": true,
