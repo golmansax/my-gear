@@ -6,8 +6,8 @@
 //= require react/react-dom
 //= require react-bind-mixin
 //= require react-bootstrap
-//= require vendor/react-router-2.0.0/ReactRouter
-//= require vendor/history-2.0.1/History
+//= require vendor/react-router-2.0.0/umd/ReactRouter
+//= require vendor/history-2.0.1/umd/History
 //= require react-router-bootstrap
 //
 //= require reqwest
