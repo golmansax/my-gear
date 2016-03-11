@@ -38,6 +38,14 @@ class WishListCategorySeeder
         'vivobarefoot-motus',
       ],
     )
+
+    create_wish_list_category!(
+      name: 'Waterproof jacket',
+      clothing_item_ids: [
+        'marmot-precip-jacket',
+        'outdoor-research-foray-jacket',
+      ],
+    )
   end
 
   def create_wish_list_category!(wish_list_category_params)
