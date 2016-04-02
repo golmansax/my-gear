@@ -25,7 +25,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Deep Gray',
-          purposes: %w(Essential Swimming),
+          purposes: %w(Backup Swimming),
         },
       ],
     )
@@ -59,7 +59,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2014'),
           version: 'Navy Plaid',
-          purposes: ['Backup'],
         },
       ],
     )
@@ -107,6 +106,13 @@ class BottomSeeder < ClothingItemSeeder
     create_bottom!(
       brand: 'Myles',
       model: 'Everyday Short',
+      purchases: [
+        {
+          date: Date.parse('Apr 2016'),
+          version: 'River Long',
+          purposes: %w(Essential Swimming Favorite),
+        },
+      ],
     )
 
     create_bottom!(

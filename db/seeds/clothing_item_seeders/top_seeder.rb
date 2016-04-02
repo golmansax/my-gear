@@ -103,7 +103,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2013'),
           version: 'Crops – Toffee',
-          purposes: ['Colorful', 'Lounging', 'For Girlfriend'],
         },
       ],
     )
@@ -179,8 +178,27 @@ class TopSeeder < ClothingItemSeeder
     )
 
     create_top!(
+      brand: 'Uniqlo',
+      model: 'Men Packaged DRY Crewneck Short Sleeve T-Shirt',
+      purchases: [
+        {
+          date: Date.parse('Mar 2016'),
+          version: 'Orange',
+          purposes: %w(Expressive Lounging),
+        },
+      ],
+    )
+
+    create_top!(
       brand: 'Kitsbow',
       model: 'Ride Tee-Tritone',
+      purchases: [
+        {
+          date: Date.parse('Mar 2016'),
+          version: 'Red Dust',
+          purposes: %w(Colorful Essential Biking Favorite),
+        },
+      ],
     )
 
     create_top!(
