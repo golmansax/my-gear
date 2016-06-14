@@ -139,6 +139,11 @@ class BottomSeeder < ClothingItemSeeder
       ],
     )
 
+    create_bottom!(
+      brand: 'Outlier',
+      model: 'New Way Long',
+    )
+
     # Ski Pants
   end
 

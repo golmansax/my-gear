@@ -9,7 +9,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: 'Fuse',
-          purposes: %w(Essential Colorful),
         },
         {
           date: Date.parse('July 2015'),
@@ -65,7 +64,6 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('July 2014'),
           version: '2014 French Open',
-          purposes: %w(Backup Expressive Colorful),
         },
       ],
     )

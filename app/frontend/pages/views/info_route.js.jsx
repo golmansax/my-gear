@@ -4,7 +4,7 @@ App.Pages.InfoRoute = (function () {
 
   return React.createClass({
     render: function () {
-      return <h1>Welcome to my site!</h1>;
+      return <h1>Learn about my clothing!</h1>;
     }
   });
 })();

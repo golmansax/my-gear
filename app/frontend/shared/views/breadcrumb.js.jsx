@@ -35,7 +35,7 @@ App.Shared.Breadcrumb = (function () {
     render: function () {
       return (
         <ol className='breadcrumb'>
-          {this._renderCrumb({ title: 'Clothing', link: { to: 'clothing' } })}
+          {this._renderCrumb({ title: 'Clothing', link: { to: '/' } })}
           {this.props.crumbs.map(this._renderCrumb)}
         </ol>
       );

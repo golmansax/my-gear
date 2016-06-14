@@ -5,7 +5,6 @@ class WishListCategorySeeder
       clothing_item_ids: [
         'vulpine-men-s-merino-henley',
         'icebreaker-cool-lite-sphere-short-sleeve-henley',
-        'kitsbow-ride-tee-tritone',
         'ibex-od-henley-t',
       ],
     )
@@ -28,7 +27,7 @@ class WishListCategorySeeder
     create_wish_list_category!(
       name: 'Everyday short',
       clothing_item_ids: [
-        'myles-everyday-short',
+        'outlier-new-way-long',
       ],
     )
 

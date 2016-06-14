@@ -97,7 +97,6 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2008'),
           version: 'Brown',
-          purposes: ['Hiking', 'Cold Weather'],
         },
       ],
     )
@@ -136,6 +135,18 @@ class FootwearSeeder < ClothingItemSeeder
     create_footwear!(
       brand: 'Mad Rock',
       model: "Men's Flash 2.0 Climbing Shoe",
+    )
+
+    create_footwear!(
+      brand: 'Lems',
+      model: 'Boulder Boot',
+      purchases: [
+        {
+          date: Date.parse('May 2016'),
+          version: 'Navy',
+          purposes: ['Hiking', 'Cold Weather'],
+        },
+      ],
     )
   end
 

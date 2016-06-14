@@ -29,10 +29,7 @@ App.Purchase.TableRow = (function () {
       return (
         <tr>
           <td>
-            <ReactRouter.Link
-              to='brand'
-              params={{ id: clothingItem.brandId }}
-              >
+            <ReactRouter.Link to={'/brands/' + clothingItem.brandId}>
               {brand.name}
             </ReactRouter.Link>
           </td>

@@ -92,7 +92,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('April 2015'),
           version: 'Taupe',
-          purposes: %w(Essential),
         },
         {
           date: Date.parse('Oct 2015'),
@@ -122,6 +121,23 @@ class UnderwearSeeder < ClothingItemSeeder
           date: Date.parse('Jan 2016'),
           version: 'Cobalt Blue',
           purposes: %w(Essential Colorful Favorite),
+        },
+        {
+          date: Date.parse('June 2016'),
+          version: 'Grapevine Stripe',
+          purposes: %w(Essential Favorite Colorful),
+        },
+      ],
+    )
+
+    create_underwear!(
+      brand: 'Smartwool',
+      model: "Men's Microweight Long Underwear Bottom",
+      purchases: [
+        {
+          date: Date.parse('June 2016'),
+          version: 'Black',
+          purposes: ['Cold Weather'],
         },
       ],
     )

@@ -14,6 +14,16 @@ class SockSeeder < ClothingItemSeeder
           date: Date.parse('May 2014'),
           version: 'Charcoal',
         },
+        {
+          date: Date.parse('June 2016'),
+          version: 'Navy',
+          purposes: %w(Colorful Essential),
+        },
+        {
+          date: Date.parse('June 2016'),
+          version: 'Burgundy',
+          purposes: %w(Colorful Essential),
+        },
       ],
     )
 
@@ -51,12 +61,11 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2015'),
           version: 'Canyon Pink/Gray',
-          purposes: %w(Colorful Favorite Essential),
         },
         {
           date: Date.parse('Mar 2016'),
           version: 'Wild Lime',
-          purposes: %w(Colorful Favorite Essential),
+          purposes: %w(Colorful Essential),
         },
       ],
     )
