@@ -81,6 +81,11 @@ class SockSeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_sock!(
+      brand: 'Injinji',
+      model: 'Multi-Sport Plus Midweight Mini Crew',
+    )
   end
 
   def create_sock!(sock_params)

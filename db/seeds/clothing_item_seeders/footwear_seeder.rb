@@ -25,6 +25,10 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Apr 2015'),
           version: 'Connect in Black/Hot Pink',
+        },
+        {
+          date: Date.parse('June 2016'),
+          version: 'Contact in Black/Hot Lemon Lime',
           purposes: %w(Expressive Essential Favorite Colorful),
         },
       ],

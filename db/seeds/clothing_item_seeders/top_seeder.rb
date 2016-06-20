@@ -141,7 +141,9 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2015'),
           version: 'Morgan – Green',
-          purposes: ['Essential', 'Formal', 'For Girlfriend', 'Colorful'],
+          purposes: [
+            'Favorite', 'Essential', 'Formal', 'For Girlfriend', 'Colorful'
+          ],
         },
       ],
     )

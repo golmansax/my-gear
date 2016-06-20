@@ -45,6 +45,13 @@ class WishListCategorySeeder
         'outdoor-research-foray-jacket',
       ],
     )
+
+    create_wish_list_category!(
+      name: 'Longer lasting sock',
+      clothing_item_ids: [
+        'injinji-multi-sport-plus-midweight-mini-crew',
+      ],
+    )
   end
 
   def create_wish_list_category!(wish_list_category_params)
