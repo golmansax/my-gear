@@ -26,8 +26,7 @@ App.Purpose.Label = (function () {
     render: function () {
       return (
         <ReactRouter.Link
-          to='purpose'
-          params={{ id: this.state.purpose.id }}
+          to={'purposes/' + this.state.purpose.id}
           className={'purpose-label label ' + this._getLabelClass()}
           >
           {this.state.purpose.name}
