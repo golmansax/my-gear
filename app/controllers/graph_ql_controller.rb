@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class GraphQlController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :create
 

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 MagicLamp.configure do |config|
   DatabaseCleaner.strategy = :transaction
 

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 ClothingItemType = GraphQL::ObjectType.define do
   name 'ClothingItem'
   description 'ClothingItem model'

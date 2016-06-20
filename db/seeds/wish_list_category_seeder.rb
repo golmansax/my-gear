@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class WishListCategorySeeder
   def seed!
     create_wish_list_category!(

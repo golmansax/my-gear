@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class InitialDbSetup < ActiveRecord::Migration
   def change
     create_table :clothing_items do |t|

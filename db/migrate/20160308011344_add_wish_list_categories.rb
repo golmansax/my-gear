@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class AddWishListCategories < ActiveRecord::Migration
   def change
     create_table :wish_list_categories do |t|

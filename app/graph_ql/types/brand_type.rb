@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 BrandType = GraphQL::ObjectType.define do
   name 'Brand'
   description 'Brand model'

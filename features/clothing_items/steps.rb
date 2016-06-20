@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Given 'I have an essential clothing item' do
   brand = Brand.new(name: 'Marmot')
   @clothing_item = Top.create!(brand: brand, model: 'Jacket')

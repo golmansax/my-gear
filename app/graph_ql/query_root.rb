@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 QueryRoot = GraphQL::ObjectType.define do
   name 'QueryRoot'
   description 'The query root of this schema'

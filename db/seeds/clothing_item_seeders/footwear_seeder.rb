@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require_relative '../clothing_item_seeder'
 
 class FootwearSeeder < ClothingItemSeeder

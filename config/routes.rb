@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class HtmlConstraint
   def matches?(request)
     accept_format(request).include?('text/html')

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 PurposeType = GraphQL::ObjectType.define do
   name 'Purpose'
   description 'Purpose model'

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 PurchaseType = GraphQL::ObjectType.define do
   name 'Purchase'
   description 'Purchase model'

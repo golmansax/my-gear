@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 WishListCategoryType = GraphQL::ObjectType.define do
   name 'WishListCategory'
   description 'WishListCategory model'

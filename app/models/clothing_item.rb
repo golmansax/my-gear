@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ClothingItem < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged

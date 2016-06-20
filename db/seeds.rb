@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 seeds_path = File.join(Rails.root, 'db', 'seeds')
 Dir[File.join(seeds_path, 'clothing_item_seeders', '*.rb')].each do |seeder|
   require seeder

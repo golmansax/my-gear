@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ClothingItemSeeder
   def create_clothing_item!(purchases: [], brand:, **clothing_item_params)
     clothing_item = ClothingItem.create!(

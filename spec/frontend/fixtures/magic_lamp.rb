@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 MagicLamp.define(controller: ClothingItemsController) do
   fixture do
     @clothing_items = [
