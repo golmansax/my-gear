@@ -11,6 +11,15 @@ class WishListCategorySeeder
     )
 
     create_wish_list_category!(
+      name: 'Long-sleeve henley',
+      clothing_item_ids: [
+        'apolis-merino-wool-henley',
+        'triple-aught-design-huntsman-henley',
+        'showers-pass-men-s-bamboo-merino-ls-henley-shirt',
+      ],
+    )
+
+    create_wish_list_category!(
       name: 'Winter boots',
       clothing_item_ids: [
         'neos-overshoe-adventurer',

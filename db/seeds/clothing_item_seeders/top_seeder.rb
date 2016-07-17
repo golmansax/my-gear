@@ -206,6 +206,21 @@ class TopSeeder < ClothingItemSeeder
       brand: 'Ibex',
       model: 'OD Henley T',
     )
+
+    create_top!(
+      brand: 'Apolis',
+      model: 'Merino Wool Henley',
+    )
+
+    create_top!(
+      brand: 'Triple Aught Design',
+      model: 'Huntsman Henley',
+    )
+
+    create_top!(
+      brand: 'Showers Pass',
+      model: "Men's Bamboo-Merino LS Henley Shirt",
+    )
   end
 
   def create_top!(top_params)
