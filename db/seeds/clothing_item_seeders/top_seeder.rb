@@ -197,7 +197,19 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Mar 2016'),
           version: 'Red Dust',
-          purposes: %w(Colorful Essential Biking Favorite),
+          purposes: %w(Colorful Essential Favorite),
+        },
+      ],
+    )
+
+    create_top!(
+      brand: 'Kitsbow',
+      model: 'Ride Tee-Duotone',
+      purchases: [
+        {
+          date: Date.parse('Aug 2016'),
+          version: 'Limon',
+          purposes: %w(Colorful Essential Favorite),
         },
       ],
     )
