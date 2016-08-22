@@ -22,7 +22,6 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2014'),
           version: 'Wine',
-          purposes: %w(Lounging Formal),
         },
       ],
     )
@@ -59,6 +58,23 @@ class OuterwearSeeder < ClothingItemSeeder
     create_outerwear!(
       brand: 'Outdoor Research',
       model: 'Foray Jacket',
+    )
+
+    create_outerwear!(
+      brand: 'Mountain Hardwear',
+      model: 'Ghost Whisperer Down Jacket',
+      purchases: [
+        {
+          date: Date.parse('Aug 2016'),
+          version: 'Inca Gold',
+          purposes: ['Cold Weather'],
+        },
+      ],
+    )
+
+    create_outerwear!(
+      brand: "Arc'teryx",
+      model: 'Beta LT Hybrid Jacket',
     )
   end
 

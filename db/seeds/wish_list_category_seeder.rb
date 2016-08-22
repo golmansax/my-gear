@@ -30,7 +30,6 @@ class WishListCategorySeeder
       name: 'Climbing shoes',
       clothing_item_ids: [
         'scarpa-furia',
-        'mad-rock-men-s-flash-2-0-climbing-shoe',
       ],
     )
 
