@@ -233,6 +233,11 @@ class TopSeeder < ClothingItemSeeder
       brand: 'Showers Pass',
       model: "Men's Bamboo-Merino LS Henley Shirt",
     )
+
+    create_top!(
+      brand: 'tentree',
+      model: 'jansen',
+    )
   end
 
   def create_top!(top_params)

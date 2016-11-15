@@ -16,6 +16,7 @@ class WishListCategorySeeder
         'apolis-merino-wool-henley',
         'triple-aught-design-huntsman-henley',
         'showers-pass-men-s-bamboo-merino-ls-henley-shirt',
+        'tentree-jensen',
       ],
     )
 
