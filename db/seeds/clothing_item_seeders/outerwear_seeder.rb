@@ -77,7 +77,7 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2016'),
           version: 'Peppergrass Green',
-          purposes: ['Rain', 'Colorful', 'Essential'],
+          purposes: %w(Rain Colorful Essential),
         },
       ],
     )
