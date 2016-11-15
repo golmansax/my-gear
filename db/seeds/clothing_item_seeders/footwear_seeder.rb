@@ -54,7 +54,6 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2014'),
           version: 'Blue',
-          purposes: %w(Tennis Basketball Colorful),
         },
       ],
     )
@@ -89,7 +88,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2013'),
           version: 'Green',
-          purposes: %w(Hiking Frisbee Colorful),
+          purposes: %w(Frisbee Colorful),
         },
       ],
     )
@@ -129,6 +128,13 @@ class FootwearSeeder < ClothingItemSeeder
     create_footwear!(
       brand: 'Vivobarefoot',
       model: 'Motus',
+      purchases: [
+        {
+          date: Date.parse('Aug 2016'),
+          version: 'Black/Red',
+          purposes: ['Basketball', 'Tennis'],
+        },
+      ],
     )
 
     create_footwear!(
@@ -155,7 +161,7 @@ class FootwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2016'),
           version: 'Navy',
-          purposes: ['Hiking', 'Cold Weather'],
+          purposes: ['Hiking', 'Cold Weather', 'Rain'],
         },
       ],
     )

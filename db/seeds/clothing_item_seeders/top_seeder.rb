@@ -113,7 +113,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Black',
-          purposes: ['Cold Weather'],
+          purposes: ['Cold Weather', 'Lounging'],
         },
       ],
     )
@@ -209,7 +209,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2016'),
           version: 'Limon',
-          purposes: %w(Colorful Essential Favorite),
+          purposes: %w(Colorful),
         },
       ],
     )

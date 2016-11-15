@@ -50,7 +50,7 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2015'),
           version: 'Charcoal',
-          purposes: ['Cold Weather'],
+          purposes: ['Cold Weather', 'Hiking', 'Essential'],
         },
       ],
     )
@@ -78,7 +78,7 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Dec 2015'),
           version: 'Indigo',
-          purposes: %w(Colorful),
+          purposes: %w(Colorful Essential),
         },
       ],
     )
@@ -86,6 +86,25 @@ class SockSeeder < ClothingItemSeeder
     create_sock!(
       brand: 'Injinji',
       model: 'Multi-Sport Plus Midweight Mini Crew',
+      purchases: [
+        {
+          date: Date.parse('Sept 2016'),
+          version: 'White',
+          purposes: %w(Basketball Tennis Essential),
+        },
+      ],
+    )
+
+    create_sock!(
+      brand: 'Injinji',
+      model: 'Sport Original Weight Micro Coolmax',
+      purchases: [
+        {
+          date: Date.parse('Nov 2016'),
+          version: 'Black',
+          purposes: %w(Basketball Tennis Essential),
+        },
+      ],
     )
   end
 

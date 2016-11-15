@@ -16,7 +16,7 @@ class WishListCategorySeeder
         'apolis-merino-wool-henley',
         'triple-aught-design-huntsman-henley',
         'showers-pass-men-s-bamboo-merino-ls-henley-shirt',
-        'tentree-jensen',
+        'tentree-jansen',
       ],
     )
 
@@ -28,23 +28,9 @@ class WishListCategorySeeder
     )
 
     create_wish_list_category!(
-      name: 'Climbing shoes',
-      clothing_item_ids: [
-        'scarpa-furia',
-      ],
-    )
-
-    create_wish_list_category!(
       name: 'Everyday short',
       clothing_item_ids: [
         'outlier-new-way-long',
-      ],
-    )
-
-    create_wish_list_category!(
-      name: 'All around athletic shoe',
-      clothing_item_ids: [
-        'vivobarefoot-motus',
       ],
     )
 
@@ -53,13 +39,6 @@ class WishListCategorySeeder
       clothing_item_ids: [
         'marmot-precip-jacket',
         'outdoor-research-foray-jacket',
-      ],
-    )
-
-    create_wish_list_category!(
-      name: 'Longer lasting sock',
-      clothing_item_ids: [
-        'injinji-multi-sport-plus-midweight-mini-crew',
       ],
     )
   end

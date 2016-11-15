@@ -96,7 +96,7 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Oct 2015'),
           version: 'Green',
-          purposes: %w(Essential Favorite Colorful),
+          purposes: %w(Essential Colorful),
         },
       ],
     )
@@ -138,6 +138,18 @@ class UnderwearSeeder < ClothingItemSeeder
           date: Date.parse('June 2016'),
           version: 'Black',
           purposes: ['Cold Weather'],
+        },
+      ],
+    )
+
+    create_underwear!(
+      brand: 'Wool & Prince',
+      model: 'Boxer Brief',
+      purchases: [
+        {
+          date: Date.parse('June 2016'),
+          version: 'Wine',
+          purposes: %w(Essential Colorful Favorite),
         },
       ],
     )

@@ -111,7 +111,7 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('Apr 2016'),
           version: 'River Long',
-          purposes: %w(Essential Swimming Favorite),
+          purposes: %w(Essential Swimming),
         },
       ],
     )

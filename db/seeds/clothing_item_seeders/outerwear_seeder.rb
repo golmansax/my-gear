@@ -10,7 +10,7 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Green',
-          purposes: %w(Essential Favorite Colorful),
+          purposes: %w(Backup),
         },
       ],
     )
@@ -33,7 +33,6 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2012'),
           version: 'Red',
-          purposes: %w(Backup Colorful),
         },
       ],
     )
@@ -45,7 +44,6 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jan 2015'),
           version: 'Navy',
-          purposes: %w(Formal Essential),
         },
       ],
     )
@@ -67,7 +65,19 @@ class OuterwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2016'),
           version: 'Inca Gold',
-          purposes: ['Cold Weather'],
+          purposes: ['Cold Weather', 'Colorful', 'Essential'],
+        },
+      ],
+    )
+
+    create_outerwear!(
+      brand: 'Patagonia',
+      model: 'Torrentshell Jacket',
+      purchases: [
+        {
+          date: Date.parse('Aug 2016'),
+          version: 'Peppergrass Green',
+          purposes: ['Rain', 'Colorful', 'Essential'],
         },
       ],
     )
