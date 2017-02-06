@@ -14,7 +14,6 @@ class BottomSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2014'),
           version: 'Brown',
-          purposes: %w(Yoga Backup),
         },
       ],
     )
@@ -136,6 +135,18 @@ class BottomSeeder < ClothingItemSeeder
           date: Date.parse('Jan 2016'),
           version: 'Navy',
           purposes: ['Essential', 'Formal', 'For Girlfriend', 'Favorite'],
+        },
+      ],
+    )
+
+    create_bottom!(
+      brand: 'Uniqlo',
+      model: "Men's Stretch Wool Slim-fit Flat Front Pant",
+      purchases: [
+        {
+          date: Date.parse('Jan 2017'),
+          version: 'Navy',
+          purposes: ['Formal', 'For Girlfriend'],
         },
       ],
     )

@@ -37,6 +37,18 @@ class AccessorySeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_accessory!(
+      brand: 'Dockers',
+      model: "Men's 35mm Stretch Fabric Braided Belt",
+      purchases: [
+        {
+          date: Date.parse('Jan 2017'),
+          version: 'Black',
+          purposes: ['Formal'],
+        },
+      ],
+    )
   end
 
   def create_accessory!(accessory_params)

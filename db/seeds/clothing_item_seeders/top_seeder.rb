@@ -35,6 +35,13 @@ class TopSeeder < ClothingItemSeeder
             'Favorite', 'Essential', 'Formal', 'For Girlfriend', 'Colorful'
           ],
         },
+        {
+          date: Date.parse('Nov 2016'),
+          version: 'Green Gingham',
+          purposes: [
+            'Favorite', 'Essential', 'Formal', 'For Girlfriend', 'Colorful'
+          ],
+        },
       ],
     )
 
@@ -49,6 +56,17 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('May 2014'),
           version: 'Home 2013/2014',
+        },
+      ],
+    )
+
+    create_top!(
+      brand: 'New Balance',
+      model: 'Liverpool Kit',
+      purchases: [
+        {
+          date: Date.parse('Dec 2016'),
+          version: 'Home 2016/2017',
           purposes: %w(Essential Expressive Colorful),
         },
       ],
@@ -143,7 +161,7 @@ class TopSeeder < ClothingItemSeeder
           date: Date.parse('Oct 2015'),
           version: 'Morgan – Green',
           purposes: [
-            'Favorite', 'Essential', 'Formal', 'For Girlfriend', 'Colorful'
+            'Essential', 'Formal', 'For Girlfriend', 'Colorful'
           ],
         },
       ],
@@ -180,7 +198,7 @@ class TopSeeder < ClothingItemSeeder
 
     create_top!(
       brand: 'Uniqlo',
-      model: 'Men Packaged DRY Crewneck Short Sleeve T-Shirt',
+      model: "Men's Packaged DRY Crewneck Short Sleeve T-Shirt",
       purchases: [
         {
           date: Date.parse('Mar 2016'),
@@ -209,7 +227,7 @@ class TopSeeder < ClothingItemSeeder
         {
           date: Date.parse('Aug 2016'),
           version: 'Limon',
-          purposes: %w(Colorful),
+          purposes: %w(Backup Colorful),
         },
       ],
     )

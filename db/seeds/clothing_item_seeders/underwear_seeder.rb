@@ -44,7 +44,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Jul 2015'),
           version: 'Map/Light Lapis',
-          purposes: %w(Essential Colorful),
         },
       ],
     )
@@ -68,7 +67,6 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2013'),
           version: 'Navy',
-          purposes: ['Cold Weather'],
         },
       ],
     )
@@ -149,6 +147,18 @@ class UnderwearSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2016'),
           version: 'Wine',
+          purposes: %w(Essential Colorful),
+        },
+      ],
+    )
+
+    create_underwear!(
+      brand: 'Finisterre',
+      model: 'Zephyr Boxer',
+      purchases: [
+        {
+          date: Date.parse('Jan 2017'),
+          version: 'Navy',
           purposes: %w(Essential Colorful Favorite),
         },
       ],

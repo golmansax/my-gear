@@ -83,6 +83,18 @@ class OuterwearSeeder < ClothingItemSeeder
     )
 
     create_outerwear!(
+      brand: 'Uniqlo',
+      model: "Men's Stretch Wool Slim-fit Jacket",
+      purchases: [
+        {
+          date: Date.parse('Jan 2017'),
+          version: 'Navy',
+          purposes: ['Formal', 'For Girlfriend'],
+        },
+      ],
+    )
+
+    create_outerwear!(
       brand: "Arc'teryx",
       model: 'Beta LT Hybrid Jacket',
     )

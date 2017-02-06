@@ -44,7 +44,8 @@
   @include label-variant(#c377e0); // purple
 }
 
-.label-cold-weather {
+.label-cold-weather,
+.label-rain {
   @include label-variant(#00c2e0); // light blue
 }
 

@@ -18,7 +18,6 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('June 2016'),
           version: 'Navy',
-          purposes: %w(Colorful Essential),
         },
         {
           date: Date.parse('June 2016'),
@@ -90,7 +89,7 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Sept 2016'),
           version: 'White',
-          purposes: %w(Basketball Tennis Essential),
+          purposes: %w(Basketball Tennis),
         },
       ],
     )
@@ -102,7 +101,7 @@ class SockSeeder < ClothingItemSeeder
         {
           date: Date.parse('Nov 2016'),
           version: 'Black',
-          purposes: %w(Basketball Tennis Essential),
+          purposes: %w(Basketball Tennis),
         },
       ],
     )
