@@ -7,5 +7,5 @@ require "#{seeds_path}/wish_list_category_seeder"
 
 [
   TopSeeder, BottomSeeder, OuterwearSeeder, UnderwearSeeder, SockSeeder,
-  FootwearSeeder, GloveSeeder, WishListCategorySeeder
+  FootwearSeeder, AccessorySeeder, WishListCategorySeeder
 ].each { |seeder_klass| seeder_klass.new.seed! }
