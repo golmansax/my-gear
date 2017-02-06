@@ -3,7 +3,7 @@ require_relative '../clothing_item_seeder'
 
 class AccessorySeeder < ClothingItemSeeder
   def seed!
-    create_glove!(
+    create_accessory!(
       brand: 'Icebreaker',
       model: 'Apex Glove Liner',
       purchases: [
@@ -15,7 +15,7 @@ class AccessorySeeder < ClothingItemSeeder
       ],
     )
 
-    create_glove!(
+    create_accessory!(
       brand: 'Giro',
       model: 'Knit Merino Wool Glove',
       purchases: [
@@ -25,9 +25,21 @@ class AccessorySeeder < ClothingItemSeeder
         },
       ],
     )
+
+    create_accessory!(
+      brand: '180s',
+      model: 'Exolite Ear Warmer',
+      purchases: [
+        {
+          date: Date.parse('Dec 2009'),
+          version: 'Black',
+          purposes: ['Cold Weather'],
+        },
+      ],
+    )
   end
 
-  def create_glove!(glove_params)
-    create_clothing_item!(glove_params.merge(type: 'Accessory'))
+  def create_accessory!(accessory_params)
+    create_clothing_item!(accessory_params.merge(type: 'Accessory'))
   end
 end
